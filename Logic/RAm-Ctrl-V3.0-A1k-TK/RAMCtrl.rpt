@@ -1,0 +1,958 @@
+ 
+cpldfit:  version P.68d                             Xilinx Inc.
+                                  Fitter Report
+Design Name: RAMCtrl                             Date:  5-17-2014,  8:41PM
+Device Used: XC9572XL-10-TQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+61 /72  ( 85%) 182 /360  ( 51%) 139/216 ( 64%)   27 /72  ( 37%) 63 /72  ( 87%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          16/18       45/54       82/90      15/18
+FB2          18/18*      29/54       33/90      18/18*
+FB3          17/18       44/54       51/90      14/18
+FB4          10/18       21/54       16/90      16/18
+             -----       -----       -----      -----    
+             61/72      139/216     182/360     63/72 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'clk' mapped onto global clock net GCK1.
+Global output enable net(s) unused.
+Signal 'reset' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   34          34    |  I/O              :    59      66
+Output        :   23          23    |  GCK/IO           :     1       3
+Bidirectional :    4           4    |  GTS/IO           :     2       2
+GCK           :    1           1    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    1           1    |
+                 ----        ----
+        Total     63          63
+
+** Power Data **
+
+There are 61 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'RAMCtrl.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'clk' based upon the LOC
+   constraint 'P22'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+WARNING:Cpld:1007 - Removing unused input(s) 'A<14>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'A<15>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:1007 - Removing unused input(s) 'A<8>'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld:828 - Signal 'Mtrien_Dout.CE' has been minimized to 'VCC'.
+     The signal is removed.
+*************************  Summary of Mapped Logic  ************************
+
+** 27 Outputs **
+
+Signal                      Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                        Pts   Inps          No.  Type    Use     Mode Rate State
+nOE                         1     3     FB1_1   16   I/O     O       STD  FAST 
+DSACK<0>                    2     3     FB1_2   13   I/O     O       STD  FAST 
+BYTE<2>                     2     5     FB1_3   18   I/O     O       STD  FAST 
+D<3>                        10    12    FB1_4   20   I/O     I/O     STD  FAST RESET
+BYTE<0>                     4     5     FB1_5   14   I/O     O       STD  FAST 
+BYTE<1>                     3     5     FB1_6   15   I/O     O       STD  FAST 
+D<2>                        12    13    FB1_7   25   I/O     I/O     STD  FAST RESET
+BYTE<3>                     2     3     FB1_8   17   I/O     O       STD  FAST 
+D<0>                        13    13    FB1_10  28   I/O     I/O     STD  FAST RESET
+nWE                         1     3     FB1_12  33   I/O     O       STD  FAST 
+D<1>                        14    13    FB1_15  29   I/O     I/O     STD  FAST RESET
+nCS2                        2     13    FB1_17  30   I/O     O       STD  FAST 
+IO4                         3     4     FB1_18  40   I/O     O       STD  FAST 
+IDE_A<2>                    1     1     FB2_2   94   I/O     O       STD  FAST 
+IDE_CS<0>                   1     1     FB2_3   91   I/O     O       STD  FAST 
+IDE_A<0>                    1     1     FB2_4   93   I/O     O       STD  FAST 
+IDE_A<1>                    1     1     FB2_5   95   I/O     O       STD  FAST 
+IDE_R                       1     4     FB2_6   96   I/O     O       STD  FAST 
+IDE_W                       1     3     FB2_8   97   I/O     O       STD  FAST 
+ROM_ENABLE                  1     2     FB2_13  8    I/O     O       STD  FAST 
+nRAM_SEL                    1     3     FB2_15  11   I/O     O       STD  FAST 
+DSACK<1>                    3     5     FB2_17  12   I/O     O       STD  FAST 
+IDE_CS<1>                   1     1     FB2_18  92   I/O     O       STD  FAST 
+IO5                         2     3     FB3_1   41   I/O     O       STD  FAST 
+nCS1                        4     14    FB3_2   32   I/O     O       STD  FAST 
+INT2                        1     2     FB3_9   42   I/O     O       STD  FAST 
+STERM                       0     0     FB4_17  90   I/O     O       STD  FAST 
+
+** 34 Buried Nodes **
+
+Signal                      Total Total Loc     Pwr  Reg Init
+Name                        Pts   Inps          Mode State
+$OpTx$FX_DC$22              3     6     FB1_9   STD  
+$OpTx$FX_DC$41              4     7     FB1_13  STD  
+$OpTx$FX_DC$34              6     17    FB1_16  STD  
+IDE_DSACK_DELAY             2     4     FB2_1   STD  SET
+IDE_BASEADR<5>              2     14    FB2_7   STD  RESET
+IDE_BASEADR<4>              2     14    FB2_9   STD  RESET
+IDE_BASEADR<2>              2     14    FB2_10  STD  RESET
+IDE_BASEADR<1>              2     14    FB2_11  STD  RESET
+IDE_BASEADR<0>              2     14    FB2_12  STD  RESET
+ROM_OUT_ENABLE_S            4     7     FB2_14  STD  SET
+DSACK_16BIT                 5     8     FB2_16  STD  SET
+IDE_ENABLE                  1     4     FB3_3   STD  RESET
+$OpTx$FX_DC$24              1     9     FB3_4   STD  
+BASEADR_4MB<2>              2     10    FB3_5   STD  RESET
+BASEADR_4MB<0>              2     9     FB3_6   STD  RESET
+BASEADR<2>                  2     8     FB3_7   STD  RESET
+BASEADR<1>                  2     8     FB3_8   STD  RESET
+BASEADR<0>                  2     8     FB3_10  STD  RESET
+AUTO_CONFIG_DONE<1>         2     7     FB3_11  STD  RESET
+AUTO_CONFIG_DONE<0>         2     6     FB3_12  STD  RESET
+AUTO_CONFIG/AUTO_CONFIG_D2  2     18    FB3_13  STD  
+SHUT_UP<1>                  3     9     FB3_14  STD  RESET
+SHUT_UP<0>                  3     9     FB3_15  STD  RESET
+BASEADR_4MB<1>              3     10    FB3_16  STD  RESET
+$OpTx$INV$5                 17    17    FB3_18  STD  
+Mtrien_Dout                 1     3     FB4_9   STD  RESET
+$OpTx$FX_DC$18              1     6     FB4_10  STD  
+IDE_BASEADR<7>              2     14    FB4_11  STD  RESET
+IDE_BASEADR<6>              2     14    FB4_12  STD  RESET
+IDE_BASEADR<3>              2     14    FB4_13  STD  RESET
+$OpTx$FX_DC$9               2     2     FB4_14  STD  
+$OpTx$FX_DC$8               2     2     FB4_15  STD  
+$OpTx$FX_DC$7               2     3     FB4_16  STD  
+$OpTx$FX_DC$27              2     2     FB4_18  STD  
+
+** 36 Inputs **
+
+Signal                      Loc     Pin  Pin     Pin     
+Name                                No.  Type    Use     
+clk                         FB1_9   22   GCK/I/O GCK
+IDE_WAIT                    FB1_16  39   I/O     I
+A<31>                       FB2_1   87   I/O     I
+A<25>                       FB2_7   3    GTS/I/O I
+reset                       FB2_9   99   GSR/I/O GSR
+nAS                         FB2_10  1    I/O     I
+SIZ<1>                      FB2_11  4    GTS/I/O I
+SIZ<0>                      FB2_12  6    I/O     I
+nDS                         FB2_14  9    I/O     I
+RW                          FB2_16  10   I/O     I
+A<2>                        FB3_4   50   I/O     I
+A<0>                        FB3_6   53   I/O     I
+A<5>                        FB3_7   54   I/O     I
+A<6>                        FB3_10  60   I/O     I
+A<1>                        FB3_11  52   I/O     I
+A<11>                       FB3_12  61   I/O     I
+A<10>                       FB3_13  63   I/O     I
+A<4>                        FB3_14  55   I/O     I
+A<3>                        FB3_15  56   I/O     I
+A<9>                        FB3_16  64   I/O     I
+A<19>                       FB3_18  59   I/O     I
+A<12>                       FB4_2   67   I/O     I
+A<17>                       FB4_3   71   I/O     I
+A<20>                       FB4_4   72   I/O     I
+A<16>                       FB4_5   68   I/O     I
+A<23>                       FB4_6   76   I/O     I
+A<22>                       FB4_7   77   I/O     I
+A<13>                       FB4_9   66   I/O     I
+A<24>                       FB4_10  81   I/O     I
+A<18>                       FB4_11  74   I/O     I
+A<29>                       FB4_12  82   I/O     I
+A<27>                       FB4_13  85   I/O     I
+A<21>                       FB4_14  78   I/O     I
+A<30>                       FB4_15  89   I/O     I
+A<28>                       FB4_16  86   I/O     I
+A<26>                       FB4_18  79   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               45/9
+Number of signals used by logic mapping into function block:  45
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+nOE                   1       0     0   4     FB1_1   16    I/O     O
+DSACK<0>              2       0   \/1   2     FB1_2   13    I/O     O
+BYTE<2>               2       1<- \/4   0     FB1_3   18    I/O     O
+D<3>                 10       5<-   0   0     FB1_4   20    I/O     I/O
+BYTE<0>               4       0   /\1   0     FB1_5   14    I/O     O
+BYTE<1>               3       0   \/2   0     FB1_6   15    I/O     O
+D<2>                 12       7<-   0   0     FB1_7   25    I/O     I/O
+BYTE<3>               2       2<- /\5   0     FB1_8   17    I/O     O
+$OpTx$FX_DC$22        3       0   /\2   0     FB1_9   22    GCK/I/O GCK
+D<0>                 13       8<-   0   0     FB1_10  28    I/O     I/O
+(unused)              0       0   /\5   0     FB1_11  23    GCK/I/O (b)
+nWE                   1       0   /\3   1     FB1_12  33    I/O     O
+$OpTx$FX_DC$41        4       0   \/1   0     FB1_13  36    I/O     (b)
+(unused)              0       0   \/5   0     FB1_14  27    GCK/I/O (b)
+D<1>                 14       9<-   0   0     FB1_15  29    I/O     I/O
+$OpTx$FX_DC$34        6       4<- /\3   0     FB1_16  39    I/O     I
+nCS2                  2       1<- /\4   0     FB1_17  30    I/O     O
+IO4                   3       0   /\1   1     FB1_18  40    I/O     O
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$18       16: A<24>             31: BASEADR_4MB<1> 
+  2: $OpTx$FX_DC$22       17: A<25>             32: D<0> 
+  3: $OpTx$FX_DC$24       18: A<26>             33: D<1> 
+  4: $OpTx$FX_DC$27       19: A<27>             34: D<2> 
+  5: $OpTx$FX_DC$34       20: A<28>             35: D<3> 
+  6: $OpTx$FX_DC$41       21: A<29>             36: IDE_ENABLE 
+  7: $OpTx$FX_DC$7        22: A<2>              37: Mtrien_Dout 
+  8: $OpTx$FX_DC$8        23: A<30>             38: ROM_OUT_ENABLE_S 
+  9: $OpTx$FX_DC$9        24: A<31>             39: RW 
+ 10: AUTO_CONFIG_DONE<0>  25: A<3>              40: SHUT_UP<0> 
+ 11: AUTO_CONFIG_DONE<1>  26: A<4>              41: SIZ<0> 
+ 12: A<0>                 27: A<5>              42: SIZ<1> 
+ 13: A<1>                 28: A<6>              43: nAS 
+ 14: A<22>                29: BASEADR<1>        44: nDS 
+ 15: A<23>                30: BASEADR<2>        45: nRAM_SEL 
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+nOE                  ....X.................................X....X...... 3
+DSACK<0>             ....X.....................................X.X..... 3
+BYTE<2>              ...........XX.........................X.XX........ 5
+D<3>                 .....X...XXXX........X..XXXX......X.X............. 12
+BYTE<0>              ...........XX.........................X.XX........ 5
+BYTE<1>              ...........XX.........................X.XX........ 5
+D<2>                 XX....X..XX.X........X..XXXX.....X..X............. 13
+BYTE<3>              ...........XX.........................X........... 3
+$OpTx$FX_DC$22       ......X..X.X.........X..X..X...................... 6
+D<0>                 XX....X..XX.X........X..XXXX...X....X............. 13
+nWE                  ....X.................................X....X...... 3
+$OpTx$FX_DC$41       ......X..XX.X............XXX...................... 7
+D<1>                 XX...X...XX.X........X..XXXX....X...X............. 13
+$OpTx$FX_DC$34       ...X...XX....XXXXXXXX.XX....XXX........X.......... 17
+nCS2                 ...X....X....X.XXXXXX.XX......X........X.......... 13
+IO4                  ..X..................X.............X.X............ 4
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               29/25
+Number of signals used by logic mapping into function block:  29
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+IDE_DSACK_DELAY       2       0     0   3     FB2_1   87    I/O     I
+IDE_A<2>              1       0     0   4     FB2_2   94    I/O     O
+IDE_CS<0>             1       0     0   4     FB2_3   91    I/O     O
+IDE_A<0>              1       0     0   4     FB2_4   93    I/O     O
+IDE_A<1>              1       0     0   4     FB2_5   95    I/O     O
+IDE_R                 1       0     0   4     FB2_6   96    I/O     O
+IDE_BASEADR<5>        2       0     0   3     FB2_7   3     GTS/I/O I
+IDE_W                 1       0     0   4     FB2_8   97    I/O     O
+IDE_BASEADR<4>        2       0     0   3     FB2_9   99    GSR/I/O GSR
+IDE_BASEADR<2>        2       0     0   3     FB2_10  1     I/O     I
+IDE_BASEADR<1>        2       0     0   3     FB2_11  4     GTS/I/O I
+IDE_BASEADR<0>        2       0     0   3     FB2_12  6     I/O     I
+ROM_ENABLE            1       0     0   4     FB2_13  8     I/O     O
+ROM_OUT_ENABLE_S      4       0     0   1     FB2_14  9     I/O     I
+nRAM_SEL              1       0     0   4     FB2_15  11    I/O     O
+DSACK_16BIT           5       0     0   0     FB2_16  10    I/O     I
+DSACK<1>              3       0     0   2     FB2_17  12    I/O     O
+IDE_CS<1>             1       0     0   4     FB2_18  92    I/O     O
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$24              11: A<3>              21: IDE_WAIT 
+  2: $OpTx$FX_DC$34              12: A<4>              22: D<2>.PIN 
+  3: AUTO_CONFIG/AUTO_CONFIG_D2  13: A<5>              23: D<1>.PIN 
+  4: AUTO_CONFIG_DONE<0>         14: A<6>              24: D<0>.PIN 
+  5: AUTO_CONFIG_DONE<1>         15: DSACK_16BIT       25: ROM_OUT_ENABLE_S 
+  6: A<0>                        16: A<9>              26: RW 
+  7: A<12>                       17: A<10>             27: nAS 
+  8: A<13>                       18: A<11>             28: nDS 
+  9: A<1>                        19: IDE_DSACK_DELAY   29: nRAM_SEL 
+ 10: A<2>                        20: IDE_ENABLE       
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+IDE_DSACK_DELAY      X.X...............X.......X............. 4
+IDE_A<2>             .................X...................... 1
+IDE_CS<0>            ......X................................. 1
+IDE_A<0>             ...............X........................ 1
+IDE_A<1>             ................X....................... 1
+IDE_R                X..................X.....XX............. 4
+IDE_BASEADR<5>       ..XXXX..XXXXXX........X..XXX............ 14
+IDE_W                X........................XX............. 3
+IDE_BASEADR<4>       ..XXXX..XXXXXX.........X.XXX............ 14
+IDE_BASEADR<2>       ..XXXX..XXXXXX.......X...XXX............ 14
+IDE_BASEADR<1>       ..XXXX..XXXXXX........X..XXX............ 14
+IDE_BASEADR<0>       ..XXXX..XXXXXX.........X.XXX............ 14
+ROM_ENABLE           X..................X.................... 2
+ROM_OUT_ENABLE_S     X.X...............XX....XXX............. 7
+nRAM_SEL             XXX..................................... 3
+DSACK_16BIT          X.X...........X...XXX....XX............. 8
+DSACK<1>             .XX...........X...........X.X........... 5
+IDE_CS<1>            .......X................................ 1
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               44/10
+Number of signals used by logic mapping into function block:  44
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+IO5                   2       2<- /\5   0     FB3_1   41    I/O     O
+nCS1                  4       1<- /\2   0     FB3_2   32    I/O     O
+IDE_ENABLE            1       0   /\1   3     FB3_3   49    I/O     (b)
+$OpTx$FX_DC$24        1       0     0   4     FB3_4   50    I/O     I
+BASEADR_4MB<2>        2       0     0   3     FB3_5   35    I/O     (b)
+BASEADR_4MB<0>        2       0     0   3     FB3_6   53    I/O     I
+BASEADR<2>            2       0     0   3     FB3_7   54    I/O     I
+BASEADR<1>            2       0     0   3     FB3_8   37    I/O     (b)
+INT2                  1       0     0   4     FB3_9   42    I/O     O
+BASEADR<0>            2       0     0   3     FB3_10  60    I/O     I
+AUTO_CONFIG_DONE<1>   2       0     0   3     FB3_11  52    I/O     I
+AUTO_CONFIG_DONE<0>   2       0     0   3     FB3_12  61    I/O     I
+AUTO_CONFIG/AUTO_CONFIG_D2
+                      2       0     0   3     FB3_13  63    I/O     I
+SHUT_UP<1>            3       0     0   2     FB3_14  55    I/O     I
+SHUT_UP<0>            3       0     0   2     FB3_15  56    I/O     I
+BASEADR_4MB<1>        3       0   \/2   0     FB3_16  64    I/O     I
+(unused)              0       0   \/5   0     FB3_17  58    I/O     (b)
+$OpTx$INV$5          17      12<-   0   0     FB3_18  59    I/O     I
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$18              16: A<24>             31: IDE_BASEADR<3> 
+  2: $OpTx$FX_DC$24              17: A<25>             32: IDE_BASEADR<4> 
+  3: $OpTx$FX_DC$8               18: A<26>             33: IDE_BASEADR<5> 
+  4: $OpTx$INV$5                 19: A<27>             34: IDE_BASEADR<6> 
+  5: AUTO_CONFIG/AUTO_CONFIG_D2  20: A<28>             35: IDE_BASEADR<7> 
+  6: AUTO_CONFIG_DONE<0>         21: A<29>             36: IDE_ENABLE 
+  7: AUTO_CONFIG_DONE<1>         22: A<2>              37: D<3>.PIN 
+  8: A<16>                       23: A<30>             38: D<2>.PIN 
+  9: A<17>                       24: A<31>             39: D<1>.PIN 
+ 10: A<18>                       25: A<3>              40: RW 
+ 11: A<19>                       26: BASEADR<1>        41: SHUT_UP<0> 
+ 12: A<20>                       27: BASEADR<2>        42: SHUT_UP<1> 
+ 13: A<21>                       28: IDE_BASEADR<0>    43: nAS 
+ 14: A<22>                       29: IDE_BASEADR<1>    44: nDS 
+ 15: A<23>                       30: IDE_BASEADR<2>   
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+IO5                  .X......................X..........X.............. 3
+nCS1                 ..X..........XXXXXXXX.XX.XX.............X......... 14
+IDE_ENABLE           .X.................................X...X..X....... 4
+$OpTx$FX_DC$24       ...X...........XXXXXX.XX.......................... 9
+BASEADR_4MB<2>       X...XX...............X..............XXXX..XX...... 10
+BASEADR_4MB<0>       X...XX...............X..............X.XX..XX...... 9
+BASEADR<2>           X...XX...............X..............X..X..XX...... 8
+BASEADR<1>           X...XX...............X...............X.X..XX...... 8
+INT2                 .X.................................X.............. 2
+BASEADR<0>           X...XX...............X................XX..XX...... 8
+AUTO_CONFIG_DONE<1>  X...XXX................................X..XX...... 7
+AUTO_CONFIG_DONE<0>  X...XX.................................X..XX...... 6
+AUTO_CONFIG/AUTO_CONFIG_D2 
+                     .....XXXXXXXXXXXXXXXX.XX.......................... 18
+SHUT_UP<1>           X...XXX..............X.................X.XXX...... 9
+SHUT_UP<0>           X...XX...............X..............X..XX.XX...... 9
+BASEADR_4MB<1>       X...XX...............X..............XXXX..XX...... 10
+$OpTx$INV$5          .......XXXXXXXX............XXXXXXXX......X........ 17
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               21/33
+Number of signals used by logic mapping into function block:  21
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB4_1   65    I/O     
+(unused)              0       0     0   5     FB4_2   67    I/O     I
+(unused)              0       0     0   5     FB4_3   71    I/O     I
+(unused)              0       0     0   5     FB4_4   72    I/O     I
+(unused)              0       0     0   5     FB4_5   68    I/O     I
+(unused)              0       0     0   5     FB4_6   76    I/O     I
+(unused)              0       0     0   5     FB4_7   77    I/O     I
+(unused)              0       0     0   5     FB4_8   70    I/O     
+Mtrien_Dout           1       0     0   4     FB4_9   66    I/O     I
+$OpTx$FX_DC$18        1       0     0   4     FB4_10  81    I/O     I
+IDE_BASEADR<7>        2       0     0   3     FB4_11  74    I/O     I
+IDE_BASEADR<6>        2       0     0   3     FB4_12  82    I/O     I
+IDE_BASEADR<3>        2       0     0   3     FB4_13  85    I/O     I
+$OpTx$FX_DC$9         2       0     0   3     FB4_14  78    I/O     I
+$OpTx$FX_DC$8         2       0     0   3     FB4_15  89    I/O     I
+$OpTx$FX_DC$7         2       0     0   3     FB4_16  86    I/O     I
+STERM                 0       0     0   5     FB4_17  90    I/O     O
+$OpTx$FX_DC$27        2       0     0   3     FB4_18  79    I/O     I
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$18               8: A<23>             15: BASEADR_4MB<0> 
+  2: AUTO_CONFIG/AUTO_CONFIG_D2   9: A<2>              16: BASEADR_4MB<2> 
+  3: AUTO_CONFIG_DONE<0>         10: A<3>              17: D<3>.PIN 
+  4: AUTO_CONFIG_DONE<1>         11: A<4>              18: D<2>.PIN 
+  5: A<0>                        12: A<5>              19: RW 
+  6: A<1>                        13: A<6>              20: nAS 
+  7: A<21>                       14: BASEADR<0>        21: nDS 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+Mtrien_Dout          .X................XX.................... 3
+$OpTx$FX_DC$18       ....XX...XXXX........................... 6
+IDE_BASEADR<7>       .XXXXX..XXXXX...X.XXX................... 14
+IDE_BASEADR<6>       .XXXXX..XXXXX....XXXX................... 14
+IDE_BASEADR<3>       .XXXXX..XXXXX...X.XXX................... 14
+$OpTx$FX_DC$9        ......X.......X......................... 2
+$OpTx$FX_DC$8        ......X......X.......................... 2
+$OpTx$FX_DC$7        X.XX.................................... 3
+STERM                ........................................ 0
+$OpTx$FX_DC$27       .......X.......X........................ 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+$OpTx$FX_DC$18 <= (NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND A(3));
+
+
+$OpTx$FX_DC$22 <= ((NOT AUTO_CONFIG_DONE(0) AND A(3))
+	OR (A(0) AND NOT $OpTx$FX_DC$7)
+	OR (A(6) AND A(2) AND NOT $OpTx$FX_DC$7));
+
+
+$OpTx$FX_DC$24 <= (NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$INV$5);
+
+
+$OpTx$FX_DC$27 <= A(23)
+	 XOR 
+$OpTx$FX_DC$27 <= BASEADR_4MB(2);
+
+
+$OpTx$FX_DC$34 <= ((NOT SHUT_UP(0) AND BASEADR(1) AND BASEADR(2) AND A(23) AND 
+	A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)
+	OR (NOT SHUT_UP(0) AND BASEADR(1) AND NOT BASEADR(2) AND NOT A(23) AND 
+	A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)
+	OR (NOT SHUT_UP(0) AND NOT BASEADR(1) AND BASEADR(2) AND A(23) AND 
+	NOT A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)
+	OR (NOT SHUT_UP(0) AND NOT BASEADR(1) AND NOT BASEADR(2) AND NOT A(23) AND 
+	NOT A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)
+	OR (NOT SHUT_UP(0) AND BASEADR_4MB(1) AND A(22) AND NOT A(31) AND 
+	NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(26) AND 
+	NOT $OpTx$FX_DC$9 AND NOT $OpTx$FX_DC$27)
+	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(1) AND NOT A(22) AND NOT A(31) AND 
+	NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(26) AND 
+	NOT $OpTx$FX_DC$9 AND NOT $OpTx$FX_DC$27));
+
+
+$OpTx$FX_DC$41 <= ((NOT AUTO_CONFIG_DONE(0) AND A(5))
+	OR (NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND NOT A(6))
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(5))
+	OR (A(4) AND A(6) AND NOT $OpTx$FX_DC$7));
+
+
+$OpTx$FX_DC$7 <= (($OpTx$FX_DC$18)
+	OR (AUTO_CONFIG_DONE(0) AND AUTO_CONFIG_DONE(1)));
+
+
+$OpTx$FX_DC$8 <= A(21)
+	 XOR 
+$OpTx$FX_DC$8 <= BASEADR(0);
+
+
+$OpTx$FX_DC$9 <= A(21)
+	 XOR 
+$OpTx$FX_DC$9 <= BASEADR_4MB(0);
+
+
+$OpTx$INV$5 <= ((SHUT_UP(1))
+	OR (IDE_BASEADR(0) AND NOT A(16))
+	OR (NOT IDE_BASEADR(0) AND A(16))
+	OR (NOT IDE_BASEADR(3) AND A(19))
+	OR (IDE_BASEADR(7) AND NOT A(23))
+	OR (NOT IDE_BASEADR(7) AND A(23))
+	OR (BASEADR_4MB(1).EXP)
+	OR (IDE_BASEADR(2) AND NOT A(18))
+	OR (NOT IDE_BASEADR(2) AND A(18))
+	OR (IDE_BASEADR(3) AND NOT A(19))
+	OR (IDE_BASEADR(5) AND NOT A(21))
+	OR (NOT IDE_BASEADR(5) AND A(21))
+	OR (IDE_BASEADR(4) AND NOT A(20))
+	OR (NOT IDE_BASEADR(4) AND A(20))
+	OR (IDE_BASEADR(6) AND NOT A(22))
+	OR (NOT IDE_BASEADR(6) AND A(22)));
+
+
+AUTO_CONFIG/AUTO_CONFIG_D2 <= ((NOT AUTO_CONFIG_DONE(0) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
+	A(23) AND A(22) AND A(19) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(26) AND NOT A(20) AND A(21))
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
+	A(23) AND A(22) AND A(19) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(26) AND NOT A(20) AND A(21)));
+
+FDCPE_AUTO_CONFIG_DONE0: FDCPE port map (AUTO_CONFIG_DONE(0),AUTO_CONFIG_DONE_D(0),clk,NOT reset,'0',AUTO_CONFIG_DONE_CE(0));
+AUTO_CONFIG_DONE_D(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT $OpTx$FX_DC$18);
+AUTO_CONFIG_DONE_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT nDS AND 
+	AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_AUTO_CONFIG_DONE1: FDCPE port map (AUTO_CONFIG_DONE(1),AUTO_CONFIG_DONE_D(1),clk,NOT reset,'0',AUTO_CONFIG_DONE_CE(1));
+AUTO_CONFIG_DONE_D(1) <= (NOT AUTO_CONFIG_DONE(1) AND NOT $OpTx$FX_DC$18);
+AUTO_CONFIG_DONE_CE(1) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND NOT nDS AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_BASEADR0: FDCPE port map (BASEADR(0),D(1).PIN,clk,'0',NOT reset,BASEADR_CE(0));
+BASEADR_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT A(2) AND NOT nDS AND 
+	$OpTx$FX_DC$18 AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_BASEADR1: FDCPE port map (BASEADR(1),D(2).PIN,clk,NOT reset,'0',BASEADR_CE(1));
+BASEADR_CE(1) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT A(2) AND NOT nDS AND 
+	$OpTx$FX_DC$18 AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_BASEADR2: FDCPE port map (BASEADR(2),D(3).PIN,clk,NOT reset,'0',BASEADR_CE(2));
+BASEADR_CE(2) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT A(2) AND NOT nDS AND 
+	$OpTx$FX_DC$18 AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_BASEADR_4MB0: FDCPE port map (BASEADR_4MB(0),BASEADR_4MB_D(0),clk,NOT reset,'0',BASEADR_4MB_CE(0));
+BASEADR_4MB_D(0) <= (NOT D(1).PIN AND NOT D(3).PIN);
+BASEADR_4MB_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT A(2) AND NOT nDS AND 
+	$OpTx$FX_DC$18 AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_BASEADR_4MB1: FDCPE port map (BASEADR_4MB(1),BASEADR_4MB_D(1),clk,'0',NOT reset,BASEADR_4MB_CE(1));
+BASEADR_4MB_D(1) <= ((D(1).PIN AND NOT D(2).PIN AND NOT D(3).PIN)
+	OR (NOT D(1).PIN AND D(2).PIN AND NOT D(3).PIN));
+BASEADR_4MB_CE(1) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT A(2) AND NOT nDS AND 
+	$OpTx$FX_DC$18 AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_BASEADR_4MB2: FDCPE port map (BASEADR_4MB(2),BASEADR_4MB_D(2),clk,NOT reset,'0',BASEADR_4MB_CE(2));
+BASEADR_4MB_D(2) <= (D(1).PIN AND D(2).PIN AND NOT D(3).PIN);
+BASEADR_4MB_CE(2) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT A(2) AND NOT nDS AND 
+	$OpTx$FX_DC$18 AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+
+BYTE(0) <= ((NOT RW AND NOT A(1) AND SIZ(1) AND NOT SIZ(0))
+	OR (NOT RW AND NOT A(1) AND NOT SIZ(1) AND SIZ(0))
+	OR (NOT RW AND NOT A(1) AND SIZ(0) AND NOT A(0))
+	OR (NOT RW AND NOT SIZ(1) AND SIZ(0) AND NOT A(0)));
+
+
+BYTE(1) <= ((NOT RW AND A(1) AND A(0))
+	OR (NOT RW AND NOT A(1) AND NOT SIZ(1) AND SIZ(0))
+	OR (NOT RW AND NOT A(1) AND SIZ(1) AND NOT SIZ(0) AND NOT A(0)));
+
+
+BYTE(2) <= ((NOT RW AND A(1))
+	OR (NOT RW AND NOT SIZ(1) AND SIZ(0) AND NOT A(0)));
+
+
+BYTE(3) <= ((NOT RW AND A(1))
+	OR (NOT RW AND A(0)));
+
+FDCPE_D0: FDCPE port map (D_I(0),D(0),clk,'0','0');
+D(0) <= (($OpTx$FX_DC$22)
+	OR (nWE_OBUF.EXP)
+	OR (NOT AUTO_CONFIG_DONE(0) AND A(4) AND NOT A(2) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(4) AND NOT A(5) AND A(3))
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(6) AND A(3) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND A(2) AND A(3) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(4) AND NOT A(2) AND NOT A(3) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (D(0) AND $OpTx$FX_DC$7)
+	OR (A(4) AND A(5) AND NOT $OpTx$FX_DC$7)
+	OR (A(5) AND NOT A(2) AND NOT $OpTx$FX_DC$7));
+D(0) <= D_I(0) when D_OE(0) = '1' else 'Z';
+D_OE(0) <= NOT Mtrien_Dout;
+
+FDCPE_D1: FDCPE port map (D_I(1),D(1),clk,'0','0');
+D(1) <= (($OpTx$FX_DC$22)
+	OR ($OpTx$FX_DC$41)
+	OR ($OpTx$FX_DC$41.EXP)
+	OR (D(1) AND AUTO_CONFIG_DONE(0) AND AUTO_CONFIG_DONE(1))
+	OR (NOT AUTO_CONFIG_DONE(0) AND A(4) AND A(2) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(4) AND A(5) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(5) AND NOT A(2) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(1) AND NOT A(2) AND A(3) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(0) AND NOT A(4) AND NOT A(6) AND NOT A(2) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(4) AND A(2) AND 
+	NOT A(3) AND NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND NOT A(4) AND NOT A(5) AND 
+	A(2) AND NOT $OpTx$FX_DC$18)
+	OR (D(1) AND $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(4) AND A(3)));
+D(1) <= D_I(1) when D_OE(1) = '1' else 'Z';
+D_OE(1) <= NOT Mtrien_Dout;
+
+FDCPE_D2: FDCPE port map (D_I(2),D(2),clk,'0','0');
+D(2) <= (($OpTx$FX_DC$22)
+	OR (NOT AUTO_CONFIG_DONE(0) AND A(5) AND NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(5) AND NOT A(2) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND A(2) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(0) AND NOT A(4) AND NOT A(6) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(3) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(4) AND A(5) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND NOT A(6) AND NOT A(3) AND 
+	NOT $OpTx$FX_DC$18)
+	OR (D(2) AND $OpTx$FX_DC$7)
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(4) AND A(3))
+	OR (A(4) AND NOT A(2) AND NOT $OpTx$FX_DC$7));
+D(2) <= D_I(2) when D_OE(2) = '1' else 'Z';
+D_OE(2) <= NOT Mtrien_Dout;
+
+FDCPE_D3: FDCPE port map (D_I(3),D(3),clk,'0','0');
+D(3) <= ((AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND A(1) AND 
+	A(4) AND NOT A(6) AND NOT A(0) AND A(2) AND NOT $OpTx$FX_DC$41)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(4) AND NOT A(6) AND 
+	NOT A(0) AND A(2) AND NOT A(3) AND NOT $OpTx$FX_DC$41)
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT A(4) AND A(6) AND NOT A(5) AND 
+	NOT A(0) AND NOT A(2) AND NOT A(3) AND NOT $OpTx$FX_DC$41)
+	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND 
+	A(4) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND A(3) AND NOT $OpTx$FX_DC$41)
+	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND 
+	NOT A(4) AND NOT A(6) AND A(5) AND NOT A(0) AND A(2) AND NOT A(3) AND 
+	NOT $OpTx$FX_DC$41)
+	OR (NOT D(3) AND AUTO_CONFIG_DONE(0) AND AUTO_CONFIG_DONE(1) AND 
+	NOT $OpTx$FX_DC$41)
+	OR (NOT AUTO_CONFIG_DONE(0) AND AUTO_CONFIG_DONE(1) AND A(4) AND 
+	NOT A(0) AND NOT A(3) AND NOT $OpTx$FX_DC$41)
+	OR (NOT AUTO_CONFIG_DONE(0) AND AUTO_CONFIG_DONE(1) AND NOT A(0) AND 
+	NOT A(2) AND NOT A(3) AND NOT $OpTx$FX_DC$41)
+	OR (NOT AUTO_CONFIG_DONE(1) AND A(1) AND NOT A(5) AND NOT A(0) AND 
+	NOT A(2) AND NOT A(3) AND NOT $OpTx$FX_DC$41));
+D(3) <= D_I(3) when D_OE(3) = '1' else 'Z';
+D_OE(3) <= NOT Mtrien_Dout;
+
+
+DSACK_I(0) <= NOT ((NOT nAS AND $OpTx$FX_DC$34));
+DSACK(0) <= DSACK_I(0) when DSACK_OE(0) = '1' else 'Z';
+DSACK_OE(0) <= NOT nRAM_SEL;
+
+
+DSACK_I(1) <= ((DSACK_16BIT AND nAS)
+	OR (DSACK_16BIT AND NOT $OpTx$FX_DC$34 AND 
+	NOT AUTO_CONFIG/AUTO_CONFIG_D2));
+DSACK(1) <= DSACK_I(1) when DSACK_OE(1) = '1' else 'Z';
+DSACK_OE(1) <= NOT nRAM_SEL;
+
+FDCPE_DSACK_16BIT: FDCPE port map (DSACK_16BIT,DSACK_16BIT_D,NOT clk,'0',NOT reset);
+DSACK_16BIT_D <= ((nAS)
+	OR (NOT AUTO_CONFIG/AUTO_CONFIG_D2 AND NOT $OpTx$FX_DC$24)
+	OR (RW AND IDE_DSACK_DELAY AND NOT IDE_ENABLE AND 
+	NOT AUTO_CONFIG/AUTO_CONFIG_D2)
+	OR (NOT RW AND DSACK_16BIT AND NOT IDE_ENABLE AND 
+	NOT AUTO_CONFIG/AUTO_CONFIG_D2)
+	OR (DSACK_16BIT AND IDE_ENABLE AND NOT IDE_WAIT AND 
+	NOT AUTO_CONFIG/AUTO_CONFIG_D2));
+
+
+
+
+
+
+
+
+IDE_A(0) <= A(9);
+
+
+IDE_A(1) <= A(10);
+
+
+IDE_A(2) <= A(11);
+
+FDCPE_IDE_BASEADR0: FDCPE port map (IDE_BASEADR(0),D(0).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(0));
+IDE_BASEADR_CE(0) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_IDE_BASEADR1: FDCPE port map (IDE_BASEADR(1),D(1).PIN,clk,NOT reset,'0',IDE_BASEADR_CE(1));
+IDE_BASEADR_CE(1) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_IDE_BASEADR2: FDCPE port map (IDE_BASEADR(2),D(2).PIN,clk,NOT reset,'0',IDE_BASEADR_CE(2));
+IDE_BASEADR_CE(2) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_IDE_BASEADR3: FDCPE port map (IDE_BASEADR(3),D(3).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(3));
+IDE_BASEADR_CE(3) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_IDE_BASEADR4: FDCPE port map (IDE_BASEADR(4),D(0).PIN,clk,NOT reset,'0',IDE_BASEADR_CE(4));
+IDE_BASEADR_CE(4) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_IDE_BASEADR5: FDCPE port map (IDE_BASEADR(5),D(1).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(5));
+IDE_BASEADR_CE(5) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_IDE_BASEADR6: FDCPE port map (IDE_BASEADR(6),D(2).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(6));
+IDE_BASEADR_CE(6) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_IDE_BASEADR7: FDCPE port map (IDE_BASEADR(7),D(3).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(7));
+IDE_BASEADR_CE(7) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
+	NOT nDS AND A(3) AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+
+IDE_CS(0) <= NOT A(12);
+
+
+IDE_CS(1) <= NOT A(13);
+
+FDCPE_IDE_DSACK_DELAY: FDCPE port map (IDE_DSACK_DELAY,IDE_DSACK_DELAY_D,NOT clk,'0',NOT reset);
+IDE_DSACK_DELAY_D <= ((NOT IDE_DSACK_DELAY AND NOT nAS AND 
+	AUTO_CONFIG/AUTO_CONFIG_D2)
+	OR (NOT nAS AND NOT AUTO_CONFIG/AUTO_CONFIG_D2 AND 
+	$OpTx$FX_DC$24));
+
+FTCPE_IDE_ENABLE: FTCPE port map (IDE_ENABLE,IDE_ENABLE_T,NOT clk,NOT reset,'0');
+IDE_ENABLE_T <= (NOT RW AND NOT nAS AND NOT IDE_ENABLE AND $OpTx$FX_DC$24);
+
+
+IDE_R <= NOT ((RW AND NOT nAS AND IDE_ENABLE AND $OpTx$FX_DC$24));
+
+
+IDE_W <= NOT ((NOT RW AND NOT nAS AND $OpTx$FX_DC$24));
+
+
+INT2 <= NOT ((NOT IDE_ENABLE AND $OpTx$FX_DC$24));
+
+
+IO4 <= ((IDE_ENABLE AND A(2))
+	OR (A(2) AND NOT $OpTx$FX_DC$24)
+	OR (ROM_OUT_ENABLE_S AND NOT IDE_ENABLE AND $OpTx$FX_DC$24));
+
+
+IO5 <= NOT (((IDE_ENABLE AND NOT A(3))
+	OR (NOT A(3) AND NOT $OpTx$FX_DC$24)));
+
+FDCPE_Mtrien_Dout: FDCPE port map (Mtrien_Dout,Mtrien_Dout_D,clk,'0',NOT reset);
+Mtrien_Dout_D <= (RW AND NOT nAS AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+
+ROM_ENABLE <= NOT ((NOT IDE_ENABLE AND $OpTx$FX_DC$24));
+
+FDCPE_ROM_OUT_ENABLE_S: FDCPE port map (ROM_OUT_ENABLE_S,ROM_OUT_ENABLE_S_D,NOT clk,'0',NOT reset);
+ROM_OUT_ENABLE_S_D <= ((NOT ROM_OUT_ENABLE_S AND NOT nAS AND 
+	AUTO_CONFIG/AUTO_CONFIG_D2)
+	OR (NOT RW AND NOT ROM_OUT_ENABLE_S AND NOT nAS AND $OpTx$FX_DC$24)
+	OR (NOT ROM_OUT_ENABLE_S AND NOT nAS AND IDE_ENABLE AND 
+	$OpTx$FX_DC$24)
+	OR (RW AND NOT IDE_DSACK_DELAY AND NOT nAS AND NOT IDE_ENABLE AND 
+	NOT AUTO_CONFIG/AUTO_CONFIG_D2 AND $OpTx$FX_DC$24));
+
+FDCPE_SHUT_UP0: FDCPE port map (SHUT_UP(0),SHUT_UP_D(0),clk,'0',NOT reset,SHUT_UP_CE(0));
+SHUT_UP_D(0) <= ((NOT SHUT_UP(0) AND NOT $OpTx$FX_DC$18)
+	OR (NOT D(3).PIN AND NOT A(2) AND $OpTx$FX_DC$18));
+SHUT_UP_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT nDS AND 
+	AUTO_CONFIG/AUTO_CONFIG_D2);
+
+FDCPE_SHUT_UP1: FDCPE port map (SHUT_UP(1),SHUT_UP_D(1),clk,'0',NOT reset,SHUT_UP_CE(1));
+SHUT_UP_D(1) <= ((SHUT_UP(1) AND NOT $OpTx$FX_DC$18)
+	OR (A(2) AND $OpTx$FX_DC$18));
+SHUT_UP_CE(1) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
+	NOT nAS AND NOT nDS AND AUTO_CONFIG/AUTO_CONFIG_D2);
+
+
+STERM <= '1';
+
+
+nCS1 <= NOT (((NOT SHUT_UP(0) AND NOT BASEADR(1) AND NOT BASEADR(2) AND NOT A(23) AND 
+	NOT A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)
+	OR (NOT SHUT_UP(0) AND BASEADR(1) AND BASEADR(2) AND A(23) AND 
+	A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)
+	OR (NOT SHUT_UP(0) AND BASEADR(1) AND NOT BASEADR(2) AND NOT A(23) AND 
+	A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)
+	OR (NOT SHUT_UP(0) AND NOT BASEADR(1) AND BASEADR(2) AND A(23) AND 
+	NOT A(22) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(28) AND NOT A(26) AND NOT $OpTx$FX_DC$8)));
+
+
+nCS2 <= NOT (((NOT SHUT_UP(0) AND NOT BASEADR_4MB(1) AND NOT A(22) AND NOT A(31) AND 
+	NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(26) AND 
+	NOT $OpTx$FX_DC$9 AND NOT $OpTx$FX_DC$27)
+	OR (NOT SHUT_UP(0) AND BASEADR_4MB(1) AND A(22) AND NOT A(31) AND 
+	NOT A(30) AND NOT A(29) AND NOT A(27) AND NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(26) AND 
+	NOT $OpTx$FX_DC$9 AND NOT $OpTx$FX_DC$27)));
+
+
+nOE <= NOT ((RW AND NOT nDS AND $OpTx$FX_DC$34));
+
+
+nRAM_SEL <= (NOT $OpTx$FX_DC$34 AND NOT AUTO_CONFIG/AUTO_CONFIG_D2 AND 
+	NOT $OpTx$FX_DC$24);
+
+
+nWE <= NOT ((NOT RW AND NOT nDS AND $OpTx$FX_DC$34));
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC9572XL-10-TQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13               XC9572XL-10-TQ100              63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 nAS                              51 VCC                           
+  2 NC                               52 A<1>                          
+  3 A<25>                            53 A<0>                          
+  4 SIZ<1>                           54 A<5>                          
+  5 VCC                              55 A<4>                          
+  6 SIZ<0>                           56 A<3>                          
+  7 NC                               57 VCC                           
+  8 ROM_ENABLE                       58 KPR                           
+  9 nDS                              59 A<19>                         
+ 10 RW                               60 A<6>                          
+ 11 nRAM_SEL                         61 A<11>                         
+ 12 DSACK<1>                         62 GND                           
+ 13 DSACK<0>                         63 A<10>                         
+ 14 BYTE<0>                          64 A<9>                          
+ 15 BYTE<1>                          65 KPR                           
+ 16 nOE                              66 A<13>                         
+ 17 BYTE<3>                          67 A<12>                         
+ 18 BYTE<2>                          68 A<16>                         
+ 19 NC                               69 GND                           
+ 20 D<3>                             70 KPR                           
+ 21 GND                              71 A<17>                         
+ 22 clk                              72 A<20>                         
+ 23 KPR                              73 NC                            
+ 24 NC                               74 A<18>                         
+ 25 D<2>                             75 GND                           
+ 26 VCC                              76 A<23>                         
+ 27 KPR                              77 A<22>                         
+ 28 D<0>                             78 A<21>                         
+ 29 D<1>                             79 A<26>                         
+ 30 nCS2                             80 NC                            
+ 31 GND                              81 A<24>                         
+ 32 nCS1                             82 A<29>                         
+ 33 nWE                              83 TDO                           
+ 34 NC                               84 GND                           
+ 35 KPR                              85 A<27>                         
+ 36 KPR                              86 A<28>                         
+ 37 KPR                              87 A<31>                         
+ 38 VCC                              88 VCC                           
+ 39 IDE_WAIT                         89 A<30>                         
+ 40 IO4                              90 STERM                         
+ 41 IO5                              91 IDE_CS<0>                     
+ 42 INT2                             92 IDE_CS<1>                     
+ 43 NC                               93 IDE_A<0>                      
+ 44 GND                              94 IDE_A<2>                      
+ 45 TDI                              95 IDE_A<1>                      
+ 46 NC                               96 IDE_R                         
+ 47 TMS                              97 IDE_W                         
+ 48 TCK                              98 VCC                           
+ 49 KPR                              99 reset                         
+ 50 A<2>                            100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc9572xl-10-TQ100
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : ON
+Input Limit                                 : 54
+Pterm Limit                                 : 25
