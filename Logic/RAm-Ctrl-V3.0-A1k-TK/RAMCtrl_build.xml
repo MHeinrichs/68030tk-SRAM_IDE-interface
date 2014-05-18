@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE document SYSTEM 'file:///c:/Xilinx/14.6/ISE_DS/ISE/chipviewer/data/xsl/buildXML.dtd'>
+<!DOCTYPE document SYSTEM 'file:///C:/Xilinx/14.6/ISE_DS/ISE/chipviewer/data/xsl/buildXML.dtd'>
 
 <document>
 <design name='RAMCtrl'/>
 <rptdir name='RAMCtrl'/>
-<xilinx path='c:/Xilinx/14.6/ISE_DS/ISE;'/>
-<projDir path='C:\Users\Matze\Amiga\Hardwarehacks\HArms Professional 030 -RAM\RAm-Ctrl-V3.0'/>
+<xilinx path='C:/Xilinx/14.6/ISE_DS/ISE;'/>
+<projDir path='C:\Users\Matze\Documents\GitHub\68030tk-SRAM_IDE-interface\Logic\RAm-Ctrl-V3.0-A1k-TK'/>
 <xslDir path='chipviewer/data/xsl'/>
 <fileDir path='/chipviewer/data/html'/>
 <dataFile file='index.htm'/>
@@ -199,7 +199,7 @@
     <output file='fbs_FB4.htm'/>
   </xslFile>
 </xmlFile>
-<xmlFile file='c:/Xilinx/14.6/ISE_DS/ISE/chipviewer/data/xsl/pinlegend.xml'>
+<xmlFile file='C:/Xilinx/14.6/ISE_DS/ISE/chipviewer/data/xsl/pinlegend.xml'>
   <xslFile file='legend.xsl'>
     <param name='device' value='XC9572XL-10-TQ100'/>
     <param name='verOn' value='0'/>
@@ -211,7 +211,7 @@
     <output file='pinlegendV.htm'/>
   </xslFile>
 </xmlFile>
-<xmlFile file='c:/Xilinx/14.6/ISE_DS/ISE/chipviewer/data/xsl/logiclegend.xml'>
+<xmlFile file='C:/Xilinx/14.6/ISE_DS/ISE/chipviewer/data/xsl/logiclegend.xml'>
   <xslFile file='legend.xsl'>
     <param name='device' value='XC9572XL-10-TQ100'/>
     <param name='verOn' value='0'/>

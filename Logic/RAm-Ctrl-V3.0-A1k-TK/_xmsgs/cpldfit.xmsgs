@@ -24,5 +24,17 @@
   The signal is removed.
 </msg>
 
+<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">1</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">DSACK&lt;0&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">1</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">nWE</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">1</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">nOE</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
+<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">2</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">DSACK&lt;1&gt;</arg> to allow all signals assigned to this function block to be placed.
+</msg>
+
 </messages>
 

@@ -85,7 +85,8 @@ signal	nCS1_S:STD_LOGIC:= '1';
 signal	nCS2_S:STD_LOGIC:= '1';
 signal	ROM_ENABLE_S:STD_LOGIC:= '1';
 signal	ROM_OUT_ENABLE_S:STD_LOGIC:= '1';
-signal	IDE_DSACK_DELAY:STD_LOGIC:= '1';
+signal	IDE_DSACK_D0:STD_LOGIC:= '1';
+signal	IDE_DSACK_D1:STD_LOGIC:= '1';
 signal	DSACK_16BIT:STD_LOGIC:='1';
 signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0);
 signal	STERM_INT:STD_LOGIC:= '0';
@@ -210,7 +211,8 @@ begin
 	--		ROM_ENABLE_DELAY <="00";
 			IDE_ENABLE			<='0';
 			ROM_OUT_ENABLE_S	<='1';
-			IDE_DSACK_DELAY	<='1';
+			IDE_DSACK_D0		<='1';
+			IDE_DSACK_D1		<='1';
 			DSACK_16BIT			<='1';
 	--	elsif(nAS ='1') then
 	--		-- AS finished...
@@ -228,17 +230,19 @@ begin
 				if(AUTO_CONFIG='1')then
 					DSACK_16BIT<='0';
 				else
-					IDE_DSACK_DELAY		<=	'0';
+					IDE_DSACK_D0		<=	'0';
+					IDE_DSACK_D1		<= IDE_DSACK_D0;
 					if (IDE_ENABLE='0' and RW='1')then
-						DSACK_16BIT			<= IDE_DSACK_DELAY;
-						ROM_OUT_ENABLE_S	<=	IDE_DSACK_DELAY;						
+						DSACK_16BIT			<= IDE_DSACK_D1;
+						ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
 					elsif(IDE_ENABLE='1' and IDE_WAIT='1')then
-						DSACK_16BIT			<=	'0';
+						DSACK_16BIT			<=	IDE_DSACK_D0;
 					end if;					
 				end if;
 			else
 				DSACK_16BIT				<='1';
-				IDE_DSACK_DELAY		<='1';
+				IDE_DSACK_D0		<='1';
+				IDE_DSACK_D1		<='1';
 				ROM_OUT_ENABLE_S		<='1';
 			end if;			
 		end if;

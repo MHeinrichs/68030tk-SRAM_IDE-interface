@@ -75,7 +75,7 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/RAm-Ctrl-V3.0/RAM-Ctrl.vhd" in Library work.
+Compiling vhdl file "C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd" in Library work.
 Entity <ramctrl> compiled.
 Entity <ramctrl> (Architecture <behavioral>) compiled.
 
@@ -99,7 +99,7 @@ Entity <RAMCtrl> analyzed. Unit <RAMCtrl> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <RAMCtrl>.
-    Related source file is "C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/RAm-Ctrl-V3.0/RAM-Ctrl.vhd".
+    Related source file is "C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd".
 WARNING:Xst:647 - Input <A<15:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <A<8:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <STERM_INT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
@@ -110,17 +110,18 @@ WARNING:Xst:1780 - Signal <STERM_INT> is never used or assigned. This unconnecte
     Found 4-bit tristate buffer for signal <Dout>.
     Found 1-bit register for signal <DSACK_16BIT>.
     Found 8-bit register for signal <IDE_BASEADR>.
-    Found 1-bit register for signal <IDE_DSACK_DELAY>.
+    Found 1-bit register for signal <IDE_DSACK_D0>.
+    Found 1-bit register for signal <IDE_DSACK_D1>.
     Found 1-bit register for signal <IDE_ENABLE>.
-    Found 8-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 103.
-    Found 4-bit register for signal <Mtridata_Dout> created at line 252.
-    Found 1-bit register for signal <Mtrien_Dout> created at line 252.
-    Found 3-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 119.
-    Found 3-bit comparator equal for signal <nCS2_S$cmp_eq0000> created at line 124.
+    Found 8-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 104.
+    Found 4-bit register for signal <Mtridata_Dout> created at line 256.
+    Found 1-bit register for signal <Mtrien_Dout> created at line 256.
+    Found 3-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 120.
+    Found 3-bit comparator equal for signal <nCS2_S$cmp_eq0000> created at line 125.
     Found 1-bit register for signal <ROM_OUT_ENABLE_S>.
     Found 2-bit register for signal <SHUT_UP>.
     Summary:
-	inferred  17 D-type flip-flop(s).
+	inferred  18 D-type flip-flop(s).
 	inferred   3 Comparator(s).
 	inferred   6 Tristate(s).
 Unit <RAMCtrl> synthesized.
@@ -130,8 +131,8 @@ Unit <RAMCtrl> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 20
- 1-bit register                                        : 17
+# Registers                                            : 21
+ 1-bit register                                        : 18
  3-bit register                                        : 2
  4-bit register                                        : 1
 # Comparators                                          : 3
@@ -152,8 +153,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 18
+ Flip-Flops                                            : 18
 # Comparators                                          : 3
  3-bit comparator equal                                : 2
  8-bit comparator equal                                : 1
@@ -170,7 +171,8 @@ Optimizing unit <RAMCtrl> ...
   implementation constraint: IOB=auto	 : Mtridata_Dout<2>
   implementation constraint: IOB=auto	 : Mtridata_Dout<1>
   implementation constraint: IOB=auto	 : Mtridata_Dout<0>
-  implementation constraint: INIT=s	 : IDE_DSACK_DELAY
+  implementation constraint: INIT=s	 : IDE_DSACK_D0
+  implementation constraint: INIT=s	 : IDE_DSACK_D1
   implementation constraint: INIT=s	 : DSACK_16BIT
   implementation constraint: INIT=r	 : IDE_ENABLE
   implementation constraint: INIT=r	 : Mtrien_Dout
@@ -206,19 +208,19 @@ Design Statistics
 # IOs                              : 67
 
 Cell Usage :
-# BELS                             : 325
-#      AND2                        : 97
-#      AND3                        : 18
+# BELS                             : 331
+#      AND2                        : 100
+#      AND3                        : 17
 #      AND4                        : 1
 #      GND                         : 1
-#      INV                         : 134
+#      INV                         : 137
 #      OR2                         : 53
-#      OR3                         : 5
+#      OR3                         : 6
 #      VCC                         : 1
 #      XOR2                        : 15
-# FlipFlops/Latches                : 27
+# FlipFlops/Latches                : 28
 #      FDCE                        : 14
-#      FDPE                        : 13
+#      FDPE                        : 14
 # IO Buffers                       : 63
 #      IBUF                        : 36
 #      IOBUFE                      : 4
@@ -227,12 +229,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.71 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.68 secs
  
 --> 
 
-Total memory usage is 255448 kilobytes
+Total memory usage is 255000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
