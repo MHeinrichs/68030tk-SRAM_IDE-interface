@@ -226,7 +226,7 @@ begin
 				IDE_ENABLE<='1';
 			end if;
 			
-			if(nAS='0' and (IDE_SPACE='1' or AUTO_CONFIG='1'))then
+			if(nAS='0' and (MY_CYCLE ='0'))then
 				if(AUTO_CONFIG='1')then
 					DSACK_16BIT<='0';
 				else

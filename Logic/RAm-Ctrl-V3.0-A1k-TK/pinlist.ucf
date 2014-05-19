@@ -71,3 +71,5 @@ NET "SIZ[0]" LOC = "P6";
 NET "SIZ[1]" LOC = "P4";
 NET "A[25]" LOC = "P3";
 NET "nAS" LOC = "P1";
+#Created by Constraints Editor (xc9572xl-tq100-10) - 2014/05/19
+NET "clk" TNM_NET = clk;

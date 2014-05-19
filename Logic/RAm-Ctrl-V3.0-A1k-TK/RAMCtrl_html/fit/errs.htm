@@ -5,7 +5,7 @@
 </head>
 <body class="pgBgnd" id="XC9572XL">
 <span id="error" class="pgRef"><h3 align="center">Errors and Warnings</h3>
-<b>There are 0 error(s), 9 warning(s), and 0 information.</b><br><br><table width="90%" border="1" cellpadding="0" cellspacing="0">
+<b>There are 2 error(s), 9 warning(s), and 0 information.</b><br><br><table width="90%" border="1" cellpadding="0" cellspacing="0">
 <tr><td>[Warning]:Cpld - Unable to retrieve the path to the iSE Project Repository. Will   use the default filename of 'RAMCtrl.ise'.INFO:Cpld - Inferring BUFG constraint for signal 'clk' based upon the LOC   constraint 'P22'. It is recommended that you declare this BUFG explicitedly   in your design. Note that for certain device families the output of a BUFG   constraint can not drive a gated clock, and the BUFG constraint will be   ignored.</td></tr>
 <tr><td>[Warning]:Cpld:1007 - Removing unused input(s) 'A&lt;14&gt;'.  The input(s) are unused   after optimization. Please verify functionality via simulation.</td></tr>
 <tr><td>[Warning]:Cpld:1007 - Removing unused input(s) 'A&lt;15&gt;'.  The input(s) are unused   after optimization. Please verify functionality via simulation.</td></tr>
@@ -14,7 +14,9 @@
 <tr><td>[Warning]:Cpld:896 - Unable to map all desired signals into function block, FB1,   because too many function block product terms are required. Buffering output   signal DSACK&lt;0&gt; to allow all signals assigned to this function block to be   placed.</td></tr>
 <tr><td>[Warning]:Cpld:896 - Unable to map all desired signals into function block, FB1,   because too many function block product terms are required. Buffering output   signal nWE to allow all signals assigned to this function block to be placed.</td></tr>
 <tr><td>[Warning]:Cpld:896 - Unable to map all desired signals into function block, FB1,   because too many function block product terms are required. Buffering output   signal nOE to allow all signals assigned to this function block to be placed.</td></tr>
-<tr><td>[Warning]:Cpld:896 - Unable to map all desired signals into function block, FB2,   because too many function block product terms are required. Buffering output   signal DSACK&lt;1&gt; to allow all signals assigned to this function block to be   placed.</td></tr>
+<tr><td>[Warning]:Cpld:868 - Cannot fit the design into any of the specified devices with   the selected implementation options.</td></tr>
+<tr><td>[Error]:Cpld:896 - Unable to map all desired signals into function block, FB2,   because too many function block product terms are required. Buffering output   signal DSACK&lt;1&gt; to allow all signals assigned to this function block to be   placed.</td></tr>
+<tr><td>[Error]:Cpld:892 - Cannot place signal $OpTx$FX_DC$48. Consider reducing the   collapsing input limit or the product term limit to prevent the fitter from   creating high input and/or high product term functions.</td></tr>
 </table></span><form><span class="pgRef"><table width="90%" align="center"><tr>
 <td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
 <td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
