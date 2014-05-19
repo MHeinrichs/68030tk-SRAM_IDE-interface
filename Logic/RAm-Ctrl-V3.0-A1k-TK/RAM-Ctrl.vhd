@@ -88,8 +88,8 @@ signal	ROM_OUT_ENABLE_S:STD_LOGIC:= '1';
 signal	IDE_DSACK_D0:STD_LOGIC:= '1';
 signal	IDE_DSACK_D1:STD_LOGIC:= '1';
 signal	DSACK_16BIT:STD_LOGIC:='1';
-signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0);
-signal	STERM_INT:STD_LOGIC:= '0';
+signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0):="11";
+signal	STERM_INT:STD_LOGIC:= '1';
 signal	IDE_ENABLE:STD_LOGIC:= '0';
 --signal 	ROM_ENABLE_DELAY:unsigned(1 downto 0):="00";
 begin
@@ -169,8 +169,8 @@ begin
 	--bits 24--31
 	BYTE(3)	<= '0' when RW='1' or ( RW='0' and (	A(0)='0' and A(1)='0') )
 					 else '1';
-	DSACK_INT	<= "00" when (nCS1_S	='0' or nCS2_S	='0') and nAS='0' else 
-				"01" when DSACK_16BIT='0' else 
+	DSACK_INT	<= "00" when MY_RAMSEL='1' and nAS='0' else 
+				"01" when DSACK_16BIT='0' and nAS='0' else 
 				"01" when AUTO_CONFIG='1' and nAS='0' else 
 	--			--"01" when (IDE_R_S='0' or IDE_W_S='0' or ROM_ENABLE_DELAY ="10" ) and IDE_WAIT='1' else
 	--			--"01" when IDE_SPACE='1' and nAS='0' and IDE_ENABLE='1' else
@@ -178,26 +178,26 @@ begin
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
 	
 	--STERM <=  '0' when (nCS1_S	='0' or nCS2_S	='0') and nAS='0' else 'Z';
-	STERM <=  '1';
+	--STERM <=  '1';
 	--dsack_gen: process (nAS, clk)
 	--begin
-	--	if	nAS = '0' then
+	--	if	nAS = '1' then
 	--		DSACK_INT	<= "11";
 	--		STERM_INT	<= '1';
 	--	elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock					
-	--		if((nCS1_S	='0' or nCS2_S	='0') and nAS='0')then
+	--		if(MY_RAMSEL='1')then
 	--			DSACK_INT	<= "00";
 	--		elsif(DSACK_16BIT='0')then
 	--			DSACK_INT	<= "01";
-	--		elsif(AUTO_CONFIG='1' and nAS='0')then
+	--		elsif(AUTO_CONFIG='1')then
 	--			DSACK_INT	<= "01";
 	--		else
 	--			DSACK_INT	<= "11";
 	--		end if;
 	--	end if;
 	--end process dsack_gen;
-	--DSACK <= DSACK_INT when nAS='0' and (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else "ZZ";
-	--STERM <= STERM_INT when nAS='0' and (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else 'Z';
+	--DSACK <= DSACK_INT when MY_CYCLE ='0' else "ZZ";
+	--STERM <= STERM_INT when MY_CYCLE ='0' else 'Z';
 
 
 
@@ -226,23 +226,21 @@ begin
 				IDE_ENABLE<='1';
 			end if;
 			
-			if(nAS='0' and (IDE_SPACE='1' or AUTO_CONFIG='1'))then
-				if(AUTO_CONFIG='1')then
-					DSACK_16BIT<='0';
-				else
-					IDE_DSACK_D0		<=	'0';
-					IDE_DSACK_D1		<= IDE_DSACK_D0;
+			if(nAS='0' and (MY_CYCLE ='0'))then
+				IDE_DSACK_D0		<=	'0';
+				IDE_DSACK_D1		<= IDE_DSACK_D0;
+				if(IDE_SPACE='1')then
 					if (IDE_ENABLE='0' and RW='1')then
 						DSACK_16BIT			<= IDE_DSACK_D1;
 						ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
 					elsif(IDE_ENABLE='1' and IDE_WAIT='1')then
-						DSACK_16BIT			<=	IDE_DSACK_D0;
+						DSACK_16BIT			<=	IDE_DSACK_D1;
 					end if;					
 				end if;
 			else
 				DSACK_16BIT				<='1';
-				IDE_DSACK_D0		<='1';
-				IDE_DSACK_D1		<='1';
+				IDE_DSACK_D0			<='1';
+				IDE_DSACK_D1			<='1';
 				ROM_OUT_ENABLE_S		<='1';
 			end if;			
 		end if;

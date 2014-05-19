@@ -102,6 +102,7 @@ Synthesizing Unit <RAMCtrl>.
     Related source file is "C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd".
 WARNING:Xst:647 - Input <A<15:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <A<8:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1306 - Output <STERM> is never assigned.
 WARNING:Xst:1780 - Signal <STERM_INT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 2-bit tristate buffer for signal <DSACK>.
     Found 2-bit register for signal <AUTO_CONFIG_DONE>.
@@ -114,8 +115,8 @@ WARNING:Xst:1780 - Signal <STERM_INT> is never used or assigned. This unconnecte
     Found 1-bit register for signal <IDE_DSACK_D1>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 8-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 104.
-    Found 4-bit register for signal <Mtridata_Dout> created at line 256.
-    Found 1-bit register for signal <Mtrien_Dout> created at line 256.
+    Found 4-bit register for signal <Mtridata_Dout> created at line 254.
+    Found 1-bit register for signal <Mtrien_Dout> created at line 254.
     Found 3-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 120.
     Found 3-bit comparator equal for signal <nCS2_S$cmp_eq0000> created at line 125.
     Found 1-bit register for signal <ROM_OUT_ENABLE_S>.
@@ -208,35 +209,36 @@ Design Statistics
 # IOs                              : 67
 
 Cell Usage :
-# BELS                             : 331
-#      AND2                        : 100
+# BELS                             : 318
+#      AND2                        : 93
 #      AND3                        : 17
-#      AND4                        : 1
+#      AND4                        : 2
 #      GND                         : 1
-#      INV                         : 137
+#      INV                         : 130
 #      OR2                         : 53
 #      OR3                         : 6
 #      VCC                         : 1
 #      XOR2                        : 15
 # FlipFlops/Latches                : 28
 #      FDCE                        : 14
-#      FDPE                        : 14
-# IO Buffers                       : 63
+#      FDP                         : 2
+#      FDPE                        : 12
+# IO Buffers                       : 62
 #      IBUF                        : 36
 #      IOBUFE                      : 4
-#      OBUF                        : 21
+#      OBUF                        : 20
 #      OBUFE                       : 2
 =========================================================================
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.68 secs
+Total CPU time to Xst completion: 6.74 secs
  
 --> 
 
-Total memory usage is 255000 kilobytes
+Total memory usage is 255640 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

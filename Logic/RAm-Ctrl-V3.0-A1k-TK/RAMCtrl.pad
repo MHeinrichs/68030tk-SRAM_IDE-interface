@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.68d
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 5-18-2014 12:52PM
+ 5-19-2014 11:02PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -107,7 +107,7 @@ P86|A<28>|I|I/O|INPUT|||||||||
 P87|A<31>|I|I/O|INPUT|||||||||
 P88|VCC||VCCIO||||||||||
 P89|A<30>|I|I/O|INPUT|||||||||
-P90|STERM|O|I/O|OUTPUT|||||||||
+P90|TIE||I/O||||||||||
 P91|IDE_CS<0>|O|I/O|OUTPUT|||||||||
 P92|IDE_CS<1>|O|I/O|OUTPUT|||||||||
 P93|IDE_A<0>|O|I/O|OUTPUT|||||||||
