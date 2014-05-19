@@ -1,11 +1,7 @@
 Release 8.1i - Fit P.68d
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-<<<<<<< HEAD
- 5-19-2014 11:02PM
-=======
- 5-19-2014 10:03PM
->>>>>>> d023fa895f313cda7708238beca5fa3a2a24d068
+ 5-20-2014  0:16AM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','
@@ -111,7 +107,7 @@ P86,A<28>,I,I/O,INPUT,,,,,,,,,
 P87,A<31>,I,I/O,INPUT,,,,,,,,,
 P88,VCC,,VCCIO,,,,,,,,,,
 P89,A<30>,I,I/O,INPUT,,,,,,,,,
-P90,TIE,,I/O,,,,,,,,,,
+P90,STERM,O,I/O,OUTPUT,,,,,,,,,
 P91,IDE_CS<0>,O,I/O,OUTPUT,,,,,,,,,
 P92,IDE_CS<1>,O,I/O,OUTPUT,,,,,,,,,
 P93,IDE_A<0>,O,I/O,OUTPUT,,,,,,,,,
