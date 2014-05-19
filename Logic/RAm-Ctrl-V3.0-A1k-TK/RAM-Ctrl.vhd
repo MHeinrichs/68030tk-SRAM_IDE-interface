@@ -203,12 +203,35 @@ begin
 			IDE_DSACK_D2		<='1';
 			DSACK_16BIT			<='1';
 		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock	
+<<<<<<< HEAD
 
 
 			if(nAS='0' and IDE_SPACE='1')then
 				--enable IDE on the first write on this IO-space!
 				if(IDE_W_S='0')then
 					IDE_ENABLE<='1';
+=======
+	--		if (ROM_ENABLE_S='0') then
+	--			 ROM_ENABLE_DELAY<= ROM_ENABLE_DELAY+1; --slow down acces to ROM!						
+	--		end if;
+	--		--enable IDE on the first write on this IO-space!
+			if(IDE_W_S='0')then
+				IDE_ENABLE<='1';
+			end if;
+			
+			if(nAS='0' and (MY_CYCLE ='0'))then
+				if(AUTO_CONFIG='1')then
+					DSACK_16BIT<='0';
+				else
+					IDE_DSACK_D0		<=	'0';
+					IDE_DSACK_D1		<= IDE_DSACK_D0;
+					if (IDE_ENABLE='0' and RW='1')then
+						DSACK_16BIT			<= IDE_DSACK_D1;
+						ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
+					elsif(IDE_ENABLE='1' and IDE_WAIT='1')then
+						DSACK_16BIT			<=	IDE_DSACK_D0;
+					end if;					
+>>>>>>> d023fa895f313cda7708238beca5fa3a2a24d068
 				end if;
 				IDE_DSACK_D0		<=	'0';
 				IDE_DSACK_D1		<= IDE_DSACK_D0;

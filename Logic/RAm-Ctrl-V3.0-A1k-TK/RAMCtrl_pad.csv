@@ -1,7 +1,11 @@
 Release 8.1i - Fit P.68d
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
+<<<<<<< HEAD
  5-19-2014 11:02PM
+=======
+ 5-19-2014 10:03PM
+>>>>>>> d023fa895f313cda7708238beca5fa3a2a24d068
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The comma ','

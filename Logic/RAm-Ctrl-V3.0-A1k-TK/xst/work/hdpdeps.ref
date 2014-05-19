@@ -1,6 +1,7 @@
 V3 5
 FL "C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/RAm-Ctrl-V2.0/RAM-Ctrl.vhd" 2014/05/16.17:01:48 P.68d
 FL "C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/RAm-Ctrl-V3.0/RAM-Ctrl.vhd" 2014/05/17.20:40:45 P.68d
+<<<<<<< HEAD
 FL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd 2014/05/19.23:01:29 P.68d
 EN work/RAMCtrl 1400533293 \
       FL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd \
@@ -8,3 +9,12 @@ EN work/RAMCtrl 1400533293 \
 AR work/RAMCtrl/Behavioral 1400533294 \
       FL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd \
       EN work/RAMCtrl 1400533293
+=======
+FL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd 2014/05/19.22:00:58 P.68d
+EN work/RAMCtrl 1400529663 \
+      FL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd \
+      PB ieee/std_logic_1164 1370735607 PB ieee/NUMERIC_STD 1370735611
+AR work/RAMCtrl/Behavioral 1400529664 \
+      FL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd \
+      EN work/RAMCtrl 1400529663
+>>>>>>> d023fa895f313cda7708238beca5fa3a2a24d068

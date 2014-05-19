@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 AR ramctrl behavioral C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd sub00/vhpl01 1400533294
 EN ramctrl NULL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd sub00/vhpl00 1400533293
+=======
+AR ramctrl behavioral C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd sub00/vhpl01 1400529664
+EN ramctrl NULL C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd sub00/vhpl00 1400529663
+>>>>>>> d023fa895f313cda7708238beca5fa3a2a24d068

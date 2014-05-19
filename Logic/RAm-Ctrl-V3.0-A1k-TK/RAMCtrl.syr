@@ -209,12 +209,21 @@ Design Statistics
 # IOs                              : 67
 
 Cell Usage :
+<<<<<<< HEAD
 # BELS                             : 318
 #      AND2                        : 93
 #      AND3                        : 17
 #      AND4                        : 2
 #      GND                         : 1
 #      INV                         : 130
+=======
+# BELS                             : 334
+#      AND2                        : 102
+#      AND3                        : 16
+#      AND4                        : 1
+#      GND                         : 1
+#      INV                         : 139
+>>>>>>> d023fa895f313cda7708238beca5fa3a2a24d068
 #      OR2                         : 53
 #      OR3                         : 6
 #      VCC                         : 1
@@ -231,12 +240,21 @@ Cell Usage :
 =========================================================================
 
 
+<<<<<<< HEAD
 Total REAL time to Xst completion: 6.00 secs
 Total CPU time to Xst completion: 6.74 secs
  
 --> 
 
 Total memory usage is 255640 kilobytes
+=======
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.12 secs
+ 
+--> 
+
+Total memory usage is 255128 kilobytes
+>>>>>>> d023fa895f313cda7708238beca5fa3a2a24d068
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)
