@@ -40,9 +40,9 @@ Port (
 	RW			: in  STD_LOGIC;
 	--nBGACK	: in 	STD_LOGIC;
 	IDE_WAIT	: in 	STD_LOGIC;
-	
+
 	D			: inout STD_LOGIC_VECTOR(3 downto 0);
-	
+
 	DSACK 	: out STD_LOGIC_VECTOR(1 downto 0);                   
 	BYTE 		: out STD_LOGIC_VECTOR(3 downto 0);                   
 	nRAM_SEL : out  STD_LOGIC:='1';
@@ -61,8 +61,8 @@ Port (
 	IDE_W		: out  STD_LOGIC:='1';
 	IDE_A		: out  STD_LOGIC_VECTOR(2 downto 0);
 	IDE_CS	: out  STD_LOGIC_VECTOR(1 downto 0)
-	
-	
+
+
 	);
 end RAMCtrl;
 
@@ -87,30 +87,27 @@ signal	ROM_ENABLE_S:STD_LOGIC:= '1';
 signal	ROM_OUT_ENABLE_S:STD_LOGIC:= '1';
 signal	IDE_DSACK_D0:STD_LOGIC:= '1';
 signal	IDE_DSACK_D1:STD_LOGIC:= '1';
+signal	IDE_DSACK_D2:STD_LOGIC:= '1';
 signal	DSACK_16BIT:STD_LOGIC:='1';
+signal	DSACK_32BIT:STD_LOGIC:='1';
 signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0):="11";
-signal	STERM_INT:STD_LOGIC:= '1';
 signal	IDE_ENABLE:STD_LOGIC:= '0';
---signal 	ROM_ENABLE_DELAY:unsigned(1 downto 0):="00";
 begin
 	--internal signals
 	ZorroII		<= '1' 	when (A(31 downto 24)= x"00") else '0'; -- 24-bit addres space. A31 is buggy on Amiga systems and ignored!
 	MY_RAMSEL	<= '1' 	when ZorroII ='1' 
 									AND SHUT_UP(0) ='0' 
-									--AND AUTO_CONFIG_DONE(0)	='1' 
 									AND (A(23 downto 21)= BASEADR OR A(23 downto 21)= BASEADR_4MB)
-									--AND (A(23 downto 22)= "01")
 								else '0'; -- Adress match and board successfully configured
 	IDE_SPACE   <= '1'	when ZorroII ='1' 
 									and A(23 downto 16)= IDE_BASEADR  
 									AND SHUT_UP(1) ='0' 
-									--AND AUTO_CONFIG_DONE(1)	='1' 
 								else '0'; -- Access to IDE-Space
 	AUTO_CONFIG	<= '1'	when ZorroII ='1' 
 									and A(23 downto 16)= x"E8" 
 									AND not (AUTO_CONFIG_DONE ="11") 
 								else '0'; -- Access to Autoconfig space and internal autoconfig not complete
-	
+
 	--output
 	MY_CYCLE		<= '0' 	when (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else '1';
 	nOE 			<= '0' 	when (nCS1_S	='0' or nCS2_S	='0') and nDS='0' and RW='1' else '1';
@@ -147,7 +144,7 @@ begin
 	IDE_W	<= IDE_W_S;
 	ROM_ENABLE <= ROM_ENABLE_S;
 	INT2	<= ROM_ENABLE_S;
-	
+
 	--now decode the adresslines A[0..1] and SIZ[0..1] to determine the ram bank to write
 	-- bits 0-7
 	BYTE(0)	<= '0' when RW='1' or ( RW='0' and (	 SIZ="00" or 
@@ -169,35 +166,26 @@ begin
 	--bits 24--31
 	BYTE(3)	<= '0' when RW='1' or ( RW='0' and (	A(0)='0' and A(1)='0') )
 					 else '1';
-	DSACK_INT	<= "00" when MY_RAMSEL='1' and nAS='0' else 
-				"01" when DSACK_16BIT='0' and nAS='0' else 
-				"01" when AUTO_CONFIG='1' and nAS='0' else 
-	--			--"01" when (IDE_R_S='0' or IDE_W_S='0' or ROM_ENABLE_DELAY ="10" ) and IDE_WAIT='1' else
-	--			--"01" when IDE_SPACE='1' and nAS='0' and IDE_ENABLE='1' else
-				"11";
+	DSACK_INT	<= --"00" when DSACK_32BIT	='0' else
+						"01" when DSACK_16BIT	='0' else 
+						"00" when MY_RAMSEL		='1' and nAS='0' else	
+						"01" when AUTO_CONFIG	='1' and nAS='0' else 
+						"11";
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
-	
-	--STERM <=  '0' when (nCS1_S	='0' or nCS2_S	='0') and nAS='0' else 'Z';
-	--STERM <=  '1';
-	--dsack_gen: process (nAS, clk)
-	--begin
-	--	if	nAS = '1' then
-	--		DSACK_INT	<= "11";
-	--		STERM_INT	<= '1';
-	--	elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock					
-	--		if(MY_RAMSEL='1')then
-	--			DSACK_INT	<= "00";
-	--		elsif(DSACK_16BIT='0')then
-	--			DSACK_INT	<= "01";
-	--		elsif(AUTO_CONFIG='1')then
-	--			DSACK_INT	<= "01";
-	--		else
-	--			DSACK_INT	<= "11";
-	--		end if;
-	--	end if;
-	--end process dsack_gen;
-	--DSACK <= DSACK_INT when MY_CYCLE ='0' else "ZZ";
-	--STERM <= STERM_INT when MY_CYCLE ='0' else 'Z';
+	STERM <=  '1';
+
+	dsack_gen: process (nAS, clk)
+	begin
+		if	nAS = '1' then
+			DSACK_32BIT	<= '1';
+		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock					
+			if(MY_RAMSEL='1')then
+				DSACK_32BIT	<= '0';
+			end if;
+		end if;
+	end process dsack_gen;
+	--DSACK <= DSACK_INT when nAS='0' and (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else "ZZ";
+	--STERM <= STERM_INT when nAS='0' and (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else 'Z';
 
 
 
@@ -208,44 +196,39 @@ begin
 	begin
 		if	(reset = '0') then
 			-- reset
-	--		ROM_ENABLE_DELAY <="00";
 			IDE_ENABLE			<='0';
 			ROM_OUT_ENABLE_S	<='1';
 			IDE_DSACK_D0		<='1';
 			IDE_DSACK_D1		<='1';
+			IDE_DSACK_D2		<='1';
 			DSACK_16BIT			<='1';
-	--	elsif(nAS ='1') then
-	--		-- AS finished...
-	--		ROM_ENABLE_DELAY <="00";
 		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock	
-	--		if (ROM_ENABLE_S='0') then
-	--			 ROM_ENABLE_DELAY<= ROM_ENABLE_DELAY+1; --slow down acces to ROM!						
-	--		end if;
-	--		--enable IDE on the first write on this IO-space!
-			if(IDE_W_S='0')then
-				IDE_ENABLE<='1';
-			end if;
-			
-			if(nAS='0' and (MY_CYCLE ='0'))then
+
+
+			if(nAS='0' and IDE_SPACE='1')then
+				--enable IDE on the first write on this IO-space!
+				if(IDE_W_S='0')then
+					IDE_ENABLE<='1';
+				end if;
 				IDE_DSACK_D0		<=	'0';
 				IDE_DSACK_D1		<= IDE_DSACK_D0;
-				if(IDE_SPACE='1')then
-					if (IDE_ENABLE='0' and RW='1')then
-						DSACK_16BIT			<= IDE_DSACK_D1;
-						ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
-					elsif(IDE_ENABLE='1' and IDE_WAIT='1')then
-						DSACK_16BIT			<=	IDE_DSACK_D1;
-					end if;					
-				end if;
+				IDE_DSACK_D2		<= IDE_DSACK_D1;
+				if (IDE_ENABLE='0' and RW='1')then
+					DSACK_16BIT			<= IDE_DSACK_D2;
+					ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
+				elsif(IDE_ENABLE='1' and IDE_WAIT='1')then
+					DSACK_16BIT			<=	IDE_DSACK_D0;
+				end if;					
 			else
-				DSACK_16BIT				<='1';
-				IDE_DSACK_D0			<='1';
-				IDE_DSACK_D1			<='1';
-				ROM_OUT_ENABLE_S		<='1';
+				DSACK_16BIT			<='1';
+				IDE_DSACK_D0		<='1';
+				IDE_DSACK_D1		<='1';
+				IDE_DSACK_D2		<='1';
+				ROM_OUT_ENABLE_S	<='1';
 			end if;			
 		end if;
 	end process p_ide; --- that's all
-		
+
 	autoconfig: process (reset, clk)
 	begin
 		if	reset = '0' then
@@ -257,10 +240,10 @@ begin
 			BASEADR_4MB <="010";
 			IDE_BASEADR<=x"E9";
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
-		
+
 			if(AUTO_CONFIG= '1' and nAS='0') then
 				if(RW='1') then
-					
+
 					if(AUTO_CONFIG_DONE(0)='0')then
 						case A(6 downto 0) is
 							when "0000000"	=> Dout <= 	"1110" ; --ZII, System-Memory, no ROM
@@ -358,10 +341,11 @@ begin
 				Dout<="ZZZZ";
 			end if;
 		end if;
-		
+
 	end process autoconfig; --- that's all
 
 
 
 end Behavioral;
+
 

@@ -54,7 +54,7 @@ NET "D[0]" LOC = "P28"; #Internal D0=external D28
 #NET "E" LOC = "P27";
 NET "D[2]" LOC = "P25"; #Internal D2=external D30
 #NET "clk2" LOC = "P23";
-NET "clk" LOC = "P22";
+NET "clk" BUFG=CLK;
 NET "D[3]" LOC = "P20"; #Internal D3=external D31
 NET "BYTE[2]" LOC = "P18";
 NET "BYTE[3]" LOC = "P17";
@@ -71,5 +71,3 @@ NET "SIZ[0]" LOC = "P6";
 NET "SIZ[1]" LOC = "P4";
 NET "A[25]" LOC = "P3";
 NET "nAS" LOC = "P1";
-#Created by Constraints Editor (xc9572xl-tq100-10) - 2014/05/19
-NET "clk" TNM_NET = clk;
