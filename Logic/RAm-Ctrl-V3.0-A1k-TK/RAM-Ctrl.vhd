@@ -110,19 +110,18 @@ begin
 
 	--output
 	MY_CYCLE		<= '0' 	when (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else '1';
-	nOE 			<= '0' 	when (nCS1_S	='0' or nCS2_S	='0') and nDS='0' and RW='1' else '1';
-	nWE 			<= '0' 	when (nCS1_S	='0' or nCS2_S	='0') and nDS='0' and RW='0' else '1';
 	nRAM_SEL 	<= MY_CYCLE; 
 	D				<=	Dout;
+	
+	nOE 			<= '0' 	when (MY_RAMSEL='1') and nDS='0' and RW='1' else '1';
+	nWE 			<= '0' 	when (MY_RAMSEL='1') and nDS='0' and RW='0' else '1';
 	nCS1_S		<= '0' 	WHEN (ZorroII ='1' 
 									and A(23 downto 21)= BASEADR									
 									AND SHUT_UP(0) ='0')
-									--and A(23 downto 21)= "010")
 								else '1';
 	nCS2_S		<= '0' 	WHEN (ZorroII ='1' 
 									and A(23 downto 21)= BASEADR_4MB									
 									AND SHUT_UP(0) ='0') 
-									--and A(23 downto 21)= "011")
 								else '1';
 	IO4			<= ROM_OUT_ENABLE_S when IDE_SPACE='1' and IDE_ENABLE='0' else
 						A(2);
@@ -178,7 +177,50 @@ begin
 	begin
 		if	nAS = '1' then
 			DSACK_32BIT	<= '1';
-		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock					
+			--IO4			<= '1';
+			--IO5			<= '1';
+			--nCS1			<= '1';
+			--nCS2			<= '1';
+			--nOE			<=	'1';
+			--nWE			<=	'1';
+		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
+
+			--if(	(ZorroII ='1' 
+			--		and A(23 downto 21)= BASEADR									
+			--		AND SHUT_UP(0) ='0'))then
+			--	nCS1	<= '0';
+			--	if(RW='1' and nDS='0')then
+			--		nOE <= '0';
+			--	end if;
+			--	if(RW='0' and nDS='0')then
+			--		nWE <= '0';
+			--	end if;
+			--end if;
+			--if(	(ZorroII ='1' 
+			--		and A(23 downto 21)= BASEADR_4MB									
+			--		AND SHUT_UP(0) ='0'))then
+			--	nCS2	<= '0';
+			--	if(RW='1' and nDS='0')then
+			--		nOE <= '0';
+			--	end if;
+			--	if(RW='0' and nDS='0')then
+			--		nWE <= '0';
+			--	end if;					
+			--end if;
+
+			
+			--if(IDE_SPACE='1' and IDE_ENABLE='0') then
+			--	IO4			<= ROM_OUT_ENABLE_S;
+			--elsif(MY_RAMSEL='1')then
+			--	IO4 <= A(2);
+			--end if;
+
+			--if(IDE_SPACE='1' and IDE_ENABLE='0') then
+			--	IO5			<= '1';
+			--elsif(MY_RAMSEL='1')then
+			--	IO5 <= A(3);
+			--end if;
+					
 			if(MY_RAMSEL='1')then
 				DSACK_32BIT	<= '0';
 			end if;
