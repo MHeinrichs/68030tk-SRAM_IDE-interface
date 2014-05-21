@@ -76,19 +76,19 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd" in Library work.
-Entity <RAMCtrl> compiled.
-Entity <RAMCtrl> (Architecture <Behavioral>) compiled.
+Entity <ramctrl> compiled.
+Entity <ramctrl> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <RAMCtrl> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <RAMCtrl> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <RAMCtrl> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <RAMCtrl> in library <work> (Architecture <behavioral>).
 Entity <RAMCtrl> analyzed. Unit <RAMCtrl> generated.
 
 
@@ -232,7 +232,7 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.97 secs
+Total CPU time to Xst completion: 6.84 secs
  
 --> 
 
