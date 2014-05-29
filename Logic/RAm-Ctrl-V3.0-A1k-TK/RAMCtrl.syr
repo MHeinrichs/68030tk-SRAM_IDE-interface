@@ -115,9 +115,9 @@ WARNING:Xst:646 - Signal <DSACK_32BIT> is assigned but never used. This unconnec
     Found 1-bit register for signal <IDE_DSACK_D2>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 8-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 102.
-    Found 4-bit register for signal <Mtridata_Dout> created at line 277.
-    Found 1-bit register for signal <Mtrien_Dout> created at line 277.
-    Found 3-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 118.
+    Found 4-bit register for signal <Mtridata_Dout> created at line 235.
+    Found 1-bit register for signal <Mtrien_Dout> created at line 235.
+    Found 3-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 117.
     Found 3-bit comparator equal for signal <nCS2_S$cmp_eq0000> created at line 122.
     Found 1-bit register for signal <ROM_OUT_ENABLE_S>.
     Found 2-bit register for signal <SHUT_UP>.
@@ -210,11 +210,11 @@ Design Statistics
 # IOs                              : 67
 
 Cell Usage :
-# BELS                             : 328
+# BELS                             : 324
 #      AND2                        : 96
-#      AND3                        : 19
+#      AND3                        : 18
 #      GND                         : 1
-#      INV                         : 138
+#      INV                         : 135
 #      OR2                         : 52
 #      OR3                         : 6
 #      VCC                         : 1
@@ -232,11 +232,11 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.76 secs
+Total CPU time to Xst completion: 7.17 secs
  
 --> 
 
-Total memory usage is 254936 kilobytes
+Total memory usage is 255000 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

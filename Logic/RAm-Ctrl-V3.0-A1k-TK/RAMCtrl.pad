@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.68d
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
- 5-21-2014  4:47PM
+ 5-29-2014  9:19PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -39,7 +39,7 @@ P18|BYTE<2>|O|I/O|OUTPUT|||||||||
 P19|TIE||.||||||||||
 P20|D<3>|I/O|I/O|BIDIR|||||||||
 P21|GND||GND||||||||||
-P22|clk|GCK|I/O/GCK1||||||||||
+P22|clk|GCK/I|I/O/GCK1||||||||||
 P23|TIE||I/O/GCK2||||||||||
 P24|TIE||.||||||||||
 P25|D<2>|I/O|I/O|BIDIR|||||||||

@@ -3,8 +3,8 @@ MDF_INFO | RAMCtrl | XC9572XL-10-TQ100
 MACROCELL | 0 | 9 | Mtridata_Dout<0>
 ATTRIBUTES | 8816386 | 0
 OUTPUTMC | 1 | 0 | 9
-INPUTS | 13 | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | D<0>  | A<3>  | Mtrien_Dout  | AUTO_CONFIG_DONE<1>.EXP  | SHUT_UP<1>.EXP
-INPUTMC | 6 | 2 | 14 | 0 | 8 | 0 | 9 | 3 | 4 | 0 | 8 | 0 | 10
+INPUTS | 13 | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | D<0>  | A<3>  | Mtrien_Dout  | IDE_BASEADR<3>.EXP  | SHUT_UP<1>.EXP
+INPUTMC | 6 | 3 | 11 | 3 | 10 | 0 | 9 | 3 | 4 | 0 | 8 | 0 | 10
 INPUTP | 7 | 46 | 49 | 54 | 47 | 44 | 48 | 50
 IMPORTS | 2 | 0 | 8 | 0 | 10
 EQ | 23 | 
@@ -36,8 +36,8 @@ GLOBALS | 1 | 2 | clk
 MACROCELL | 0 | 14 | Mtridata_Dout<1>
 ATTRIBUTES | 8816386 | 0
 OUTPUTMC | 1 | 0 | 14
-INPUTS | 12 | D<1>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>  | A<1>  | Mtrien_Dout  | EXP11_.EXP
-INPUTMC | 5 | 0 | 14 | 2 | 14 | 0 | 8 | 3 | 4 | 0 | 13
+INPUTS | 12 | D<1>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>  | A<1>  | Mtrien_Dout  | EXP9_.EXP
+INPUTMC | 5 | 0 | 14 | 3 | 11 | 3 | 10 | 3 | 4 | 0 | 13
 INPUTP | 7 | 49 | 54 | 47 | 44 | 48 | 50 | 46
 IMPORTS | 1 | 0 | 13
 EQ | 23 | 
@@ -70,7 +70,7 @@ MACROCELL | 0 | 6 | Mtridata_Dout<2>
 ATTRIBUTES | 8816386 | 0
 OUTPUTMC | 1 | 0 | 6
 INPUTS | 13 | D<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>  | A<1>  | Mtrien_Dout  | BYTE_1_OBUF.EXP  | BYTE_3_OBUF.EXP
-INPUTMC | 6 | 0 | 6 | 2 | 14 | 0 | 8 | 3 | 4 | 0 | 5 | 0 | 7
+INPUTMC | 6 | 0 | 6 | 3 | 11 | 3 | 10 | 3 | 4 | 0 | 5 | 0 | 7
 INPUTP | 7 | 49 | 54 | 47 | 44 | 48 | 50 | 46
 IMPORTS | 2 | 0 | 5 | 0 | 7
 EQ | 19 | 
@@ -99,7 +99,7 @@ MACROCELL | 0 | 3 | Mtridata_Dout<3>
 ATTRIBUTES | 8816386 | 0
 OUTPUTMC | 1 | 0 | 3
 INPUTS | 13 | AUTO_CONFIG_DONE<1>  | A<1>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<0>  | D<3>  | A<4>  | Mtrien_Dout  | BYTE_2_OBUF.EXP  | BYTE_0_OBUF.EXP
-INPUTMC | 6 | 0 | 8 | 2 | 14 | 0 | 3 | 3 | 4 | 0 | 2 | 0 | 4
+INPUTMC | 6 | 3 | 10 | 3 | 11 | 0 | 3 | 3 | 4 | 0 | 2 | 0 | 4
 INPUTP | 7 | 46 | 54 | 47 | 44 | 48 | 50 | 49
 IMPORTS | 2 | 0 | 2 | 0 | 4
 EQ | 21 | 
@@ -126,82 +126,13 @@ EQ | 21 |
    D<3>.OE = !Mtrien_Dout;
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 2 | 16 | DSACK<1>_BUFR.MC
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 1 | 16
-INPUTS | 19 | DSACK_16BIT  | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | EXP16_.EXP  | EXP17_.EXP
-INPUTMC | 7 | 3 | 6 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 15 | 2 | 17
-INPUTP | 12 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-IMPORTS | 2 | 2 | 15 | 2 | 17
-EQ | 59 | 
-   !DSACK<1>_BUFR = !DSACK_16BIT
-	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
-;Imported pterms FB3_16
-	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-;Imported pterms FB3_15
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-	# !AUTO_CONFIG_DONE<0> & !nAS & !A<31> & !A<30> & 
-	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
-	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
-;Imported pterms FB3_18
-	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-;Imported pterms FB3_1
-	# !AUTO_CONFIG_DONE<1> & !nAS & !A<31> & !A<30> & 
-	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
-	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>;
-
-MACROCELL | 2 | 14 | AUTO_CONFIG_DONE<0>
+MACROCELL | 3 | 11 | AUTO_CONFIG_DONE<0>
 ATTRIBUTES | 4367168 | 0
-OUTPUTMC | 31 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 0 | 12 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 1 | 12 | 0 | 13 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 2 | 15
-INPUTS | 30 | AUTO_CONFIG_DONE<0>  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>
-INPUTMC | 5 | 2 | 14 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7
+OUTPUTMC | 31 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 1 | 12 | 0 | 13 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 12
+INPUTS | 26 | AUTO_CONFIG_DONE<0>  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
+INPUTMC | 1 | 3 | 11
 INPUTP | 25 | 46 | 49 | 54 | 47 | 48 | 50 | 8 | 7 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EXPORTS | 1 | 2 | 15
-EQ | 17 | 
+EQ | 8 | 
    AUTO_CONFIG_DONE<0>.T = !AUTO_CONFIG_DONE<0> & !A<1> & !A<4> & A<6> & 
 	!A<0> & !A<5> & A<3>;
    AUTO_CONFIG_DONE<0>.CLK = clk;	// GCK
@@ -210,25 +141,15 @@ EQ | 17 |
 	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & 
 	!A<17> & !A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & 
 	A<23>;
-    AUTO_CONFIG_DONE<0>.EXP  =  !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-	# !AUTO_CONFIG_DONE<0> & !nAS & !A<31> & !A<30> & 
-	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
-	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 0 | 8 | AUTO_CONFIG_DONE<1>
+MACROCELL | 3 | 10 | AUTO_CONFIG_DONE<1>
 ATTRIBUTES | 4367168 | 0
-OUTPUTMC | 24 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 13 | 0 | 8 | 0 | 10 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 1 | 12 | 2 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 12 | 0 | 13
-INPUTS | 28 | AUTO_CONFIG_DONE<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<0>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | A<2>
-INPUTMC | 2 | 0 | 8 | 2 | 14
-INPUTP | 26 | 46 | 49 | 54 | 47 | 48 | 50 | 8 | 7 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70 | 44
-EXPORTS | 1 | 0 | 9
-EQ | 14 | 
+OUTPUTMC | 23 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 10 | 0 | 10 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 1 | 12 | 0 | 13 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 12
+INPUTS | 27 | AUTO_CONFIG_DONE<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<0>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
+INPUTMC | 2 | 3 | 10 | 3 | 11
+INPUTP | 25 | 46 | 49 | 54 | 47 | 48 | 50 | 8 | 7 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70
+EQ | 8 | 
    AUTO_CONFIG_DONE<1>.T = !AUTO_CONFIG_DONE<1> & !A<1> & !A<4> & A<6> & 
 	!A<0> & !A<5> & A<3>;
    AUTO_CONFIG_DONE<1>.CLK = clk;	// GCK
@@ -237,60 +158,17 @@ EQ | 14 |
 	!nDS & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
 	!A<24> & A<19> & !A<18> & !A<17> & !A<28> & !A<27> & A<21> & 
 	!A<20> & !A<16> & A<22> & A<23>;
-    AUTO_CONFIG_DONE<1>.EXP  =  !AUTO_CONFIG_DONE<1> & !A<4> & A<6> & !A<0> & 
-	!A<2> & !A<5> & !A<3>
-	# AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<4> & 
-	!A<6> & !A<0> & A<2> & A<5> & !A<3>
-	# !AUTO_CONFIG_DONE<0> & A<1> & !A<4> & !A<6> & 
-	!A<0> & A<2> & A<5> & !A<3>
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 3 | 6 | DSACK_16BIT
-ATTRIBUTES | 8557316 | 0
-OUTPUTMC | 7 | 2 | 16 | 3 | 6 | 3 | 0 | 3 | 1 | 3 | 2 | 3 | 17 | 3 | 7
-INPUTS | 23 | DSACK_16BIT  | IDE_ENABLE  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | IDE_WAIT  | A<28>  | A<27>  | $OpTx$INV$37  | RW  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | nDS  | A<21>  | A<22>  | A<23>  | ROM_OUT_ENABLE_S.EXP
-INPUTMC | 8 | 3 | 6 | 3 | 2 | 3 | 15 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 3 | 5
-INPUTP | 15 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 35 | 79 | 78 | 8 | 7 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 7
-IMPORTS | 1 | 3 | 5
-EQ | 24 | 
-   !DSACK_16BIT.D = !DSACK_16BIT & IDE_ENABLE & !nAS & !A<31> & !A<30> & 
-	!A<29> & !A<26> & !A<25> & !A<24> & !IDE_WAIT & !A<28> & 
-	!A<27> & !$OpTx$INV$37
-	# !DSACK_16BIT & !IDE_ENABLE & !RW & !nAS & !A<31> & 
-	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37
-;Imported pterms FB4_6
-	# IDE_ENABLE & !nAS & !IDE_DSACK_D0 & !A<31> & 
-	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & IDE_WAIT & 
-	!A<28> & !A<27> & !$OpTx$INV$37
-	# !IDE_ENABLE & RW & !nAS & !IDE_DSACK_D2 & !A<31> & 
-	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37;
-   !DSACK_16BIT.CLK = clk;	// GCK
-   !DSACK_16BIT.AP = reset;	// GSR
-    DSACK_16BIT.EXP  =  !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-GLOBALS | 2 | 2 | clk | 1 | reset
-
-MACROCELL | 1 | 15 | SHUT_UP<0>
+MACROCELL | 1 | 11 | SHUT_UP<0>
 ATTRIBUTES | 4363072 | 0
-OUTPUTMC | 28 | 2 | 16 | 1 | 13 | 3 | 0 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 0 | 15 | 1 | 12 | 1 | 15 | 1 | 16 | 2 | 2 | 2 | 9 | 2 | 10 | 2 | 12 | 2 | 14 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 2 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 12 | 3 | 17
-INPUTS | 25 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | _9_.EXP  | AUTO_CONFIG_DONE<0>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 6 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 1 | 16 | 2 | 14
-INPUTP | 19 | 8 | 7 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EXPORTS | 1 | 1 | 14
-IMPORTS | 1 | 1 | 16
-EQ | 25 | 
-   SHUT_UP<0>.T = ;Imported pterms FB2_17
-	  !SHUT_UP<0> & D<3>.PIN & !A<1> & !A<4> & A<6> & 
+OUTPUTMC | 27 | 1 | 11 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 0 | 15 | 1 | 7 | 1 | 9 | 1 | 10 | 1 | 12 | 1 | 13 | 1 | 15 | 2 | 0 | 2 | 2 | 2 | 9 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 14 | 3 | 15 | 3 | 17
+INPUTS | 30 | SHUT_UP<0>  | D<3>.PIN  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | A<2>  | AUTO_CONFIG_DONE<0>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | D<0>.PIN
+INPUTMC | 2 | 1 | 11 | 3 | 11
+INPUTP | 28 | 17 | 46 | 49 | 54 | 47 | 48 | 50 | 44 | 8 | 7 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70 | 25
+EXPORTS | 1 | 1 | 10
+EQ | 13 | 
+   SHUT_UP<0>.T = !SHUT_UP<0> & D<3>.PIN & !A<1> & !A<4> & A<6> & 
 	!A<0> & !A<5> & A<3>
 	# !SHUT_UP<0> & !A<1> & !A<4> & A<6> & !A<0> & A<2> & 
 	!A<5> & A<3>
@@ -302,25 +180,14 @@ EQ | 25 |
 	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & 
 	!A<17> & !A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & 
 	A<23>;
-    SHUT_UP<0>.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+    SHUT_UP<0>.EXP  =  D<0>.PIN
 GLOBALS | 2 | 2 | clk | 1 | reset
 
 MACROCELL | 0 | 10 | SHUT_UP<1>
 ATTRIBUTES | 4363072 | 0
-OUTPUTMC | 4 | 0 | 10 | 3 | 15 | 0 | 11 | 0 | 9
-INPUTS | 30 | SHUT_UP<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | _7_.EXP
-INPUTMC | 4 | 0 | 10 | 2 | 14 | 0 | 8 | 0 | 11
+OUTPUTMC | 4 | 0 | 10 | 2 | 7 | 0 | 11 | 0 | 9
+INPUTS | 30 | SHUT_UP<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | RW  | nDS  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | _6_.EXP
+INPUTMC | 4 | 0 | 10 | 3 | 11 | 3 | 10 | 0 | 11
 INPUTP | 26 | 46 | 49 | 54 | 47 | 44 | 48 | 50 | 8 | 7 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EXPORTS | 1 | 0 | 9
 IMPORTS | 1 | 0 | 11
@@ -344,14 +211,13 @@ EQ | 17 |
 	!A<0> & A<2> & !A<5> & !A<3>
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 13 | BASEADR<0>
+MACROCELL | 3 | 9 | BASEADR<0>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 18 | 2 | 15 | 2 | 17 | 2 | 1 | 3 | 10 | 1 | 14 | 3 | 7 | 2 | 11 | 1 | 13 | 2 | 2 | 2 | 10 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 6 | 3 | 9 | 3 | 12 | 3 | 17 | 2 | 12
-INPUTS | 29 | D<1>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | AUTO_CONFIG_DONE<1>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+OUTPUTMC | 18 | 3 | 15 | 2 | 1 | 2 | 10 | 1 | 14 | 2 | 13 | 1 | 8 | 1 | 7 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 14 | 3 | 17
+INPUTS | 28 | D<1>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
+INPUTMC | 1 | 3 | 11
 INPUTP | 27 | 26 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EXPORTS | 1 | 2 | 12
-EQ | 11 | 
+EQ | 8 | 
    BASEADR<0>.D = D<1>.PIN;
    BASEADR<0>.CLK = clk;	// GCK
    !BASEADR<0>.AP = reset;	// GSR
@@ -360,19 +226,15 @@ EQ | 11 |
 	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
 	A<3> & !A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & 
 	A<23>;
-    BASEADR<0>.EXP  =  !AUTO_CONFIG_DONE<1> & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
-	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 9 | BASEADR<1>
+MACROCELL | 3 | 8 | BASEADR<1>
 ATTRIBUTES | 8561472 | 0
-OUTPUTMC | 17 | 2 | 15 | 2 | 17 | 2 | 1 | 3 | 10 | 1 | 14 | 3 | 7 | 2 | 11 | 1 | 13 | 2 | 2 | 2 | 10 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 6 | 3 | 9 | 3 | 12 | 3 | 17
-INPUTS | 32 | D<2>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>
-INPUTMC | 5 | 2 | 14 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9
+OUTPUTMC | 18 | 3 | 15 | 2 | 1 | 2 | 10 | 1 | 14 | 2 | 13 | 1 | 8 | 1 | 7 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 14 | 3 | 17
+INPUTS | 28 | D<2>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
+INPUTMC | 1 | 3 | 11
 INPUTP | 27 | 22 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EXPORTS | 1 | 2 | 10
-EQ | 17 | 
+EQ | 8 | 
    BASEADR<1>.D = D<2>.PIN;
    BASEADR<1>.CLK = clk;	// GCK
    !BASEADR<1>.AR = reset;	// GSR
@@ -381,22 +243,13 @@ EQ | 17 |
 	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
 	A<3> & !A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & 
 	A<23>;
-    BASEADR<1>.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-	# !AUTO_CONFIG_DONE<0> & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
-	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 7 | BASEADR<2>
+MACROCELL | 3 | 7 | BASEADR<2>
 ATTRIBUTES | 8561472 | 0
-OUTPUTMC | 17 | 2 | 15 | 2 | 17 | 2 | 1 | 3 | 10 | 1 | 14 | 3 | 7 | 2 | 11 | 1 | 13 | 2 | 2 | 2 | 10 | 2 | 14 | 3 | 1 | 3 | 2 | 3 | 6 | 3 | 9 | 3 | 12 | 3 | 17
+OUTPUTMC | 18 | 3 | 15 | 2 | 1 | 2 | 10 | 1 | 14 | 2 | 13 | 1 | 8 | 1 | 7 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 9 | 2 | 12 | 2 | 14 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 14 | 3 | 17
 INPUTS | 28 | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 1 | 2 | 14
+INPUTMC | 1 | 3 | 11
 INPUTP | 27 | 17 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EQ | 8 | 
    BASEADR<2>.D = D<3>.PIN;
@@ -409,11 +262,11 @@ EQ | 8 |
 	A<23>;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 1 | 10 | BASEADR_4MB<0>
+MACROCELL | 3 | 6 | BASEADR_4MB<0>
 ATTRIBUTES | 8561472 | 0
-OUTPUTMC | 16 | 2 | 16 | 3 | 0 | 0 | 16 | 3 | 11 | 1 | 13 | 3 | 9 | 2 | 10 | 0 | 15 | 1 | 12 | 1 | 15 | 2 | 9 | 2 | 12 | 2 | 15 | 3 | 8 | 3 | 10 | 3 | 17
+OUTPUTMC | 14 | 3 | 16 | 0 | 16 | 2 | 11 | 1 | 13 | 2 | 14 | 1 | 7 | 0 | 15 | 1 | 9 | 1 | 10 | 1 | 12 | 1 | 15 | 2 | 10 | 2 | 15 | 3 | 15
 INPUTS | 29 | D<1>.PIN  | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 1 | 2 | 14
+INPUTMC | 1 | 3 | 11
 INPUTP | 28 | 26 | 17 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EQ | 8 | 
    BASEADR_4MB<0>.D = !D<1>.PIN & !D<3>.PIN;
@@ -426,14 +279,13 @@ EQ | 8 |
 	A<23>;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 1 | 11 | BASEADR_4MB<1>
+MACROCELL | 3 | 13 | BASEADR_4MB<1>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 16 | 2 | 16 | 3 | 0 | 0 | 16 | 3 | 11 | 1 | 13 | 3 | 9 | 2 | 10 | 0 | 15 | 1 | 12 | 1 | 15 | 2 | 9 | 2 | 12 | 2 | 15 | 3 | 8 | 3 | 10 | 3 | 17
-INPUTS | 32 | D<1>.PIN  | D<2>.PIN  | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | IDE_ENABLE  | $OpTx$INV$37
-INPUTMC | 3 | 2 | 14 | 3 | 2 | 3 | 15
+OUTPUTMC | 14 | 3 | 16 | 0 | 16 | 2 | 11 | 1 | 13 | 2 | 14 | 1 | 7 | 0 | 15 | 1 | 9 | 1 | 10 | 1 | 12 | 1 | 15 | 2 | 10 | 2 | 15 | 3 | 15
+INPUTS | 30 | D<1>.PIN  | D<2>.PIN  | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
+INPUTMC | 1 | 3 | 11
 INPUTP | 29 | 26 | 22 | 17 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EXPORTS | 1 | 1 | 12
-EQ | 11 | 
+EQ | 9 | 
    BASEADR_4MB<1>.D = D<1>.PIN & !D<2>.PIN & !D<3>.PIN
 	# !D<1>.PIN & D<2>.PIN & !D<3>.PIN;
    BASEADR_4MB<1>.CLK = clk;	// GCK
@@ -443,17 +295,16 @@ EQ | 11 |
 	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
 	A<3> & !A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & 
 	A<23>;
-    BASEADR_4MB<1>.EXP  =  !IDE_ENABLE & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 1 | 9 | BASEADR_4MB<2>
+MACROCELL | 2 | 9 | BASEADR_4MB<2>
 ATTRIBUTES | 8561472 | 0
-OUTPUTMC | 16 | 2 | 16 | 3 | 0 | 0 | 16 | 3 | 11 | 1 | 13 | 3 | 9 | 2 | 10 | 0 | 15 | 1 | 12 | 1 | 15 | 2 | 9 | 2 | 12 | 2 | 15 | 3 | 8 | 3 | 10 | 3 | 17
-INPUTS | 30 | D<1>.PIN  | D<2>.PIN  | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 1 | 2 | 14
-INPUTP | 29 | 26 | 22 | 17 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EQ | 8 | 
+OUTPUTMC | 12 | 3 | 16 | 0 | 16 | 1 | 13 | 1 | 7 | 3 | 12 | 0 | 15 | 1 | 9 | 1 | 10 | 1 | 12 | 1 | 15 | 3 | 15 | 2 | 10
+INPUTS | 35 | D<1>.PIN  | D<2>.PIN  | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | clk  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>
+INPUTMC | 5 | 3 | 11 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7
+INPUTP | 30 | 26 | 22 | 17 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70 | 20
+EXPORTS | 1 | 2 | 10
+EQ | 17 | 
    BASEADR_4MB<2>.D = D<1>.PIN & D<2>.PIN & !D<3>.PIN;
    BASEADR_4MB<2>.CLK = clk;	// GCK
    !BASEADR_4MB<2>.AR = reset;	// GSR
@@ -462,13 +313,60 @@ EQ | 8 |
 	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
 	A<3> & !A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & 
 	A<23>;
+    BASEADR_4MB<2>.EXP  =  !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 6 | IDE_BASEADR<0>
+MACROCELL | 3 | 17 | DSACK_16BIT
+ATTRIBUTES | 8557316 | 0
+OUTPUTMC | 4 | 3 | 17 | 1 | 16 | 3 | 0 | 3 | 16
+INPUTS | 21 | DSACK_16BIT  | IDE_ENABLE  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | IDE_WAIT  | A<28>  | A<27>  | $OpTx$INV$35  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<21>  | A<22>  | A<23>  | IDE_ENABLE.EXP
+INPUTMC | 8 | 3 | 17 | 3 | 0 | 2 | 7 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 0
+INPUTP | 13 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 35 | 79 | 78 | 72 | 71 | 70
+EXPORTS | 1 | 3 | 16
+IMPORTS | 1 | 3 | 0
+EQ | 27 | 
+   !DSACK_16BIT.D = !DSACK_16BIT & IDE_ENABLE & !nAS & !A<31> & !A<30> & 
+	!A<29> & !A<26> & !A<25> & !A<24> & !IDE_WAIT & !A<28> & 
+	!A<27> & !$OpTx$INV$35
+;Imported pterms FB4_1
+	# !DSACK_16BIT & !IDE_ENABLE & !RW & !nAS & !A<31> & 
+	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
+	!$OpTx$INV$35
+	# IDE_ENABLE & !nAS & !IDE_DSACK_D0 & !A<31> & 
+	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & IDE_WAIT & 
+	!A<28> & !A<27> & !$OpTx$INV$35
+	# !IDE_ENABLE & RW & !nAS & !IDE_DSACK_D2 & !A<31> & 
+	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
+	!$OpTx$INV$35;
+   !DSACK_16BIT.CLK = clk;	// GCK
+   !DSACK_16BIT.AP = reset;	// GSR
+    DSACK_16BIT.EXP  =  !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
+GLOBALS | 2 | 2 | clk | 1 | reset
+
+MACROCELL | 3 | 5 | IDE_BASEADR<0>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 3 | 13
+OUTPUTMC | 2 | 2 | 5 | 2 | 8
 INPUTS | 29 | D<0>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 27 | 25 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EQ | 8 | 
    IDE_BASEADR<0>.D = D<0>.PIN;
@@ -481,13 +379,14 @@ EQ | 8 |
 	!A<16> & A<22> & A<23>;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 1 | 8 | IDE_BASEADR<1>
+MACROCELL | 2 | 5 | IDE_BASEADR<1>
 ATTRIBUTES | 8561472 | 0
-OUTPUTMC | 2 | 3 | 14 | 3 | 16
-INPUTS | 29 | D<1>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+OUTPUTMC | 2 | 2 | 6 | 2 | 8
+INPUTS | 31 | D<1>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | IDE_BASEADR<0>  | IDE_BASEADR<3>
+INPUTMC | 4 | 3 | 11 | 3 | 10 | 3 | 5 | 0 | 8
 INPUTP | 27 | 26 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EQ | 8 | 
+EXPORTS | 1 | 2 | 6
+EQ | 11 | 
    IDE_BASEADR<1>.D = D<1>.PIN;
    IDE_BASEADR<1>.CLK = clk;	// GCK
    !IDE_BASEADR<1>.AR = reset;	// GSR
@@ -496,13 +395,16 @@ EQ | 8 |
 	!A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & A<19> & 
 	!A<18> & !A<17> & A<3> & !A<28> & !A<27> & A<21> & !A<20> & 
 	!A<16> & A<22> & A<23>;
+    IDE_BASEADR<1>.EXP  =  !IDE_BASEADR<0> & A<16>
+	# IDE_BASEADR<3> & !A<19>
+	# !IDE_BASEADR<3> & A<19>
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 5 | IDE_BASEADR<2>
+MACROCELL | 2 | 4 | IDE_BASEADR<2>
 ATTRIBUTES | 8561472 | 0
-OUTPUTMC | 1 | 3 | 16
+OUTPUTMC | 1 | 2 | 7
 INPUTS | 29 | D<2>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 27 | 22 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EQ | 8 | 
    IDE_BASEADR<2>.D = D<2>.PIN;
@@ -515,13 +417,14 @@ EQ | 8 |
 	!A<16> & A<22> & A<23>;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 1 | 6 | IDE_BASEADR<3>
+MACROCELL | 0 | 8 | IDE_BASEADR<3>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 3 | 15
+OUTPUTMC | 2 | 2 | 5 | 0 | 9
 INPUTS | 29 | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 27 | 17 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EQ | 8 | 
+EXPORTS | 1 | 0 | 9
+EQ | 14 | 
    IDE_BASEADR<3>.D = D<3>.PIN;
    IDE_BASEADR<3>.CLK = clk;	// GCK
    !IDE_BASEADR<3>.AP = reset;	// GSR
@@ -530,16 +433,25 @@ EQ | 8 |
 	!A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & A<19> & 
 	!A<18> & !A<17> & A<3> & !A<28> & !A<27> & A<21> & !A<20> & 
 	!A<16> & A<22> & A<23>;
+    IDE_BASEADR<3>.EXP  =  !AUTO_CONFIG_DONE<1> & !A<4> & A<6> & !A<0> & 
+	!A<2> & !A<5> & !A<3>
+	# AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<4> & 
+	!A<6> & !A<0> & A<2> & A<5> & !A<3>
+	# !AUTO_CONFIG_DONE<0> & A<1> & !A<4> & !A<6> & 
+	!A<0> & A<2> & A<5> & !A<3>
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 4 | IDE_BASEADR<4>
+MACROCELL | 1 | 10 | IDE_BASEADR<4>
 ATTRIBUTES | 8561472 | 0
-OUTPUTMC | 1 | 3 | 15
-INPUTS | 29 | D<0>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 2 | 2 | 14 | 0 | 8
-INPUTP | 27 | 25 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EQ | 8 | 
-   IDE_BASEADR<4>.D = D<0>.PIN;
+OUTPUTMC | 2 | 2 | 7 | 1 | 9
+INPUTS | 33 | SHUT_UP<0>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | SHUT_UP<0>.EXP
+INPUTMC | 7 | 1 | 11 | 3 | 11 | 3 | 10 | 3 | 6 | 3 | 13 | 2 | 9 | 1 | 11
+INPUTP | 26 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
+EXPORTS | 1 | 1 | 9
+IMPORTS | 1 | 1 | 11
+EQ | 21 | 
+   IDE_BASEADR<4>.D = ;Imported pterms FB2_12
+	  D<0>.PIN;
    IDE_BASEADR<4>.CLK = clk;	// GCK
    !IDE_BASEADR<4>.AR = reset;	// GSR
    IDE_BASEADR<4>.CE = AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<1> & 
@@ -547,15 +459,28 @@ EQ | 8 |
 	!A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & A<19> & 
 	!A<18> & !A<17> & A<3> & !A<28> & !A<27> & A<21> & !A<20> & 
 	!A<16> & A<22> & A<23>;
+    IDE_BASEADR<4>.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !AUTO_CONFIG_DONE<0> & !A<31> & !A<30> & !A<29> & 
+	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
+	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
+	# !AUTO_CONFIG_DONE<1> & !A<31> & !A<30> & !A<29> & 
+	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
+	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 3 | IDE_BASEADR<5>
+MACROCELL | 1 | 6 | IDE_BASEADR<5>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 3 | 14
-INPUTS | 29 | D<1>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+OUTPUTMC | 2 | 2 | 6 | 1 | 7
+INPUTS | 30 | D<1>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | $OpTx$INV$35
+INPUTMC | 3 | 3 | 11 | 3 | 10 | 2 | 7
 INPUTP | 27 | 26 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EQ | 8 | 
+EXPORTS | 1 | 1 | 7
+EQ | 10 | 
    IDE_BASEADR<5>.D = D<1>.PIN;
    IDE_BASEADR<5>.CLK = clk;	// GCK
    !IDE_BASEADR<5>.AP = reset;	// GSR
@@ -564,16 +489,17 @@ EQ | 8 |
 	!A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & A<19> & 
 	!A<18> & !A<17> & A<3> & !A<28> & !A<27> & A<21> & !A<20> & 
 	!A<16> & A<22> & A<23>;
+    IDE_BASEADR<5>.EXP  =  !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 2 | IDE_BASEADR<6>
+MACROCELL | 2 | 3 | IDE_BASEADR<6>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 2 | 3 | 14 | 2 | 1
-INPUTS | 33 | D<2>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>
-INPUTMC | 6 | 2 | 14 | 0 | 8 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7
+OUTPUTMC | 1 | 2 | 6
+INPUTS | 29 | D<2>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 27 | 22 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
-EXPORTS | 1 | 2 | 1
-EQ | 17 | 
+EQ | 8 | 
    IDE_BASEADR<6>.D = D<2>.PIN;
    IDE_BASEADR<6>.CLK = clk;	// GCK
    !IDE_BASEADR<6>.AP = reset;	// GSR
@@ -582,22 +508,13 @@ EQ | 17 |
 	!A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & A<19> & 
 	!A<18> & !A<17> & A<3> & !A<28> & !A<27> & A<21> & !A<20> & 
 	!A<16> & A<22> & A<23>;
-    IDE_BASEADR<6>.EXP  =  !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
 GLOBALS | 2 | 2 | clk | 1 | reset
 
 MACROCELL | 1 | 0 | IDE_BASEADR<7>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 2 | 3 | 13 | 3 | 16
+OUTPUTMC | 1 | 2 | 8
 INPUTS | 29 | D<3>.PIN  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | RW  | nDS  | nAS  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<3>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 27 | 17 | 46 | 8 | 7 | 1 | 49 | 54 | 47 | 44 | 48 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 50 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EQ | 8 | 
    IDE_BASEADR<7>.D = D<3>.PIN;
@@ -610,132 +527,76 @@ EQ | 8 |
 	!A<16> & A<22> & A<23>;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 3 | 5 | ROM_OUT_ENABLE_S
+MACROCELL | 3 | 14 | ROM_OUT_ENABLE_S
 ATTRIBUTES | 8557316 | 0
-OUTPUTMC | 3 | 3 | 5 | 0 | 0 | 3 | 6
-INPUTS | 16 | ROM_OUT_ENABLE_S  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37  | IDE_ENABLE  | IDE_DSACK_D0  | IDE_WAIT  | IDE_DSACK_D2
-INPUTMC | 5 | 3 | 5 | 3 | 15 | 3 | 2 | 3 | 12 | 3 | 3
-INPUTP | 11 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 35
-EXPORTS | 1 | 3 | 6
+OUTPUTMC | 3 | 3 | 14 | 0 | 0 | 3 | 15
+INPUTS | 21 | ROM_OUT_ENABLE_S  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35  | IDE_ENABLE  | IDE_DSACK_D0  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<21>  | A<22>  | A<23>
+INPUTMC | 8 | 3 | 14 | 2 | 7 | 3 | 0 | 3 | 3 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7
+INPUTP | 13 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
+EXPORTS | 1 | 3 | 15
 EQ | 17 | 
    !ROM_OUT_ENABLE_S.D = !ROM_OUT_ENABLE_S & IDE_ENABLE & !nAS & !A<31> & 
 	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37
+	!$OpTx$INV$35
 	# !ROM_OUT_ENABLE_S & !RW & !nAS & !A<31> & !A<30> & 
 	!A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37
+	!$OpTx$INV$35
 	# !IDE_ENABLE & RW & !nAS & !IDE_DSACK_D0 & !A<31> & 
 	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37;
+	!$OpTx$INV$35;
    !ROM_OUT_ENABLE_S.CLK = clk;	// GCK
    !ROM_OUT_ENABLE_S.AP = reset;	// GSR
-    ROM_OUT_ENABLE_S.EXP  =  IDE_ENABLE & !nAS & !IDE_DSACK_D0 & !A<31> & 
-	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & IDE_WAIT & 
-	!A<28> & !A<27> & !$OpTx$INV$37
-	# !IDE_ENABLE & RW & !nAS & !IDE_DSACK_D2 & !A<31> & 
-	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37
+    ROM_OUT_ENABLE_S.EXP  =  !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 3 | 0 | DSACK<0>_BUFR.MC
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 0 | 1
-INPUTS | 19 | DSACK_16BIT  | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | EXP18_.EXP  | EXP23_.EXP
-INPUTMC | 7 | 3 | 6 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 3 | 1 | 3 | 17
-INPUTP | 12 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-IMPORTS | 2 | 3 | 1 | 3 | 17
-EQ | 67 | 
-   !DSACK<0>_BUFR = DSACK_16BIT & !SHUT_UP<0> & BASEADR_4MB<0> & 
-	BASEADR_4MB<1> & BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR_4MB<0> & 
-	BASEADR_4MB<1> & !BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR_4MB<0> & 
-	!BASEADR_4MB<1> & BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR_4MB<0> & 
-	!BASEADR_4MB<1> & !BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR_4MB<0> & 
-	BASEADR_4MB<1> & BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & 
-	A<23>
-;Imported pterms FB4_2
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	!BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	!BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	!BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	A<23>
-;Imported pterms FB4_3
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	!BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	!A<23>
-;Imported pterms FB4_18
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR_4MB<0> & 
-	BASEADR_4MB<1> & !BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR_4MB<0> & 
-	!BASEADR_4MB<1> & BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR_4MB<0> & 
-	!BASEADR_4MB<1> & !BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	!A<23>;
-
-MACROCELL | 3 | 2 | IDE_ENABLE
-ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 9 | 3 | 6 | 3 | 5 | 3 | 2 | 0 | 0 | 2 | 0 | 1 | 5 | 1 | 11 | 2 | 8 | 3 | 1
-INPUTS | 20 | IDE_ENABLE  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37  | DSACK_16BIT  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<21>  | A<22>  | A<23>
-INPUTMC | 7 | 3 | 2 | 3 | 15 | 3 | 6 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7
-INPUTP | 13 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 1
+MACROCELL | 1 | 16 | DSACK_INT<1>
+ATTRIBUTES | 265986 | 0
+INPUTS | 21 | DSACK_16BIT  | AUTO_CONFIG_DONE<0>  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | AUTO_CONFIG_DONE<1>  | DSACK_INT<0>/DSACK_INT<0>_TRST
+INPUTMC | 4 | 3 | 17 | 3 | 11 | 3 | 10 | 1 | 8
+INPUTP | 17 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EQ | 8 | 
+   !DSACK<1> = !DSACK_16BIT
+	# !AUTO_CONFIG_DONE<0> & !nAS & !A<31> & !A<30> & 
+	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
+	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
+	# !AUTO_CONFIG_DONE<1> & !nAS & !A<31> & !A<30> & 
+	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
+	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>;
+   DSACK<1>.OE = DSACK_INT<0>/DSACK_INT<0>_TRST;
+
+MACROCELL | 3 | 0 | IDE_ENABLE
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 8 | 3 | 17 | 3 | 14 | 3 | 0 | 0 | 0 | 2 | 8 | 1 | 5 | 1 | 12 | 2 | 1
+INPUTS | 16 | IDE_ENABLE  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35  | DSACK_16BIT  | IDE_DSACK_D0  | IDE_WAIT  | IDE_DSACK_D2
+INPUTMC | 5 | 3 | 0 | 2 | 7 | 3 | 17 | 3 | 3 | 3 | 1
+INPUTP | 11 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 35
+EXPORTS | 1 | 3 | 17
+EQ | 13 | 
    IDE_ENABLE.T = !IDE_ENABLE & !RW & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
    !IDE_ENABLE.CLK = clk;	// GCK
    !IDE_ENABLE.AR = reset;	// GSR
-    IDE_ENABLE.EXP  =  DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	!BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	!A<23>
+    IDE_ENABLE.EXP  =  !DSACK_16BIT & !IDE_ENABLE & !RW & !nAS & !A<31> & 
+	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
+	!$OpTx$INV$35
+	# IDE_ENABLE & !nAS & !IDE_DSACK_D0 & !A<31> & 
+	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & IDE_WAIT & 
+	!A<28> & !A<27> & !$OpTx$INV$35
+	# !IDE_ENABLE & RW & !nAS & !IDE_DSACK_D2 & !A<31> & 
+	!A<30> & !A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
+	!$OpTx$INV$35
 GLOBALS | 2 | 2 | clk | 4 | reset
 
 MACROCELL | 3 | 4 | Mtrien_Dout
 ATTRIBUTES | 8557312 | 0
 OUTPUTMC | 4 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3
 INPUTS | 20 | AUTO_CONFIG_DONE<0>  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<19>  | A<18>  | A<17>  | A<28>  | A<27>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>  | AUTO_CONFIG_DONE<1>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 18 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 53 | 68 | 66 | 79 | 78 | 72 | 67 | 63 | 71 | 70
 EQ | 8 | 
    !Mtrien_Dout.D = !AUTO_CONFIG_DONE<0> & RW & !nAS & !A<31> & !A<30> & 
@@ -748,65 +609,48 @@ EQ | 8 |
    !Mtrien_Dout.AP = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 3 | 12 | IDE_DSACK_D0
+MACROCELL | 3 | 3 | IDE_DSACK_D0
 ATTRIBUTES | 8557316 | 0
-OUTPUTMC | 3 | 3 | 13 | 3 | 5 | 3 | 11
-INPUTS | 19 | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | nDS  | A<21>  | A<22>  | A<23>
-INPUTMC | 5 | 3 | 15 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7
-INPUTP | 14 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 8 | 7 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 11
-EQ | 16 | 
+OUTPUTMC | 3 | 3 | 0 | 3 | 14 | 3 | 2
+INPUTS | 10 | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35
+INPUTMC | 1 | 2 | 7
+INPUTP | 9 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78
+EQ | 4 | 
    !IDE_DSACK_D0.D = !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+	!A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
    !IDE_DSACK_D0.CLK = clk;	// GCK
    !IDE_DSACK_D0.AP = reset;	// GSR
-    IDE_DSACK_D0.EXP  =  !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 3 | 13 | IDE_DSACK_D1
+MACROCELL | 3 | 2 | IDE_DSACK_D1
 ATTRIBUTES | 8557316 | 0
-OUTPUTMC | 2 | 3 | 3 | 3 | 14
-INPUTS | 15 | nAS  | IDE_DSACK_D0  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37  | IDE_BASEADR<0>  | A<16>  | IDE_BASEADR<7>  | A<23>
-INPUTMC | 4 | 3 | 12 | 3 | 15 | 2 | 6 | 1 | 0
-INPUTP | 11 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 63 | 70
-EXPORTS | 1 | 3 | 14
-EQ | 7 | 
+OUTPUTMC | 1 | 3 | 1
+INPUTS | 11 | nAS  | IDE_DSACK_D0  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35
+INPUTMC | 2 | 3 | 3 | 2 | 7
+INPUTP | 9 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78
+EQ | 4 | 
    !IDE_DSACK_D1.D = !nAS & !IDE_DSACK_D0 & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
    !IDE_DSACK_D1.CLK = clk;	// GCK
    !IDE_DSACK_D1.AP = reset;	// GSR
-    IDE_DSACK_D1.EXP  =  IDE_BASEADR<0> & !A<16>
-	# !IDE_BASEADR<0> & A<16>
-	# !IDE_BASEADR<7> & A<23>
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 3 | 3 | IDE_DSACK_D2
+MACROCELL | 3 | 1 | IDE_DSACK_D2
 ATTRIBUTES | 8557316 | 0
-OUTPUTMC | 1 | 3 | 5
-INPUTS | 11 | nAS  | IDE_DSACK_D1  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37
-INPUTMC | 2 | 3 | 13 | 3 | 15
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 11 | nAS  | IDE_DSACK_D1  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35
+INPUTMC | 2 | 3 | 2 | 2 | 7
 INPUTP | 9 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78
 EQ | 4 | 
    !IDE_DSACK_D2.D = !nAS & !IDE_DSACK_D1 & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
    !IDE_DSACK_D2.CLK = clk;	// GCK
    !IDE_DSACK_D2.AP = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 1 | reset
 
 MACROCELL | 0 | 17 | IO4_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 8 | A<2>  | A<24>  | A<25>  | A<26>  | A<27>  | A<28>  | _8_.EXP  | nCS2_OBUF.EXP
+INPUTS | 8 | A<2>  | A<24>  | A<25>  | A<26>  | A<27>  | A<28>  | _7_.EXP  | nCS2_OBUF.EXP
 INPUTMC | 2 | 0 | 0 | 0 | 16
 INPUTP | 6 | 44 | 74 | 2 | 73 | 78 | 79
 IMPORTS | 2 | 0 | 0 | 0 | 16
@@ -819,10 +663,10 @@ EQ | 15 |
 ;Imported pterms FB1_1
 	# IDE_ENABLE & A<2>
 	# A<2> & A<31>
-	# A<2> & $OpTx$INV$37
+	# A<2> & $OpTx$INV$35
 	# ROM_OUT_ENABLE_S & !IDE_ENABLE & !A<31> & !A<30> & 
 	!A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37
+	!$OpTx$INV$35
 ;Imported pterms FB1_17
 	# A<2> & A<30>
 	# A<2> & A<29>;
@@ -830,23 +674,37 @@ EQ | 15 |
 MACROCELL | 2 | 0 | IO5_OBUF
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 2 | 17
-INPUTS | 21 | A<3>  | IDE_ENABLE  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37  | AUTO_CONFIG_DONE<1>  | nAS  | A<19>  | A<18>  | A<17>  | A<21>  | A<20>  | A<16>  | A<22>  | A<23>
-INPUTMC | 3 | 3 | 2 | 3 | 15 | 0 | 8
-INPUTP | 18 | 50 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 1 | 53 | 68 | 66 | 72 | 67 | 63 | 71 | 70
+INPUTS | 19 | clk  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | nAS  | nCS1_OBUF.EXP
+INPUTMC | 5 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 1
+INPUTP | 14 | 20 | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 1
 EXPORTS | 1 | 2 | 17
-EQ | 6 | 
-   IO5 = A<3>
+IMPORTS | 1 | 2 | 1
+EQ | 19 | 
+   IO5 = ;Imported pterms FB3_2
+	  A<3>
 	# !IDE_ENABLE & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
-    IO5_OBUF.EXP  =  !AUTO_CONFIG_DONE<1> & !nAS & !A<31> & !A<30> & 
-	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
-	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
+	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
+    IO5_OBUF.EXP  =  !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
 
 MACROCELL | 0 | 4 | BYTE_0_OBUF
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 0 | 3
 INPUTS | 12 | RW  | SIZ<1>  | SIZ<0>  | A<0>  | A<1>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<4>  | A<6>  | A<2>  | A<5>  | A<3>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 10 | 8 | 3 | 5 | 47 | 46 | 49 | 54 | 44 | 48 | 50
 EXPORTS | 1 | 0 | 3
 EQ | 6 | 
@@ -861,7 +719,7 @@ MACROCELL | 0 | 5 | BYTE_1_OBUF
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 0 | 6
 INPUTS | 12 | A<1>  | RW  | A<0>  | SIZ<1>  | SIZ<0>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<4>  | A<6>  | A<2>  | A<3>  | A<5>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 10 | 46 | 8 | 47 | 3 | 5 | 49 | 54 | 44 | 50 | 48
 EXPORTS | 1 | 0 | 6
 EQ | 7 | 
@@ -876,8 +734,8 @@ EQ | 7 |
 MACROCELL | 0 | 2 | BYTE_2_OBUF
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 0 | 3
-INPUTS | 11 | A<1>  | RW  | AUTO_CONFIG_DONE<0>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<1>  | A<2>  | _6_.EXP
-INPUTMC | 3 | 2 | 14 | 0 | 8 | 0 | 1
+INPUTS | 11 | A<1>  | RW  | AUTO_CONFIG_DONE<0>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<1>  | A<2>  | DSACK_INT<0>.EXP
+INPUTMC | 3 | 3 | 11 | 3 | 10 | 0 | 1
 INPUTP | 8 | 46 | 8 | 49 | 54 | 47 | 48 | 50 | 44
 EXPORTS | 1 | 0 | 3
 IMPORTS | 1 | 0 | 1
@@ -898,7 +756,7 @@ MACROCELL | 0 | 7 | BYTE_3_OBUF
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 0 | 6
 INPUTS | 10 | A<1>  | RW  | A<0>  | AUTO_CONFIG_DONE<1>  | A<4>  | A<6>  | A<2>  | A<5>  | A<3>  | AUTO_CONFIG_DONE<0>
-INPUTMC | 2 | 0 | 8 | 2 | 14
+INPUTMC | 2 | 3 | 10 | 3 | 11
 INPUTP | 8 | 46 | 8 | 47 | 49 | 54 | 44 | 48 | 50
 EXPORTS | 1 | 0 | 6
 EQ | 6 | 
@@ -908,6 +766,18 @@ EQ | 6 |
 	!A<0> & A<2> & !A<5> & !A<3>
 	# AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<1> & 
 	A<4> & !A<6> & !A<0> & A<2> & !A<5> & A<3>
+
+MACROCELL | 0 | 1 | DSACK_INT<0>
+ATTRIBUTES | 265986 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 5 | DSACK_INT<0>/DSACK_INT<0>_TRST  | RW  | SIZ<1>  | SIZ<0>  | A<0>
+INPUTMC | 1 | 1 | 8
+INPUTP | 4 | 8 | 3 | 5 | 47
+EXPORTS | 1 | 0 | 2
+EQ | 3 | 
+   DSACK<0> = Vcc;
+   DSACK<0>.OE = DSACK_INT<0>/DSACK_INT<0>_TRST;
+    DSACK_INT<0>.EXP  =  !RW & !SIZ<1> & SIZ<0> & !A<0>
 
 MACROCELL | 1 | 3 | IDE_A_0_OBUF$BUF0
 ATTRIBUTES | 264962 | 0
@@ -946,40 +816,54 @@ EQ | 1 |
 
 MACROCELL | 1 | 5 | IDE_R_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 12 | IDE_ENABLE  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37
-INPUTMC | 2 | 3 | 2 | 3 | 15
+INPUTS | 12 | IDE_ENABLE  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35
+INPUTMC | 2 | 3 | 0 | 2 | 7
 INPUTP | 10 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78
 EQ | 2 | 
    !IDE_R = IDE_ENABLE & RW & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
 
 MACROCELL | 1 | 7 | IDE_W_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 11 | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37
-INPUTMC | 1 | 3 | 15
-INPUTP | 10 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78
-EQ | 2 | 
-   !IDE_W = !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 19 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | IDE_BASEADR<5>.EXP
+INPUTMC | 8 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 1 | 6
+INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
+EXPORTS | 1 | 1 | 8
+IMPORTS | 1 | 1 | 6
+EQ | 18 | 
+   !IDE_W = ;Imported pterms FB2_7
+	  !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
+    IDE_W_OBUF.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & A<23>
 
 MACROCELL | 1 | 12 | INT2_OBUF
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 1 | 13
-INPUTS | 23 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | AUTO_CONFIG_DONE<0>  | A<19>  | A<18>  | A<17>  | A<20>  | A<16>  | AUTO_CONFIG_DONE<1>  | BASEADR_4MB<1>.EXP
-INPUTMC | 7 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 14 | 0 | 8 | 1 | 11
+INPUTS | 24 | IDE_ENABLE  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35  | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<21>  | A<22>  | A<23>  | AUTO_CONFIG_DONE<0>  | A<19>  | A<18>  | A<17>  | A<20>  | A<16>  | AUTO_CONFIG_DONE<1>
+INPUTMC | 8 | 3 | 0 | 2 | 7 | 1 | 11 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 11 | 3 | 10
 INPUTP | 16 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 53 | 68 | 66 | 67 | 63
 EXPORTS | 1 | 1 | 13
-IMPORTS | 1 | 1 | 11
-EQ | 18 | 
-   !ROM_ENABLE = ;Imported pterms FB2_12
-	  !IDE_ENABLE & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+EQ | 14 | 
+   !ROM_ENABLE = !IDE_ENABLE & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
     INT2_OBUF.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
@@ -992,26 +876,65 @@ EQ | 18 |
 
 MACROCELL | 2 | 8 | INT2_OBUF$BUF0
 ATTRIBUTES | 264962 | 0
-INPUTS | 10 | IDE_ENABLE  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37
-INPUTMC | 2 | 3 | 2 | 3 | 15
-INPUTP | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78
-EQ | 2 | 
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 16 | IDE_ENABLE  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35  | IDE_BASEADR<0>  | A<16>  | IDE_BASEADR<1>  | A<17>  | IDE_BASEADR<7>  | A<23>
+INPUTMC | 5 | 3 | 0 | 2 | 7 | 3 | 5 | 2 | 5 | 1 | 0
+INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 63 | 66 | 70
+EXPORTS | 1 | 2 | 7
+EQ | 6 | 
    !INT2 = !IDE_ENABLE & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$37;
+	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35;
+    INT2_OBUF$BUF0.EXP  =  IDE_BASEADR<0> & !A<16>
+	# !IDE_BASEADR<1> & A<17>
+	# IDE_BASEADR<7> & !A<23>
+	# !IDE_BASEADR<7> & A<23>
 
-MACROCELL | 2 | 1 | nCS1_OBUF
+MACROCELL | 3 | 16 | STERM_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 16 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | IDE_BASEADR<6>.EXP
-INPUTMC | 5 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 2 | 2
+INPUTS | 17 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | EXP22_.EXP  | DSACK_16BIT.EXP
+INPUTMC | 6 | 1 | 11 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 15 | 3 | 17
 INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-IMPORTS | 1 | 2 | 2
-EQ | 25 | 
-   !nCS1 = !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+IMPORTS | 2 | 3 | 15 | 3 | 17
+EQ | 51 | 
+   !STERM = !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & A<23>
+;Imported pterms FB4_16
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
 	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & A<23>
 	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
 	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+;Imported pterms FB4_15
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+;Imported pterms FB4_18
 	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
 	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & !A<22> & A<23>
@@ -1021,7 +944,35 @@ EQ | 25 |
 	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
 	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>;
+
+MACROCELL | 2 | 1 | nCS1_OBUF
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 2 | 0
+INPUTS | 19 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | A<3>  | IDE_ENABLE  | $OpTx$INV$35  | EXP14_.EXP
+INPUTMC | 7 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 0 | 2 | 7 | 2 | 2
+INPUTP | 12 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 50
+EXPORTS | 1 | 2 | 0
+IMPORTS | 1 | 2 | 2
+EQ | 28 | 
+   !nCS1 = !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & A<23>
 ;Imported pterms FB3_3
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
 	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
@@ -1031,12 +982,15 @@ EQ | 25 |
 	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
 	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>;
+    nCS1_OBUF.EXP  =  A<3>
+	# !IDE_ENABLE & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !$OpTx$INV$35
 
 MACROCELL | 0 | 16 | nCS2_OBUF
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 0 | 17
-INPUTS | 17 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | A<2>  | EXP12_.EXP
-INPUTMC | 5 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 0 | 15
+INPUTS | 17 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | A<2>  | EXP10_.EXP
+INPUTMC | 5 | 1 | 11 | 3 | 6 | 3 | 13 | 2 | 9 | 0 | 15
 INPUTP | 12 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 44
 EXPORTS | 1 | 0 | 17
 IMPORTS | 1 | 0 | 15
@@ -1069,75 +1023,101 @@ EQ | 27 |
     nCS2_OBUF.EXP  =  A<2> & A<30>
 	# A<2> & A<29>
 
-MACROCELL | 3 | 11 | nOE_BUFR.MC
+MACROCELL | 2 | 11 | nOE_BUFR.MC
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 1 | 0 | 0
-INPUTS | 19 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | RW  | nDS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | EXP21_.EXP  | IDE_DSACK_D0.EXP
-INPUTMC | 6 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 3 | 10 | 3 | 12
-INPUTP | 13 | 8 | 7 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-IMPORTS | 2 | 3 | 10 | 3 | 12
-EQ | 51 | 
-   !nOE_BUFR = !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+INPUTS | 19 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | $OpTx$FX_DC$42  | clk  | EXP16_.EXP  | EXP17_.EXP
+INPUTMC | 6 | 1 | 11 | 3 | 6 | 3 | 13 | 3 | 12 | 2 | 10 | 2 | 12
+INPUTP | 13 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 20
+IMPORTS | 2 | 2 | 10 | 2 | 12
+EQ | 77 | 
+   !nOE_BUFR = !clk & !SHUT_UP<0> & BASEADR_4MB<0> & 
+	BASEADR_4MB<1> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & !BASEADR_4MB<0> & 
+	BASEADR_4MB<1> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & $OpTx$FX_DC$42
 	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & $OpTx$FX_DC$42
 	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & $OpTx$FX_DC$42
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-;Imported pterms FB4_11
+	RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & $OpTx$FX_DC$42
+;Imported pterms FB3_11
+	# !clk & !SHUT_UP<0> & BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & !BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
 	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+;Imported pterms FB3_10
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
 	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-;Imported pterms FB4_10
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-;Imported pterms FB4_13
+;Imported pterms FB3_13
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
 	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB3_14
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>;
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+;Imported pterms FB3_15
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>;
 
 MACROCELL | 1 | 14 | nRAM_SEL_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 18 | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<21>  | A<22>  | A<23>  | EXP13_.EXP  | SHUT_UP<0>.EXP
-INPUTMC | 7 | 3 | 15 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 13 | 1 | 15
+INPUTS | 18 | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<21>  | A<22>  | A<23>  | EXP12_.EXP  | EXP13_.EXP
+INPUTMC | 7 | 2 | 7 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 1 | 13 | 1 | 15
 INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
 IMPORTS | 2 | 1 | 13 | 1 | 15
 EQ | 59 | 
    !nRAM_SEL = !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !$OpTx$INV$37
+	!A<28> & !A<27> & !$OpTx$INV$35
 	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
 	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & A<23>
@@ -1170,9 +1150,6 @@ EQ | 59 |
 	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
@@ -1192,101 +1169,141 @@ EQ | 59 |
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
 	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & A<23>;
 
-MACROCELL | 3 | 9 | nWE_BUFR.MC
+MACROCELL | 2 | 14 | nWE_BUFR.MC
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 0 | 11 | 3 | 10
-INPUTS | 21 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | RW  | nDS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | EXP20_.EXP
-INPUTMC | 8 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 13 | 2 | 9 | 2 | 7 | 3 | 8
-INPUTP | 13 | 8 | 7 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 10
-IMPORTS | 1 | 3 | 8
-EQ | 57 | 
-   !nWE_BUFR = !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+OUTPUTMC | 2 | 0 | 11 | 2 | 13
+INPUTS | 22 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | RW  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | $OpTx$FX_DC$42  | clk  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<23>  | EXP19_.EXP
+INPUTMC | 8 | 1 | 11 | 3 | 6 | 3 | 13 | 3 | 12 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 15
+INPUTP | 14 | 8 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 20 | 70
+EXPORTS | 1 | 2 | 13
+IMPORTS | 1 | 2 | 15
+EQ | 79 | 
+   !nWE_BUFR = !clk & !SHUT_UP<0> & BASEADR_4MB<0> & 
+	BASEADR_4MB<1> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & !BASEADR_4MB<0> & 
+	BASEADR_4MB<1> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & $OpTx$FX_DC$42
 	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-;Imported pterms FB4_9
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	!RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & $OpTx$FX_DC$42
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	!RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & $OpTx$FX_DC$42
+;Imported pterms FB3_16
+	# !clk & !SHUT_UP<0> & BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & !BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
+	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & $OpTx$FX_DC$42
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-;Imported pterms FB4_8
+	!RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
 	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+;Imported pterms FB3_17
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
 	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-;Imported pterms FB4_7
+;Imported pterms FB3_18
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB3_1
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
 	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>;
-    nWE_BUFR.EXP  =  !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+    nWE_BUFR.EXP  =  !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
 
-MACROCELL | 3 | 16 | Mtrien_Dout_not0001
-ATTRIBUTES | 264962 | 0
-OUTPUTMC | 1 | 3 | 15
-INPUTS | 6 | IDE_BASEADR<1>  | A<17>  | IDE_BASEADR<2>  | A<18>  | IDE_BASEADR<7>  | A<23>
-INPUTMC | 3 | 1 | 8 | 2 | 5 | 1 | 0
-INPUTP | 3 | 66 | 68 | 70
-EXPORTS | 1 | 3 | 15
-EQ | 5 | 
-   STERM = Vcc;
-    Mtrien_Dout_not0001.EXP  =  !IDE_BASEADR<1> & A<17>
+MACROCELL | 2 | 7 | $OpTx$INV$35
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 14 | 3 | 17 | 3 | 14 | 3 | 0 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 0 | 1 | 8 | 1 | 5 | 1 | 6 | 1 | 12 | 2 | 8 | 1 | 14 | 2 | 1
+INPUTS | 7 | SHUT_UP<1>  | IDE_BASEADR<2>  | A<18>  | IDE_BASEADR<4>  | A<20>  | EXP15_.EXP  | INT2_OBUF$BUF0.EXP
+INPUTMC | 5 | 0 | 10 | 2 | 4 | 1 | 10 | 2 | 6 | 2 | 8
+INPUTP | 2 | 68 | 67
+IMPORTS | 2 | 2 | 6 | 2 | 8
+EQ | 20 | 
+   $OpTx$INV$35 = SHUT_UP<1>
 	# IDE_BASEADR<2> & !A<18>
 	# !IDE_BASEADR<2> & A<18>
+	# IDE_BASEADR<4> & !A<20>
+	# !IDE_BASEADR<4> & A<20>
+;Imported pterms FB3_7
+	# IDE_BASEADR<1> & !A<17>
+	# IDE_BASEADR<5> & !A<21>
+	# !IDE_BASEADR<5> & A<21>
+	# IDE_BASEADR<6> & !A<22>
+	# !IDE_BASEADR<6> & A<22>
+;Imported pterms FB3_6
+	# !IDE_BASEADR<0> & A<16>
+	# IDE_BASEADR<3> & !A<19>
+	# !IDE_BASEADR<3> & A<19>
+;Imported pterms FB3_9
+	# IDE_BASEADR<0> & !A<16>
+	# !IDE_BASEADR<1> & A<17>
 	# IDE_BASEADR<7> & !A<23>
+	# !IDE_BASEADR<7> & A<23>;
 
-MACROCELL | 2 | 11 | DSACK_INT<1>/DSACK_INT<1>_TRST
+MACROCELL | 1 | 8 | DSACK_INT<0>/DSACK_INT<0>_TRST
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 2 | 1 | 16 | 0 | 1
-INPUTS | 18 | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$37  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<21>  | A<22>  | A<23>  | EXP14_.EXP  | EXP15_.EXP
-INPUTMC | 7 | 3 | 15 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 2 | 10 | 2 | 12
+INPUTS | 18 | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | $OpTx$INV$35  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<21>  | A<22>  | A<23>  | IDE_W_OBUF.EXP  | EXP11_.EXP
+INPUTMC | 7 | 2 | 7 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 1 | 7 | 1 | 9
 INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-IMPORTS | 2 | 2 | 10 | 2 | 12
-EQ | 60 | 
-   DSACK_INT<1>/DSACK_INT<1>_TRST = !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !$OpTx$INV$37
+IMPORTS | 2 | 1 | 7 | 1 | 9
+EQ | 59 | 
+   DSACK_INT<0>/DSACK_INT<0>_TRST = !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !$OpTx$INV$35
 	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
 	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & A<23>
@@ -1299,7 +1316,7 @@ EQ | 60 |
 	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
 	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
-;Imported pterms FB3_11
+;Imported pterms FB2_8
 	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
 	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & !A<23>
@@ -1315,7 +1332,23 @@ EQ | 60 |
 	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
 	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & A<23>
-;Imported pterms FB3_10
+;Imported pterms FB2_10
+	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB2_11
 	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
@@ -1325,134 +1358,69 @@ EQ | 60 |
 	# !AUTO_CONFIG_DONE<0> & !A<31> & !A<30> & !A<29> & 
 	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
 	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
-;Imported pterms FB3_13
-	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
-;Imported pterms FB3_14
 	# !AUTO_CONFIG_DONE<1> & !A<31> & !A<30> & !A<29> & 
 	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
 	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>;
 
-MACROCELL | 3 | 15 | $OpTx$INV$37
+MACROCELL | 3 | 12 | $OpTx$FX_DC$42
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 14 | 3 | 6 | 3 | 5 | 3 | 2 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 0 | 2 | 0 | 1 | 5 | 1 | 7 | 1 | 11 | 2 | 8 | 1 | 14 | 2 | 11
-INPUTS | 7 | SHUT_UP<1>  | IDE_BASEADR<3>  | A<19>  | IDE_BASEADR<4>  | A<20>  | EXP22_.EXP  | Mtrien_Dout_not0001.EXP
-INPUTMC | 5 | 0 | 10 | 1 | 6 | 2 | 4 | 3 | 14 | 3 | 16
-INPUTP | 2 | 53 | 67
-IMPORTS | 2 | 3 | 14 | 3 | 16
-EQ | 20 | 
-   $OpTx$INV$37 = SHUT_UP<1>
-	# IDE_BASEADR<3> & !A<19>
-	# !IDE_BASEADR<3> & A<19>
-	# IDE_BASEADR<4> & !A<20>
-	# !IDE_BASEADR<4> & A<20>
-;Imported pterms FB4_15
-	# IDE_BASEADR<1> & !A<17>
-	# IDE_BASEADR<5> & !A<21>
-	# !IDE_BASEADR<5> & A<21>
-	# IDE_BASEADR<6> & !A<22>
-	# !IDE_BASEADR<6> & A<22>
-;Imported pterms FB4_14
-	# IDE_BASEADR<0> & !A<16>
-	# !IDE_BASEADR<0> & A<16>
-	# !IDE_BASEADR<7> & A<23>
-;Imported pterms FB4_17
-	# !IDE_BASEADR<1> & A<17>
-	# IDE_BASEADR<2> & !A<18>
-	# !IDE_BASEADR<2> & A<18>
-	# IDE_BASEADR<7> & !A<23>;
+OUTPUTMC | 4 | 2 | 11 | 2 | 14 | 2 | 10 | 2 | 15
+INPUTS | 2 | A<23>  | BASEADR_4MB<2>
+INPUTMC | 1 | 2 | 9
+INPUTP | 1 | 70
+EQ | 2 | 
+   !$OpTx$FX_DC$42 = A<23>
+	$ BASEADR_4MB<2>;
 
-MACROCELL | 0 | 1 | _6_
-ATTRIBUTES | 265986 | 0
-OUTPUTMC | 1 | 0 | 2
-INPUTS | 6 | DSACK_INT<1>/DSACK_INT<1>_TRST  | DSACK<0>_BUFR  | RW  | SIZ<1>  | SIZ<0>  | A<0>
-INPUTMC | 2 | 2 | 11 | 3 | 0
-INPUTP | 4 | 8 | 3 | 5 | 47
-EXPORTS | 1 | 0 | 2
-EQ | 3 | 
-   DSACK<0> = DSACK<0>_BUFR;
-   DSACK<0>.OE = DSACK_INT<1>/DSACK_INT<1>_TRST;
-    _6_.EXP  =  !RW & !SIZ<1> & SIZ<0> & !A<0>
-
-MACROCELL | 0 | 11 | _7_
+MACROCELL | 0 | 11 | _6_
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 0 | 10
 INPUTS | 9 | nWE_BUFR  | SHUT_UP<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>
-INPUTMC | 2 | 3 | 9 | 0 | 10
+INPUTMC | 2 | 2 | 14 | 0 | 10
 INPUTP | 7 | 46 | 49 | 54 | 47 | 44 | 48 | 50
 EXPORTS | 1 | 0 | 10
 EQ | 3 | 
    nWE = nWE_BUFR;
-    _7_.EXP  =  SHUT_UP<1> & !A<1> & !A<4> & A<6> & !A<0> & !A<2> & 
+    _6_.EXP  =  SHUT_UP<1> & !A<1> & !A<4> & A<6> & !A<0> & !A<2> & 
 	!A<5> & A<3>
 
-MACROCELL | 0 | 0 | _8_
+MACROCELL | 0 | 0 | _7_
 ATTRIBUTES | 264962 | 0
 OUTPUTMC | 1 | 0 | 17
-INPUTS | 13 | nOE_BUFR  | IDE_ENABLE  | A<2>  | A<31>  | $OpTx$INV$37  | ROM_OUT_ENABLE_S  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>
-INPUTMC | 4 | 3 | 11 | 3 | 2 | 3 | 15 | 3 | 5
+INPUTS | 13 | nOE_BUFR  | IDE_ENABLE  | A<2>  | A<31>  | $OpTx$INV$35  | ROM_OUT_ENABLE_S  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>
+INPUTMC | 4 | 2 | 11 | 3 | 0 | 2 | 7 | 3 | 14
 INPUTP | 9 | 44 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78
 EXPORTS | 1 | 0 | 17
 EQ | 7 | 
    nOE = nOE_BUFR;
-    _8_.EXP  =  IDE_ENABLE & A<2>
+    _7_.EXP  =  IDE_ENABLE & A<2>
 	# A<2> & A<31>
-	# A<2> & $OpTx$INV$37
+	# A<2> & $OpTx$INV$35
 	# ROM_OUT_ENABLE_S & !IDE_ENABLE & !A<31> & !A<30> & 
 	!A<29> & !A<26> & !A<25> & !A<24> & !A<28> & !A<27> & 
-	!$OpTx$INV$37
+	!$OpTx$INV$35
 
-MACROCELL | 1 | 16 | _9_
-ATTRIBUTES | 265986 | 0
-OUTPUTMC | 1 | 1 | 15
-INPUTS | 11 | DSACK_INT<1>/DSACK_INT<1>_TRST  | DSACK<1>_BUFR  | SHUT_UP<0>  | D<3>.PIN  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | A<2>
-INPUTMC | 3 | 2 | 11 | 2 | 16 | 1 | 15
-INPUTP | 8 | 17 | 46 | 49 | 54 | 47 | 48 | 50 | 44
-EXPORTS | 1 | 1 | 15
-EQ | 8 | 
-   DSACK<1> = DSACK<1>_BUFR;
-   DSACK<1>.OE = DSACK_INT<1>/DSACK_INT<1>_TRST;
-    _9_.EXP  =  !SHUT_UP<0> & D<3>.PIN & !A<1> & !A<4> & A<6> & 
-	!A<0> & !A<5> & A<3>
-	# !SHUT_UP<0> & !A<1> & !A<4> & A<6> & !A<0> & A<2> & 
-	!A<5> & A<3>
-	# SHUT_UP<0> & !D<3>.PIN & !A<1> & !A<4> & A<6> & 
-	!A<0> & !A<2> & !A<5> & A<3>
-
-MACROCELL | 0 | 12 | EXP10_
+MACROCELL | 0 | 12 | EXP8_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 0 | 13
 INPUTS | 9 | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<2>  | A<5>  | A<3>
-INPUTMC | 2 | 2 | 14 | 0 | 8
+INPUTMC | 2 | 3 | 11 | 3 | 10
 INPUTP | 7 | 46 | 49 | 54 | 47 | 44 | 48 | 50
 EXPORTS | 1 | 0 | 13
 EQ | 2 | 
-       EXP10_.EXP  =  AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<1> & 
+       EXP8_.EXP  =  AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<1> & 
 	!A<4> & !A<6> & !A<0> & A<2> & A<5> & !A<3>
 
-MACROCELL | 0 | 13 | EXP11_
+MACROCELL | 0 | 13 | EXP9_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 0 | 14
-INPUTS | 10 | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | A<2>  | EXP10_.EXP
-INPUTMC | 3 | 2 | 14 | 0 | 8 | 0 | 12
+INPUTS | 10 | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<1>  | A<4>  | A<6>  | A<0>  | A<5>  | A<3>  | A<2>  | EXP8_.EXP
+INPUTMC | 3 | 3 | 11 | 3 | 10 | 0 | 12
 INPUTP | 7 | 46 | 49 | 54 | 47 | 48 | 50 | 44
 EXPORTS | 1 | 0 | 14
 IMPORTS | 1 | 0 | 12
 EQ | 13 | 
-       EXP11_.EXP  =  AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<1> & 
+       EXP9_.EXP  =  AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<1> & 
 	!A<4> & !A<6> & !A<0> & !A<5> & !A<3>
 	# AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<1> & 
 	A<4> & !A<6> & !A<0> & A<2> & !A<5>
@@ -1466,15 +1434,15 @@ EQ | 13 |
 	# AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & !A<1> & 
 	!A<4> & !A<6> & !A<0> & A<2> & A<5> & !A<3>
 
-MACROCELL | 0 | 15 | EXP12_
+MACROCELL | 0 | 15 | EXP10_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 0 | 16
 INPUTS | 15 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>
-INPUTMC | 4 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9
+INPUTMC | 4 | 1 | 11 | 3 | 6 | 3 | 13 | 2 | 9
 INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
 EXPORTS | 1 | 0 | 16
 EQ | 15 | 
-       EXP12_.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+       EXP10_.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
@@ -1490,16 +1458,54 @@ EQ | 15 |
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
 
-MACROCELL | 1 | 13 | EXP13_
+MACROCELL | 1 | 9 | EXP11_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 16 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | IDE_BASEADR<4>.EXP
+INPUTMC | 5 | 1 | 11 | 3 | 6 | 3 | 13 | 2 | 9 | 1 | 10
+INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
+EXPORTS | 1 | 1 | 8
+IMPORTS | 1 | 1 | 10
+EQ | 28 | 
+       EXP11_.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB2_11
+	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !AUTO_CONFIG_DONE<0> & !A<31> & !A<30> & !A<29> & 
+	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
+	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
+	# !AUTO_CONFIG_DONE<1> & !A<31> & !A<30> & !A<29> & 
+	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
+	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
+
+MACROCELL | 1 | 13 | EXP12_
 ATTRIBUTES | 2048 | 0
 OUTPUTMC | 1 | 1 | 14
 INPUTS | 19 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | INT2_OBUF.EXP
-INPUTMC | 8 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 1 | 12
+INPUTMC | 8 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 1 | 12
 INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
 EXPORTS | 1 | 1 | 14
 IMPORTS | 1 | 1 | 12
-EQ | 31 | 
-       EXP13_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+EQ | 28 | 
+       EXP12_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
 	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
@@ -1518,9 +1524,6 @@ EQ | 31 |
 	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
@@ -1531,51 +1534,15 @@ EQ | 31 |
 	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
 	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
 
-MACROCELL | 2 | 10 | EXP14_
+MACROCELL | 1 | 15 | EXP13_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 11
-INPUTS | 19 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | BASEADR<1>.EXP
-INPUTMC | 8 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 9
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 15 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>
+INPUTMC | 4 | 1 | 11 | 3 | 6 | 3 | 13 | 2 | 9
 INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 2 | 11
-IMPORTS | 1 | 2 | 9
-EQ | 25 | 
-       EXP14_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & A<22> & A<23>
-;Imported pterms FB3_10
-	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
-	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-	# !AUTO_CONFIG_DONE<0> & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
-	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
-
-MACROCELL | 2 | 12 | EXP15_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 11
-INPUTS | 16 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR<0>.EXP
-INPUTMC | 5 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 13
-INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 2 | 11
-IMPORTS | 1 | 2 | 13
-EQ | 19 | 
-       EXP15_.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
+EXPORTS | 1 | 1 | 14
+EQ | 15 | 
+       EXP13_.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & BASEADR_4MB<1> & 
 	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & A<21> & A<22> & !A<23>
 	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
@@ -1590,305 +1557,391 @@ EQ | 19 |
 	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
 	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
 	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
-;Imported pterms FB3_14
-	# !AUTO_CONFIG_DONE<1> & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & !A<28> & 
-	!A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
 
-MACROCELL | 2 | 15 | EXP16_
+MACROCELL | 2 | 2 | EXP14_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 16
-INPUTS | 20 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | AUTO_CONFIG_DONE<0>.EXP
-INPUTMC | 8 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 14
-INPUTP | 12 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 2 | 16
-IMPORTS | 1 | 2 | 14
-EQ | 25 | 
-       EXP16_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-;Imported pterms FB3_15
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-	# !AUTO_CONFIG_DONE<0> & !nAS & !A<31> & !A<30> & 
-	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
-	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
-
-MACROCELL | 2 | 17 | EXP17_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 2 | 16
-INPUTS | 17 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | IO5_OBUF.EXP
-INPUTMC | 5 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 2 | 0
-INPUTP | 12 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 2 | 16
-IMPORTS | 1 | 2 | 0
-EQ | 19 | 
-       EXP17_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 15 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>
+INPUTMC | 4 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7
+INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
+EXPORTS | 1 | 2 | 1
+EQ | 15 | 
+       EXP14_.EXP  =  !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & !A<22> & !A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & A<23>
 	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
-	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-;Imported pterms FB3_1
-	# !AUTO_CONFIG_DONE<1> & !nAS & !A<31> & !A<30> & 
-	!A<29> & !A<26> & !A<25> & !A<24> & A<19> & !A<18> & !A<17> & 
-	!A<28> & !A<27> & A<21> & !A<20> & !A<16> & A<22> & A<23>
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
 
-MACROCELL | 3 | 1 | EXP18_
+MACROCELL | 2 | 6 | EXP15_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 0
-INPUTS | 18 | DSACK_16BIT  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | IDE_ENABLE.EXP
-INPUTMC | 6 | 3 | 6 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 3 | 2
-INPUTP | 12 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 0
-IMPORTS | 1 | 3 | 2
-EQ | 25 | 
-       EXP18_.EXP  =  DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	!BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	!BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	!BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	A<23>
-;Imported pterms FB4_3
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR<0> & 
-	!BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	!A<23>
-
-MACROCELL | 3 | 7 | EXP19_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 8
-INPUTS | 18 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | nDS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | DSACK_16BIT.EXP
-INPUTMC | 5 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 3 | 6
-INPUTP | 13 | 8 | 7 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 8
-IMPORTS | 1 | 3 | 6
-EQ | 25 | 
-       EXP19_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-;Imported pterms FB4_7
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-
-MACROCELL | 3 | 8 | EXP20_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 9
-INPUTS | 18 | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | RW  | nDS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | EXP19_.EXP
-INPUTMC | 5 | 1 | 15 | 1 | 10 | 1 | 11 | 1 | 9 | 3 | 7
-INPUTP | 13 | 8 | 7 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 9
-IMPORTS | 1 | 3 | 7
-EQ | 41 | 
-       EXP20_.EXP  =  !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-;Imported pterms FB4_8
-	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
-;Imported pterms FB4_7
-	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & !RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-
-MACROCELL | 3 | 10 | EXP21_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 11
-INPUTS | 21 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | nDS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | nWE_BUFR.EXP
-INPUTMC | 8 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 3 | 9
-INPUTP | 13 | 8 | 7 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 11
-IMPORTS | 1 | 3 | 9
-EQ | 22 | 
-       EXP21_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
-	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
-	!BASEADR_4MB<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-;Imported pterms FB4_10
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
-	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
-	!BASEADR<2> & RW & !nDS & !A<31> & !A<30> & !A<29> & !A<26> & 
-	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
-
-MACROCELL | 3 | 14 | EXP22_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 15
-INPUTS | 7 | IDE_BASEADR<1>  | A<17>  | IDE_BASEADR<5>  | A<21>  | IDE_BASEADR<6>  | A<22>  | IDE_DSACK_D1.EXP
-INPUTMC | 4 | 1 | 8 | 2 | 3 | 2 | 2 | 3 | 13
+OUTPUTMC | 1 | 2 | 7
+INPUTS | 7 | IDE_BASEADR<1>  | A<17>  | IDE_BASEADR<5>  | A<21>  | IDE_BASEADR<6>  | A<22>  | IDE_BASEADR<1>.EXP
+INPUTMC | 4 | 2 | 5 | 1 | 6 | 2 | 3 | 2 | 5
 INPUTP | 3 | 66 | 72 | 71
-EXPORTS | 1 | 3 | 15
-IMPORTS | 1 | 3 | 13
+EXPORTS | 1 | 2 | 7
+IMPORTS | 1 | 2 | 5
 EQ | 9 | 
-       EXP22_.EXP  =  IDE_BASEADR<1> & !A<17>
+       EXP15_.EXP  =  IDE_BASEADR<1> & !A<17>
 	# IDE_BASEADR<5> & !A<21>
 	# !IDE_BASEADR<5> & A<21>
 	# IDE_BASEADR<6> & !A<22>
 	# !IDE_BASEADR<6> & A<22>
-;Imported pterms FB4_14
-	# IDE_BASEADR<0> & !A<16>
+;Imported pterms FB3_6
 	# !IDE_BASEADR<0> & A<16>
-	# !IDE_BASEADR<7> & A<23>
+	# IDE_BASEADR<3> & !A<19>
+	# !IDE_BASEADR<3> & A<19>
 
-MACROCELL | 3 | 17 | EXP23_
+MACROCELL | 2 | 10 | EXP16_
 ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 3 | 0
-INPUTS | 20 | DSACK_16BIT  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | nAS  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>
-INPUTMC | 8 | 3 | 6 | 1 | 15 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9
-INPUTP | 12 | 1 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
-EXPORTS | 1 | 3 | 0
-EQ | 20 | 
-       EXP23_.EXP  =  DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	BASEADR<1> & BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & BASEADR<0> & 
-	BASEADR<1> & !BASEADR<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR_4MB<0> & 
-	BASEADR_4MB<1> & !BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & 
-	!A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR_4MB<0> & 
-	!BASEADR_4MB<1> & BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	A<23>
-	# DSACK_16BIT & !SHUT_UP<0> & !BASEADR_4MB<0> & 
-	!BASEADR_4MB<1> & !BASEADR_4MB<2> & !nAS & !A<31> & !A<30> & !A<29> & 
-	!A<26> & !A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & 
-	!A<23>
+OUTPUTMC | 1 | 2 | 11
+INPUTS | 22 | clk  | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | RW  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | $OpTx$FX_DC$42  | nAS  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<23>  | BASEADR_4MB<2>.EXP
+INPUTMC | 8 | 1 | 11 | 3 | 6 | 3 | 13 | 3 | 12 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 9
+INPUTP | 14 | 20 | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 1 | 70
+EXPORTS | 1 | 2 | 11
+IMPORTS | 1 | 2 | 9
+EQ | 25 | 
+       EXP16_.EXP  =  !clk & !SHUT_UP<0> & BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & !BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+;Imported pterms FB3_10
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
 
-PIN | clk | 4096 | 0 | N/A | 20 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 3 | 6 | 3 | 5 | 3 | 2 | 3 | 12 | 3 | 13 | 3 | 3
-PIN | A<1> | 64 | 0 | N/A | 46 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 14 | 0 | 8 | 0 | 13 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 0 | 4 | 0 | 5 | 0 | 2 | 0 | 7 | 0 | 11 | 0 | 12 | 1 | 16
-PIN | A<2> | 64 | 0 | N/A | 44 | 31 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 0 | 16 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 0 | 17 | 0 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 8 | 0 | 11 | 0 | 12 | 0 | 13 | 1 | 16
-PIN | A<4> | 64 | 0 | N/A | 49 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 14 | 0 | 8 | 0 | 13 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 1 | 16
-PIN | A<5> | 64 | 0 | N/A | 48 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 14 | 0 | 8 | 0 | 13 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 1 | 16
-PIN | A<6> | 64 | 0 | N/A | 54 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 14 | 0 | 8 | 0 | 13 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 1 | 16
-PIN | A<0> | 64 | 0 | N/A | 47 | 30 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 14 | 0 | 8 | 0 | 13 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 0 | 4 | 0 | 5 | 0 | 1 | 0 | 7 | 0 | 2 | 0 | 11 | 0 | 12 | 1 | 16
-PIN | A<3> | 64 | 0 | N/A | 50 | 30 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 2 | 14 | 0 | 8 | 0 | 13 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 2 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 1 | 16
-PIN | A<21> | 64 | 0 | N/A | 72 | 44 | 2 | 16 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 0 | 3 | 4 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 3 | 14 | 0 | 15 | 1 | 12 | 1 | 13 | 2 | 0 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 2 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 12 | 3 | 17
-PIN | A<22> | 64 | 0 | N/A | 71 | 44 | 2 | 16 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 0 | 3 | 4 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 3 | 14 | 0 | 15 | 1 | 12 | 1 | 13 | 2 | 0 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 2 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 12 | 3 | 17
-PIN | A<23> | 64 | 0 | N/A | 70 | 45 | 2 | 16 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 0 | 3 | 4 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 3 | 13 | 0 | 15 | 1 | 12 | 1 | 13 | 2 | 0 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 2 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 12 | 3 | 16 | 3 | 17
-PIN | nAS | 64 | 0 | N/A | 1 | 34 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 1 | 5 | 1 | 7 | 2 | 0 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 17
-PIN | A<24> | 64 | 0 | N/A | 74 | 51 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 17 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 15 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 0 | 0 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<25> | 64 | 0 | N/A | 2 | 51 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 17 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 15 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 0 | 0 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<26> | 64 | 0 | N/A | 73 | 51 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 17 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 15 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 0 | 0 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<27> | 64 | 0 | N/A | 78 | 51 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 17 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 15 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 0 | 0 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<28> | 64 | 0 | N/A | 79 | 51 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 17 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 15 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 0 | 0 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<29> | 64 | 0 | N/A | 75 | 50 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 15 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 0 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<30> | 64 | 0 | N/A | 82 | 50 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 15 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 0 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<31> | 64 | 0 | N/A | 80 | 50 | 2 | 16 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 0 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3 | 0 | 15 | 2 | 0 | 1 | 5 | 1 | 7 | 0 | 0 | 2 | 8 | 2 | 1 | 0 | 16 | 3 | 11 | 1 | 14 | 3 | 9 | 2 | 11 | 1 | 12 | 1 | 13 | 2 | 10 | 2 | 12 | 2 | 15 | 2 | 17 | 3 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 17
-PIN | A<16> | 64 | 0 | N/A | 63 | 22 | 3 | 13 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 1 | 12 | 2 | 0
-PIN | A<17> | 64 | 0 | N/A | 66 | 23 | 3 | 14 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 1 | 12 | 2 | 0 | 3 | 16
-PIN | A<18> | 64 | 0 | N/A | 68 | 22 | 2 | 0 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 1 | 12 | 3 | 16
-PIN | A<19> | 64 | 0 | N/A | 53 | 22 | 3 | 15 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 1 | 12 | 2 | 0
-PIN | A<20> | 64 | 0 | N/A | 67 | 22 | 3 | 15 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 4 | 1 | 12 | 2 | 0
-PIN | reset | 65536 | 0 | N/A | 92 | 25 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 13 | 3 | 3
-PIN | RW | 64 | 0 | N/A | 8 | 35 | 2 | 14 | 0 | 8 | 3 | 6 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 5 | 3 | 2 | 3 | 4 | 0 | 4 | 0 | 5 | 0 | 2 | 0 | 7 | 1 | 5 | 1 | 7 | 3 | 11 | 3 | 9 | 0 | 1 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 12
-PIN | nDS | 64 | 0 | N/A | 7 | 25 | 2 | 14 | 0 | 8 | 1 | 15 | 0 | 10 | 2 | 13 | 2 | 9 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 2 | 6 | 1 | 8 | 2 | 5 | 1 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 1 | 0 | 3 | 11 | 3 | 9 | 3 | 6 | 3 | 7 | 3 | 8 | 3 | 10 | 3 | 12
-PIN | IDE_WAIT | 64 | 0 | N/A | 35 | 2 | 3 | 6 | 3 | 5
+MACROCELL | 2 | 12 | EXP17_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 11
+INPUTS | 19 | clk  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | nAS  | EXP18_.EXP
+INPUTMC | 5 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 13
+INPUTP | 14 | 20 | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 1
+EXPORTS | 1 | 2 | 11
+IMPORTS | 1 | 2 | 13
+EQ | 35 | 
+       EXP17_.EXP  =  !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB3_14
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+;Imported pterms FB3_15
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+
+MACROCELL | 2 | 13 | EXP18_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 12
+INPUTS | 19 | clk  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | nAS  | nWE_BUFR.EXP
+INPUTMC | 5 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 14
+INPUTP | 14 | 20 | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 1
+EXPORTS | 1 | 2 | 12
+IMPORTS | 1 | 2 | 14
+EQ | 19 | 
+       EXP18_.EXP  =  !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+;Imported pterms FB3_15
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+
+MACROCELL | 2 | 15 | EXP19_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 14
+INPUTS | 22 | clk  | SHUT_UP<0>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | RW  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | $OpTx$FX_DC$42  | nAS  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<23>  | EXP20_.EXP
+INPUTMC | 8 | 1 | 11 | 3 | 6 | 3 | 13 | 3 | 12 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 16
+INPUTP | 14 | 20 | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 1 | 70
+EXPORTS | 1 | 2 | 14
+IMPORTS | 1 | 2 | 16
+EQ | 63 | 
+       EXP19_.EXP  =  !clk & !SHUT_UP<0> & BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & $OpTx$FX_DC$42
+	# !clk & !SHUT_UP<0> & !BASEADR_4MB<0> & 
+	!BASEADR_4MB<1> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
+	# !SHUT_UP<0> & BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & $OpTx$FX_DC$42
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & $OpTx$FX_DC$42
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+;Imported pterms FB3_17
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+;Imported pterms FB3_18
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB3_1
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+
+MACROCELL | 2 | 16 | EXP20_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 15
+INPUTS | 19 | clk  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | nAS  | EXP21_.EXP
+INPUTMC | 5 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 17
+INPUTP | 14 | 20 | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 1
+EXPORTS | 1 | 2 | 15
+IMPORTS | 1 | 2 | 17
+EQ | 47 | 
+       EXP20_.EXP  =  !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & A<23>
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & A<23>
+;Imported pterms FB3_18
+	# !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB3_1
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+
+MACROCELL | 2 | 17 | EXP21_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 16
+INPUTS | 19 | clk  | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | RW  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | nAS  | IO5_OBUF.EXP
+INPUTMC | 5 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 2 | 0
+INPUTP | 14 | 20 | 8 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70 | 1
+EXPORTS | 1 | 2 | 16
+IMPORTS | 1 | 2 | 0
+EQ | 31 | 
+       EXP21_.EXP  =  !clk & !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & A<23>
+;Imported pterms FB3_1
+	# !clk & !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !clk & !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & 
+	!A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & A<21> & !A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !RW & !nAS & !A<31> & !A<30> & !A<29> & !A<26> & 
+	!A<25> & !A<24> & !A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+
+MACROCELL | 3 | 15 | EXP22_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 16
+INPUTS | 19 | SHUT_UP<0>  | BASEADR<0>  | BASEADR<1>  | BASEADR<2>  | A<31>  | A<30>  | A<29>  | A<26>  | A<25>  | A<24>  | A<28>  | A<27>  | A<21>  | A<22>  | A<23>  | BASEADR_4MB<0>  | BASEADR_4MB<1>  | BASEADR_4MB<2>  | ROM_OUT_ENABLE_S.EXP
+INPUTMC | 8 | 1 | 11 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 14
+INPUTP | 11 | 80 | 82 | 75 | 73 | 2 | 74 | 79 | 78 | 72 | 71 | 70
+EXPORTS | 1 | 3 | 16
+IMPORTS | 1 | 3 | 14
+EQ | 22 | 
+       EXP22_.EXP  =  !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & A<23>
+	# !SHUT_UP<0> & BASEADR<0> & BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & A<22> & !A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR_4MB<0> & !BASEADR_4MB<1> & 
+	!BASEADR_4MB<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+;Imported pterms FB4_15
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & A<23>
+	# !SHUT_UP<0> & !BASEADR<0> & !BASEADR<1> & 
+	!BASEADR<2> & !A<31> & !A<30> & !A<29> & !A<26> & !A<25> & !A<24> & 
+	!A<28> & !A<27> & !A<21> & !A<22> & !A<23>
+
+PIN | clk | 4160 | 0 | N/A | 20 | 38 | 2 | 11 | 2 | 14 | 2 | 0 | 2 | 9 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 4 | 3 | 17 | 3 | 14 | 3 | 0 | 3 | 3 | 3 | 2 | 3 | 1
+PIN | A<1> | 64 | 0 | N/A | 46 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 0 | 4 | 0 | 5 | 0 | 2 | 0 | 7 | 0 | 11 | 0 | 12 | 0 | 13
+PIN | A<2> | 64 | 0 | N/A | 44 | 30 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 0 | 17 | 0 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 0 | 13 | 0 | 16
+PIN | A<4> | 64 | 0 | N/A | 49 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 0 | 13
+PIN | A<5> | 64 | 0 | N/A | 48 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 0 | 13
+PIN | A<6> | 64 | 0 | N/A | 54 | 29 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 0 | 13
+PIN | A<0> | 64 | 0 | N/A | 47 | 30 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 0 | 4 | 0 | 5 | 0 | 1 | 0 | 7 | 0 | 2 | 0 | 11 | 0 | 12 | 0 | 13
+PIN | A<3> | 64 | 0 | N/A | 50 | 30 | 0 | 9 | 0 | 14 | 0 | 6 | 0 | 3 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 0 | 13 | 0 | 2 | 0 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 12 | 2 | 1
+PIN | reset | 65536 | 0 | N/A | 92 | 25 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1
+PIN | RW | 64 | 0 | N/A | 8 | 36 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 2 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 3 | 0 | 3 | 4 | 0 | 4 | 0 | 5 | 0 | 2 | 0 | 7 | 1 | 5 | 0 | 1 | 2 | 11 | 2 | 14 | 2 | 0 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16
+PIN | A<21> | 64 | 0 | N/A | 72 | 45 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 2 | 6 | 1 | 8 | 0 | 15 | 1 | 7 | 1 | 9 | 1 | 12 | 1 | 13 | 1 | 15 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 14 | 3 | 15 | 3 | 17
+PIN | A<22> | 64 | 0 | N/A | 71 | 45 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 2 | 6 | 1 | 8 | 0 | 15 | 1 | 7 | 1 | 9 | 1 | 12 | 1 | 13 | 1 | 15 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 14 | 3 | 15 | 3 | 17
+PIN | A<23> | 64 | 0 | N/A | 70 | 45 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 10 | 1 | 14 | 2 | 13 | 2 | 2 | 1 | 8 | 3 | 12 | 0 | 15 | 1 | 7 | 1 | 9 | 1 | 12 | 1 | 13 | 1 | 15 | 2 | 0 | 2 | 8 | 2 | 12 | 2 | 14 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 14 | 3 | 15 | 3 | 17
+PIN | nAS | 64 | 0 | N/A | 1 | 36 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 1 | 5 | 2 | 14 | 2 | 11 | 2 | 0 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17
+PIN | A<16> | 64 | 0 | N/A | 63 | 22 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 1 | 12 | 2 | 8
+PIN | A<17> | 64 | 0 | N/A | 66 | 23 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 1 | 12 | 2 | 6 | 2 | 8
+PIN | A<18> | 64 | 0 | N/A | 68 | 22 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 1 | 12 | 2 | 7
+PIN | A<19> | 64 | 0 | N/A | 53 | 21 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 1 | 12
+PIN | A<20> | 64 | 0 | N/A | 67 | 22 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 1 | 16 | 3 | 4 | 1 | 12 | 2 | 7
+PIN | A<24> | 64 | 0 | N/A | 74 | 52 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 17 | 1 | 15 | 1 | 5 | 0 | 15 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 0 | 0 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | A<25> | 64 | 0 | N/A | 2 | 52 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 17 | 1 | 15 | 1 | 5 | 0 | 15 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 0 | 0 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | A<26> | 64 | 0 | N/A | 73 | 52 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 17 | 1 | 15 | 1 | 5 | 0 | 15 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 0 | 0 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | A<27> | 64 | 0 | N/A | 78 | 52 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 17 | 1 | 15 | 1 | 5 | 0 | 15 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 0 | 0 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | A<28> | 64 | 0 | N/A | 79 | 52 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 17 | 1 | 15 | 1 | 5 | 0 | 15 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 0 | 0 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | A<29> | 64 | 0 | N/A | 75 | 51 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 15 | 1 | 15 | 1 | 5 | 0 | 0 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | A<30> | 64 | 0 | N/A | 82 | 51 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 15 | 1 | 15 | 1 | 5 | 0 | 0 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | A<31> | 64 | 0 | N/A | 80 | 51 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 17 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0 | 3 | 14 | 1 | 16 | 3 | 0 | 3 | 4 | 3 | 3 | 3 | 2 | 3 | 1 | 0 | 15 | 1 | 15 | 1 | 5 | 0 | 0 | 1 | 12 | 2 | 8 | 3 | 16 | 2 | 1 | 0 | 16 | 2 | 11 | 1 | 14 | 2 | 14 | 1 | 8 | 1 | 7 | 1 | 9 | 1 | 13 | 2 | 0 | 2 | 2 | 2 | 10 | 2 | 12 | 2 | 13 | 2 | 15 | 2 | 16 | 2 | 17 | 3 | 15
+PIN | nDS | 64 | 0 | N/A | 7 | 18 | 3 | 11 | 3 | 10 | 1 | 11 | 0 | 10 | 3 | 9 | 3 | 8 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 3 | 5 | 2 | 5 | 2 | 4 | 0 | 8 | 1 | 10 | 1 | 6 | 2 | 3 | 1 | 0
+PIN | IDE_WAIT | 64 | 0 | N/A | 35 | 2 | 3 | 17 | 3 | 0
 PIN | SIZ<1> | 64 | 0 | N/A | 3 | 3 | 0 | 4 | 0 | 5 | 0 | 1
 PIN | SIZ<0> | 64 | 0 | N/A | 5 | 3 | 0 | 4 | 0 | 5 | 0 | 1
 PIN | A<9> | 64 | 0 | N/A | 59 | 1 | 1 | 3
@@ -1897,13 +1950,13 @@ PIN | A<11> | 64 | 0 | N/A | 55 | 1 | 1 | 1
 PIN | A<12> | 64 | 0 | N/A | 62 | 1 | 1 | 2
 PIN | A<13> | 64 | 0 | N/A | 61 | 1 | 1 | 17
 PIN | DSACK<1> | 536871040 | 0 | N/A | 10
-PIN | DSACK<0> | 536871040 | 0 | N/A | 11
 PIN | IO4 | 536871040 | 0 | N/A | 36
 PIN | IO5 | 536871040 | 0 | N/A | 37
 PIN | BYTE<0> | 536871040 | 0 | N/A | 12
 PIN | BYTE<1> | 536871040 | 0 | N/A | 13
 PIN | BYTE<2> | 536871040 | 0 | N/A | 16
 PIN | BYTE<3> | 536871040 | 0 | N/A | 15
+PIN | DSACK<0> | 536871040 | 0 | N/A | 11
 PIN | IDE_A<0> | 536871040 | 0 | N/A | 86
 PIN | IDE_A<1> | 536871040 | 0 | N/A | 88
 PIN | IDE_A<2> | 536871040 | 0 | N/A | 87
@@ -1913,13 +1966,13 @@ PIN | IDE_R | 536871040 | 0 | N/A | 89
 PIN | IDE_W | 536871040 | 0 | N/A | 90
 PIN | ROM_ENABLE | 536871040 | 0 | N/A | 6
 PIN | INT2 | 536871040 | 0 | N/A | 38
+PIN | STERM | 536871040 | 0 | N/A | 83
 PIN | nCS1 | 536871040 | 0 | N/A | 29
 PIN | nCS2 | 536871040 | 0 | N/A | 27
 PIN | nOE | 536871040 | 0 | N/A | 14
 PIN | nRAM_SEL | 536871040 | 0 | N/A | 9
 PIN | nWE | 536871040 | 0 | N/A | 30
-PIN | STERM | 536871040 | 0 | N/A | 83
-PIN | D<0> | 536870976 | 0 | N/A | 25 | 2 | 2 | 6 | 2 | 4
-PIN | D<1> | 536870976 | 0 | N/A | 26 | 6 | 2 | 13 | 1 | 10 | 1 | 11 | 1 | 9 | 1 | 8 | 2 | 3
-PIN | D<2> | 536870976 | 0 | N/A | 22 | 5 | 2 | 9 | 1 | 11 | 1 | 9 | 2 | 5 | 2 | 2
-PIN | D<3> | 536870976 | 0 | N/A | 17 | 7 | 1 | 0 | 2 | 7 | 1 | 10 | 1 | 11 | 1 | 9 | 1 | 6 | 1 | 16
+PIN | D<0> | 536870976 | 0 | N/A | 25 | 2 | 3 | 5 | 1 | 11
+PIN | D<1> | 536870976 | 0 | N/A | 26 | 6 | 3 | 9 | 3 | 6 | 3 | 13 | 2 | 9 | 2 | 5 | 1 | 6
+PIN | D<2> | 536870976 | 0 | N/A | 22 | 5 | 3 | 8 | 3 | 13 | 2 | 9 | 2 | 4 | 2 | 3
+PIN | D<3> | 536870976 | 0 | N/A | 17 | 7 | 1 | 11 | 3 | 7 | 3 | 6 | 3 | 13 | 2 | 9 | 0 | 8 | 1 | 0

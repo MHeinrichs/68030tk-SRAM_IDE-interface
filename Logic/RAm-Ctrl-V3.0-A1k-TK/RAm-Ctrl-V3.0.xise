@@ -30,7 +30,7 @@
     <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|RAMCtrl|Behavioral" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top File" xil_pn:value="RAM-Ctrl.vhd" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/RAMCtrl" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Last Applied Strategy" xil_pn:value="ram;C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/RAm-Ctrl-V2.0/ram.xds" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Last Applied Strategy" xil_pn:value="ram;C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/ram.xds" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Netlist Hierarchy" xil_pn:value="Rebuilt" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Optimization Effort" xil_pn:value="High" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Optimization Goal" xil_pn:value="Area" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
@@ -44,7 +44,7 @@
     <property xil_pn:name="Speed Grade" xil_pn:value="-10" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Synthesis Tool" xil_pn:value="XST (VHDL/Verilog)" xil_pn:valueState="default"/>
     <property xil_pn:name="Top-Level Source Type" xil_pn:value="HDL" xil_pn:valueState="default"/>
-    <property xil_pn:name="User Browsed Strategy Files" xil_pn:value="C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/RAm-Ctrl-V2.0/ram.xds" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="User Browsed Strategy Files" xil_pn:value="C:/Xilinx/14.6/ISE_DS/ISE/data/default.xds" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Working Directory" xil_pn:value="." xil_pn:valueState="non-default"/>
     <!--                                                                                  -->
     <!-- The following properties are for internal use only. These should not be modified.-->
