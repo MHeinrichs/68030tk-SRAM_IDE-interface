@@ -104,6 +104,7 @@ WARNING:Xst:647 - Input <A<15:14>> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <A<8:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:646 - Signal <DSACK_32BIT> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 2-bit tristate buffer for signal <DSACK>.
+    Found 1-bit tristate buffer for signal <CIIN>.
     Found 2-bit register for signal <AUTO_CONFIG_DONE>.
     Found 3-bit register for signal <BASEADR>.
     Found 3-bit register for signal <BASEADR_4MB>.
@@ -115,8 +116,8 @@ WARNING:Xst:646 - Signal <DSACK_32BIT> is assigned but never used. This unconnec
     Found 1-bit register for signal <IDE_DSACK_D2>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 8-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 102.
-    Found 4-bit register for signal <Mtridata_Dout> created at line 235.
-    Found 1-bit register for signal <Mtrien_Dout> created at line 235.
+    Found 4-bit register for signal <Mtridata_Dout> created at line 240.
+    Found 1-bit register for signal <Mtrien_Dout> created at line 240.
     Found 3-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 117.
     Found 3-bit comparator equal for signal <nCS2_S$cmp_eq0000> created at line 122.
     Found 1-bit register for signal <ROM_OUT_ENABLE_S>.
@@ -124,7 +125,7 @@ WARNING:Xst:646 - Signal <DSACK_32BIT> is assigned but never used. This unconnec
     Summary:
 	inferred  19 D-type flip-flop(s).
 	inferred   3 Comparator(s).
-	inferred   6 Tristate(s).
+	inferred   7 Tristate(s).
 Unit <RAMCtrl> synthesized.
 
 
@@ -139,7 +140,8 @@ Macro Statistics
 # Comparators                                          : 3
  3-bit comparator equal                                : 2
  8-bit comparator equal                                : 1
-# Tristates                                            : 2
+# Tristates                                            : 3
+ 1-bit tristate buffer                                 : 1
  2-bit tristate buffer                                 : 1
  4-bit tristate buffer                                 : 1
 
@@ -207,27 +209,28 @@ Clock Enable                       : YES
 wysiwyg                            : NO
 
 Design Statistics
-# IOs                              : 67
+# IOs                              : 68
 
 Cell Usage :
-# BELS                             : 324
-#      AND2                        : 96
-#      AND3                        : 18
+# BELS                             : 322
+#      AND2                        : 93
+#      AND3                        : 17
+#      AND4                        : 2
 #      GND                         : 1
-#      INV                         : 135
-#      OR2                         : 52
-#      OR3                         : 6
+#      INV                         : 136
+#      OR2                         : 50
+#      OR3                         : 7
 #      VCC                         : 1
 #      XOR2                        : 15
 # FlipFlops/Latches                : 29
 #      FDCE                        : 14
 #      FDP                         : 3
 #      FDPE                        : 12
-# IO Buffers                       : 63
+# IO Buffers                       : 64
 #      IBUF                        : 36
 #      IOBUFE                      : 4
 #      OBUF                        : 21
-#      OBUFE                       : 2
+#      OBUFE                       : 3
 =========================================================================
 
 
@@ -236,7 +239,7 @@ Total CPU time to Xst completion: 7.17 secs
  
 --> 
 
-Total memory usage is 255000 kilobytes
+Total memory usage is 255448 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

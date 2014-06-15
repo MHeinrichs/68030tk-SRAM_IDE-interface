@@ -60,8 +60,8 @@ Port (
 	IDE_R		: out  STD_LOGIC:='1';
 	IDE_W		: out  STD_LOGIC:='1';
 	IDE_A		: out  STD_LOGIC_VECTOR(2 downto 0);
-	IDE_CS	: out  STD_LOGIC_VECTOR(1 downto 0)
-
+	IDE_CS	: out  STD_LOGIC_VECTOR(1 downto 0);
+	CIIN		: out  STD_LOGIC:='1' --this is AS_000 on the original HARMS-INTERFACE
 
 	);
 end RAMCtrl;
@@ -114,16 +114,16 @@ begin
 	nWE 			<= '0' 	when MY_RAMSEL ='1' and RW='0' and (clk='0' or nAS='0') else '1';
 	nRAM_SEL 	<= MY_CYCLE; 
 	D				<=	Dout;
-	nCS1_S		<= '0' 	WHEN (ZorroII ='1' 
+	nCS1_S		<= '1' 	WHEN (ZorroII ='1' 
 									and A(23 downto 21)= BASEADR									
 									AND SHUT_UP(0) ='0')
 									--and A(23 downto 21)= "010")
-								else '1';
-	nCS2_S		<= '0' 	WHEN (ZorroII ='1' 
+								else '0';
+	nCS2_S		<= '1' 	WHEN (ZorroII ='1' 
 									and A(23 downto 21)= BASEADR_4MB									
 									AND SHUT_UP(0) ='0') 
 									--and A(23 downto 21)= "011")
-								else '1';
+								else '0';
 	IO4			<= ROM_OUT_ENABLE_S when IDE_SPACE='1' and IDE_ENABLE='0' else
 						A(2);
 	IO5			<= '1' when IDE_SPACE='1' and IDE_ENABLE='0' else
@@ -173,7 +173,12 @@ begin
 						"11";
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
 	STERM <=  '0' when MY_RAMSEL ='1' else '1';
-
+	--STERM <=  '1';
+	CIIN	<= '1' when MY_RAMSEL ='1' else 
+				'0' when AUTO_CONFIG='1' else
+				'0' when IDE_SPACE='1' else
+				'Z';
+	
 	dsack_gen: process (nAS, clk)
 	begin
 		if	nAS = '1' then
