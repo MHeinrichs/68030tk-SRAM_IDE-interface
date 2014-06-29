@@ -114,6 +114,7 @@ begin
 	nWE 			<= '0' 	when MY_RAMSEL ='1' and RW='0' and (clk='0' or nAS='0') else '1';
 	nRAM_SEL 	<= MY_CYCLE; 
 	D				<=	Dout;
+	
 	nCS1_S		<= '1' 	WHEN (ZorroII ='1' 
 									and A(23 downto 21)= BASEADR									
 									AND SHUT_UP(0) ='0')
@@ -128,20 +129,34 @@ begin
 						A(2);
 	IO5			<= '1' when IDE_SPACE='1' and IDE_ENABLE='0' else
 						A(3);
-	IDE_CS(0)	<= not(A(12));			
-	IDE_CS(1)	<= not(A(13));
-	IDE_A(0)		<= A(9);
-	IDE_A(1)		<= A(10);
-	IDE_A(2)		<= A(11);
-	IDE_R_S		<= '0' when(IDE_SPACE='1' and nAS='0' and RW='1' and IDE_ENABLE='1') else '1';
 	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0') else '1';
-	IDE_W_S		<= '0' when(IDE_SPACE='1' and nAS='0' and RW='0') else '1';
+	--IDE_R_S		<= '0' when(IDE_SPACE='1' and nAS='0' and RW='1' and IDE_ENABLE='1') else '1';
+	--IDE_W_S		<= '0' when(IDE_SPACE='1' and nAS='0' and RW='0') else '1';
+
+	ide_rw_gen: process (nAS, clk)
+	begin
+		if	nAS = '1' then
+			IDE_R		<= '1';
+			IDE_W		<= '1';
+		elsif rising_edge(clk) then
+			IDE_CS(0)	<= not(A(12));			
+			IDE_CS(1)	<= not(A(13));
+			IDE_A(0)		<= A(9);
+			IDE_A(1)		<= A(10);
+			IDE_A(2)		<= A(11);
+			if( IDE_SPACE='1' and RW='1' and IDE_ENABLE='1')then
+				IDE_R		<= '0';
+			elsif (IDE_SPACE='1' and nAS='0' and RW='0')then
+				IDE_W		<= '0';			
+			end if;
+		end if;
+	end process ide_rw_gen;
 
 	--map signals
 	nCS1	<= nCS1_S;
 	nCS2	<= nCS2_S;
-	IDE_R	<= IDE_R_S;
-	IDE_W	<= IDE_W_S;
+	--IDE_R	<= IDE_R_S;
+	--IDE_W	<= IDE_W_S;
 	ROM_ENABLE <= ROM_ENABLE_S;
 	INT2	<= ROM_ENABLE_S;
 
@@ -189,14 +204,8 @@ begin
 			end if;
 		end if;
 	end process dsack_gen;
-	--DSACK <= DSACK_INT when nAS='0' and (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else "ZZ";
-	--STERM <= STERM_INT when nAS='0' and (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else 'Z';
-
-
-
-
+	
 	-- this is the clocked process
-
 	p_ide: process (reset, clk)
 	begin
 		if	(reset = '0') then
@@ -210,7 +219,7 @@ begin
 		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock	
 			if(nAS='0' and IDE_SPACE='1')then
 				--enable IDE on the first write on this IO-space!
-				if(IDE_W_S='0')then
+				if(RW='0')then
 					IDE_ENABLE<='1';
 				end if;
 				IDE_DSACK_D0		<=	'0';

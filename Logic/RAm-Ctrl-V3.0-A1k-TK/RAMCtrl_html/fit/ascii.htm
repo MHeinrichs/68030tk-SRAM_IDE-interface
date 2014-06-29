@@ -3,7 +3,7 @@
  
 cpldfit:  version P.68d                             Xilinx Inc.
                                   Fitter Report
-Design Name: RAMCtrl                             Date:  6-15-2014,  4:37PM
+Design Name: RAMCtrl                             Date:  6-27-2014,  1:39PM
 Device Used: XC9572XL-10-TQ100
 Fitting Status: Successful
 
@@ -11,18 +11,18 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-56 /72  ( 78%) 259 /360  ( 72%) 189/216 ( 87%)   29 /72  ( 40%) 64 /72  ( 89%)
+56 /72  ( 78%) 266 /360  ( 74%) 191/216 ( 88%)   36 /72  ( 50%) 64 /72  ( 89%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
 FB1          18/18*      48/54       81/90      15/18
-FB2          17/18       49/54       46/90      18/18*
+FB2          17/18       51/54       53/90      18/18*
 FB3          11/18       41/54       76/90      15/18
 FB4          10/18       51/54       56/90      16/18
              -----       -----       -----      -----    
-             56/72      189/216     259/360     64/72 
+             56/72      191/216     266/360     64/72 
 
 * - Resource is exhausted
 
@@ -85,16 +85,16 @@ nWE                             2     4     FB1_12  33   I/O     O       STD  FA
 D<1>                            11    11    FB1_15  29   I/O     I/O     STD  FAST RESET
 nCS2                            8     15    FB1_17  30   I/O     O       STD  FAST 
 IO4                             3     4     FB1_18  40   I/O     O       STD  FAST 
-IDE_A<2>                        1     1     FB2_2   94   I/O     O       STD  FAST 
-IDE_CS<0>                       1     1     FB2_3   91   I/O     O       STD  FAST 
-IDE_A<0>                        1     1     FB2_4   93   I/O     O       STD  FAST 
-IDE_A<1>                        1     1     FB2_5   95   I/O     O       STD  FAST 
-IDE_R                           1     4     FB2_6   96   I/O     O       STD  FAST 
-IDE_W                           1     3     FB2_8   97   I/O     O       STD  FAST 
+IDE_A<2>                        2     2     FB2_2   94   I/O     O       STD  FAST RESET
+IDE_CS<0>                       2     2     FB2_3   91   I/O     O       STD  FAST RESET
+IDE_A<0>                        2     2     FB2_4   93   I/O     O       STD  FAST RESET
+IDE_A<1>                        2     2     FB2_5   95   I/O     O       STD  FAST RESET
+IDE_R                           2     5     FB2_6   96   I/O     O       STD  FAST SET
+IDE_W                           2     4     FB2_8   97   I/O     O       STD  FAST SET
 ROM_ENABLE                      1     2     FB2_13  8    I/O     O       STD  FAST 
 nRAM_SEL                        19    26    FB2_15  11   I/O     O       STD  FAST 
 DSACK<1>                        4     21    FB2_17  12   I/O     O       STD  FAST 
-IDE_CS<1>                       1     1     FB2_18  92   I/O     O       STD  FAST 
+IDE_CS<1>                       2     2     FB2_18  92   I/O     O       STD  FAST RESET
 IO5                             2     3     FB3_1   41   I/O     O       STD  FAST 
 nCS1                            8     15    FB3_2   32   I/O     O       STD  FAST 
 CIIN                            17    19    FB3_3   49   I/O     O       STD  FAST 
@@ -127,7 +127,7 @@ IDE_BASEADR<6>                  2     29    FB3_17  STD  RESET
 AUTO_CONFIG_DONE<0>             2     26    FB4_1   STD  RESET
 DSACK_16BIT                     4     8     FB4_2   STD  SET
 ROM_OUT_ENABLE_S                3     6     FB4_3   STD  SET
-$OpTx$INV$37                    25    25    FB4_6   STD  
+$OpTx$INV$33                    25    25    FB4_6   STD  
 Mtrien_Dout                     2     20    FB4_8   STD  RESET
 IDE_DSACK_D0                    1     2     FB4_9   STD  SET
 IDE_DSACK_D1                    1     3     FB4_10  STD  SET
@@ -215,7 +215,7 @@ nCS2                  8       5<- /\2   0     FB1_17  30    I/O     O
 IO4                   3       3<- /\5   0     FB1_18  40    I/O     O
 
 Signals Used by Logic in Function Block
-  1: $OpTx$INV$37         17: A<27>             33: D<2> 
+  1: $OpTx$INV$33         17: A<27>             33: D<2> 
   2: AUTO_CONFIG_DONE<0>  18: A<28>             34: D<3> 
   3: AUTO_CONFIG_DONE<1>  19: A<29>             35: DSACK_INT<0>/DSACK_INT<0>_TRST 
   4: A<0>                 20: A<2>              36: IDE_ENABLE 
@@ -255,18 +255,18 @@ IO4                  X..................X...............X....X......... 4
                     0----+----1----+----2----+----3----+----4----+----5
                               0         0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               49/5
-Number of signals used by logic mapping into function block:  49
+Number of function block inputs used/remaining:               51/3
+Number of signals used by logic mapping into function block:  51
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 IDE_BASEADR<5>        2       0     0   3     FB2_1   87    I/O     I
-IDE_A<2>              1       0     0   4     FB2_2   94    I/O     O
-IDE_CS<0>             1       0     0   4     FB2_3   91    I/O     O
-IDE_A<0>              1       0     0   4     FB2_4   93    I/O     O
-IDE_A<1>              1       0     0   4     FB2_5   95    I/O     O
-IDE_R                 1       0     0   4     FB2_6   96    I/O     O
+IDE_A<2>              2       0     0   3     FB2_2   94    I/O     O
+IDE_CS<0>             2       0     0   3     FB2_3   91    I/O     O
+IDE_A<0>              2       0     0   3     FB2_4   93    I/O     O
+IDE_A<1>              2       0     0   3     FB2_5   95    I/O     O
+IDE_R                 2       0     0   3     FB2_6   96    I/O     O
 IDE_BASEADR<4>        2       0     0   3     FB2_7   3     GTS/I/O I
-IDE_W                 1       0     0   4     FB2_8   97    I/O     O
+IDE_W                 2       0     0   3     FB2_8   97    I/O     O
 IDE_BASEADR<2>        2       0     0   3     FB2_9   99    GSR/I/O GSR
 IDE_BASEADR<1>        2       0     0   3     FB2_10  1     I/O     I
 IDE_BASEADR<0>        2       0     0   3     FB2_11  4     GTS/I/O I
@@ -276,48 +276,48 @@ ROM_ENABLE            1       1<- \/5   0     FB2_13  8     I/O     O
 nRAM_SEL             19      14<-   0   0     FB2_15  11    I/O     O
 SHUT_UP<1>            3       2<- /\4   0     FB2_16  10    I/O     I
 DSACK<1>              4       1<- /\2   0     FB2_17  12    I/O     O
-IDE_CS<1>             1       0   /\1   3     FB2_18  92    I/O     O
+IDE_CS<1>             2       0   /\1   2     FB2_18  92    I/O     O
 
 Signals Used by Logic in Function Block
-  1: $OpTx$INV$37         18: A<26>             34: BASEADR_4MB<2> 
-  2: AUTO_CONFIG_DONE<0>  19: A<27>             35: DSACK_16BIT 
-  3: AUTO_CONFIG_DONE<1>  20: A<28>             36: DSACK_INT<0>/DSACK_INT<0>_TRST 
-  4: A<0>                 21: A<29>             37: A<9> 
-  5: A<12>                22: A<2>              38: A<10> 
-  6: A<13>                23: A<30>             39: A<11> 
-  7: A<16>                24: A<31>             40: IDE_ENABLE 
-  8: A<17>                25: A<3>              41: D<3>.PIN 
-  9: A<18>                26: A<4>              42: D<2>.PIN 
- 10: A<19>                27: A<5>              43: D<1>.PIN 
- 11: A<1>                 28: A<6>              44: D<0>.PIN 
- 12: A<20>                29: BASEADR<0>        45: RW 
- 13: A<21>                30: BASEADR<1>        46: SHUT_UP<0> 
- 14: A<22>                31: BASEADR<2>        47: SHUT_UP<1> 
- 15: A<23>                32: BASEADR_4MB<0>    48: nAS 
- 16: A<24>                33: BASEADR_4MB<1>    49: nDS 
- 17: A<25>               
+  1: $OpTx$INV$33         18: A<24>             35: BASEADR_4MB<0> 
+  2: AUTO_CONFIG_DONE<0>  19: A<25>             36: BASEADR_4MB<1> 
+  3: AUTO_CONFIG_DONE<1>  20: A<26>             37: BASEADR_4MB<2> 
+  4: A<0>                 21: A<27>             38: DSACK_16BIT 
+  5: A<10>                22: A<28>             39: DSACK_INT<0>/DSACK_INT<0>_TRST 
+  6: A<11>                23: A<29>             40: IDE_ENABLE 
+  7: A<12>                24: A<2>              41: IDE_R 
+  8: A<13>                25: A<30>             42: IDE_W 
+  9: A<16>                26: A<31>             43: D<3>.PIN 
+ 10: A<17>                27: A<3>              44: D<2>.PIN 
+ 11: A<18>                28: A<4>              45: D<1>.PIN 
+ 12: A<19>                29: A<5>              46: D<0>.PIN 
+ 13: A<1>                 30: A<6>              47: RW 
+ 14: A<20>                31: A<9>              48: SHUT_UP<0> 
+ 15: A<21>                32: BASEADR<0>        49: SHUT_UP<1> 
+ 16: A<22>                33: BASEADR<1>        50: nAS 
+ 17: A<23>                34: BASEADR<2>        51: nDS 
 
-Signal                        1         2         3         4         5 FB
-Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
-IDE_BASEADR<5>       .XXX..XXXXXXXXXXXXXXXXXXXXXX..............X.X..XX. 29
-IDE_A<2>             ......................................X........... 1
-IDE_CS<0>            ....X............................................. 1
-IDE_A<0>             ....................................X............. 1
-IDE_A<1>             .....................................X............ 1
-IDE_R                X......................................X....X..X.. 4
-IDE_BASEADR<4>       .XXX..XXXXXXXXXXXXXXXXXXXXXX...............XX..XX. 29
-IDE_W                X...........................................X..X.. 3
-IDE_BASEADR<2>       .XXX..XXXXXXXXXXXXXXXXXXXXXX.............X..X..XX. 29
-IDE_BASEADR<1>       .XXX..XXXXXXXXXXXXXXXXXXXXXX..............X.X..XX. 29
-IDE_BASEADR<0>       .XXX..XXXXXXXXXXXXXXXXXXXXXX...............XX..XX. 29
-BASEADR_4MB<0>       .X.X..XXXXXXXXXXXXXXXXXXXXXX............X.X.X..XX. 29
-ROM_ENABLE           X......................................X.......... 2
-nRAM_SEL             XXX...XXXX.XXXXXXXXXX.XX....XXXXXX...........X.... 26
-SHUT_UP<1>           .XXX..XXXXXXXXXXXXXXXXXXXXXX................X.XXX. 29
-DSACK<1>             .XX...XXXX.XXXXXXXXXX.XX..........XX...........X.. 21
-IDE_CS<1>            .....X............................................ 1
-                    0----+----1----+----2----+----3----+----4----+----5
-                              0         0         0         0         0
+Signal                        1         2         3         4         5         6 FB
+Name                0----+----0----+----0----+----0----+----0----+----0----+----0 Inputs
+IDE_BASEADR<5>       .XXX....XXXXXXXXXXXXXXXXXXXXXX..............X.X..XX......... 29
+IDE_A<2>             .....X...........................................X.......... 2
+IDE_CS<0>            ......X..........................................X.......... 2
+IDE_A<0>             ..............................X..................X.......... 2
+IDE_A<1>             ....X............................................X.......... 2
+IDE_R                X......................................XX.....X..X.......... 5
+IDE_BASEADR<4>       .XXX....XXXXXXXXXXXXXXXXXXXXXX...............XX..XX......... 29
+IDE_W                X........................................X....X..X.......... 4
+IDE_BASEADR<2>       .XXX....XXXXXXXXXXXXXXXXXXXXXX.............X..X..XX......... 29
+IDE_BASEADR<1>       .XXX....XXXXXXXXXXXXXXXXXXXXXX..............X.X..XX......... 29
+IDE_BASEADR<0>       .XXX....XXXXXXXXXXXXXXXXXXXXXX...............XX..XX......... 29
+BASEADR_4MB<0>       .X.X....XXXXXXXXXXXXXXXXXXXXXX............X.X.X..XX......... 29
+ROM_ENABLE           X......................................X.................... 2
+nRAM_SEL             XXX.....XXXX.XXXXXXXXXX.XX.....XXXXXX..........X............ 26
+SHUT_UP<1>           .XXX....XXXXXXXXXXXXXXXXXXXXXX................X.XXX......... 29
+DSACK<1>             .XX.....XXXX.XXXXXXXXXX.XX...........XX..........X.......... 21
+IDE_CS<1>            .......X.........................................X.......... 2
+                    0----+----1----+----2----+----3----+----4----+----5----+----6
+                              0         0         0         0         0         0
 *********************************** FB3  ***********************************
 Number of function block inputs used/remaining:               41/13
 Number of signals used by logic mapping into function block:  41
@@ -344,7 +344,7 @@ IDE_BASEADR<6>        2       0     0   3     FB3_17  58    I/O     (b)
 (unused)              0       0   \/2   3     FB3_18  59    I/O     I
 
 Signals Used by Logic in Function Block
-  1: $OpTx$INV$37         15: A<25>             29: BASEADR<2> 
+  1: $OpTx$INV$33         15: A<25>             29: BASEADR<2> 
   2: AUTO_CONFIG_DONE<0>  16: A<26>             30: BASEADR_4MB<0> 
   3: AUTO_CONFIG_DONE<1>  17: A<27>             31: BASEADR_4MB<1> 
   4: A<0>                 18: A<28>             32: BASEADR_4MB<2> 
@@ -385,7 +385,7 @@ DSACK_16BIT           4       0     0   1     FB4_2   67    I/O     I
 ROM_OUT_ENABLE_S      3       0     0   2     FB4_3   71    I/O     I
 (unused)              0       0   \/5   0     FB4_4   72    I/O     I
 (unused)              0       0   \/5   0     FB4_5   68    I/O     I
-$OpTx$INV$37         25      20<-   0   0     FB4_6   76    I/O     I
+$OpTx$INV$33         25      20<-   0   0     FB4_6   76    I/O     I
 (unused)              0       0   /\5   0     FB4_7   77    I/O     I
 Mtrien_Dout           2       2<- /\5   0     FB4_8   70    I/O     (b)
 IDE_DSACK_D0          1       0   /\2   2     FB4_9   66    I/O     I
@@ -400,7 +400,7 @@ STERM                16      11<-   0   0     FB4_17  90    I/O     O
 (unused)              0       0   /\5   0     FB4_18  79    I/O     I
 
 Signals Used by Logic in Function Block
-  1: $OpTx$INV$37         18: A<28>             35: IDE_BASEADR<2> 
+  1: $OpTx$INV$33         18: A<28>             35: IDE_BASEADR<2> 
   2: AUTO_CONFIG_DONE<0>  19: A<29>             36: IDE_BASEADR<3> 
   3: AUTO_CONFIG_DONE<1>  20: A<30>             37: IDE_BASEADR<4> 
   4: A<0>                 21: A<31>             38: IDE_BASEADR<5> 
@@ -423,7 +423,7 @@ Name                0----+----0----+----0----+----0----+----0----+----0----+----
 AUTO_CONFIG_DONE<0>  .X.XXXXXXXXXXXXXXXXXXXXXX.....................X..XX......... 26
 DSACK_16BIT          X..............................X........X.XXX.X..X.......... 8
 ROM_OUT_ENABLE_S     X.......................................X..X.XX..X.......... 6
-$OpTx$INV$37         ....XXXX.XXXXXXXXXXXX...........XXXXXXXX........X........... 25
+$OpTx$INV$33         ....XXXX.XXXXXXXXXXXX...........XXXXXXXX........X........... 25
 Mtrien_Dout          .XX.XXXX.XXXXXXXXXXXX.........................X..X.......... 20
 IDE_DSACK_D0         X................................................X.......... 2
 IDE_DSACK_D1         X.......................................X........X.......... 3
@@ -437,7 +437,7 @@ STERM                ..........XXXXXXXXXXX....XXXXXX................X...........
 ********** Mapped Logic **********
 
 
-$OpTx$INV$37 <= ((SHUT_UP(1))
+$OpTx$INV$33 <= ((SHUT_UP(1))
 	OR (A(31))
 	OR (A(30))
 	OR (A(29))
@@ -447,74 +447,74 @@ $OpTx$INV$37 <= ((SHUT_UP(1))
 	OR (A(28))
 	OR (A(27))
 	OR (EXP14_.EXP)
-	OR (IDE_BASEADR(0) AND NOT A(16))
-	OR (Mtrien_Dout.EXP)
-	OR (NOT IDE_BASEADR(0) AND A(16))
-	OR (IDE_BASEADR(1) AND NOT A(17))
-	OR (NOT IDE_BASEADR(1) AND A(17))
 	OR (IDE_BASEADR(2) AND NOT A(18))
-	OR (NOT IDE_BASEADR(2) AND A(18)));
+	OR (Mtrien_Dout.EXP)
+	OR (NOT IDE_BASEADR(2) AND A(18))
+	OR (IDE_BASEADR(3) AND NOT A(19))
+	OR (NOT IDE_BASEADR(3) AND A(19))
+	OR (IDE_BASEADR(4) AND NOT A(20))
+	OR (NOT IDE_BASEADR(4) AND A(20)));
 
 FTCPE_AUTO_CONFIG_DONE0: FTCPE port map (AUTO_CONFIG_DONE(0),AUTO_CONFIG_DONE_T(0),clk,NOT reset,'0',AUTO_CONFIG_DONE_CE(0));
 AUTO_CONFIG_DONE_T(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND NOT A(4) AND A(6) AND 
 	NOT A(5) AND NOT A(0) AND A(3));
-AUTO_CONFIG_DONE_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT nDS AND NOT A(31) AND 
-	NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND 
-	NOT A(16) AND A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+AUTO_CONFIG_DONE_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT nDS AND A(22) AND 
+	A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(18) AND NOT A(17) AND NOT A(16) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 FTCPE_AUTO_CONFIG_DONE1: FTCPE port map (AUTO_CONFIG_DONE(1),AUTO_CONFIG_DONE_T(1),clk,NOT reset,'0',AUTO_CONFIG_DONE_CE(1));
 AUTO_CONFIG_DONE_T(1) <= (NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND NOT A(4) AND A(6) AND 
 	NOT A(5) AND NOT A(0) AND A(3));
 AUTO_CONFIG_DONE_CE(1) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
-	NOT nAS AND NOT nDS AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND NOT A(28) AND 
+	NOT nAS AND NOT nDS AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND 
+	NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND NOT A(28) AND 
 	NOT A(27) AND A(19) AND NOT A(20) AND A(23));
 
 FDCPE_BASEADR0: FDCPE port map (BASEADR(0),D(1).PIN,clk,'0',NOT reset,BASEADR_CE(0));
 BASEADR_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT A(1) AND NOT nAS AND NOT nDS AND 
-	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 FDCPE_BASEADR1: FDCPE port map (BASEADR(1),D(2).PIN,clk,NOT reset,'0',BASEADR_CE(1));
 BASEADR_CE(1) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT A(1) AND NOT nAS AND NOT nDS AND 
-	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 FDCPE_BASEADR2: FDCPE port map (BASEADR(2),D(3).PIN,clk,NOT reset,'0',BASEADR_CE(2));
 BASEADR_CE(2) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT A(1) AND NOT nAS AND NOT nDS AND 
-	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 FDCPE_BASEADR_4MB0: FDCPE port map (BASEADR_4MB(0),BASEADR_4MB_D(0),clk,NOT reset,'0',BASEADR_4MB_CE(0));
 BASEADR_4MB_D(0) <= (NOT D(1).PIN AND NOT D(3).PIN);
 BASEADR_4MB_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT A(1) AND NOT nAS AND NOT nDS AND 
-	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 FDCPE_BASEADR_4MB1: FDCPE port map (BASEADR_4MB(1),BASEADR_4MB_D(1),clk,'0',NOT reset,BASEADR_4MB_CE(1));
 BASEADR_4MB_D(1) <= ((D(1).PIN AND NOT D(2).PIN AND NOT D(3).PIN)
 	OR (NOT D(1).PIN AND D(2).PIN AND NOT D(3).PIN));
 BASEADR_4MB_CE(1) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT A(1) AND NOT nAS AND NOT nDS AND 
-	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 FDCPE_BASEADR_4MB2: FDCPE port map (BASEADR_4MB(2),BASEADR_4MB_D(2),clk,NOT reset,'0',BASEADR_4MB_CE(2));
 BASEADR_4MB_D(2) <= (D(1).PIN AND D(2).PIN AND NOT D(3).PIN);
 BASEADR_4MB_CE(2) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT A(1) AND NOT nAS AND NOT nDS AND 
-	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+	NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 
@@ -538,87 +538,87 @@ BYTE(3) <= ((NOT RW AND A(1))
 
 
 CIIN_I <= ((NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (EXP8_.EXP)
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23)));
+	NOT BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23)));
 CIIN <= CIIN_I when CIIN_OE = '1' else 'Z';
 CIIN_OE <= NOT CIIN_and0000;
 
 
-CIIN_and0000 <= NOT (((NOT $OpTx$INV$37)
+CIIN_and0000 <= NOT (((NOT $OpTx$INV$33)
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (INT2_OBUF$BUF0.EXP)
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))));
+	NOT BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))));
 
 FDCPE_D0: FDCPE port map (D_I(0),D(0),clk,'0','0');
 D(0) <= ((NOT AUTO_CONFIG_DONE(1) AND NOT A(4) AND A(6) AND NOT A(5) AND 
@@ -644,25 +644,25 @@ D(0) <= D_I(0) when D_OE(0) = '1' else 'Z';
 D_OE(0) <= NOT Mtrien_Dout;
 
 FDCPE_D1: FDCPE port map (D_I(1),D(1),clk,'0','0');
-D(1) <= ((AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(4) AND 
-	NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(3))
-	OR (NOT AUTO_CONFIG_DONE(0) AND A(1) AND A(4) AND NOT A(6) AND 
-	NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(3))
-	OR (NOT AUTO_CONFIG_DONE(0) AND A(1) AND NOT A(4) AND NOT A(6) AND 
-	NOT A(5) AND NOT A(0) AND A(2) AND NOT A(3))
-	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND 
+D(1) <= ((AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND 
 	A(4) AND NOT A(6) AND NOT A(5) AND NOT A(0) AND A(2))
 	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND 
 	A(4) AND NOT A(6) AND NOT A(5) AND NOT A(0) AND A(3))
-	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND 
-	NOT A(4) AND NOT A(6) AND A(5) AND NOT A(0) AND A(2) AND NOT A(3))
-	OR (NOT D(1) AND AUTO_CONFIG_DONE(0) AND AUTO_CONFIG_DONE(1))
-	OR (NOT AUTO_CONFIG_DONE(0) AND NOT A(4) AND A(6) AND NOT A(5) AND 
-	NOT A(0) AND NOT A(2) AND NOT A(3))
+	OR (NOT AUTO_CONFIG_DONE(0) AND A(1) AND NOT A(4) AND NOT A(6) AND 
+	NOT A(5) AND NOT A(0) AND A(2) AND NOT A(3))
 	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND A(1) AND 
 	NOT A(4) AND NOT A(6) AND NOT A(5) AND NOT A(0) AND NOT A(3))
 	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND A(4) AND 
-	NOT A(6) AND NOT A(5) AND NOT A(0) AND A(2) AND A(3)));
+	NOT A(6) AND NOT A(5) AND NOT A(0) AND A(2) AND A(3))
+	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND 
+	NOT A(4) AND NOT A(6) AND A(5) AND NOT A(0) AND A(2) AND NOT A(3))
+	OR (NOT D(1) AND AUTO_CONFIG_DONE(0) AND AUTO_CONFIG_DONE(1))
+	OR (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT A(4) AND 
+	NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(3))
+	OR (NOT AUTO_CONFIG_DONE(0) AND NOT A(4) AND A(6) AND NOT A(5) AND 
+	NOT A(0) AND NOT A(2) AND NOT A(3))
+	OR (NOT AUTO_CONFIG_DONE(0) AND A(1) AND A(4) AND NOT A(6) AND 
+	NOT A(5) AND NOT A(0) AND NOT A(2) AND NOT A(3)));
 D(1) <= D_I(1) when D_OE(1) = '1' else 'Z';
 D_OE(1) <= NOT Mtrien_Dout;
 
@@ -713,71 +713,71 @@ DSACK_OE(0) <= DSACK_INT(0)/DSACK_INT(0)_TRST;
 
 
 DSACK_I(1) <= NOT (((NOT DSACK_16BIT)
-	OR (NOT AUTO_CONFIG_DONE(1) AND NOT nAS AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23))
-	OR (NOT AUTO_CONFIG_DONE(0) AND NOT nAS AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23))));
+	OR (NOT AUTO_CONFIG_DONE(1) AND NOT nAS AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23))
+	OR (NOT AUTO_CONFIG_DONE(0) AND NOT nAS AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23))));
 DSACK(1) <= DSACK_I(1) when DSACK_OE(1) = '1' else 'Z';
 DSACK_OE(1) <= DSACK_INT(0)/DSACK_INT(0)_TRST;
 
 FDCPE_DSACK_16BIT: FDCPE port map (DSACK_16BIT,DSACK_16BIT_D,NOT clk,'0',NOT reset);
 DSACK_16BIT_D <= ((RW AND NOT IDE_ENABLE AND NOT nAS AND NOT IDE_DSACK_D2 AND 
-	NOT $OpTx$INV$37)
+	NOT $OpTx$INV$33)
 	OR (NOT RW AND NOT DSACK_16BIT AND NOT IDE_ENABLE AND NOT nAS AND 
-	NOT $OpTx$INV$37)
+	NOT $OpTx$INV$33)
 	OR (NOT DSACK_16BIT AND IDE_ENABLE AND NOT nAS AND NOT IDE_WAIT AND 
-	NOT $OpTx$INV$37)
+	NOT $OpTx$INV$33)
 	OR (IDE_ENABLE AND NOT nAS AND NOT IDE_DSACK_D0 AND IDE_WAIT AND 
-	NOT $OpTx$INV$37));
+	NOT $OpTx$INV$33));
 
 
-DSACK_INT(0)/DSACK_INT(0)_TRST <= ((NOT $OpTx$INV$37)
+DSACK_INT(0)/DSACK_INT(0)_TRST <= ((NOT $OpTx$INV$33)
 	OR (AUTO_CONFIG_DONE(1).EXP)
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (BASEADR(0).EXP)
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23)));
+	NOT BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23)));
 
 
 
@@ -807,124 +807,119 @@ DSACK_INT(0)/DSACK_INT(0)_TRST <= ((NOT $OpTx$INV$37)
 
 
 
+FDCPE_IDE_A0: FDCPE port map (IDE_A(0),A(9),clk,'0','0',NOT nAS);
 
-IDE_A(0) <= A(9);
+FDCPE_IDE_A1: FDCPE port map (IDE_A(1),A(10),clk,'0','0',NOT nAS);
 
-
-IDE_A(1) <= A(10);
-
-
-IDE_A(2) <= A(11);
+FDCPE_IDE_A2: FDCPE port map (IDE_A(2),A(11),clk,'0','0',NOT nAS);
 
 FDCPE_IDE_BASEADR0: FDCPE port map (IDE_BASEADR(0),D(0).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(0));
 IDE_BASEADR_CE(0) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
 FDCPE_IDE_BASEADR1: FDCPE port map (IDE_BASEADR(1),D(1).PIN,clk,NOT reset,'0',IDE_BASEADR_CE(1));
 IDE_BASEADR_CE(1) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
 FDCPE_IDE_BASEADR2: FDCPE port map (IDE_BASEADR(2),D(2).PIN,clk,NOT reset,'0',IDE_BASEADR_CE(2));
 IDE_BASEADR_CE(2) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
 FDCPE_IDE_BASEADR3: FDCPE port map (IDE_BASEADR(3),D(3).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(3));
 IDE_BASEADR_CE(3) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
 FDCPE_IDE_BASEADR4: FDCPE port map (IDE_BASEADR(4),D(0).PIN,clk,NOT reset,'0',IDE_BASEADR_CE(4));
 IDE_BASEADR_CE(4) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	NOT A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
 FDCPE_IDE_BASEADR5: FDCPE port map (IDE_BASEADR(5),D(1).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(5));
 IDE_BASEADR_CE(5) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	NOT A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
 FDCPE_IDE_BASEADR6: FDCPE port map (IDE_BASEADR(6),D(2).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(6));
 IDE_BASEADR_CE(6) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	NOT A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
 FDCPE_IDE_BASEADR7: FDCPE port map (IDE_BASEADR(7),D(3).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(7));
 IDE_BASEADR_CE(7) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
 	NOT A(1) AND NOT nAS AND NOT nDS AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND NOT A(2) AND 
-	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
-	NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND A(3) AND NOT A(28) AND NOT A(27) AND 
+	A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(3) AND NOT A(28) AND NOT A(27) AND 
 	A(19) AND NOT A(20) AND A(23));
 
+FDCPE_IDE_CS0: FDCPE port map (IDE_CS(0),NOT A(12),clk,'0','0',NOT nAS);
 
-IDE_CS(0) <= NOT A(12);
-
-
-IDE_CS(1) <= NOT A(13);
+FDCPE_IDE_CS1: FDCPE port map (IDE_CS(1),NOT A(13),clk,'0','0',NOT nAS);
 
 FDCPE_IDE_DSACK_D0: FDCPE port map (IDE_DSACK_D0,IDE_DSACK_D0_D,NOT clk,'0',NOT reset);
-IDE_DSACK_D0_D <= (NOT nAS AND NOT $OpTx$INV$37);
+IDE_DSACK_D0_D <= (NOT nAS AND NOT $OpTx$INV$33);
 
 FDCPE_IDE_DSACK_D1: FDCPE port map (IDE_DSACK_D1,IDE_DSACK_D1_D,NOT clk,'0',NOT reset);
-IDE_DSACK_D1_D <= (NOT nAS AND NOT IDE_DSACK_D0 AND NOT $OpTx$INV$37);
+IDE_DSACK_D1_D <= (NOT nAS AND NOT IDE_DSACK_D0 AND NOT $OpTx$INV$33);
 
 FDCPE_IDE_DSACK_D2: FDCPE port map (IDE_DSACK_D2,IDE_DSACK_D2_D,NOT clk,'0',NOT reset);
-IDE_DSACK_D2_D <= (NOT nAS AND NOT IDE_DSACK_D1 AND NOT $OpTx$INV$37);
+IDE_DSACK_D2_D <= (NOT nAS AND NOT IDE_DSACK_D1 AND NOT $OpTx$INV$33);
 
 FTCPE_IDE_ENABLE: FTCPE port map (IDE_ENABLE,IDE_ENABLE_T,NOT clk,NOT reset,'0');
-IDE_ENABLE_T <= (NOT RW AND NOT IDE_ENABLE AND NOT nAS AND NOT $OpTx$INV$37);
+IDE_ENABLE_T <= (NOT RW AND NOT IDE_ENABLE AND NOT nAS AND NOT $OpTx$INV$33);
+
+FTCPE_IDE_R: FTCPE port map (IDE_R,IDE_R_T,clk,'0',nAS);
+IDE_R_T <= (RW AND IDE_ENABLE AND IDE_R AND NOT $OpTx$INV$33);
+
+FTCPE_IDE_W: FTCPE port map (IDE_W,IDE_W_T,clk,'0',nAS);
+IDE_W_T <= (NOT RW AND IDE_W AND NOT $OpTx$INV$33);
 
 
-IDE_R <= NOT ((RW AND IDE_ENABLE AND NOT nAS AND NOT $OpTx$INV$37));
-
-
-IDE_W <= NOT ((NOT RW AND NOT nAS AND NOT $OpTx$INV$37));
-
-
-INT2 <= NOT ((NOT IDE_ENABLE AND NOT $OpTx$INV$37));
+INT2 <= NOT ((NOT IDE_ENABLE AND NOT $OpTx$INV$33));
 
 
 IO4 <= ((IDE_ENABLE AND A(2))
-	OR (A(2) AND $OpTx$INV$37)
-	OR (ROM_OUT_ENABLE_S AND NOT IDE_ENABLE AND NOT $OpTx$INV$37));
+	OR (A(2) AND $OpTx$INV$33)
+	OR (ROM_OUT_ENABLE_S AND NOT IDE_ENABLE AND NOT $OpTx$INV$33));
 
 
 IO5 <= NOT (((IDE_ENABLE AND NOT A(3))
-	OR (NOT A(3) AND $OpTx$INV$37)));
+	OR (NOT A(3) AND $OpTx$INV$33)));
 
 FDCPE_Mtrien_Dout: FDCPE port map (Mtrien_Dout,Mtrien_Dout_D,clk,'0',NOT reset);
-Mtrien_Dout_D <= ((NOT AUTO_CONFIG_DONE(0) AND RW AND NOT nAS AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23))
-	OR (NOT AUTO_CONFIG_DONE(1) AND RW AND NOT nAS AND NOT A(31) AND NOT A(30) AND 
-	NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23)));
+Mtrien_Dout_D <= ((NOT AUTO_CONFIG_DONE(0) AND RW AND NOT nAS AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23))
+	OR (NOT AUTO_CONFIG_DONE(1) AND RW AND NOT nAS AND A(22) AND A(21) AND 
+	NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND 
+	NOT A(17) AND NOT A(16) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND A(23)));
 
 
-ROM_ENABLE <= NOT ((NOT IDE_ENABLE AND NOT $OpTx$INV$37));
+ROM_ENABLE <= NOT ((NOT IDE_ENABLE AND NOT $OpTx$INV$33));
 
 FDCPE_ROM_OUT_ENABLE_S: FDCPE port map (ROM_OUT_ENABLE_S,ROM_OUT_ENABLE_S_D,NOT clk,'0',NOT reset);
-ROM_OUT_ENABLE_S_D <= ((NOT RW AND NOT ROM_OUT_ENABLE_S AND NOT nAS AND NOT $OpTx$INV$37)
+ROM_OUT_ENABLE_S_D <= ((NOT RW AND NOT ROM_OUT_ENABLE_S AND NOT nAS AND NOT $OpTx$INV$33)
 	OR (NOT ROM_OUT_ENABLE_S AND IDE_ENABLE AND NOT nAS AND 
-	NOT $OpTx$INV$37)
+	NOT $OpTx$INV$33)
 	OR (RW AND NOT IDE_ENABLE AND NOT nAS AND NOT IDE_DSACK_D0 AND 
-	NOT $OpTx$INV$37));
+	NOT $OpTx$INV$33));
 
 FTCPE_SHUT_UP0: FTCPE port map (SHUT_UP(0),SHUT_UP_T(0),clk,'0',NOT reset,SHUT_UP_CE(0));
 SHUT_UP_T(0) <= ((NOT SHUT_UP(0) AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND 
@@ -933,9 +928,9 @@ SHUT_UP_T(0) <= ((NOT SHUT_UP(0) AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5)
 	NOT A(5) AND NOT A(0) AND NOT A(2) AND A(3))
 	OR (NOT SHUT_UP(0) AND D(3).PIN AND NOT A(1) AND NOT A(4) AND A(6) AND 
 	NOT A(5) AND NOT A(0) AND A(3)));
-SHUT_UP_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT nDS AND NOT A(31) AND 
-	NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND 
-	NOT A(16) AND A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
+SHUT_UP_CE(0) <= (NOT AUTO_CONFIG_DONE(0) AND NOT RW AND NOT nAS AND NOT nDS AND A(22) AND 
+	A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
+	NOT A(18) AND NOT A(17) AND NOT A(16) AND NOT A(28) AND NOT A(27) AND A(19) AND NOT A(20) AND 
 	A(23));
 
 FTCPE_SHUT_UP1: FTCPE port map (SHUT_UP(1),SHUT_UP_T(1),clk,'0',NOT reset,SHUT_UP_CE(1));
@@ -944,156 +939,156 @@ SHUT_UP_T(1) <= ((SHUT_UP(1) AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND
 	OR (NOT SHUT_UP(1) AND NOT A(1) AND NOT A(4) AND A(6) AND NOT A(5) AND NOT A(0) AND 
 	A(2) AND A(3)));
 SHUT_UP_CE(1) <= (AUTO_CONFIG_DONE(0) AND NOT AUTO_CONFIG_DONE(1) AND NOT RW AND 
-	NOT nAS AND NOT nDS AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND A(22) AND A(21) AND NOT A(28) AND 
+	NOT nAS AND NOT nDS AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND 
+	NOT A(26) AND NOT A(25) AND NOT A(24) AND NOT A(18) AND NOT A(17) AND NOT A(16) AND NOT A(28) AND 
 	NOT A(27) AND A(19) AND NOT A(20) AND A(23));
 
 
 STERM <= NOT (((EXP17_.EXP)
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))));
+	BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))));
 
 
 nCS1 <= ((NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND NOT BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23)));
+	BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23)));
 
 
 nCS2 <= ((NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23)));
+	BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23)));
 
 
 nOE <= NOT (((NOT clk AND RW AND CIIN)
 	OR (RW AND CIIN AND NOT nAS)));
 
 
-nRAM_SEL <= NOT (((NOT $OpTx$INV$37)
+nRAM_SEL <= NOT (((NOT $OpTx$INV$33)
 	OR (INT2_OBUF.EXP)
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND NOT A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR(0) AND NOT BASEADR(1) AND 
-	NOT BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND NOT BASEADR(0) AND BASEADR(1) AND 
-	BASEADR(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND NOT A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR(2) AND A(22) AND NOT A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))
+	NOT BASEADR_4MB(2) AND A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND A(23))
+	BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND A(23))
 	OR (NOT SHUT_UP(0) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND 
-	NOT BASEADR_4MB(2) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND NOT A(25) AND NOT A(24) AND 
-	NOT A(22) AND A(21) AND NOT A(28) AND NOT A(27) AND NOT A(23))));
+	NOT BASEADR_4MB(2) AND NOT A(22) AND A(21) AND NOT A(31) AND NOT A(30) AND NOT A(29) AND NOT A(26) AND 
+	NOT A(25) AND NOT A(24) AND NOT A(28) AND NOT A(27) AND NOT A(23))));
 
 
 nWE <= NOT (((NOT clk AND NOT RW AND CIIN)
