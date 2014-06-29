@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Fri Jun 27 13:39:25 2014">
+  <application stringID="Xst" timeStamp="Sun Jun 29 22:12:21 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -116,20 +116,19 @@
         <item stringID="XST_IOS" value="68"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="326">
-          <item dataType="int" stringID="XST_AND2" value="92"/>
+        <item dataType="int" stringID="XST_BELS" value="318">
+          <item dataType="int" stringID="XST_AND2" value="93"/>
           <item dataType="int" stringID="XST_AND3" value="17"/>
           <item dataType="int" stringID="XST_AND4" value="2"/>
           <item dataType="int" stringID="XST_GND" value="1"/>
-          <item dataType="int" stringID="XST_INV" value="138"/>
-          <item dataType="int" stringID="XST_OR2" value="53"/>
+          <item dataType="int" stringID="XST_INV" value="132"/>
+          <item dataType="int" stringID="XST_OR2" value="49"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
           <item dataType="int" stringID="XST_XOR2" value="15"/>
         </item>
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="36">
-          <item dataType="int" stringID="XST_FDCE" value="19"/>
-          <item dataType="int" stringID="XST_FDP" value="3"/>
-          <item dataType="int" stringID="XST_FDPE" value="14"/>
+          <item dataType="int" stringID="XST_FDCE" value="14"/>
+          <item dataType="int" stringID="XST_FDPE" value="22"/>
         </item>
         <item dataType="int" stringID="XST_IO_BUFFERS" value="64">
           <item dataType="int" stringID="XST_IBUF" value="36"/>

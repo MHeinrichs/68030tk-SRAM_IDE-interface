@@ -133,22 +133,59 @@ begin
 	--IDE_R_S		<= '0' when(IDE_SPACE='1' and nAS='0' and RW='1' and IDE_ENABLE='1') else '1';
 	--IDE_W_S		<= '0' when(IDE_SPACE='1' and nAS='0' and RW='0') else '1';
 
-	ide_rw_gen: process (nAS, clk)
+	-- this is the clocked process
+	ide_rw_gen: process (nAS, reset, clk)
 	begin
-		if	nAS = '1' then
+	
+		if	(reset = '0') then
+			-- reset
+			IDE_ENABLE			<='0';
+		elsif	nAS = '1' then
 			IDE_R		<= '1';
 			IDE_W		<= '1';
+			ROM_OUT_ENABLE_S	<= '1';
+			IDE_DSACK_D0		<= '1';
+			IDE_DSACK_D1		<= '1';
+			IDE_DSACK_D2		<= '1';
+			DSACK_16BIT			<= '1';
+			IDE_CS(0)			<= '1';
+			IDE_CS(1)			<= '1';
+			IDE_A(0)				<= '1';
+			IDE_A(1)				<= '1';
+			IDE_A(2)				<= '1';
 		elsif rising_edge(clk) then
-			IDE_CS(0)	<= not(A(12));			
-			IDE_CS(1)	<= not(A(13));
-			IDE_A(0)		<= A(9);
-			IDE_A(1)		<= A(10);
-			IDE_A(2)		<= A(11);
-			if( IDE_SPACE='1' and RW='1' and IDE_ENABLE='1')then
-				IDE_R		<= '0';
-			elsif (IDE_SPACE='1' and nAS='0' and RW='0')then
-				IDE_W		<= '0';			
-			end if;
+			if(IDE_SPACE='1')then
+				--map adresses to signals
+				IDE_CS(0)	<= not(A(12));			
+				IDE_CS(1)	<= not(A(13));
+				IDE_A(0)		<= A(9);
+				IDE_A(1)		<= A(10);
+				IDE_A(2)		<= A(11);
+
+			
+				
+				if(RW='0')then
+					--enable IDE on the first write on this IO-space!
+					IDE_ENABLE<='1';
+					--the write goes to the hdd!
+					IDE_W		<= '0';			
+				elsif(RW='1' and IDE_ENABLE='1')then
+					--read from IDE instead from ROM
+					IDE_R		<= '0';
+				end if;
+
+				--generate IO-delay and ROM_OUT_ENABLE
+				IDE_DSACK_D0		<=	'0';
+				IDE_DSACK_D1		<= IDE_DSACK_D0;
+				IDE_DSACK_D2		<= IDE_DSACK_D1;
+				
+				if (IDE_ENABLE='0' and RW='1')then --rom read
+					DSACK_16BIT			<= IDE_DSACK_D2;
+					ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
+				elsif(IDE_ENABLE='1' and IDE_WAIT='1')then --IDE I/O
+					DSACK_16BIT			<=	'0';
+				end if;					
+			end if;				
 		end if;
 	end process ide_rw_gen;
 
@@ -204,42 +241,6 @@ begin
 			end if;
 		end if;
 	end process dsack_gen;
-	
-	-- this is the clocked process
-	p_ide: process (reset, clk)
-	begin
-		if	(reset = '0') then
-			-- reset
-			IDE_ENABLE			<='0';
-			ROM_OUT_ENABLE_S	<='1';
-			IDE_DSACK_D0		<='1';
-			IDE_DSACK_D1		<='1';
-			IDE_DSACK_D2		<='1';
-			DSACK_16BIT			<='1';
-		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock	
-			if(nAS='0' and IDE_SPACE='1')then
-				--enable IDE on the first write on this IO-space!
-				if(RW='0')then
-					IDE_ENABLE<='1';
-				end if;
-				IDE_DSACK_D0		<=	'0';
-				IDE_DSACK_D1		<= IDE_DSACK_D0;
-				IDE_DSACK_D2		<= IDE_DSACK_D1;
-				if (IDE_ENABLE='0' and RW='1')then
-					DSACK_16BIT			<= IDE_DSACK_D2;
-					ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
-				elsif(IDE_ENABLE='1' and IDE_WAIT='1')then
-					DSACK_16BIT			<=	IDE_DSACK_D0;
-				end if;					
-			else
-				DSACK_16BIT			<='1';
-				IDE_DSACK_D0		<='1';
-				IDE_DSACK_D1		<='1';
-				IDE_DSACK_D2		<='1';
-				ROM_OUT_ENABLE_S	<='1';
-			end if;			
-		end if;
-	end process p_ide; --- that's all
 
 	autoconfig: process (reset, clk)
 	begin

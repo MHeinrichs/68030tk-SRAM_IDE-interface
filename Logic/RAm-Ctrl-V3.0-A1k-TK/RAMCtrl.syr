@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: RAMCtrl.prj
 
@@ -122,8 +122,8 @@ WARNING:Xst:646 - Signal <DSACK_32BIT> is assigned but never used. This unconnec
     Found 1-bit register for signal <IDE_DSACK_D2>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 8-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 102.
-    Found 4-bit register for signal <Mtridata_Dout> created at line 256.
-    Found 1-bit register for signal <Mtrien_Dout> created at line 256.
+    Found 4-bit register for signal <Mtridata_Dout> created at line 250.
+    Found 1-bit register for signal <Mtrien_Dout> created at line 250.
     Found 3-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 118.
     Found 3-bit comparator equal for signal <nCS2_S$cmp_eq0000> created at line 123.
     Found 1-bit register for signal <ROM_OUT_ENABLE_S>.
@@ -181,14 +181,14 @@ Optimizing unit <RAMCtrl> ...
   implementation constraint: IOB=auto	 : Mtridata_Dout<1>
   implementation constraint: IOB=auto	 : Mtridata_Dout<0>
   implementation constraint: INIT=s	 : IDE_R
+  implementation constraint: INIT=s	 : ROM_OUT_ENABLE_S
   implementation constraint: INIT=s	 : IDE_W
+  implementation constraint: INIT=r	 : IDE_ENABLE
+  implementation constraint: INIT=r	 : Mtrien_Dout
   implementation constraint: INIT=s	 : IDE_DSACK_D0
   implementation constraint: INIT=s	 : IDE_DSACK_D1
   implementation constraint: INIT=s	 : IDE_DSACK_D2
   implementation constraint: INIT=s	 : DSACK_16BIT
-  implementation constraint: INIT=r	 : Mtrien_Dout
-  implementation constraint: INIT=r	 : IDE_ENABLE
-  implementation constraint: INIT=s	 : ROM_OUT_ENABLE_S
 
 =========================================================================
 *                           Partition Report                            *
@@ -220,20 +220,19 @@ Design Statistics
 # IOs                              : 68
 
 Cell Usage :
-# BELS                             : 326
-#      AND2                        : 92
+# BELS                             : 318
+#      AND2                        : 93
 #      AND3                        : 17
 #      AND4                        : 2
 #      GND                         : 1
-#      INV                         : 138
-#      OR2                         : 53
-#      OR3                         : 7
+#      INV                         : 132
+#      OR2                         : 49
+#      OR3                         : 8
 #      VCC                         : 1
 #      XOR2                        : 15
 # FlipFlops/Latches                : 36
-#      FDCE                        : 19
-#      FDP                         : 3
-#      FDPE                        : 14
+#      FDCE                        : 14
+#      FDPE                        : 22
 # IO Buffers                       : 64
 #      IBUF                        : 36
 #      IOBUFE                      : 4
@@ -243,11 +242,11 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.88 secs
+Total CPU time to Xst completion: 6.83 secs
  
 --> 
 
-Total memory usage is 255064 kilobytes
+Total memory usage is 256216 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    5 (   0 filtered)
