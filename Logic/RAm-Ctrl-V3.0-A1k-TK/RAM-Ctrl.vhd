@@ -90,6 +90,7 @@ signal	IDE_DSACK_D1:STD_LOGIC:= '1';
 signal	IDE_DSACK_D2:STD_LOGIC:= '1';
 signal	DSACK_16BIT:STD_LOGIC:='1';
 signal	DSACK_32BIT:STD_LOGIC:='1';
+signal	AS_D0:STD_LOGIC:= '1';
 signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0):="11";
 signal	IDE_ENABLE:STD_LOGIC:= '0';
 begin
@@ -110,8 +111,8 @@ begin
 
 	--output
 	MY_CYCLE		<= '0' 	when (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else '1';
-	nOE 			<= '0' 	when MY_RAMSEL ='1' and RW='1' and (clk='0' or nAS='0') else '1';
-	nWE 			<= '0' 	when MY_RAMSEL ='1' and RW='0' and (clk='0' or nAS='0') else '1';
+	nOE 			<= '0' 	when MY_RAMSEL ='1' and RW='1' and (nAS='0') else '1';
+	nWE 			<= '0' 	when MY_RAMSEL ='1' and RW='0' and (nAS='0') else '1';
 	nRAM_SEL 	<= MY_CYCLE; 
 	D				<=	Dout;
 
@@ -132,6 +133,16 @@ begin
 						A(3);
 	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0') else '1';
 
+	AS_EDGE_DETECT: process (reset, clk)
+	begin
+		if	reset = '0' then
+			-- reset active ...
+			AS_D0	<='1';
+		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
+			AS_D0	<= nAS;
+		end if;
+	end process AS_EDGE_DETECT;
+
 	-- this is the clocked process
 	ide_rw_gen: process (nAS, reset, clk)
 	begin
@@ -139,7 +150,7 @@ begin
 		if	(reset = '0') then
 			-- reset
 			IDE_ENABLE			<='0';
-		elsif	nAS = '1' then
+		elsif	(nAS = '1') then
 			IDE_R		<= '1';
 			IDE_W		<= '1';
 			ROM_OUT_ENABLE_S	<= '1';
