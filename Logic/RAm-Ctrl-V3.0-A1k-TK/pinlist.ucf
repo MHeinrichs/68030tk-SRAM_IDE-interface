@@ -53,7 +53,7 @@ NET "D[1]" LOC = "P29"; #Internal D1=external D29
 NET "D[0]" LOC = "P28"; #Internal D0=external D28
 #NET "E" LOC = "P27";
 NET "D[2]" LOC = "P25"; #Internal D2=external D30
-#NET "clk2" LOC = "P23";
+NET "ECS" LOC = "P23";
 NET "clk" BUFG=CLK;
 NET "D[3]" LOC = "P20"; #Internal D3=external D31
 NET "BYTE[2]" LOC = "P18";

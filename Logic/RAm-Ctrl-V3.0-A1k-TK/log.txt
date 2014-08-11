@@ -296,6 +296,22 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D0\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D0\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
@@ -484,10 +500,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_ENABLE_
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/STERM1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
@@ -512,11 +524,15 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO51 prop_n
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1424,19 +1440,19 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_34
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_42 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_42 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_51 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_51 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_52 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_52 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -2342,6 +2358,16 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/reset prop_
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P23"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS_IBUF prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "IBUF"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS_IBUF prop_name=IOCOMP prop_terse=XDM_PROPERTY_BOOL "IOCOMP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/A<15> prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P70"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
@@ -2378,26 +2404,33 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/TS_TIMESPEC
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+INFO:Cpld - Inferring BUFG constraint for signal 'ECS' based upon the LOC
+   constraint 'P23'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
 WARNING:Cpld:1007 - Removing unused input(s) 'A<14>'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
 WARNING:Cpld:1007 - Removing unused input(s) 'A<15>'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
 WARNING:Cpld:1007 - Removing unused input(s) 'A<8>'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
-WARNING:Cpld - The signal(s) 'CIIN_and0000' are in combinational feedback loops.
+WARNING:Cpld:1007 - Removing unused input(s) 'ECS'.  The input(s) are unused
+   after optimization. Please verify functionality via simulation.
+WARNING:Cpld - The signal(s) 'CIIN' are in combinational feedback loops.
    These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
    hazard reduction circuitry.
    Timing analysis of paths involving this node may be inaccurate or incomplete.
 Considering device XC9572XL-10-TQ100.
 Multi-level logic optimization...
 Timespec optimization
-Density optimization..............................  .. 
+Density optimization.............................  . 
 WARNING:Cpld:828 - Signal 'Mtrien_Dout.CE' has been minimized to 'VCC'.
      The signal is removed.
 Timespec driven global resource optimizationAll paths with TIMESPECs have been optimized.
 
 General global resource optimization........
 Re-checking device resources ...
-Mapping a total of 65 equations into 4 function blocks..........................................
+Mapping a total of 62 equations into 4 function blocks................
 
 Design RAMCtrl has been optimized and fit into device XC9572XL-10-TQ100.

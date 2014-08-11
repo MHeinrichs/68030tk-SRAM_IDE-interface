@@ -36,6 +36,7 @@ Port (
 	A 			: in 	STD_LOGIC_VECTOR(31 downto 0);                   
 	SIZ 		: in 	STD_LOGIC_VECTOR(1 downto 0);                   
 	nAS 		: in  STD_LOGIC;
+	ECS 		: in  STD_LOGIC;
 	nDS 		: in  STD_LOGIC;
 	RW			: in  STD_LOGIC;
 	--nBGACK	: in 	STD_LOGIC;
@@ -93,6 +94,7 @@ signal	DSACK_32BIT:STD_LOGIC:='1';
 signal	AS_D0:STD_LOGIC:= '1';
 signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0):="11";
 signal	IDE_ENABLE:STD_LOGIC:= '0';
+signal	ECS_D0:STD_LOGIC:= '0';
 begin
 	--internal signals
 	ZorroII		<= '1' 	when (A(31 downto 24)= x"00") else '0'; -- 24-bit addres space. A31 is buggy on Amiga systems and ignored!
@@ -133,15 +135,47 @@ begin
 						A(3);
 	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0') else '1';
 
-	AS_EDGE_DETECT: process (reset, clk)
-	begin
-		if	reset = '0' then
-			-- reset active ...
-			AS_D0	<='1';
-		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
-			AS_D0	<= nAS;
-		end if;
-	end process AS_EDGE_DETECT;
+	--AS_EDGE_DETECT: process (reset, clk)
+	--begin
+	--	if	reset = '0' then
+	--		-- reset active ...
+	--		MY_RAMSEL <= '0';
+	--		AUTO_CONFIG <= '0';
+	--		IDE_SPACE <='0';
+	--	elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock		
+	--		if(ECS = '0' or nAS='0')
+	--		then
+	--			if( 	A(31 downto 24)= x"00"
+	--					AND SHUT_UP(0) ='0' 
+	--					AND (A(23 downto 21)= BASEADR OR A(23 downto 21)= BASEADR_4MB))
+	--			then
+	--				MY_RAMSEL <= '1';
+	--				AUTO_CONFIG <= '0';
+	--				IDE_SPACE <='0';				
+	--			elsif( A(31 downto 24)= x"00"
+	--					AND A(23 downto 16)= IDE_BASEADR  
+	--					AND SHUT_UP(1) ='0' ) then
+	--				MY_RAMSEL <= '0';
+	--				AUTO_CONFIG <= '0';
+	--				IDE_SPACE <='1';
+	--			elsif( A(31 downto 24)= x"00"
+	--					and A(23 downto 16)= x"E8" 
+	--					AND not (AUTO_CONFIG_DONE ="11") ) then
+	--				MY_RAMSEL <= '0';
+	--				AUTO_CONFIG <= '1';
+	--				IDE_SPACE <='0';
+	--			else
+	--				MY_RAMSEL <= '0';
+	--				AUTO_CONFIG <= '0';
+	--				IDE_SPACE <='0';
+	--			end if;
+	--		else
+	--				MY_RAMSEL <= '0';
+	--				AUTO_CONFIG <= '0';
+	--				IDE_SPACE <='0';
+	--		end if;
+	--	end if;
+	--end process AS_EDGE_DETECT;
 
 	-- this is the clocked process
 	ide_rw_gen: process (nAS, reset, clk)
@@ -226,24 +260,24 @@ begin
 					 else '1';
 	
 	--map DSACK signal
-	DSACK_INT	<= --"00" when DSACK_32BIT	='0' else
+	DSACK_INT	<= "00" when DSACK_32BIT	='0' else
 						"01" when DSACK_16BIT	='0' else 
 						--"00" when MY_RAMSEL		='1' and nAS='0' else	
 						"01" when AUTO_CONFIG	='1' and nAS='0' else 
 						"11";
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
-	STERM <=  '0' when MY_RAMSEL ='1' else '1';
-	--STERM <=  '1';
-	--dsack_gen: process (nAS, clk)
-	--begin
-	--	if	nAS = '1' then
-	--		DSACK_32BIT	<= '1';
-	--	elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock					
-	--		if(MY_RAMSEL='1')then
-	--			DSACK_32BIT	<= '0';
-	--		end if;
-	--	end if;
-	--end process dsack_gen;
+	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
+	STERM <=  '1';
+	dsack_gen: process (nAS, clk)
+	begin
+		if	nAS = '1' then
+			DSACK_32BIT	<= '1';
+		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock					
+			if(MY_RAMSEL='1')then
+				DSACK_32BIT	<= '0';
+			end if;
+		end if;
+	end process dsack_gen;
 	
 	--enable caching for RAM
 	CIIN	<= '1' when MY_RAMSEL ='1' else 
