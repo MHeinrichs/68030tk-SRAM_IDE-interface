@@ -28,6 +28,9 @@ These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the ha
 Timing analysis of paths involving this node may be inaccurate or incomplete.
 </msg>
 
+<msg type="info" file="Cpld" num="994" delta="new" >Exhaustive fitting is trying <arg fmt="%s" index="1">pterm limit</arg>: <arg fmt="%d" index="2">32</arg> and <arg fmt="%s" index="3">input limit</arg>: <arg fmt="%d" index="4">54</arg>
+</msg>
+
 <msg type="warning" file="Cpld" num="828" delta="new" >Signal &apos;<arg fmt="%s" index="1">Mtrien_Dout.CE</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
   The signal is removed.
 </msg>

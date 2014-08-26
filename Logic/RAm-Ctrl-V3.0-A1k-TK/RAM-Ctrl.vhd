@@ -89,12 +89,16 @@ signal	ROM_OUT_ENABLE_S:STD_LOGIC:= '1';
 signal	IDE_DSACK_D0:STD_LOGIC:= '1';
 signal	IDE_DSACK_D1:STD_LOGIC:= '1';
 signal	IDE_DSACK_D2:STD_LOGIC:= '1';
+signal	IDE_DSACK_D3:STD_LOGIC:= '1';
 signal	DSACK_16BIT:STD_LOGIC:='1';
 signal	DSACK_32BIT:STD_LOGIC:='1';
-signal	AS_D0:STD_LOGIC:= '1';
+signal	DSACK_32BIT_D0:STD_LOGIC:='1';
+signal	DSACK_32BIT_D1:STD_LOGIC:='1';
+signal	DSACK_32BIT_D2:STD_LOGIC:='1';
+--signal	AS_D0:STD_LOGIC:= '1';
 signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0):="11";
 signal	IDE_ENABLE:STD_LOGIC:= '0';
-signal	ECS_D0:STD_LOGIC:= '0';
+--signal	ECS_D0:STD_LOGIC:= '0';
 begin
 	--internal signals
 	ZorroII		<= '1' 	when (A(31 downto 24)= x"00") else '0'; -- 24-bit addres space. A31 is buggy on Amiga systems and ignored!
@@ -134,6 +138,13 @@ begin
 	IO5			<= '1' when IDE_SPACE='1' and IDE_ENABLE='0' else
 						A(3);
 	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0') else '1';
+
+	--ECS_EDGE_DETECT: process (clk)
+	--begin
+	--	if falling_edge(clk) then -- no reset, so wait for rising edge of the clock		
+	--		ECS_D0 <= ECS;
+	--	end if;
+	--end process ECS_EDGE_DETECT;
 
 	--AS_EDGE_DETECT: process (reset, clk)
 	--begin
@@ -191,6 +202,7 @@ begin
 			IDE_DSACK_D0		<= '1';
 			IDE_DSACK_D1		<= '1';
 			IDE_DSACK_D2		<= '1';
+			IDE_DSACK_D3		<= '1';
 			DSACK_16BIT			<= '1';
 			IDE_CS(0)			<= '1';
 			IDE_CS(1)			<= '1';
@@ -220,12 +232,12 @@ begin
 				IDE_DSACK_D0		<=	'0';
 				IDE_DSACK_D1		<= IDE_DSACK_D0;
 				IDE_DSACK_D2		<= IDE_DSACK_D1;
-				
+				IDE_DSACK_D3		<= IDE_DSACK_D2;
 				if (IDE_ENABLE='0' and RW='1')then --rom read
-					DSACK_16BIT			<= IDE_DSACK_D2;
-					ROM_OUT_ENABLE_S	<=	IDE_DSACK_D0;						
+					DSACK_16BIT			<= IDE_DSACK_D3;
+					ROM_OUT_ENABLE_S	<=	IDE_DSACK_D1;						
 				elsif(IDE_ENABLE='1' and IDE_WAIT='1')then --IDE I/O
-					DSACK_16BIT			<=	'0';
+					DSACK_16BIT			<=	IDE_DSACK_D1;
 				end if;					
 			end if;				
 		end if;
@@ -260,9 +272,8 @@ begin
 					 else '1';
 	
 	--map DSACK signal
-	DSACK_INT	<= "00" when DSACK_32BIT	='0' else
-						"01" when DSACK_16BIT	='0' else 
-						--"00" when MY_RAMSEL		='1' and nAS='0' else	
+	DSACK_INT	<= "00" when DSACK_32BIT_D1	='0' else
+						"01" when DSACK_16BIT	='0' else 						
 						"01" when AUTO_CONFIG	='1' and nAS='0' else 
 						"11";
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
@@ -272,9 +283,13 @@ begin
 	begin
 		if	nAS = '1' then
 			DSACK_32BIT	<= '1';
-		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock					
+			DSACK_32BIT_D0 <= '1';
+			DSACK_32BIT_D1 <= '1';
+		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
 			if(MY_RAMSEL='1')then
 				DSACK_32BIT	<= '0';
+				DSACK_32BIT_D0 <= DSACK_32BIT;
+				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
 			end if;
 		end if;
 	end process dsack_gen;
@@ -296,23 +311,24 @@ begin
 			BASEADR <="001";
 			BASEADR_4MB <="010";
 			IDE_BASEADR<=x"E9";
+			--AS_D0	<= '1';
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
-
+			--AS_D0	<= nAS;
 			if(AUTO_CONFIG= '1' and nAS='0') then
 				if(RW='1') then
 
 					if(AUTO_CONFIG_DONE(0)='0')then
-						case A(6 downto 0) is
-							when "0000000"	=> Dout <= 	"1110" ; --ZII, System-Memory, no ROM
-							when "0000010"	=> Dout <=	"0111" ; --one Card, 4MB = 111
+						case A(6 downto 1) is
+							when "000000"	=> Dout <= 	"1110" ; --ZII, System-Memory, no ROM
+							when "000001"	=> Dout <=	"0111" ; --one Card, 4MB = 111
 							--when "0000100"	=> Dout <=	"1111" ; --ProductID high nibble : E->0001
-							when "0000110"	=> Dout <=	"1101" ; --ProductID low nibble: F->0000
+							when "000011"	=> Dout <=	"1101" ; --ProductID low nibble: F->0000
 							--when "0001000"	=> Dout <=	"1111" ; --Config HIGH: 0x20 and no shut down
 							--when "0001010"	=> Dout <=	"1111" ; --Config LOW
 							--when "0010000"	=> Dout <=	"1111" ; --Ventor ID 0
-							when "0010010"	=> Dout <=	"0101" ; --Ventor ID 1
-							when "0010100"	=> Dout <=	"1110" ; --Ventor ID 2
-							when "0010110"	=> Dout <=	"0011" ; --Ventor ID 3 : $0A1C: A1K.org
+							when "001001"	=> Dout <=	"0101" ; --Ventor ID 1
+							when "001010"	=> Dout <=	"1110" ; --Ventor ID 2
+							when "001011"	=> Dout <=	"0011" ; --Ventor ID 3 : $0A1C: A1K.org
 							--when "0011000"	=> Dout <=	"1111" ; --Serial byte 0 (msb) high nibble
 							--when "0011010"	=> Dout <=	"1111" ; --Serial byte 0 (msb) low  nibble
 							--when "0011100"	=> Dout <=	"1111" ; --Serial byte 1       high nibble
@@ -320,38 +336,38 @@ begin
 							--when "0100000"	=> Dout <=	"1111" ; --Serial byte 2       high nibble
 							--when "0100010"	=> Dout <=	"1111" ; --Serial byte 2       low  nibble
 							--when "0100100"	=> Dout <=	"1111" ; --Serial byte 3 (lsb) high nibble
-							when "0100110"	=> Dout <=	"1110" ; --Serial byte 3 (lsb) low  nibble
-							when "1000000"	=> Dout <=	"0000" ; --Interrupt config: all zero
-							when "1000010"	=> Dout <=	"0000" ; --Interrupt config: all zero
+							when "010011"	=> Dout <=	"1110" ; --Serial byte 3 (lsb) low  nibble
+							when "100000"	=> Dout <=	"0000" ; --Interrupt config: all zero
+							when "100001"	=> Dout <=	"0000" ; --Interrupt config: all zero
 							when others	=> Dout <=	"1111" ;
 						end case;	
 					elsif(AUTO_CONFIG_DONE(1)='0')then						
 --					if(AUTO_CONFIG_DONE(1)='0')then						
-						case A(6 downto 0) is
-							when "0000000"	=> Dout <= 	"1101" ; --ZII, no Memory,  ROM
-							when "0000010"	=> Dout <=	"0001" ; --one Card, 64kb = 001
+						case A(6 downto 1) is
+							when "000000"	=> Dout <= 	"1101" ; --ZII, no Memory,  ROM
+							when "000001"	=> Dout <=	"0001" ; --one Card, 64kb = 001
 							--when "0000100"	=> Dout <=	"1111" ; --ProductID high nibble : F->0000=0
-							when "0000110"	=> Dout <=	"1001" ; --ProductID low nibble: 9->0110=6
+							when "000011"	=> Dout <=	"1001" ; --ProductID low nibble: 9->0110=6
 							--when "0001000"	=>                                                                                                                                                                                                                                                                                                                        Dout <=	"1111" ; --Config HIGH: 0x20 and no shut down
 							--when "0001010"	=> Dout <=	"1111" ; --Config LOW
 							--when "0010000"	=> Dout <=	"1111" ; --Ventor ID 0
-							when "0010010"	=> Dout <=	"0111" ; --Ventor ID 1
-							when "0010100"	=> Dout <=	"1101" ; --Ventor ID 2
-							when "0010110"	=> Dout <=	"0011" ; --Ventor ID 3 : $082C: BSC
-							when "0011000"	=> Dout <=	"0100" ; --Serial byte 0 (msb) high nibble
-							when "0011010"	=> Dout <=	"1110" ; --Serial byte 0 (msb) low  nibble
-							when "0011100"	=> Dout <=	"1001" ; --Serial byte 1       high nibble
-							when "0011110"	=> Dout <=	"0100" ; --Serial byte 1       low  nibble
+							when "001001"	=> Dout <=	"0111" ; --Ventor ID 1
+							when "001010"	=> Dout <=	"1101" ; --Ventor ID 2
+							when "001011"	=> Dout <=	"0011" ; --Ventor ID 3 : $082C: BSC
+							when "001100"	=> Dout <=	"0100" ; --Serial byte 0 (msb) high nibble
+							when "001101"	=> Dout <=	"1110" ; --Serial byte 0 (msb) low  nibble
+							when "001110"	=> Dout <=	"1001" ; --Serial byte 1       high nibble
+							when "001111"	=> Dout <=	"0100" ; --Serial byte 1       low  nibble
 							--when "0100000"	=> Dout <=	"1111" ; --Serial byte 2       high nibble
 							--when "0100010"	=> Dout <=	"1111" ; --Serial byte 2       low  nibble
-							when "0100100"	=> Dout <=	"0100" ; --Serial byte 3 (lsb) high nibble
-							when "0100110"	=> Dout <=	"1010" ; --Serial byte 3 (lsb) low  nibble: B16B00B5
+							when "010010"	=> Dout <=	"0100" ; --Serial byte 3 (lsb) high nibble
+							when "010011"	=> Dout <=	"1010" ; --Serial byte 3 (lsb) low  nibble: B16B00B5
 							--when "0101000"	=> Dout <=	"1111" ; --Rom vector high byte high nibble 
 							--when "0101010"	=> Dout <=	"1111" ; --Rom vector high byte low  nibble 
 							--when "0101100"	=> Dout <=	"1111" ; --Rom vector low byte high nibble
-							when "0101110"	=> Dout <=	"1110" ; --Rom vector low byte low  nibble
-							when "1000000"	=> Dout <=	"0000" ; --Interrupt config: all zero
-							when "1000010"	=> Dout <=	"0000" ; --Interrupt config: all zero
+							when "010111"	=> Dout <=	"1110" ; --Rom vector low byte low  nibble
+							when "100000"	=> Dout <=	"0000" ; --Interrupt config: all zero
+							when "100001"	=> Dout <=	"0000" ; --Interrupt config: all zero
 							when others	=> Dout <=	"1111" ;
 						end case;	
 					end if;
