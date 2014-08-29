@@ -25,7 +25,7 @@
   </files>
 
   <properties>
-    <property xil_pn:name="Device" xil_pn:value="xc9572xl" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Device" xil_pn:value="xc95144xl" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Device Family" xil_pn:value="XC9500XL CPLDs" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Enable Message Filtering" xil_pn:value="true" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top" xil_pn:value="Architecture|RAMCtrl|Behavioral" xil_pn:valueState="non-default"/>
@@ -35,7 +35,7 @@
     <property xil_pn:name="Netlist Hierarchy" xil_pn:value="Rebuilt" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Optimization Effort" xil_pn:value="High" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Optimization Goal" xil_pn:value="Area" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
-    <property xil_pn:name="Package" xil_pn:value="TQ100" xil_pn:valueState="non-default"/>
+    <property xil_pn:name="Package" xil_pn:value="TQ100" xil_pn:valueState="default"/>
     <property xil_pn:name="Preferred Language" xil_pn:value="VHDL" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Property Specification in Project File" xil_pn:value="Store non-default values only" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Safe Implementation" xil_pn:value="Yes" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>

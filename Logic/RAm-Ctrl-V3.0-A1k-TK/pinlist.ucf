@@ -73,4 +73,4 @@ NET "A[25]" LOC = "P3";
 NET "nAS" LOC = "P1";
 #Created by Constraints Editor (xc9572xl-tq100-10) - 2014/08/09
 NET "clk" TNM_NET = clk;
-TIMESPEC TS_clk = PERIOD "clk" 25 MHz HIGH 50%;
+TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;

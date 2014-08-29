@@ -126,18 +126,20 @@ begin
 	nCS1_S		<= '1' 	WHEN (ZorroII ='1' 
 									and A(23 downto 21)= BASEADR									
 									AND SHUT_UP(0) ='0')
+									--and nAS ='0'
 									--and A(23 downto 21)= "010")
 								else '0';
 	nCS2_S		<= '1' 	WHEN (ZorroII ='1' 
 									and A(23 downto 21)= BASEADR_4MB									
 									AND SHUT_UP(0) ='0') 
+									--and nAS ='0'
 									--and A(23 downto 21)= "011")
 								else '0';
-	IO4			<= ROM_OUT_ENABLE_S when IDE_SPACE='1' and IDE_ENABLE='0' else
+	IO4			<= ROM_OUT_ENABLE_S when IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0' else
 						A(2);
-	IO5			<= '1' when IDE_SPACE='1' and IDE_ENABLE='0' else
+	IO5			<= '1' when IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0' else
 						A(3);
-	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0') else '1';
+	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0') else '1';
 
 	--ECS_EDGE_DETECT: process (clk)
 	--begin
@@ -251,29 +253,33 @@ begin
 
 	--now decode the adresslines A[0..1] and SIZ[0..1] to determine the ram bank to write
 	-- bits 0-7
-	BYTE(0)	<= '0' when RW='1' or ( RW='0' and (	 SIZ="00" or 
+	BYTE(0)	<= '0' when (RW='1' or ( RW='0' and (	 SIZ="00" or 
 														(A(0)='1' and A(1)='1') or 
 														(A(1)='1' and SIZ(1)='1') or
-														(A(0)='1' and SIZ="11" )))
+														(A(0)='1' and SIZ="11" ))))
+								--and nAS ='0'
 					 else '1';
 	-- bits 8-15
-	BYTE(1)	<= '0' when RW='1' or ( RW='0' and (	(A(0)='0' and A(1)='1') or
+	BYTE(1)	<= '0' when (RW='1' or ( RW='0' and (	(A(0)='0' and A(1)='1') or
 														(A(0)='1' and A(1)='0' and SIZ(0)='0') or
 														(A(1)='0' and SIZ="11") or 
-														(A(1)='0' and SIZ="00")))
+														(A(1)='0' and SIZ="00"))))
+								--and nAS ='0'
 					 else '1';
 	--bits 16-23
-	BYTE(2)	<= '0' when RW='1' or ( RW='0' and (	(A(0)='1' and A(1)='0') or
+	BYTE(2)	<= '0' when (RW='1' or ( RW='0' and (	(A(0)='1' and A(1)='0') or
 														(A(1)='0' and SIZ(0)='0') or 
-														(A(1)='0' and SIZ(1)='1')))
+														(A(1)='0' and SIZ(1)='1'))))
+								--and nAS ='0'
 					 else '1';
 	--bits 24--31
-	BYTE(3)	<= '0' when RW='1' or ( RW='0' and (	A(0)='0' and A(1)='0') )
+	BYTE(3)	<= '0' when (RW='1' or ( RW='0' and (	A(0)='0' and A(1)='0') ))
+								--and nAS ='0'
 					 else '1';
 	
 	--map DSACK signal
-	DSACK_INT	<= "00" when DSACK_32BIT_D1	='0' else
-						"01" when DSACK_16BIT	='0' else 						
+	DSACK_INT	<= "00" when DSACK_32BIT_D2='0' and nAS='0' else
+						"01" when DSACK_16BIT	='0' and nAS='0' else 						
 						"01" when AUTO_CONFIG	='1' and nAS='0' else 
 						"11";
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
@@ -281,15 +287,23 @@ begin
 	STERM <=  '1';
 	dsack_gen: process (nAS, clk)
 	begin
-		if	nAS = '1' then
-			DSACK_32BIT	<= '1';
-			DSACK_32BIT_D0 <= '1';
-			DSACK_32BIT_D1 <= '1';
-		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
-			if(MY_RAMSEL='1')then
+		--if	nAS = '1' then
+		--	DSACK_32BIT	<= '1';
+		--	DSACK_32BIT_D0 <= '1';
+		--	DSACK_32BIT_D1 <= '1';
+		--	DSACK_32BIT_D2 <= '1';
+		--els
+		if rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
+			if((nCS1_S = '1' or nCS2_S = '1') and nAS ='0')then
 				DSACK_32BIT	<= '0';
 				DSACK_32BIT_D0 <= DSACK_32BIT;
 				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
+				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
+			else
+				DSACK_32BIT	<= '1';
+				DSACK_32BIT_D0 <= '1';
+				DSACK_32BIT_D1 <= '1';
+				DSACK_32BIT_D2 <= '1';
 			end if;
 		end if;
 	end process dsack_gen;
@@ -417,4 +431,3 @@ begin
 
 	end process autoconfig; --- that's all
 end Behavioral;
-
