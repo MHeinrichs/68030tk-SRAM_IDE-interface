@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Cpld" num="310" delta="new" >Cannot apply TIMESPEC <arg fmt="%s" index="1">AUTO_TS_2001</arg> = <arg fmt="%s" index="2">FROM:INT_CLK_clk:TO:INT_TNM_BYTE&lt;0&gt;:1.0</arg> because of one of the following: (a) a signal name was not found; (b) a signal was removed or renamed due to optimization; (c) there is no path between the FROM node and TO node in the TIMESPEC.
+</msg>
+
+<msg type="warning" file="Cpld" num="310" delta="new" >Cannot apply TIMESPEC <arg fmt="%s" index="1">AUTO_TS_2002</arg> = <arg fmt="%s" index="2">FROM:INT_CLK_clk:TO:INT_TNM_BYTE&lt;1&gt;:1.0</arg> because of one of the following: (a) a signal name was not found; (b) a signal was removed or renamed due to optimization; (c) there is no path between the FROM node and TO node in the TIMESPEC.
+</msg>
+
+<msg type="warning" file="Cpld" num="310" delta="new" >Cannot apply TIMESPEC <arg fmt="%s" index="1">AUTO_TS_2003</arg> = <arg fmt="%s" index="2">FROM:INT_CLK_clk:TO:INT_TNM_BYTE&lt;2&gt;:1.0</arg> because of one of the following: (a) a signal name was not found; (b) a signal was removed or renamed due to optimization; (c) there is no path between the FROM node and TO node in the TIMESPEC.
+</msg>
+
+<msg type="warning" file="Cpld" num="310" delta="new" >Cannot apply TIMESPEC <arg fmt="%s" index="1">AUTO_TS_2004</arg> = <arg fmt="%s" index="2">FROM:INT_CLK_clk:TO:INT_TNM_BYTE&lt;3&gt;:1.0</arg> because of one of the following: (a) a signal name was not found; (b) a signal was removed or renamed due to optimization; (c) there is no path between the FROM node and TO node in the TIMESPEC.
+</msg>
+
+</messages>
+

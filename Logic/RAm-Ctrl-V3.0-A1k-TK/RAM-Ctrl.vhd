@@ -79,7 +79,6 @@ signal	BASEADR:STD_LOGIC_VECTOR(2 downto 0);
 signal	BASEADR_4MB:STD_LOGIC_VECTOR(2 downto 0);
 signal	IDE_BASEADR:STD_LOGIC_VECTOR(7 downto 0);
 signal	Dout:STD_LOGIC_VECTOR(3 downto 0);
-signal	ZorroII:STD_LOGIC:= '0';
 signal	IDE_R_S:STD_LOGIC:= '1';
 signal	IDE_W_S:STD_LOGIC:= '1';
 signal	nCS1_S:STD_LOGIC:= '1';
@@ -101,50 +100,64 @@ signal	IDE_ENABLE:STD_LOGIC:= '0';
 --signal	ECS_D0:STD_LOGIC:= '0';
 begin
 	--internal signals
-	ZorroII		<= '1' 	when (A(31 downto 24)= x"00") else '0'; -- 24-bit addres space. A31 is buggy on Amiga systems and ignored!
-	MY_RAMSEL	<= '1' 	when ZorroII ='1' 
+	MY_RAMSEL	<= '1' 	when 
+									(A(31 downto 21) = (x"00" & BASEADR) or A(31 downto 21) = (x"00" & BASEADR_4MB))
 									AND SHUT_UP(0) ='0' 
-									AND (A(23 downto 21)= BASEADR OR A(23 downto 21)= BASEADR_4MB)
-								else '0'; -- Adress match and board successfully configured
-	IDE_SPACE   <= '1'	when ZorroII ='1' 
-									and A(23 downto 16)= IDE_BASEADR  
+						else '0'; -- Adress match and board successfully configured
+	IDE_SPACE   <= '1'	when 
+									A(31 downto 16) = (x"00" & IDE_BASEADR)  
 									AND SHUT_UP(1) ='0' 
-								else '0'; -- Access to IDE-Space
-	AUTO_CONFIG	<= '1'	when ZorroII ='1' 
-									and A(23 downto 16)= x"E8" 
+						else '0'; -- Access to IDE-Space
+	AUTO_CONFIG	<= '1'	when 
+									A(31 downto 16) = x"00E8"
 									AND not (AUTO_CONFIG_DONE ="11") 
-								else '0'; -- Access to Autoconfig space and internal autoconfig not complete
+						else '0'; -- Access to Autoconfig space and internal autoconfig not complete
 
 	--output
 	MY_CYCLE		<= '0' 	when (MY_RAMSEL='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else '1';
-	nOE 			<= '0' 	when MY_RAMSEL ='1' and RW='1' and (nAS='0') else '1';
-	nWE 			<= '0' 	when MY_RAMSEL ='1' and RW='0' and (nAS='0') else '1';
+	--nOE 			<= '0' 	when MY_RAMSEL ='1' and RW='1' and (nAS='0') else '1';
+	--nWE 			<= '0' 	when MY_RAMSEL ='1' and RW='0' and (nAS='0' and DSACK_32BIT_D1 = '1') else '1';
 	nRAM_SEL 	<= MY_CYCLE; 
 	D				<=	Dout;
 
 	--these signals are timing crittical and MUST be async
-	nCS1_S		<= '1' 	WHEN (ZorroII ='1' 
-									and A(23 downto 21)= BASEADR									
-									AND SHUT_UP(0) ='0')
-									--and nAS ='0'
+	nCS1_S		<= '1' 	WHEN 
+									A(31 downto 21) = (x"00" & BASEADR)									
+									AND SHUT_UP(0) ='0'
+									and nAS ='0'
 									--and A(23 downto 21)= "010")
 								else '0';
-	nCS2_S		<= '1' 	WHEN (ZorroII ='1' 
-									and A(23 downto 21)= BASEADR_4MB									
-									AND SHUT_UP(0) ='0') 
-									--and nAS ='0'
+	nCS2_S		<= '1' 	WHEN 
+									A(31 downto 21) = (x"00" & BASEADR_4MB)
+									AND SHUT_UP(0) ='0' 
+									and nAS ='0'
 									--and A(23 downto 21)= "011")
 								else '0';
-	IO4			<= ROM_OUT_ENABLE_S when IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0' else
-						A(2);
+	IO4			<= '0' when IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0' and ROM_OUT_ENABLE_S ='0' else
+						'1' when IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0' and ROM_OUT_ENABLE_S ='1' else
+						'0' when A(2) = '0' 
+						else '1';
 	IO5			<= '1' when IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0' else
-						A(3);
-	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0') else '1';
+						'0' when A(3)='0' 
+						else '1';
+	ROM_ENABLE_S<= '0' when(IDE_SPACE='1' and IDE_ENABLE='0' and nAS ='0') 
+						else '1';
 
 	--ECS_EDGE_DETECT: process (clk)
 	--begin
 	--	if falling_edge(clk) then -- no reset, so wait for rising edge of the clock		
-	--		ECS_D0 <= ECS;
+			
+	--		if(  IDE_SPACE='1' and IDE_ENABLE='0' and (ECS = '0' or nAS = '0') )then
+	--			IO4 <= ROM_OUT_ENABLE_S;
+	--		else
+	--			IO4 <= A(2);
+	--		end if;
+
+	--		if(  IDE_SPACE='1' and IDE_ENABLE='0' and (ECS = '0' or nAS = '0'))then
+	--			IO5 <= '1';
+	--		else
+	--			IO5 <= A(3);
+	--		end if;
 	--	end if;
 	--end process ECS_EDGE_DETECT;
 
@@ -278,7 +291,7 @@ begin
 					 else '1';
 	
 	--map DSACK signal
-	DSACK_INT	<= "00" when DSACK_32BIT_D2='0' and nAS='0' else
+	DSACK_INT	<= "00" when DSACK_32BIT_D1='0' and nAS='0' else
 						"01" when DSACK_16BIT	='0' and nAS='0' else 						
 						"01" when AUTO_CONFIG	='1' and nAS='0' else 
 						"11";
@@ -287,14 +300,23 @@ begin
 	STERM <=  '1';
 	dsack_gen: process (nAS, clk)
 	begin
-		--if	nAS = '1' then
-		--	DSACK_32BIT	<= '1';
-		--	DSACK_32BIT_D0 <= '1';
-		--	DSACK_32BIT_D1 <= '1';
-		--	DSACK_32BIT_D2 <= '1';
-		--els
-		if rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
+		if	nAS = '1' then
+			DSACK_32BIT		<= '1';
+			DSACK_32BIT_D0 <= '1';
+			DSACK_32BIT_D1 <= '1';
+			DSACK_32BIT_D2 <= '1';
+			nOE				<= '1';
+			nWE				<= '1';
+		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
 			if((nCS1_S = '1' or nCS2_S = '1') and nAS ='0')then
+				nOE 			<= not RW;
+				
+				if(RW='0' and DSACK_32BIT_D2 ='1') then --nWE must be deasserted before nAS terminates!
+					nWE 		<= '0';
+				else 
+					nWE 		<= '1';
+				end if;
+			
 				DSACK_32BIT	<= '0';
 				DSACK_32BIT_D0 <= DSACK_32BIT;
 				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
@@ -304,6 +326,8 @@ begin
 				DSACK_32BIT_D0 <= '1';
 				DSACK_32BIT_D1 <= '1';
 				DSACK_32BIT_D2 <= '1';
+				nOE				<= '1';
+				nWE				<= '1';
 			end if;
 		end if;
 	end process dsack_gen;

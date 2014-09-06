@@ -8,6 +8,30 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/XST_VCC pro
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS2_S\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS2_S\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS2_S\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS2_S\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
@@ -21,22 +45,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R\/X_ZE
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -116,30 +124,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_A_0\/X_
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_1\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_1\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_0\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_0\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_0\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_0\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_1\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
@@ -149,18 +133,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=T
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_1\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -224,51 +196,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_2\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_2\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_0\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_0\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_2\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_2\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -360,6 +292,38 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D4\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D4\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D4\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D4\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D4\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D4\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D5\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D5\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D5\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D5\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D5\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D5\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_16BIT\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_16BIT\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
@@ -373,6 +337,46 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_16BIT
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_16BIT\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_16BIT\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D6\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D6\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D6\/Q prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D6\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDPE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D6\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_DSACK_D6\/X_ZERO prop_name=FPGAINIT prop_terse=XDM_PROPERTY_INT32 "FPGAINIT" 1
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO5\/Q prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO5\/Q prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO5\/X_ZERO prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCE"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO5\/X_ZERO prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -404,6 +408,42 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtrien_Dout
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE\/Q\/X_ONE prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE\/Q\/X_ONE prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
@@ -419,6 +459,24 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=T
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3\/Q\/FDCP prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3\/Q\/FDCP prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3\/Q\/X_ONE prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "FDCP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3\/Q\/X_ONE prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3\/$1I43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "GND"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3\/$1I43 prop_name=INIT prop_terse=XDM_PROPERTY_STRING "INIT" "1"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -508,59 +566,35 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Do
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS1_S_cmp_eq0000_Mxor_or0000_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0000_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS1_S_cmp_eq0000_Mxor_or0000_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0000_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS1_S_cmp_eq0000_Mxor_AEB_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0001_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS2_S_cmp_eq0000_Mxor_or0000_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0001_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS2_S_cmp_eq0000_Mxor_or0000_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0002_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS2_S_cmp_eq0000_Mxor_AEB_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0002_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0000_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0003_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0000_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0001_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0001_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0002_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0002_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0003_xor0000\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0000_Mxor_or0003_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_IDE_SPACE_cmp_eq0001_Mxor_or0003_xor0001\/Xo<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -568,47 +602,7 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_CYCLE1 p
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_ENABLE_S1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO42 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO44 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO51 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -617,14 +611,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R_and00
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -640,7 +626,15 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_A_0_and
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO5_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -668,47 +662,23 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtrien_Dout
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_cmp_eq00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_CYCLE_or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_ENABLE_S_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_ENABLE_S_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT_and00021 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_ENABLE_S_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT_and00022 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -728,23 +698,19 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_R_or000
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S_or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S_or00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ROM_OUT_ENABLE_S_or00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_W_or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_W_or00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -756,11 +722,7 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/CIIN_and000
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/CIIN_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/CIIN_and00004 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/CIIN_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -772,10 +734,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_CS_1_no
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtrien_Dout_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/CIIN_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
@@ -784,7 +742,27 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Dout_Mtrida
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE__or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE__or00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE__or00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT__and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3__or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D3__or00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -812,7 +790,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0_N01 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_N01 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4_N01 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -820,63 +802,43 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Do
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE_or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<0>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE_or00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<0>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE_or00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS2_S_cmp_eq0000_AEB_or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mcompar_nCS1_S_cmp_eq0000_AEB_or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<2>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<2>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_INT<1>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<2>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and000013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -888,39 +850,19 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Do
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000016 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -928,35 +870,15 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_16BIT
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0_mux000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0_mux00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0_mux00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0_mux00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_0_mux00014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<1>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "XOR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<1>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_mux0001<1>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -976,18 +898,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SHUT_UP_1_m
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_2_mux00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_2_mux00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_2_mux00004 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_3_mux000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
@@ -1000,19 +910,43 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_3_mux0
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_3_mux00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_2_mux00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00081 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_2_mux00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00082 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00083 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1021,10 +955,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux00004 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux00005 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1037,22 +967,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0000113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1072,87 +986,51 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux0
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>34 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>35 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>36 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000022 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000023 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>34 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>35 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>36 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0000211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0000212 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0000213 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000021 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000022 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000023 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000024 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1160,11 +1038,51 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_2_mux0
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>212 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>213 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>214 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>215 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>216 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1172,279 +1090,95 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Do
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>25 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>26 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>34 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>35 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>36 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S_cmp_eq000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>37 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S_cmp_eq00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S_cmp_eq00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>212 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS2_S_mux00021 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_CYCLE_or0000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_CYCLE_or000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_CYCLE_or000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000521 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00052 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000522 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00053 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000523 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00054 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>42 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00052 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>44 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00053 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>45 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00054 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or00055 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>5 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR4"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and000013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and000014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and000015 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_and00004 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_SPACE_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_RAMSEL_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_RAMSEL_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_RAMSEL_and00003 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BASEADR_4MB_not00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_0_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>11 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>12 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>13 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>42 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>44 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000511 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000512 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000513 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000514 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1452,47 +1186,79 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001115 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and000021 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/MY_CYCLE_or00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and000022 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and000023 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_SPACE_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS1_S_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_4_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS2_S_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_4_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nCS2_S_and00002 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux0000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_32BIT_D0_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux0000112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_1_mux000014 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0000211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/BYTE_0_mux0000212 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1548,127 +1314,87 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK_16BIT
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000121 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or0005111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000122 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or0005112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_4_not00011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000511 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_4_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000512 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_4_not00013 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000513 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000514 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_not00012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_or000515 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>42 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>212 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>213 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<2>25 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>1 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>2 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>32 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>3 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<0>33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<1>4 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>51 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001212 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtridata_Dout_mux0000<3>52 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001213 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtrien_Dout_and000011 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001214 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtrien_Dout_and000012 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000121 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/Mtrien_Dout_and00001 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND4"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_not000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_not000112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/AUTO_CONFIG_DONE_1_not000113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001121 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001122 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not0001123 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000111 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_BASEADR_0_not000114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_14 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1680,31 +1406,23 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_11
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_112 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_26 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_21 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_27 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_22 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_28 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_23 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_24 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_31 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1712,15 +1430,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_32
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_33 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_34 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_41 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1728,11 +1442,27 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_42
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_43 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_51 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_44 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_51 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_52 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_53 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_54 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1752,22 +1482,6 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_64
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_71 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_72 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_73 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_74 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_81 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
@@ -1784,7 +1498,7 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_84
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_91 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_91 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1792,11 +1506,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_92
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_93 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_93 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_101 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_101 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1804,19 +1518,27 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_10
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_103 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_103 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_113 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_115 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_114 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_121 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_115 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_116 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_121 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1824,7 +1546,7 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_12
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_123 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_123 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1832,23 +1554,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_13
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_132 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_132 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_141 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_142 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_143 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_144 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_133 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1860,15 +1570,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_15
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_153 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_153 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_154 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_161 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_161 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1876,43 +1582,103 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_17
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_172 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_172 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_173 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_173 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_181 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_181 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_182 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_182 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_183 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_183 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_191 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_191 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_192 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_192 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_193 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_201 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_201 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_211 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_202 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_212 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_213 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_221 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_222 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_223 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_231 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_232 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_233 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_234 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_241 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_242 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_243 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_244 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND3"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_251 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "INV"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_252 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "AND2"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/SFDecomp_253 prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "OR2"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -1925,6 +1691,12 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=T
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/clk_IBUF prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "IBUF"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/clk_IBUF prop_name=IOCOMP prop_terse=XDM_PROPERTY_BOOL "IOCOMP"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS_IBUF prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "IBUF"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS_IBUF prop_name=IOCOMP prop_terse=XDM_PROPERTY_BOOL "IOCOMP"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -2480,6 +2252,10 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/DSACK<1> pr
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P23"
+
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
+
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IDE_A<0> prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P93"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
@@ -2516,11 +2292,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/INT2 prop_n
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4 prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P40"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO4.PAD prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P40"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO5 prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P41"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/IO5.PAD prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P41"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -2562,7 +2338,7 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nDS prop_na
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P16"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nOE.PAD prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P16"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -2570,21 +2346,11 @@ CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nRAM_SEL pr
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P33"
+CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/nWE.PAD prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P33"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/reset prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P99"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS prop_name=LOC prop_terse=XDM_PROPERTY_STRING "LOC" "P23"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS_IBUF prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "IBUF"
-
-CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl/ECS_IBUF prop_name=IOCOMP prop_terse=XDM_PROPERTY_BOOL "IOCOMP"
 
 CS: block property: block_name=/RAMCtrl/EXPANDED_FlattenFull/RAMCtrl prop_name=TYPE prop_terse=XDM_PROPERTY_STRING "TYPE" "RAMCtrl"
 
@@ -2635,22 +2401,17 @@ WARNING:Cpld:1007 - Removing unused input(s) 'A<15>'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
 WARNING:Cpld:1007 - Removing unused input(s) 'A<8>'.  The input(s) are unused
    after optimization. Please verify functionality via simulation.
-WARNING:Cpld:1007 - Removing unused input(s) 'ECS'.  The input(s) are unused
-   after optimization. Please verify functionality via simulation.
-WARNING:Cpld - The signal(s) 'CIIN' are in combinational feedback loops.
-   These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
-   hazard reduction circuitry.
-   Timing analysis of paths involving this node may be inaccurate or incomplete.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'ECS_IBUF' is
+   ignored. Most likely the signal is gated and therefore cannot be used as a
+   global control signal.
 INFO:Cpld:994 - Exhaustive fitting is trying pterm limit: 32 and input limit: 54
-Considering device XC9572XL-10-TQ100.
-Timespec optimization...........................
-Density optimization.......................................................................................................................... ...................... ..... 
-WARNING:Cpld:828 - Signal 'Mtrien_Dout.CE' has been minimized to 'VCC'.
-     The signal is removed.
+Considering device XC95144XL-10-TQ100.
+Timespec optimization............................................................................
+Density optimization.........................................................................................   
 Timespec driven global resource optimizationAll paths with TIMESPECs have been optimized.
 
 General global resource optimization........
 Re-checking device resources ...
-Mapping a total of 66 equations into 4 function blocks...........................................................................
+Mapping a total of 76 equations into 8 function blocks...........................
 
-Design RAMCtrl has been optimized and fit into device XC9572XL-10-TQ100.
+Design RAMCtrl has been optimized and fit into device XC95144XL-10-TQ100.
