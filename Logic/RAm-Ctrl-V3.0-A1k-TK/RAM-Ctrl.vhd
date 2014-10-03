@@ -94,6 +94,7 @@ signal	DSACK_32BIT:STD_LOGIC:='1';
 signal	DSACK_32BIT_D0:STD_LOGIC:='1';
 signal	DSACK_32BIT_D1:STD_LOGIC:='1';
 signal	DSACK_32BIT_D2:STD_LOGIC:='1';
+signal	DSACK_32BIT_D3:STD_LOGIC:='1';
 --signal	AS_D0:STD_LOGIC:= '1';
 signal	DSACK_INT:STD_LOGIC_VECTOR(1 downto 0):="11";
 signal	IDE_ENABLE:STD_LOGIC:= '0';
@@ -261,8 +262,15 @@ begin
 	--map signals
 	nCS1	<= nCS1_S;
 	nCS2	<= nCS2_S;
+
+	--nOE				<= '0' when MY_RAMSEL = '1' and RW = '1' and (nAS = '0' or DSACK_32BIT ='0')
+	--						else '1';
+	--nWE				<= '0' when MY_RAMSEL = '1' and RW = '0' and (nAS = '0' and DSACK_32BIT_D3 ='1')
+	--						else '1';
+
 	ROM_ENABLE <= ROM_ENABLE_S;
-	INT2	<= ROM_ENABLE_S;
+	INT2	<= '0' when MY_RAMSEL = '1' and RW = '0' and (nAS = '0' and DSACK_32BIT_D3 ='1')
+							else '1';
 
 	--now decode the adresslines A[0..1] and SIZ[0..1] to determine the ram bank to write
 	-- bits 0-7
@@ -298,17 +306,18 @@ begin
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
 	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
 	STERM <=  '1';
-	dsack_gen: process (nAS, clk)
+	dsack_gen: process (reset, clk)
 	begin
-		if	nAS = '1' then
+		if	reset = '0' then
 			DSACK_32BIT		<= '1';
 			DSACK_32BIT_D0 <= '1';
 			DSACK_32BIT_D1 <= '1';
 			DSACK_32BIT_D2 <= '1';
+			DSACK_32BIT_D3 <= '1';
 			nOE				<= '1';
 			nWE				<= '1';
-		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
-			if((nCS1_S = '1' or nCS2_S = '1') and nAS ='0')then
+		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
+			if(MY_RAMSEL = '1' and nAS ='0')then
 				nOE 			<= not RW;
 				
 				if(RW='0' and DSACK_32BIT_D2 ='1') then --nWE must be deasserted before nAS terminates!
@@ -321,11 +330,15 @@ begin
 				DSACK_32BIT_D0 <= DSACK_32BIT;
 				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
 				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
+				DSACK_32BIT_D3 <= DSACK_32BIT_D2;
+
 			else
-				DSACK_32BIT	<= '1';
+				DSACK_32BIT		<= '1';
 				DSACK_32BIT_D0 <= '1';
 				DSACK_32BIT_D1 <= '1';
 				DSACK_32BIT_D2 <= '1';
+				DSACK_32BIT_D3 <= '1';
+				
 				nOE				<= '1';
 				nWE				<= '1';
 			end if;

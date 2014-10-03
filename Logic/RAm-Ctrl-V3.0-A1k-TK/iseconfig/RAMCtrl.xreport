@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-09-06T23:21:28</DateModified>
+  <DateModified>2014-10-03T07:17:42</DateModified>
   <ModuleName>RAMCtrl</ModuleName>
-  <SummaryTimeStamp>2014-09-06T23:20:57</SummaryTimeStamp>
+  <SummaryTimeStamp>2014-10-02T23:07:33</SummaryTimeStamp>
   <SavedFilePath>C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/iseconfig/RAMCtrl.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK\</ImplementationReportsDirectory>
-  <DateInitialized>2013-12-15T20:38:25</DateInitialized>
+  <DateInitialized>2014-09-16T14:59:51</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>
  <body>

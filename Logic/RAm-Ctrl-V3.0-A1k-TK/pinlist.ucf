@@ -76,13 +76,3 @@ NET "clk" TNM_NET = clk;
 TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;
 #Created by Constraints Editor (xc95144xl-tq100-10) - 2014/09/06
 #Created by Constraints Editor (xc95144xl-tq100-10) - 2014/09/06
-NET "IO4" OFFSET = OUT 1 ns AFTER "clk";
-NET "IO5" OFFSET = OUT 1 ns AFTER "clk";
-NET "nCS1" OFFSET = OUT 1 ns AFTER "clk";
-NET "nCS2" OFFSET = OUT 1 ns AFTER "clk";
-NET "nOE" OFFSET = OUT 1 ns AFTER "clk";
-NET "nWE" OFFSET = OUT 1 ns AFTER "clk";
-NET "BYTE<0>" OFFSET = OUT 1 ns AFTER "clk";
-NET "BYTE<1>" OFFSET = OUT 1 ns AFTER "clk";
-NET "BYTE<2>" OFFSET = OUT 1 ns AFTER "clk";
-NET "BYTE<3>" OFFSET = OUT 1 ns AFTER "clk";
