@@ -2786,18 +2786,14 @@ WARNING:Cpld:1007 - Removing unused input(s) 'A<8>'.  The input(s) are unused
 WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'ECS_IBUF' is
    ignored. Most likely the signal is gated and therefore cannot be used as a
    global control signal.
-WARNING:Cpld - The signal(s) 'CIIN_and0000' are in combinational feedback loops.
-   These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the
-   hazard reduction circuitry.
-   Timing analysis of paths involving this node may be inaccurate or incomplete.
 INFO:Cpld:994 - Exhaustive fitting is trying pterm limit: 32 and input limit: 54
 Considering device XC95144XL-10-TQ100.
 Timespec optimization.........................
-Density optimization................................................................................................................................  ....... 
+Density optimization................................................................................................................................  ......... ..
 Timespec driven global resource optimizationAll paths with TIMESPECs have been optimized.
 
 General global resource optimization........
 Re-checking device resources ...
-Mapping a total of 86 equations into 8 function blocks.................................
+Mapping a total of 82 equations into 8 function blocks................................
 
 Design RAMCtrl has been optimized and fit into device XC95144XL-10-TQ100.

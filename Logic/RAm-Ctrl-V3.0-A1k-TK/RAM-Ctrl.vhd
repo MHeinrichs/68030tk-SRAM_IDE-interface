@@ -316,7 +316,7 @@ begin
 			DSACK_32BIT_D3 <= '1';
 			nOE				<= '1';
 			nWE				<= '1';
-		elsif falling_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
+		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
 			if(MY_RAMSEL = '1' and nAS ='0')then
 				nOE 			<= not RW;
 				
@@ -326,8 +326,8 @@ begin
 					nWE 		<= '1';
 				end if;
 			
-				DSACK_32BIT	<= '0';
-				DSACK_32BIT_D0 <= DSACK_32BIT;
+				DSACK_32BIT	<= '0';				
+				DSACK_32BIT_D0 <= DSACK_32BIT;				
 				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
 				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
 				DSACK_32BIT_D3 <= DSACK_32BIT_D2;
