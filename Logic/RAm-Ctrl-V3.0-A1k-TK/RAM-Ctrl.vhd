@@ -254,8 +254,9 @@ begin
 					ROM_OUT_ENABLE_S	<=	IDE_DSACK_D1;						
 				elsif(IDE_ENABLE='1' and IDE_WAIT='1')then --IDE I/O
 					DSACK_16BIT			<=	IDE_DSACK_D1;
-				end if;					
+				end if;						
 			end if;				
+			
 		end if;
 	end process ide_rw_gen;
 
@@ -269,8 +270,7 @@ begin
 	--						else '1';
 
 	ROM_ENABLE <= ROM_ENABLE_S;
-	INT2	<= '0' when MY_RAMSEL = '1' and RW = '0' and (nAS = '0' and DSACK_32BIT_D3 ='1')
-							else '1';
+	INT2	<= '1';
 
 	--now decode the adresslines A[0..1] and SIZ[0..1] to determine the ram bank to write
 	-- bits 0-7
