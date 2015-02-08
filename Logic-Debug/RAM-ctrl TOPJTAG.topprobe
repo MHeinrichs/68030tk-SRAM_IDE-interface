@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CorsicaProbe Version="2">
+  <Components>
+    <Component PosInChain="1" Name="Dev1" BsdlFile="C:\Users\Matze\Documents\GitHub\68030tk-SRAM_IDE-interface\Logic-Debug\XC95144XL_TQ100.bsdl" IRLen="-1" PinMapping="tq100" Package="QFP 100 25" Instruction="1" Idcode="01011001011000001000000010010011">
+      <BSDL Entity="xc95144xl_tq100">
+        <DefaultPinMapping Name="tq100"/>
+        <Ports>
+          <Port N="PB00_01" T="inout"/>
+          <Port N="PB00_02" T="inout"/>
+          <Port N="PB00_04" T="inout"/>
+          <Port N="PB00_05" T="inout"/>
+          <Port N="PB00_07" T="inout"/>
+          <Port N="PB00_08" T="inout"/>
+          <Port N="PB00_10" T="inout"/>
+          <Port N="PB00_11" T="inout"/>
+          <Port N="PB00_13" T="inout"/>
+          <Port N="PB00_14" T="inout"/>
+          <Port N="PB00_16" T="inout"/>
+          <Port N="PB01_01" T="inout"/>
+          <Port N="PB01_04" T="inout"/>
+          <Port N="PB01_05" T="inout"/>
+          <Port N="PB01_07" T="inout"/>
+          <Port N="PB01_08" T="inout"/>
+          <Port N="PB01_10" T="inout"/>
+          <Port N="PB01_11" T="inout"/>
+          <Port N="PB01_13" T="inout"/>
+          <Port N="PB01_14" T="inout"/>
+          <Port N="PB01_16" T="inout"/>
+          <Port N="PB02_01" T="inout"/>
+          <Port N="PB02_04" T="inout"/>
+          <Port N="PB02_05" T="inout"/>
+          <Port N="PB02_07" T="inout"/>
+          <Port N="PB02_08" T="inout"/>
+          <Port N="PB02_10" T="inout"/>
+          <Port N="PB02_11" T="inout"/>
+          <Port N="PB02_13" T="inout"/>
+          <Port N="PB02_14" T="inout"/>
+          <Port N="PB02_16" T="inout"/>
+          <Port N="PB03_01" T="inout"/>
+          <Port N="PB03_04" T="inout"/>
+          <Port N="PB03_05" T="inout"/>
+          <Port N="PB03_07" T="inout"/>
+          <Port N="PB03_08" T="inout"/>
+          <Port N="PB03_10" T="inout"/>
+          <Port N="PB03_11" T="inout"/>
+          <Port N="PB03_13" T="inout"/>
+          <Port N="PB03_14" T="inout"/>
+          <Port N="PB03_16" T="inout"/>
+          <Port N="PB04_01" T="inout"/>
+          <Port N="PB04_04" T="inout"/>
+          <Port N="PB04_05" T="inout"/>
+          <Port N="PB04_07" T="inout"/>
+          <Port N="PB04_08" T="inout"/>
+          <Port N="PB04_10" T="inout"/>
+          <Port N="PB04_11" T="inout"/>
+          <Port N="PB04_13" T="inout"/>
+          <Port N="PB04_14" T="inout"/>
+          <Port N="PB04_16" T="inout"/>
+          <Port N="PB05_01" T="inout"/>
+          <Port N="PB05_04" T="inout"/>
+          <Port N="PB05_05" T="inout"/>
+          <Port N="PB05_07" T="inout"/>
+          <Port N="PB05_08" T="inout"/>
+          <Port N="PB05_10" T="inout"/>
+          <Port N="PB05_11" T="inout"/>
+          <Port N="PB05_13" T="inout"/>
+          <Port N="PB05_14" T="inout"/>
+          <Port N="PB05_16" T="inout"/>
+          <Port N="PB06_01" T="inout"/>
+          <Port N="PB06_04" T="inout"/>
+          <Port N="PB06_05" T="inout"/>
+          <Port N="PB06_07" T="inout"/>
+          <Port N="PB06_08" T="inout"/>
+          <Port N="PB06_10" T="inout"/>
+          <Port N="PB06_11" T="inout"/>
+          <Port N="PB06_13" T="inout"/>
+          <Port N="PB06_14" T="inout"/>
+          <Port N="PB06_16" T="inout"/>
+          <Port N="PB07_01" T="inout"/>
+          <Port N="PB07_04" T="inout"/>
+          <Port N="PB07_05" T="inout"/>
+          <Port N="PB07_07" T="inout"/>
+          <Port N="PB07_08" T="inout"/>
+          <Port N="PB07_10" T="inout"/>
+          <Port N="PB07_11" T="inout"/>
+          <Port N="PB07_13" T="inout"/>
+          <Port N="PB07_14" T="inout"/>
+          <Port N="PB07_16" T="inout"/>
+          <Port N="TCK" T="in"/>
+          <Port N="TDI" T="in"/>
+          <Port N="TDO" T="out"/>
+          <Port N="TMS" T="in"/>
+          <Port N="Vccint_1" T="linkage"/>
+          <Port N="Vccint_2" T="linkage"/>
+          <Port N="VccInt_Vpp" T="linkage"/>
+          <Port N="Vccio_1" T="linkage"/>
+          <Port N="Vccio_2" T="linkage"/>
+          <Port N="Vccio_3" T="linkage"/>
+          <Port N="Vccio_4" T="linkage"/>
+          <Port N="Vssint_1" T="linkage"/>
+          <Port N="Vssint_2" T="linkage"/>
+          <Port N="Vssint_3" T="linkage"/>
+          <Port N="Vssio_1" T="linkage"/>
+          <Port N="Vssio_2" T="linkage"/>
+          <Port N="Vssio_3" T="linkage"/>
+          <Port N="Vssio_4" T="linkage"/>
+          <Port N="Vssio_5" T="linkage"/>
+        </Ports>
+        <PinMappings>
+          <PinMapping Name="tq100">
+            <Map P="11" S="PB00_01"/>
+            <Map P="12" S="PB00_02"/>
+            <Map P="13" S="PB00_04"/>
+            <Map P="14" S="PB00_05"/>
+            <Map P="15" S="PB00_07"/>
+            <Map P="16" S="PB00_08"/>
+            <Map P="17" S="PB00_10"/>
+            <Map P="18" S="PB00_11"/>
+            <Map P="19" S="PB00_13"/>
+            <Map P="20" S="PB00_14"/>
+            <Map P="22" S="PB00_16"/>
+            <Map P="99" S="PB01_01"/>
+            <Map P="1" S="PB01_04"/>
+            <Map P="2" S="PB01_05"/>
+            <Map P="3" S="PB01_07"/>
+            <Map P="4" S="PB01_08"/>
+            <Map P="6" S="PB01_10"/>
+            <Map P="7" S="PB01_11"/>
+            <Map P="8" S="PB01_13"/>
+            <Map P="9" S="PB01_14"/>
+            <Map P="10" S="PB01_16"/>
+            <Map P="23" S="PB02_01"/>
+            <Map P="24" S="PB02_04"/>
+            <Map P="25" S="PB02_05"/>
+            <Map P="27" S="PB02_07"/>
+            <Map P="28" S="PB02_08"/>
+            <Map P="29" S="PB02_10"/>
+            <Map P="30" S="PB02_11"/>
+            <Map P="32" S="PB02_13"/>
+            <Map P="33" S="PB02_14"/>
+            <Map P="34" S="PB02_16"/>
+            <Map P="87" S="PB03_01"/>
+            <Map P="89" S="PB03_04"/>
+            <Map P="90" S="PB03_05"/>
+            <Map P="91" S="PB03_07"/>
+            <Map P="92" S="PB03_08"/>
+            <Map P="93" S="PB03_10"/>
+            <Map P="94" S="PB03_11"/>
+            <Map P="95" S="PB03_13"/>
+            <Map P="96" S="PB03_14"/>
+            <Map P="97" S="PB03_16"/>
+            <Map P="35" S="PB04_01"/>
+            <Map P="36" S="PB04_04"/>
+            <Map P="37" S="PB04_05"/>
+            <Map P="39" S="PB04_07"/>
+            <Map P="40" S="PB04_08"/>
+            <Map P="41" S="PB04_10"/>
+            <Map P="42" S="PB04_11"/>
+            <Map P="43" S="PB04_13"/>
+            <Map P="46" S="PB04_14"/>
+            <Map P="49" S="PB04_16"/>
+            <Map P="74" S="PB05_01"/>
+            <Map P="76" S="PB05_04"/>
+            <Map P="77" S="PB05_05"/>
+            <Map P="78" S="PB05_07"/>
+            <Map P="79" S="PB05_08"/>
+            <Map P="80" S="PB05_10"/>
+            <Map P="81" S="PB05_11"/>
+            <Map P="82" S="PB05_13"/>
+            <Map P="85" S="PB05_14"/>
+            <Map P="86" S="PB05_16"/>
+            <Map P="50" S="PB06_01"/>
+            <Map P="52" S="PB06_04"/>
+            <Map P="53" S="PB06_05"/>
+            <Map P="54" S="PB06_07"/>
+            <Map P="55" S="PB06_08"/>
+            <Map P="56" S="PB06_10"/>
+            <Map P="58" S="PB06_11"/>
+            <Map P="59" S="PB06_13"/>
+            <Map P="60" S="PB06_14"/>
+            <Map P="61" S="PB06_16"/>
+            <Map P="63" S="PB07_01"/>
+            <Map P="64" S="PB07_04"/>
+            <Map P="65" S="PB07_05"/>
+            <Map P="66" S="PB07_07"/>
+            <Map P="67" S="PB07_08"/>
+            <Map P="68" S="PB07_10"/>
+            <Map P="70" S="PB07_11"/>
+            <Map P="71" S="PB07_13"/>
+            <Map P="72" S="PB07_14"/>
+            <Map P="73" S="PB07_16"/>
+            <Map P="48" S="TCK"/>
+            <Map P="45" S="TDI"/>
+            <Map P="83" S="TDO"/>
+            <Map P="47" S="TMS"/>
+            <Map P="57" S="Vccint_1"/>
+            <Map P="98" S="Vccint_2"/>
+            <Map P="5" S="VccInt_Vpp"/>
+            <Map P="26" S="Vccio_1"/>
+            <Map P="38" S="Vccio_2"/>
+            <Map P="51" S="Vccio_3"/>
+            <Map P="88" S="Vccio_4"/>
+            <Map P="21" S="Vssint_1"/>
+            <Map P="44" S="Vssint_2"/>
+            <Map P="62" S="Vssint_3"/>
+            <Map P="31" S="Vssio_1"/>
+            <Map P="69" S="Vssio_2"/>
+            <Map P="75" S="Vssio_3"/>
+            <Map P="84" S="Vssio_4"/>
+            <Map P="100" S="Vssio_5"/>
+          </PinMapping>
+        </PinMappings>
+        <IR IRLen="8">
+          <Instruction Name="BYPASS">
+            <Code Value="11111111"/>
+          </Instruction>
+          <Instruction Name="CLAMP">
+            <Code Value="11111010"/>
+          </Instruction>
+          <Instruction Name="EXTEST">
+            <Code Value="00000000"/>
+          </Instruction>
+          <Instruction Name="FBLANK">
+            <Code Value="11100101"/>
+          </Instruction>
+          <Instruction Name="FBULK">
+            <Code Value="11101101"/>
+          </Instruction>
+          <Instruction Name="FERASE">
+            <Code Value="11101100"/>
+          </Instruction>
+          <Instruction Name="FPGM">
+            <Code Value="11101010"/>
+          </Instruction>
+          <Instruction Name="FPGMI">
+            <Code Value="11101011"/>
+          </Instruction>
+          <Instruction Name="FVFY">
+            <Code Value="11101110"/>
+          </Instruction>
+          <Instruction Name="FVFYI">
+            <Code Value="11101111"/>
+          </Instruction>
+          <Instruction Name="HIGHZ">
+            <Code Value="11111100"/>
+          </Instruction>
+          <Instruction Name="IDCODE">
+            <Code Value="11111110"/>
+          </Instruction>
+          <Instruction Name="INTEST">
+            <Code Value="00000010"/>
+          </Instruction>
+          <Instruction Name="ISPEN">
+            <Code Value="11101000"/>
+          </Instruction>
+          <Instruction Name="ISPENC">
+            <Code Value="11101001"/>
+          </Instruction>
+          <Instruction Name="ISPEX">
+            <Code Value="11110000"/>
+          </Instruction>
+          <Instruction Name="SAMPLE">
+            <Code Value="00000001"/>
+          </Instruction>
+          <Instruction Name="USERCODE">
+            <Code Value="11111101"/>
+          </Instruction>
+        </IR>
+        <Idcodes>
+          <Idcode Value="XXXX1001011000001000000010010011"/>
+        </Idcodes>
+        <BSR BSRLen="432">
+          <Cell N="0" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="1" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="2" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="3" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="4" T="BC_1" P="PB07_16" F="OUTPUT3" SB="X" CC="3" DV="0" DR="Z"/>
+          <Cell N="5" T="BC_1" P="PB07_16" F="INPUT" SB="X"/>
+          <Cell N="6" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="7" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="8" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="9" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="10" T="BC_1" P="PB07_14" F="OUTPUT3" SB="X" CC="9" DV="0" DR="Z"/>
+          <Cell N="11" T="BC_1" P="PB07_14" F="INPUT" SB="X"/>
+          <Cell N="12" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="13" T="BC_1" P="PB07_13" F="OUTPUT3" SB="X" CC="12" DV="0" DR="Z"/>
+          <Cell N="14" T="BC_1" P="PB07_13" F="INPUT" SB="X"/>
+          <Cell N="15" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="16" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="17" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="18" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="19" T="BC_1" P="PB07_11" F="OUTPUT3" SB="X" CC="18" DV="0" DR="Z"/>
+          <Cell N="20" T="BC_1" P="PB07_11" F="INPUT" SB="X"/>
+          <Cell N="21" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="22" T="BC_1" P="PB07_10" F="OUTPUT3" SB="X" CC="21" DV="0" DR="Z"/>
+          <Cell N="23" T="BC_1" P="PB07_10" F="INPUT" SB="X"/>
+          <Cell N="24" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="25" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="26" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="27" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="28" T="BC_1" P="PB07_08" F="OUTPUT3" SB="X" CC="27" DV="0" DR="Z"/>
+          <Cell N="29" T="BC_1" P="PB07_08" F="INPUT" SB="X"/>
+          <Cell N="30" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="31" T="BC_1" P="PB07_07" F="OUTPUT3" SB="X" CC="30" DV="0" DR="Z"/>
+          <Cell N="32" T="BC_1" P="PB07_07" F="INPUT" SB="X"/>
+          <Cell N="33" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="34" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="35" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="36" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="37" T="BC_1" P="PB07_05" F="OUTPUT3" SB="X" CC="36" DV="0" DR="Z"/>
+          <Cell N="38" T="BC_1" P="PB07_05" F="INPUT" SB="X"/>
+          <Cell N="39" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="40" T="BC_1" P="PB07_04" F="OUTPUT3" SB="X" CC="39" DV="0" DR="Z"/>
+          <Cell N="41" T="BC_1" P="PB07_04" F="INPUT" SB="X"/>
+          <Cell N="42" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="43" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="44" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="45" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="46" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="47" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="48" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="49" T="BC_1" P="PB07_01" F="OUTPUT3" SB="X" CC="48" DV="0" DR="Z"/>
+          <Cell N="50" T="BC_1" P="PB07_01" F="INPUT" SB="X"/>
+          <Cell N="51" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="52" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="53" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="54" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="55" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="56" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="57" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="58" T="BC_1" P="PB06_16" F="OUTPUT3" SB="X" CC="57" DV="0" DR="Z"/>
+          <Cell N="59" T="BC_1" P="PB06_16" F="INPUT" SB="X"/>
+          <Cell N="60" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="61" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="62" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="63" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="64" T="BC_1" P="PB06_14" F="OUTPUT3" SB="X" CC="63" DV="0" DR="Z"/>
+          <Cell N="65" T="BC_1" P="PB06_14" F="INPUT" SB="X"/>
+          <Cell N="66" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="67" T="BC_1" P="PB06_13" F="OUTPUT3" SB="X" CC="66" DV="0" DR="Z"/>
+          <Cell N="68" T="BC_1" P="PB06_13" F="INPUT" SB="X"/>
+          <Cell N="69" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="70" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="71" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="72" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="73" T="BC_1" P="PB06_11" F="OUTPUT3" SB="X" CC="72" DV="0" DR="Z"/>
+          <Cell N="74" T="BC_1" P="PB06_11" F="INPUT" SB="X"/>
+          <Cell N="75" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="76" T="BC_1" P="PB06_10" F="OUTPUT3" SB="X" CC="75" DV="0" DR="Z"/>
+          <Cell N="77" T="BC_1" P="PB06_10" F="INPUT" SB="X"/>
+          <Cell N="78" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="79" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="80" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="81" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="82" T="BC_1" P="PB06_08" F="OUTPUT3" SB="X" CC="81" DV="0" DR="Z"/>
+          <Cell N="83" T="BC_1" P="PB06_08" F="INPUT" SB="X"/>
+          <Cell N="84" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="85" T="BC_1" P="PB06_07" F="OUTPUT3" SB="X" CC="84" DV="0" DR="Z"/>
+          <Cell N="86" T="BC_1" P="PB06_07" F="INPUT" SB="X"/>
+          <Cell N="87" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="88" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="89" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="90" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="91" T="BC_1" P="PB06_05" F="OUTPUT3" SB="X" CC="90" DV="0" DR="Z"/>
+          <Cell N="92" T="BC_1" P="PB06_05" F="INPUT" SB="X"/>
+          <Cell N="93" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="94" T="BC_1" P="PB06_04" F="OUTPUT3" SB="X" CC="93" DV="0" DR="Z"/>
+          <Cell N="95" T="BC_1" P="PB06_04" F="INPUT" SB="X"/>
+          <Cell N="96" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="97" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="98" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="99" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="100" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="101" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="102" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="103" T="BC_1" P="PB06_01" F="OUTPUT3" SB="X" CC="102" DV="0" DR="Z"/>
+          <Cell N="104" T="BC_1" P="PB06_01" F="INPUT" SB="X"/>
+          <Cell N="105" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="106" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="107" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="108" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="109" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="110" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="111" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="112" T="BC_1" P="PB05_16" F="OUTPUT3" SB="X" CC="111" DV="0" DR="Z"/>
+          <Cell N="113" T="BC_1" P="PB05_16" F="INPUT" SB="X"/>
+          <Cell N="114" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="115" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="116" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="117" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="118" T="BC_1" P="PB05_14" F="OUTPUT3" SB="X" CC="117" DV="0" DR="Z"/>
+          <Cell N="119" T="BC_1" P="PB05_14" F="INPUT" SB="X"/>
+          <Cell N="120" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="121" T="BC_1" P="PB05_13" F="OUTPUT3" SB="X" CC="120" DV="0" DR="Z"/>
+          <Cell N="122" T="BC_1" P="PB05_13" F="INPUT" SB="X"/>
+          <Cell N="123" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="124" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="125" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="126" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="127" T="BC_1" P="PB05_11" F="OUTPUT3" SB="X" CC="126" DV="0" DR="Z"/>
+          <Cell N="128" T="BC_1" P="PB05_11" F="INPUT" SB="X"/>
+          <Cell N="129" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="130" T="BC_1" P="PB05_10" F="OUTPUT3" SB="X" CC="129" DV="0" DR="Z"/>
+          <Cell N="131" T="BC_1" P="PB05_10" F="INPUT" SB="X"/>
+          <Cell N="132" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="133" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="134" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="135" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="136" T="BC_1" P="PB05_08" F="OUTPUT3" SB="X" CC="135" DV="0" DR="Z"/>
+          <Cell N="137" T="BC_1" P="PB05_08" F="INPUT" SB="X"/>
+          <Cell N="138" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="139" T="BC_1" P="PB05_07" F="OUTPUT3" SB="X" CC="138" DV="0" DR="Z"/>
+          <Cell N="140" T="BC_1" P="PB05_07" F="INPUT" SB="X"/>
+          <Cell N="141" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="142" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="143" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="144" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="145" T="BC_1" P="PB05_05" F="OUTPUT3" SB="X" CC="144" DV="0" DR="Z"/>
+          <Cell N="146" T="BC_1" P="PB05_05" F="INPUT" SB="X"/>
+          <Cell N="147" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="148" T="BC_1" P="PB05_04" F="OUTPUT3" SB="X" CC="147" DV="0" DR="Z"/>
+          <Cell N="149" T="BC_1" P="PB05_04" F="INPUT" SB="X"/>
+          <Cell N="150" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="151" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="152" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="153" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="154" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="155" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="156" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="157" T="BC_1" P="PB05_01" F="OUTPUT3" SB="X" CC="156" DV="0" DR="Z"/>
+          <Cell N="158" T="BC_1" P="PB05_01" F="INPUT" SB="X"/>
+          <Cell N="159" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="160" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="161" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="162" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="163" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="164" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="165" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="166" T="BC_1" P="PB04_16" F="OUTPUT3" SB="X" CC="165" DV="0" DR="Z"/>
+          <Cell N="167" T="BC_1" P="PB04_16" F="INPUT" SB="X"/>
+          <Cell N="168" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="169" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="170" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="171" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="172" T="BC_1" P="PB04_14" F="OUTPUT3" SB="X" CC="171" DV="0" DR="Z"/>
+          <Cell N="173" T="BC_1" P="PB04_14" F="INPUT" SB="X"/>
+          <Cell N="174" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="175" T="BC_1" P="PB04_13" F="OUTPUT3" SB="X" CC="174" DV="0" DR="Z"/>
+          <Cell N="176" T="BC_1" P="PB04_13" F="INPUT" SB="X"/>
+          <Cell N="177" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="178" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="179" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="180" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="181" T="BC_1" P="PB04_11" F="OUTPUT3" SB="X" CC="180" DV="0" DR="Z"/>
+          <Cell N="182" T="BC_1" P="PB04_11" F="INPUT" SB="X"/>
+          <Cell N="183" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="184" T="BC_1" P="PB04_10" F="OUTPUT3" SB="X" CC="183" DV="0" DR="Z"/>
+          <Cell N="185" T="BC_1" P="PB04_10" F="INPUT" SB="X"/>
+          <Cell N="186" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="187" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="188" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="189" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="190" T="BC_1" P="PB04_08" F="OUTPUT3" SB="X" CC="189" DV="0" DR="Z"/>
+          <Cell N="191" T="BC_1" P="PB04_08" F="INPUT" SB="X"/>
+          <Cell N="192" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="193" T="BC_1" P="PB04_07" F="OUTPUT3" SB="X" CC="192" DV="0" DR="Z"/>
+          <Cell N="194" T="BC_1" P="PB04_07" F="INPUT" SB="X"/>
+          <Cell N="195" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="196" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="197" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="198" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="199" T="BC_1" P="PB04_05" F="OUTPUT3" SB="X" CC="198" DV="0" DR="Z"/>
+          <Cell N="200" T="BC_1" P="PB04_05" F="INPUT" SB="X"/>
+          <Cell N="201" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="202" T="BC_1" P="PB04_04" F="OUTPUT3" SB="X" CC="201" DV="0" DR="Z"/>
+          <Cell N="203" T="BC_1" P="PB04_04" F="INPUT" SB="X"/>
+          <Cell N="204" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="205" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="206" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="207" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="208" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="209" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="210" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="211" T="BC_1" P="PB04_01" F="OUTPUT3" SB="X" CC="210" DV="0" DR="Z"/>
+          <Cell N="212" T="BC_1" P="PB04_01" F="INPUT" SB="X"/>
+          <Cell N="213" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="214" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="215" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="216" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="217" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="218" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="219" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="220" T="BC_1" P="PB03_16" F="OUTPUT3" SB="X" CC="219" DV="0" DR="Z"/>
+          <Cell N="221" T="BC_1" P="PB03_16" F="INPUT" SB="X"/>
+          <Cell N="222" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="223" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="224" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="225" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="226" T="BC_1" P="PB03_14" F="OUTPUT3" SB="X" CC="225" DV="0" DR="Z"/>
+          <Cell N="227" T="BC_1" P="PB03_14" F="INPUT" SB="X"/>
+          <Cell N="228" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="229" T="BC_1" P="PB03_13" F="OUTPUT3" SB="X" CC="228" DV="0" DR="Z"/>
+          <Cell N="230" T="BC_1" P="PB03_13" F="INPUT" SB="X"/>
+          <Cell N="231" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="232" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="233" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="234" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="235" T="BC_1" P="PB03_11" F="OUTPUT3" SB="X" CC="234" DV="0" DR="Z"/>
+          <Cell N="236" T="BC_1" P="PB03_11" F="INPUT" SB="X"/>
+          <Cell N="237" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="238" T="BC_1" P="PB03_10" F="OUTPUT3" SB="X" CC="237" DV="0" DR="Z"/>
+          <Cell N="239" T="BC_1" P="PB03_10" F="INPUT" SB="X"/>
+          <Cell N="240" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="241" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="242" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="243" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="244" T="BC_1" P="PB03_08" F="OUTPUT3" SB="X" CC="243" DV="0" DR="Z"/>
+          <Cell N="245" T="BC_1" P="PB03_08" F="INPUT" SB="X"/>
+          <Cell N="246" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="247" T="BC_1" P="PB03_07" F="OUTPUT3" SB="X" CC="246" DV="0" DR="Z"/>
+          <Cell N="248" T="BC_1" P="PB03_07" F="INPUT" SB="X"/>
+          <Cell N="249" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="250" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="251" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="252" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="253" T="BC_1" P="PB03_05" F="OUTPUT3" SB="X" CC="252" DV="0" DR="Z"/>
+          <Cell N="254" T="BC_1" P="PB03_05" F="INPUT" SB="X"/>
+          <Cell N="255" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="256" T="BC_1" P="PB03_04" F="OUTPUT3" SB="X" CC="255" DV="0" DR="Z"/>
+          <Cell N="257" T="BC_1" P="PB03_04" F="INPUT" SB="X"/>
+          <Cell N="258" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="259" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="260" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="261" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="262" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="263" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="264" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="265" T="BC_1" P="PB03_01" F="OUTPUT3" SB="X" CC="264" DV="0" DR="Z"/>
+          <Cell N="266" T="BC_1" P="PB03_01" F="INPUT" SB="X"/>
+          <Cell N="267" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="268" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="269" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="270" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="271" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="272" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="273" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="274" T="BC_1" P="PB02_16" F="OUTPUT3" SB="X" CC="273" DV="0" DR="Z"/>
+          <Cell N="275" T="BC_1" P="PB02_16" F="INPUT" SB="X"/>
+          <Cell N="276" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="277" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="278" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="279" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="280" T="BC_1" P="PB02_14" F="OUTPUT3" SB="X" CC="279" DV="0" DR="Z"/>
+          <Cell N="281" T="BC_1" P="PB02_14" F="INPUT" SB="X"/>
+          <Cell N="282" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="283" T="BC_1" P="PB02_13" F="OUTPUT3" SB="X" CC="282" DV="0" DR="Z"/>
+          <Cell N="284" T="BC_1" P="PB02_13" F="INPUT" SB="X"/>
+          <Cell N="285" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="286" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="287" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="288" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="289" T="BC_1" P="PB02_11" F="OUTPUT3" SB="X" CC="288" DV="0" DR="Z"/>
+          <Cell N="290" T="BC_1" P="PB02_11" F="INPUT" SB="X"/>
+          <Cell N="291" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="292" T="BC_1" P="PB02_10" F="OUTPUT3" SB="X" CC="291" DV="0" DR="Z"/>
+          <Cell N="293" T="BC_1" P="PB02_10" F="INPUT" SB="X"/>
+          <Cell N="294" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="295" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="296" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="297" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="298" T="BC_1" P="PB02_08" F="OUTPUT3" SB="X" CC="297" DV="0" DR="Z"/>
+          <Cell N="299" T="BC_1" P="PB02_08" F="INPUT" SB="X"/>
+          <Cell N="300" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="301" T="BC_1" P="PB02_07" F="OUTPUT3" SB="X" CC="300" DV="0" DR="Z"/>
+          <Cell N="302" T="BC_1" P="PB02_07" F="INPUT" SB="X"/>
+          <Cell N="303" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="304" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="305" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="306" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="307" T="BC_1" P="PB02_05" F="OUTPUT3" SB="X" CC="306" DV="0" DR="Z"/>
+          <Cell N="308" T="BC_1" P="PB02_05" F="INPUT" SB="X"/>
+          <Cell N="309" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="310" T="BC_1" P="PB02_04" F="OUTPUT3" SB="X" CC="309" DV="0" DR="Z"/>
+          <Cell N="311" T="BC_1" P="PB02_04" F="INPUT" SB="X"/>
+          <Cell N="312" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="313" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="314" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="315" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="316" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="317" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="318" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="319" T="BC_1" P="PB02_01" F="OUTPUT3" SB="X" CC="318" DV="0" DR="Z"/>
+          <Cell N="320" T="BC_1" P="PB02_01" F="INPUT" SB="X"/>
+          <Cell N="321" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="322" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="323" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="324" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="325" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="326" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="327" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="328" T="BC_1" P="PB01_16" F="OUTPUT3" SB="X" CC="327" DV="0" DR="Z"/>
+          <Cell N="329" T="BC_1" P="PB01_16" F="INPUT" SB="X"/>
+          <Cell N="330" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="331" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="332" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="333" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="334" T="BC_1" P="PB01_14" F="OUTPUT3" SB="X" CC="333" DV="0" DR="Z"/>
+          <Cell N="335" T="BC_1" P="PB01_14" F="INPUT" SB="X"/>
+          <Cell N="336" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="337" T="BC_1" P="PB01_13" F="OUTPUT3" SB="X" CC="336" DV="0" DR="Z"/>
+          <Cell N="338" T="BC_1" P="PB01_13" F="INPUT" SB="X"/>
+          <Cell N="339" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="340" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="341" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="342" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="343" T="BC_1" P="PB01_11" F="OUTPUT3" SB="X" CC="342" DV="0" DR="Z"/>
+          <Cell N="344" T="BC_1" P="PB01_11" F="INPUT" SB="X"/>
+          <Cell N="345" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="346" T="BC_1" P="PB01_10" F="OUTPUT3" SB="X" CC="345" DV="0" DR="Z"/>
+          <Cell N="347" T="BC_1" P="PB01_10" F="INPUT" SB="X"/>
+          <Cell N="348" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="349" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="350" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="351" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="352" T="BC_1" P="PB01_08" F="OUTPUT3" SB="X" CC="351" DV="0" DR="Z"/>
+          <Cell N="353" T="BC_1" P="PB01_08" F="INPUT" SB="X"/>
+          <Cell N="354" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="355" T="BC_1" P="PB01_07" F="OUTPUT3" SB="X" CC="354" DV="0" DR="Z"/>
+          <Cell N="356" T="BC_1" P="PB01_07" F="INPUT" SB="X"/>
+          <Cell N="357" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="358" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="359" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="360" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="361" T="BC_1" P="PB01_05" F="OUTPUT3" SB="X" CC="360" DV="0" DR="Z"/>
+          <Cell N="362" T="BC_1" P="PB01_05" F="INPUT" SB="X"/>
+          <Cell N="363" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="364" T="BC_1" P="PB01_04" F="OUTPUT3" SB="X" CC="363" DV="0" DR="Z"/>
+          <Cell N="365" T="BC_1" P="PB01_04" F="INPUT" SB="X"/>
+          <Cell N="366" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="367" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="368" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="369" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="370" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="371" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="372" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="373" T="BC_1" P="PB01_01" F="OUTPUT3" SB="X" CC="372" DV="0" DR="Z"/>
+          <Cell N="374" T="BC_1" P="PB01_01" F="INPUT" SB="X"/>
+          <Cell N="375" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="376" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="377" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="378" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="379" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="380" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="381" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="382" T="BC_1" P="PB00_16" F="OUTPUT3" SB="X" CC="381" DV="0" DR="Z"/>
+          <Cell N="383" T="BC_1" P="PB00_16" F="INPUT" SB="X"/>
+          <Cell N="384" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="385" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="386" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="387" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="388" T="BC_1" P="PB00_14" F="OUTPUT3" SB="X" CC="387" DV="0" DR="Z"/>
+          <Cell N="389" T="BC_1" P="PB00_14" F="INPUT" SB="X"/>
+          <Cell N="390" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="391" T="BC_1" P="PB00_13" F="OUTPUT3" SB="X" CC="390" DV="0" DR="Z"/>
+          <Cell N="392" T="BC_1" P="PB00_13" F="INPUT" SB="X"/>
+          <Cell N="393" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="394" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="395" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="396" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="397" T="BC_1" P="PB00_11" F="OUTPUT3" SB="X" CC="396" DV="0" DR="Z"/>
+          <Cell N="398" T="BC_1" P="PB00_11" F="INPUT" SB="X"/>
+          <Cell N="399" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="400" T="BC_1" P="PB00_10" F="OUTPUT3" SB="X" CC="399" DV="0" DR="Z"/>
+          <Cell N="401" T="BC_1" P="PB00_10" F="INPUT" SB="X"/>
+          <Cell N="402" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="403" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="404" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="405" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="406" T="BC_1" P="PB00_08" F="OUTPUT3" SB="X" CC="405" DV="0" DR="Z"/>
+          <Cell N="407" T="BC_1" P="PB00_08" F="INPUT" SB="X"/>
+          <Cell N="408" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="409" T="BC_1" P="PB00_07" F="OUTPUT3" SB="X" CC="408" DV="0" DR="Z"/>
+          <Cell N="410" T="BC_1" P="PB00_07" F="INPUT" SB="X"/>
+          <Cell N="411" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="412" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="413" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="414" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="415" T="BC_1" P="PB00_05" F="OUTPUT3" SB="X" CC="414" DV="0" DR="Z"/>
+          <Cell N="416" T="BC_1" P="PB00_05" F="INPUT" SB="X"/>
+          <Cell N="417" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="418" T="BC_1" P="PB00_04" F="OUTPUT3" SB="X" CC="417" DV="0" DR="Z"/>
+          <Cell N="419" T="BC_1" P="PB00_04" F="INPUT" SB="X"/>
+          <Cell N="420" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="421" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="422" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="423" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="424" T="BC_1" P="PB00_02" F="OUTPUT3" SB="X" CC="423" DV="0" DR="Z"/>
+          <Cell N="425" T="BC_1" P="PB00_02" F="INPUT" SB="X"/>
+          <Cell N="426" T="BC_1" P="*" F="CONTROLR" SB="0"/>
+          <Cell N="427" T="BC_1" P="PB00_01" F="OUTPUT3" SB="X" CC="426" DV="0" DR="Z"/>
+          <Cell N="428" T="BC_1" P="PB00_01" F="INPUT" SB="X"/>
+          <Cell N="429" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="430" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+          <Cell N="431" T="BC_1" P="*" F="INTERNAL" SB="X"/>
+        </BSR>
+      </BSDL>
+    </Component>
+  </Components>
+  <CapturedIRsBits Bits="00000001"/>
+  <Nets>
+    <Net Name="RAM_SEL" Component="0" PortName="PB00_01" PortIndex="-1"/>
+    <Net Name="ROM_OE" Component="0" PortName="PB00_08" PortIndex="-1"/>
+    <Net Name="CLK" Component="0" PortName="PB00_16" PortIndex="-1"/>
+    <Net Name="RESET" Component="0" PortName="PB01_01" PortIndex="-1"/>
+    <Net Name="!AS" Component="0" PortName="PB01_04" PortIndex="-1"/>
+    <Net Name="IDE_BUF_DIR" Component="0" PortName="PB01_05" PortIndex="-1"/>
+    <Net Name="ROM_WE" Component="0" PortName="PB01_11" PortIndex="-1"/>
+    <Net Name="ROM_EN" Component="0" PortName="PB01_13" PortIndex="-1"/>
+    <Net Name="!DS" Component="0" PortName="PB01_14" PortIndex="-1"/>
+    <Net Name="RW" Component="0" PortName="PB01_16" PortIndex="-1"/>
+    <Net Name="ECS" Component="0" PortName="PB02_01" PortIndex="-1"/>
+    <Net Name="E" Component="0" PortName="PB02_07" PortIndex="-1"/>
+    <Net Name="STERM" Component="0" PortName="PB03_05" PortIndex="-1"/>
+    <Net Name="IDE_R" Component="0" PortName="PB03_14" PortIndex="-1"/>
+    <Net Name="IDE_W" Component="0" PortName="PB03_16" PortIndex="-1"/>
+    <Net Name="IDE_IRQ" Component="0" PortName="PB04_01" PortIndex="-1"/>
+    <Net Name="LDS" Component="0" PortName="PB04_04" PortIndex="-1"/>
+    <Net Name="UDS" Component="0" PortName="PB04_05" PortIndex="-1"/>
+    <Net Name="IDE_WAIT" Component="0" PortName="PB04_07" PortIndex="-1"/>
+    <Net Name="IO4" Component="0" PortName="PB04_08" PortIndex="-1"/>
+    <Net Name="IO5" Component="0" PortName="PB04_10" PortIndex="-1"/>
+    <Net Name="INT2" Component="0" PortName="PB04_11" PortIndex="-1"/>
+    <Net Name="CIIN" Component="0" PortName="PB04_16" PortIndex="-1"/>
+  </Nets>
+  <Buses>
+    <Bus Component="0" Name="A" LowIndex="0" HighIndex="31">
+      <Signal Component="0" PortName="PB06_05" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_04" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_01" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_07" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_14" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_16" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_11" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_04" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_01" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_16" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_08" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_07" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_05" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_11" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_10" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_13" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_01" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_13" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB07_14" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_07" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_05" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_04" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_11" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB01_07" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_08" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_14" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_16" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB05_13" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB03_04" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB03_01" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_10" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB06_08" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="D" LowIndex="28" HighIndex="31">
+      <Signal Component="0" PortName="PB02_08" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB02_10" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB02_05" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB00_14" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="BYTE" LowIndex="0" HighIndex="3">
+      <Signal Component="0" PortName="PB00_05" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB00_07" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB00_11" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB00_10" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="OE" LowIndex="0" HighIndex="1">
+      <Signal Component="0" PortName="PB02_13" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB02_16" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="WE" LowIndex="0" HighIndex="1">
+      <Signal Component="0" PortName="PB02_11" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB02_14" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="SIZ" LowIndex="0" HighIndex="1">
+      <Signal Component="0" PortName="PB01_10" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB01_08" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="IDE_A" LowIndex="0" HighIndex="2">
+      <Signal Component="0" PortName="PB03_10" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB03_13" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB03_11" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="IDE_CS" LowIndex="0" HighIndex="1">
+      <Signal Component="0" PortName="PB03_07" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB03_08" PortIndex="-1"/>
+    </Bus>
+    <Bus Component="0" Name="DSACK" LowIndex="0" HighIndex="1">
+      <Signal Component="0" PortName="PB00_02" PortIndex="-1"/>
+      <Signal Component="0" PortName="PB00_04" PortIndex="-1"/>
+    </Bus>
+  </Buses>
+  <Cable Type="0" Port="0" Freq="200000"/>
+  <Watch>
+    <Bus Component="0" Name="A" Signals="31,30,29,28,27,26,25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0"/>
+  </Watch>
+  <Waveform>
+    <Signal Component="0" PortName="PB03_16" PortIndex="-1" ValuePart="in"/>
+    <Signal Component="0" PortName="PB03_16" PortIndex="-1" ValuePart="out"/>
+    <Signal Component="0" PortName="PB03_14" PortIndex="-1" ValuePart="in"/>
+    <Signal Component="0" PortName="PB03_14" PortIndex="-1" ValuePart="out"/>
+    <Bus Component="0" Name="IDE_CS" Signals="1,0" ValuePart="in"/>
+    <Bus Component="0" Name="IDE_CS" Signals="1,0" ValuePart="out"/>
+    <Signal Component="0" PortName="PB01_05" PortIndex="-1" ValuePart="in"/>
+    <Signal Component="0" PortName="PB01_05" PortIndex="-1" ValuePart="out"/>
+    <Bus Component="0" Name="IDE_A" Signals="2,1,0" ValuePart="in"/>
+    <Bus Component="0" Name="IDE_A" Signals="2,1,0" ValuePart="out"/>
+  </Waveform>
+</CorsicaProbe>
