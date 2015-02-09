@@ -252,9 +252,9 @@ begin
 	
 	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and nAS ='0' else '1';
 	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and nAS ='0' else '1';
-	WE(0) <= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' else '1';
-	WE(1) <= '0' when RAM4MB = '1' and RW = '0' and nAS ='0' else '1';
-	INT2	<= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' else '1';
+	WE(0) <= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
+	WE(1) <= '0' when RAM4MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
+	INT2	<= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
 
 	dsack_gen: process (nAS, clk)
 	begin
