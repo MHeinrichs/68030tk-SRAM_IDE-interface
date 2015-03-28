@@ -102,6 +102,7 @@ signal	IDE_WAIT_D0 :STD_LOGIC:= '1';
 signal	nDS_D0:STD_LOGIC:= '1';
 signal	nAS_D0:STD_LOGIC:= '1';
 signal	AUTO_CONFIG_D0:STD_LOGIC:= '1';
+signal	AUTO_CONFIG_WRITE_DONE:STD_LOGIC:= '1';
 begin
 	--internal signals
 	--MY_RAMSEL	<= '1' 	when 
@@ -244,7 +245,7 @@ begin
 	--map DSACK signal
 	DSACK_INT	<= "00" when DSACK_32BIT_D1='0' and nAS='0' else
 						"01" when DSACK_16BIT	='0' and nAS='0' else 						
-						"01" when AUTO_CONFIG_D0='1' and nAS='0' and nDS_D0='0' else 
+						"01" when AUTO_CONFIG_D0='1' and nAS='0' and nDS='0' else 
 						"11";
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
 	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
@@ -327,16 +328,16 @@ begin
 			AUTO_CONFIG_DONE	<="00";
 			Dout<="ZZZZ";
 			SHUT_UP	<="11";
-			BASEADR <="001";
-			BASEADR_4MB <="010";
+			BASEADR <="111";
+			BASEADR_4MB <="111";
 			IDE_BASEADR<=x"E9";
 			AUTO_CONFIG_D0 <= '0';
-			--AS_D0	<= '1';
+			AUTO_CONFIG_WRITE_DONE <= '0';
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
-			--AS_D0	<= nAS;
 			if(AUTO_CONFIG= '1' and nAS='0') then
 				AUTO_CONFIG_D0 <='1';
 				if(RW='1') then
+					AUTO_CONFIG_WRITE_DONE <= '0';
 					if(AUTO_CONFIG_DONE(0)='0')then
 						case A(6 downto 1) is
 							when "000000"	=> Dout <= 	"1110" ; --ZII, System-Memory, no ROM
@@ -391,47 +392,48 @@ begin
 							when others	=> Dout <=	"1111" ;
 						end case;	
 					end if;
-				elsif(RW='0' and nDS_D0='0')then --write
+				else --write
 					Dout<="ZZZZ";
-						--Din			<=  D;
-					if(AUTO_CONFIG_DONE(0)='0')then
-						if(A (6 downto 0)="1001000")then
-							BASEADR 				<= D(3 downto 1); --Base adress
-							case D(3 downto 1) is
-								when "000" => 	BASEADR_4MB <="001";
-													SHUT_UP(0) <= '0'; --enable board
-								when "001" => 	BASEADR_4MB <="010";
-													SHUT_UP(0) <= '0'; --enable board
-								when "010" => 	BASEADR_4MB <="011";
-													SHUT_UP(0) <= '0'; --enable board
-								when "011" => 	BASEADR_4MB <="100";
-													SHUT_UP(0) <= '0'; --enable board
-								when others	=> BASEADR_4MB <="000";																														
-													SHUT_UP(0)	<='1'; --disable board
-							end case;
-							AUTO_CONFIG_DONE(0)	<='1'; --done here
-						elsif(A (6 downto 0)="1001100")then
-							SHUT_UP(0)				<='1'; --disable board
-							AUTO_CONFIG_DONE(0)	<='1'; --done here
-						end if;
-					elsif(AUTO_CONFIG_DONE(1)='0')then
---						if(AUTO_CONFIG_DONE(1)='0')then
-						if(A (6 downto 0)="1001000")then
-							--IDE_BASEADR(7 downto 4)	<= D(3 downto 0); --Base adress
-							SHUT_UP(1) <= '0'; --enable board
-							AUTO_CONFIG_DONE(1)	<='1'; --done here
-						elsif(A (6 downto 0)="1001010")then
-							--IDE_BASEADR(3 downto 0)	<= D(3 downto 0); --Base adress
-						elsif(A (6 downto 0)="1001100")then
-							SHUT_UP(1)				<='1'; --disable board
-							AUTO_CONFIG_DONE(1)	<='1'; --done here
+					if(AUTO_CONFIG_WRITE_DONE = '0' and  nDS='0')then
+						AUTO_CONFIG_WRITE_DONE <= '1';
+						if(AUTO_CONFIG_DONE(0)='0')then
+							if(A (6 downto 1)="100100")then
+								BASEADR 				<= D(3 downto 1); --Base adress
+								case D(3 downto 1) is
+									when "000" => 	BASEADR_4MB <="001";
+														SHUT_UP(0) <= '0'; --enable board
+									when "001" => 	BASEADR_4MB <="010";
+														SHUT_UP(0) <= '0'; --enable board
+									when "010" => 	BASEADR_4MB <="011";
+														SHUT_UP(0) <= '0'; --enable board
+									when "011" => 	BASEADR_4MB <="100";
+														SHUT_UP(0) <= '0'; --enable board
+									when others	=> BASEADR_4MB <="000";																														
+														SHUT_UP(0)	<='1'; --disable board
+								end case;
+								AUTO_CONFIG_DONE(0)	<='1'; --done here
+							elsif(A (6 downto 1)="100110")then
+								SHUT_UP(0)				<='1'; --disable board
+								AUTO_CONFIG_DONE(0)	<='1'; --done here
+							end if;
+						elsif(AUTO_CONFIG_DONE(1)='0')then
+	--						if(AUTO_CONFIG_DONE(1)='0')then
+							if(A (6 downto 1)="100100")then
+								IDE_BASEADR(7 downto 4)	<= D(3 downto 0); --Base adress
+								SHUT_UP(1) <= '0'; --enable board
+								AUTO_CONFIG_DONE(1)	<='1'; --done here
+							--elsif(A (6 downto 1)="100101")then
+								--IDE_BASEADR(3 downto 0)	<= D(3 downto 0); --Base adress
+							elsif(A (6 downto 1)="100110")then
+								SHUT_UP(1)				<='1'; --disable board
+								AUTO_CONFIG_DONE(1)	<='1'; --done here
+							end if;
 						end if;
 					end if;
-				else
-					Dout<="ZZZZ";
 				end if;
 			else
 				Dout<="ZZZZ";
+				AUTO_CONFIG_WRITE_DONE <= '0';
 				AUTO_CONFIG_D0 <='0';
 			end if;
 		end if;

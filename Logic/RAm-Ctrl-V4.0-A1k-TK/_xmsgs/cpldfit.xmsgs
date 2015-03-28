@@ -29,9 +29,6 @@
 <msg type="warning" file="Cpld" num="1007" delta="old" >Removing unused input(s) &apos;<arg fmt="%s" index="1">IDE_IRQ</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
 </msg>
 
-<msg type="warning" file="Cpld" num="1007" delta="old" >Removing unused input(s) &apos;<arg fmt="%s" index="1">nDS</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
-</msg>
-
 <msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:10.000nS:VALID:20.000nS:BEFORE:clk:FALLING</arg> is invalid for CPLD designs. This constraint will be ignored.
 </msg>
 
@@ -41,8 +38,7 @@
 <msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:10.000nS:VALID:20.000nS:BEFORE:clk:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
 </msg>
 
-<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">Mtrien_Dout.CE</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
-  The signal is removed.
+<msg type="info" file="Cpld" num="994" delta="new" >Exhaustive fitting is trying <arg fmt="%s" index="1">pterm limit</arg>: <arg fmt="%d" index="2">32</arg> and <arg fmt="%s" index="3">input limit</arg>: <arg fmt="%d" index="4">54</arg>
 </msg>
 
 </messages>
