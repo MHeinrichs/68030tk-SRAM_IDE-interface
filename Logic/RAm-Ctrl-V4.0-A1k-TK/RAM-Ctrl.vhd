@@ -422,8 +422,8 @@ begin
 								IDE_BASEADR(7 downto 4)	<= D(3 downto 0); --Base adress
 								SHUT_UP(1) <= '0'; --enable board
 								AUTO_CONFIG_DONE(1)	<='1'; --done here
-							--elsif(A (6 downto 1)="100101")then
-								--IDE_BASEADR(3 downto 0)	<= D(3 downto 0); --Base adress
+							elsif(A (6 downto 1)="100101")then
+								IDE_BASEADR(3 downto 0)	<= D(3 downto 0); --Base adress
 							elsif(A (6 downto 1)="100110")then
 								SHUT_UP(1)				<='1'; --disable board
 								AUTO_CONFIG_DONE(1)	<='1'; --done here
