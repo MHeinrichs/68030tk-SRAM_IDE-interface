@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: RAMCtrl.prj
 
@@ -109,9 +109,10 @@ WARNING:Xst:647 - Input <IDE_IRQ> is never used. This port will be preserved and
     Found 1-bit tristate buffer for signal <CIIN>.
     Found 1-bit register for signal <AUTO_CONFIG_D0>.
     Found 2-bit register for signal <AUTO_CONFIG_DONE>.
+    Found 2-bit register for signal <AUTO_CONFIG_DONE_CYCLE>.
     Found 3-bit register for signal <BASEADR>.
     Found 3-bit register for signal <BASEADR_4MB>.
-    Found 3-bit adder for signal <BASEADR_4MB$add0000> created at line 393.
+    Found 3-bit adder for signal <BASEADR_4MB$add0000> created at line 406.
     Found 4-bit register for signal <Dout1>.
     Found 4-bit register for signal <Dout2>.
     Found 1-bit register for signal <DSACK_16BIT>.
@@ -126,12 +127,12 @@ WARNING:Xst:647 - Input <IDE_IRQ> is never used. This port will be preserved and
     Found 1-bit register for signal <IDE_DSACK_D3>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 1-bit register for signal <IDE_R_S>.
-    Found 16-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 119.
+    Found 16-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 120.
     Found 1-bit register for signal <IDE_W_S>.
     Found 1-bit register for signal <nDS_D0>.
     Found 1-bit register for signal <nDS_D1>.
-    Found 11-bit comparator equal for signal <RAM2MB$cmp_eq0000> created at line 111.
-    Found 11-bit comparator equal for signal <RAM4MB$cmp_eq0000> created at line 115.
+    Found 11-bit comparator equal for signal <RAM2MB$cmp_eq0000> created at line 112.
+    Found 11-bit comparator equal for signal <RAM4MB$cmp_eq0000> created at line 116.
     Found 1-bit register for signal <ROM_OE_S>.
     Found 2-bit register for signal <SHUT_UP>.
     Summary:
@@ -148,8 +149,9 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  3-bit adder                                           : 1
-# Registers                                            : 32
+# Registers                                            : 33
  1-bit register                                        : 28
+ 2-bit register                                        : 1
  3-bit register                                        : 2
  4-bit register                                        : 2
 # Comparators                                          : 3
@@ -188,20 +190,20 @@ Macro Statistics
 Optimizing unit <RAMCtrl> ...
   implementation constraint: INIT=s	 : ROM_OE_S
   implementation constraint: INIT=s	 : IDE_W_S
-  implementation constraint: INIT=s	 : AUTO_CONFIG_D0
   implementation constraint: INIT=s	 : nDS_D0
-  implementation constraint: INIT=s	 : nDS_D1
   implementation constraint: INIT=s	 : DSACK_32BIT_D0
   implementation constraint: INIT=s	 : DSACK_32BIT_D1
+  implementation constraint: INIT=s	 : nDS_D1
   implementation constraint: INIT=s	 : DSACK_32BIT_D2
   implementation constraint: INIT=s	 : IDE_R_S
+  implementation constraint: INIT=r	 : IDE_ENABLE
+  implementation constraint: INIT=s	 : AUTO_CONFIG_D0
   implementation constraint: INIT=s	 : DSACK_32BIT
   implementation constraint: INIT=s	 : IDE_DSACK_D0
   implementation constraint: INIT=s	 : IDE_DSACK_D1
   implementation constraint: INIT=s	 : IDE_DSACK_D2
   implementation constraint: INIT=s	 : IDE_DSACK_D3
   implementation constraint: INIT=s	 : DSACK_16BIT
-  implementation constraint: INIT=r	 : IDE_ENABLE
 
 =========================================================================
 *                           Partition Report                            *
@@ -233,20 +235,20 @@ Design Statistics
 # IOs                              : 73
 
 Cell Usage :
-# BELS                             : 335
-#      AND2                        : 89
-#      AND3                        : 23
-#      AND4                        : 2
+# BELS                             : 338
+#      AND2                        : 91
+#      AND3                        : 25
+#      AND4                        : 1
 #      GND                         : 1
-#      INV                         : 140
-#      OR2                         : 57
+#      INV                         : 143
+#      OR2                         : 54
 #      OR3                         : 6
 #      VCC                         : 1
 #      XOR2                        : 16
-# FlipFlops/Latches                : 42
-#      FDCE                        : 7
+# FlipFlops/Latches                : 44
+#      FDCE                        : 6
 #      FDP                         : 6
-#      FDPE                        : 29
+#      FDPE                        : 32
 # IO Buffers                       : 67
 #      IBUF                        : 36
 #      IOBUFE                      : 4
@@ -255,12 +257,12 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.67 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.81 secs
  
 --> 
 
-Total memory usage is 289768 kilobytes
+Total memory usage is 289804 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)

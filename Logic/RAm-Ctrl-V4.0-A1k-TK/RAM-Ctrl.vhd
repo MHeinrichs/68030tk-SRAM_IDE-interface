@@ -77,6 +77,7 @@ signal	MY_CYCLE: STD_LOGIC;
 signal   IDE_SPACE:STD_LOGIC;
 signal	AUTO_CONFIG:STD_LOGIC;
 signal	AUTO_CONFIG_DONE:STD_LOGIC_VECTOR(1 downto 0);
+signal	AUTO_CONFIG_DONE_CYCLE:STD_LOGIC_VECTOR(1 downto 0);
 signal	SHUT_UP:STD_LOGIC_VECTOR(1 downto 0);
 signal	BASEADR:STD_LOGIC_VECTOR(2 downto 0);
 signal	BASEADR_4MB:STD_LOGIC_VECTOR(2 downto 0);
@@ -239,9 +240,9 @@ begin
 	
 	--map DSACK signal
 	DSACK		<= 	"ZZ" when MY_CYCLE ='1' ELSE
-						"00" when DSACK_32BIT_D0='0' and nAS='0' else
-						"01" when DSACK_16BIT	='0' and nAS='0' else 						
-						"01" when AUTO_CONFIG_D0='1' and nAS='0' and nDS='0' else 
+						"00" when DSACK_32BIT_D0='0' else
+						"01" when DSACK_16BIT	='0' else 						
+						"01" when AUTO_CONFIG_D0='1' else 
 						"11";
 	--DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
 	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
@@ -251,7 +252,7 @@ begin
 	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and nAS ='0' else '1';
 	WE(0) <= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
 	WE(1) <= '0' when RAM4MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
-	INT2	<= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
+	INT2	<= '1';
 
 	dsack_gen: process (nAS, clk)
 	begin
@@ -318,17 +319,29 @@ begin
 			Dout2;
 
 
-	autoconfig: process (reset, clk)
+	autoconfig_done: process (reset, nAS)
 	begin
 		if	reset = '0' then
 			-- reset active ...
 			AUTO_CONFIG_DONE	<="00";
+		elsif rising_edge(nAS) then -- no reset, so wait for rising edge of the nAS
+			if(not(AUTO_CONFIG_DONE = "11"))then
+				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE;
+			end if;
+		end if;
+	end process autoconfig_done;
+
+	autoconfig: process (reset, clk)
+	begin
+		if	reset = '0' then
+			-- reset active ...
+			AUTO_CONFIG_DONE_CYCLE	<="00";
 			Dout1<="1111";
 			Dout2<="1111";
 			SHUT_UP	<="11";
 			BASEADR <="111";
 			BASEADR_4MB <="111";
-			IDE_BASEADR<=x"E9";
+			IDE_BASEADR<=x"FF";
 			AUTO_CONFIG_D0 <= '0';
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
 			if(AUTO_CONFIG= '1' and nAS='0') then
@@ -391,21 +404,21 @@ begin
 							if(A (6 downto 1)="100100")then								
 								BASEADR 				<= D(3 downto 1); --Base adress
 								BASEADR_4MB 		<= D(3 downto 1)+"001"; 
-								AUTO_CONFIG_DONE(0)	<='1'; --done here
+								AUTO_CONFIG_DONE_CYCLE(0)	<='1'; --done here
 								SHUT_UP(0)				<='0'; --enable board
 							elsif(A (6 downto 1)="100110")then
-								AUTO_CONFIG_DONE(0)	<='1'; --done here
+								AUTO_CONFIG_DONE_CYCLE(0)	<='1'; --done here
 							end if;
 						elsif(AUTO_CONFIG_DONE(1)='0')then
 	--						if(AUTO_CONFIG_DONE(1)='0')then
 							if(A (6 downto 1)="100100")then
 								IDE_BASEADR(7 downto 4)	<= D(3 downto 0); --Base adress
 								SHUT_UP(1) <= '0'; --enable board
-								AUTO_CONFIG_DONE(1)	<='1'; --done here
+								AUTO_CONFIG_DONE_CYCLE(1)	<='1'; --done here
 							elsif(A (6 downto 1)="100101")then
 								IDE_BASEADR(3 downto 0)	<= D(3 downto 0); --Base adress
 							elsif(A (6 downto 1)="100110")then
-								AUTO_CONFIG_DONE(1)	<='1'; --done here
+								AUTO_CONFIG_DONE_CYCLE(1)	<='1'; --done here
 							end if;
 						end if;
 					end if;

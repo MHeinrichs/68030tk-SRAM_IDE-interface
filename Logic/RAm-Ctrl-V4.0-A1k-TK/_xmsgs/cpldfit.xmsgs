@@ -38,7 +38,7 @@
 <msg type="warning" file="Cpld" num="822" delta="old" >Timespec <arg fmt="%s" index="1">OFFSET</arg> = <arg fmt="%s" index="2">IN:10.000nS:VALID:20.000nS:BEFORE:clk:RISING</arg> is invalid for CPLD designs. This constraint will be ignored.
 </msg>
 
-<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">4</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">IDE_R</arg> to allow all signals assigned to this function block to be placed.
+<msg type="info" file="Cpld" num="994" delta="new" >Exhaustive fitting is trying <arg fmt="%s" index="1">pterm limit</arg>: <arg fmt="%d" index="2">32</arg> and <arg fmt="%s" index="3">input limit</arg>: <arg fmt="%d" index="4">54</arg>
 </msg>
 
 </messages>
