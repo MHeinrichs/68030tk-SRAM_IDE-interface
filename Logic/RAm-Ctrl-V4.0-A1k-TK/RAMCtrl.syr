@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: RAMCtrl.prj
 
@@ -55,10 +55,10 @@ XOR Preserve                       : YES
 Equivalent register Removal        : YES
 
 ---- General Options
-Optimization Goal                  : Area
+Optimization Goal                  : Speed
 Optimization Effort                : 2
 Keep Hierarchy                     : Yes
-Netlist Hierarchy                  : Rebuilt
+Netlist Hierarchy                  : As_Optimized
 RTL Output                         : Yes
 Hierarchy Separator                : /
 Bus Delimiter                      : <>
@@ -104,6 +104,7 @@ WARNING:Xst:647 - Input <ECS> is never used. This port will be preserved and lef
 WARNING:Xst:647 - Input <A<15:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <A<8:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <IDE_IRQ> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <DSACK_32BIT_D2> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 4-bit tristate buffer for signal <D>.
     Found 2-bit tristate buffer for signal <DSACK>.
     Found 1-bit tristate buffer for signal <CIIN>.
@@ -112,14 +113,13 @@ WARNING:Xst:647 - Input <IDE_IRQ> is never used. This port will be preserved and
     Found 2-bit register for signal <AUTO_CONFIG_DONE_CYCLE>.
     Found 3-bit register for signal <BASEADR>.
     Found 3-bit register for signal <BASEADR_4MB>.
-    Found 3-bit adder for signal <BASEADR_4MB$add0000> created at line 406.
+    Found 3-bit adder for signal <BASEADR_4MB$add0000> created at line 380.
     Found 4-bit register for signal <Dout1>.
     Found 4-bit register for signal <Dout2>.
     Found 1-bit register for signal <DSACK_16BIT>.
     Found 1-bit register for signal <DSACK_32BIT>.
     Found 1-bit register for signal <DSACK_32BIT_D0>.
     Found 1-bit register for signal <DSACK_32BIT_D1>.
-    Found 1-bit register for signal <DSACK_32BIT_D2>.
     Found 8-bit register for signal <IDE_BASEADR>.
     Found 1-bit register for signal <IDE_DSACK_D0>.
     Found 1-bit register for signal <IDE_DSACK_D1>.
@@ -127,12 +127,13 @@ WARNING:Xst:647 - Input <IDE_IRQ> is never used. This port will be preserved and
     Found 1-bit register for signal <IDE_DSACK_D3>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 1-bit register for signal <IDE_R_S>.
-    Found 16-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 120.
+    Found 16-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 121.
     Found 1-bit register for signal <IDE_W_S>.
+    Found 1-bit register for signal <nAS_D0>.
     Found 1-bit register for signal <nDS_D0>.
     Found 1-bit register for signal <nDS_D1>.
-    Found 11-bit comparator equal for signal <RAM2MB$cmp_eq0000> created at line 112.
-    Found 11-bit comparator equal for signal <RAM4MB$cmp_eq0000> created at line 116.
+    Found 11-bit comparator equal for signal <RAM2MB$cmp_eq0000> created at line 113.
+    Found 11-bit comparator equal for signal <RAM4MB$cmp_eq0000> created at line 117.
     Found 1-bit register for signal <ROM_OE_S>.
     Found 2-bit register for signal <SHUT_UP>.
     Summary:
@@ -194,11 +195,11 @@ Optimizing unit <RAMCtrl> ...
   implementation constraint: INIT=s	 : DSACK_32BIT_D0
   implementation constraint: INIT=s	 : DSACK_32BIT_D1
   implementation constraint: INIT=s	 : nDS_D1
-  implementation constraint: INIT=s	 : DSACK_32BIT_D2
   implementation constraint: INIT=s	 : IDE_R_S
   implementation constraint: INIT=r	 : IDE_ENABLE
   implementation constraint: INIT=s	 : AUTO_CONFIG_D0
   implementation constraint: INIT=s	 : DSACK_32BIT
+  implementation constraint: INIT=s	 : nAS_D0
   implementation constraint: INIT=s	 : IDE_DSACK_D0
   implementation constraint: INIT=s	 : IDE_DSACK_D1
   implementation constraint: INIT=s	 : IDE_DSACK_D2
@@ -223,7 +224,7 @@ Final Results
 RTL Top Level Output File Name     : RAMCtrl.ngr
 Top Level Output File Name         : RAMCtrl
 Output Format                      : NGC
-Optimization Goal                  : Area
+Optimization Goal                  : Speed
 Keep Hierarchy                     : Yes
 Target Technology                  : XC9500XL CPLDs
 Macro Preserve                     : YES
@@ -235,19 +236,22 @@ Design Statistics
 # IOs                              : 73
 
 Cell Usage :
-# BELS                             : 338
-#      AND2                        : 91
+# BELS                             : 420
+#      AND2                        : 104
 #      AND3                        : 25
-#      AND4                        : 1
+#      AND4                        : 6
+#      AND5                        : 1
+#      AND8                        : 5
 #      GND                         : 1
-#      INV                         : 143
-#      OR2                         : 54
-#      OR3                         : 6
+#      INV                         : 195
+#      OR2                         : 57
+#      OR3                         : 8
+#      OR5                         : 1
 #      VCC                         : 1
 #      XOR2                        : 16
 # FlipFlops/Latches                : 44
-#      FDCE                        : 6
-#      FDP                         : 6
+#      FDCE                        : 7
+#      FDP                         : 5
 #      FDPE                        : 32
 # IO Buffers                       : 67
 #      IBUF                        : 36
@@ -258,13 +262,13 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.81 secs
+Total CPU time to Xst completion: 8.01 secs
  
 --> 
 
-Total memory usage is 289804 kilobytes
+Total memory usage is 290364 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    4 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

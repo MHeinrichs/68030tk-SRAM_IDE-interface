@@ -102,6 +102,7 @@ signal	IDE_W_S:STD_LOGIC:= '1';
 signal	nDS_D0:STD_LOGIC:= '1';
 signal	nDS_D1:STD_LOGIC:= '1';
 signal	AUTO_CONFIG_D0:STD_LOGIC:= '1';
+signal	nAS_D0:STD_LOGIC:= '1';
 begin
 	--internal signals
 	--MY_RAMSEL	<= '1' 	when 
@@ -144,6 +145,7 @@ begin
 		elsif rising_edge(clk) then
 			nDS_D0				<=nDS;
 			nDS_D1				<=nDS_D0;
+			nAS_D0				<=nAS;
 			if(IDE_SPACE='1' and nAS = '0')then
 				if(RW='0')then
 					--enable IDE on the first write on this IO-space!
@@ -240,18 +242,18 @@ begin
 	
 	--map DSACK signal
 	DSACK		<= 	"ZZ" when MY_CYCLE ='1' ELSE
-						"00" when DSACK_32BIT_D0='0' else
-						"01" when DSACK_16BIT	='0' else 						
+						"00" when DSACK_32BIT_D1 ='0' else
+						"01" when DSACK_16BIT	 ='0' else 						
 						"01" when AUTO_CONFIG_D0='1' else 
 						"11";
 	--DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
 	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
 	STERM <=  '1';
 	
-	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and nAS ='0' else '1';
-	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and nAS ='0' else '1';
-	WE(0) <= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
-	WE(1) <= '0' when RAM4MB = '1' and RW = '0' and nAS ='0' and DSACK_32BIT_D2 ='1' else '1';
+	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and (nAS ='0' or nAS_D0 ='0')else '1';
+	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and (nAS ='0' or nAS_D0 ='0') else '1';
+	WE(0) <= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' else '1';
+	WE(1) <= '0' when RAM4MB = '1' and RW = '0' and nAS ='0' else '1';
 	INT2	<= '1';
 
 	dsack_gen: process (nAS, clk)
@@ -261,42 +263,14 @@ begin
 			DSACK_32BIT_D0 <= '1';
 			DSACK_32BIT_D1 <= '1';
 			DSACK_32BIT_D2 <= '1';
-			--OE					<= "11";
-			--WE					<= "11";
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
-			if(RAM2MB ='1')then
-				--OE(0) 			<= not RW;					
-				--WE(0) 			<= RW;
-				--OE(1)		<='1';
-				--WE(1)		<='1';
-				--if(RW='0' and DSACK_32BIT_D2 ='1') then --nWE must be deasserted before nAS terminates!
-				--	WE(0) 		<= '0';
-				--else 
-				--	WE(0) 		<= '1';
-				--end if;
+			if(RAM2MB ='1' or RAM4MB='1')then
 				
-				DSACK_32BIT	<= '0';				
-				DSACK_32BIT_D0 <= DSACK_32BIT;				
-				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
-				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
-			elsif(RAM4MB='1') then
-				--OE(0)		<='1';
-				--WE(0)		<='1';
-				--OE(1) 			<= not RW;			
-				--WE(1) 			<= RW;
-				
-				--if(RW='0' and DSACK_32BIT_D2 ='1') then --nWE must be deasserted before nAS terminates!
-				--	WE(1) 		<= '0';
-				--else 
-				--	WE(1) 		<= '1';
-				--end if;
 				DSACK_32BIT	<= '0';				
 				DSACK_32BIT_D0 <= DSACK_32BIT;				
 				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
 				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
 			else
-				--OE	<="11";				
-				--WE	<="11";
 				DSACK_32BIT		<= '1';				
 				DSACK_32BIT_D0 <= '1';				
 				DSACK_32BIT_D1 <= '1';

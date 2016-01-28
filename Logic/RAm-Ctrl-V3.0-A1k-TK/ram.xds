@@ -6,13 +6,13 @@
   <DeviceList devices="xc9500xl"/>
 
   <Properties>
-    <property name="Synthesize - XST:Optimization Goal" value="Area"/>
+    <property name="Synthesize - XST:Optimization Goal" value="Speed"/>
     <property name="Synthesize - XST:Optimization Effort" value="High"/>
-    <property name="Synthesize - XST:Netlist Hierarchy" value="Rebuilt"/>
+    <property name="Synthesize - XST:Netlist Hierarchy" value="As Optimized"/>
     <property name="Synthesize - XST:Safe Implementation" value="Yes"/>
-    <property name="Fit:Implementation Template" value="Optimize Density"/>
+    <property name="Fit:Implementation Template" value="Optimize Balance"/>
     <property name="Fit:I/O Pin Termination" value="Float"/>
-    <property name="Fit:Exhaustive Fit Mode" value="false"/>
+    <property name="Fit:Exhaustive Fit Mode" value="true"/>
     <property name="Fit:Collapsing Pterm Limit (1-90)" value="32"/>
   </Properties>
 

@@ -32,9 +32,9 @@
     <property xil_pn:name="Implementation Top File" xil_pn:value="RAM-Ctrl.vhd" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Implementation Top Instance Path" xil_pn:value="/RAMCtrl" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Last Applied Strategy" xil_pn:value="ram;C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/ram.xds" xil_pn:valueState="non-default"/>
-    <property xil_pn:name="Netlist Hierarchy" xil_pn:value="Rebuilt" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Netlist Hierarchy" xil_pn:value="As Optimized" xil_pn:valueState="default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Optimization Effort" xil_pn:value="High" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
-    <property xil_pn:name="Optimization Goal" xil_pn:value="Area" xil_pn:valueState="non-default" xil_pn:x_locked="true"/>
+    <property xil_pn:name="Optimization Goal" xil_pn:value="Speed" xil_pn:valueState="default" xil_pn:x_locked="true"/>
     <property xil_pn:name="Package" xil_pn:value="TQ100" xil_pn:valueState="default"/>
     <property xil_pn:name="Preferred Language" xil_pn:value="VHDL" xil_pn:valueState="non-default"/>
     <property xil_pn:name="Property Specification in Project File" xil_pn:value="Store non-default values only" xil_pn:valueState="non-default"/>

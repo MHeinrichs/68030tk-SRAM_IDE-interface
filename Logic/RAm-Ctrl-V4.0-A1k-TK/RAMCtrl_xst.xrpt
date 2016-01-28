@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Mon Nov 30 23:51:52 2015">
+  <application stringID="Xst" timeStamp="Thu Jan 28 21:17:05 2016">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -60,11 +60,11 @@
       <item DEFAULT="NGC" label="-ofmt" stringID="XST_OFMT" value="NGC"/>
       <item DEFAULT="" label="-p" stringID="XST_P" value="xc9500xl"/>
       <item DEFAULT="" label="-top" stringID="XST_TOP" value="RAMCtrl"/>
-      <item DEFAULT="SPEED" label="-opt_mode" stringID="XST_OPTMODE" value="Area"/>
+      <item DEFAULT="SPEED" label="-opt_mode" stringID="XST_OPTMODE" value="Speed"/>
       <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="2"/>
       <item DEFAULT="NO" label="-iuc" stringID="XST_IUC" value="NO"/>
       <item DEFAULT="YES" label="-keep_hierarchy" stringID="XST_KEEPHIERARCHY" value="Yes"/>
-      <item DEFAULT="as_optimized" label="-netlist_hierarchy" stringID="XST_NETLISTHIERARCHY" value="Rebuilt"/>
+      <item DEFAULT="as_optimized" label="-netlist_hierarchy" stringID="XST_NETLISTHIERARCHY" value="As_Optimized"/>
       <item DEFAULT="NO" label="-rtlview" stringID="XST_RTLVIEW" value="Yes"/>
       <item DEFAULT="/" stringID="XST_HIERARCHYSEPARATOR" value="/"/>
       <item DEFAULT="&lt;>" label="-bus_delimiter" stringID="XST_BUSDELIMITER" value="&lt;>"/>
@@ -116,26 +116,26 @@
         <item stringID="XST_RTL_TOP_LEVEL_OUTPUT_FILE_NAME" value="RAMCtrl.ngr"/>
         <item stringID="XST_TOP_LEVEL_OUTPUT_FILE_NAME" value="RAMCtrl"/>
         <item stringID="XST_OUTPUT_FORMAT" value="NGC"/>
-        <item stringID="XST_OPTIMIZATION_GOAL" value="Area"/>
+        <item stringID="XST_OPTIMIZATION_GOAL" value="Speed"/>
         <item stringID="XST_KEEP_HIERARCHY" value="Yes"/>
       </section>
       <section stringID="XST_DESIGN_STATISTICS">
         <item stringID="XST_IOS" value="73"/>
       </section>
       <section stringID="XST_CELL_USAGE">
-        <item dataType="int" stringID="XST_BELS" value="338">
-          <item dataType="int" stringID="XST_AND2" value="91"/>
+        <item dataType="int" stringID="XST_BELS" value="420">
+          <item dataType="int" stringID="XST_AND2" value="104"/>
           <item dataType="int" stringID="XST_AND3" value="25"/>
-          <item dataType="int" stringID="XST_AND4" value="1"/>
+          <item dataType="int" stringID="XST_AND4" value="6"/>
           <item dataType="int" stringID="XST_GND" value="1"/>
-          <item dataType="int" stringID="XST_INV" value="143"/>
-          <item dataType="int" stringID="XST_OR2" value="54"/>
+          <item dataType="int" stringID="XST_INV" value="195"/>
+          <item dataType="int" stringID="XST_OR2" value="57"/>
           <item dataType="int" stringID="XST_VCC" value="1"/>
           <item dataType="int" stringID="XST_XOR2" value="16"/>
         </item>
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="44">
-          <item dataType="int" stringID="XST_FDCE" value="6"/>
-          <item dataType="int" stringID="XST_FDP" value="6"/>
+          <item dataType="int" stringID="XST_FDCE" value="7"/>
+          <item dataType="int" stringID="XST_FDP" value="5"/>
           <item dataType="int" stringID="XST_FDPE" value="32"/>
         </item>
         <item dataType="int" stringID="XST_IO_BUFFERS" value="67">
@@ -146,7 +146,7 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="4"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="5"/>
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="0"/>
     </section>
   </application>

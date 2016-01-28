@@ -1,7 +1,7 @@
 Release 8.1i - Fit P.68d
 Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
 
-11-30-2015 11:52PM
+ 1-28-2016  9:17PM
 
 NOTE: This file is designed to be imported into a spreadsheet program
 such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
@@ -116,7 +116,7 @@ P95|IDE_A<1>|O|I/O|OUTPUT|||||||||
 P96|IDE_R|O|I/O|OUTPUT|||||||||
 P97|IDE_W|O|I/O|OUTPUT|||||||||
 P98|VCC||VCCINT||||||||||
-P99|reset|GSR|I/O/GSR||||||||||
+P99|reset|GSR/I|I/O/GSR||||||||||
 P100|GND||GND||||||||||
 
 To preserve the pinout above for future design iterations in
