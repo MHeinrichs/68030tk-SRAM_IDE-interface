@@ -10098,8 +10098,8 @@ Source: RS Component / Phycomp</description>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C11" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0603K" value="100nF"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="4.7K"/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="4.7K"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="R0603" value="4.7"/>
+<part name="R2" library="rcl" deviceset="R-EU_" device="R0603" value="4.7"/>
 <part name="R3" library="rcl" deviceset="R-EU_" device="R0603" value="330"/>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X5" device=""/>
 <part name="F1" library="rcl" deviceset="R-EU_" device="R2512" value="500mA"/>

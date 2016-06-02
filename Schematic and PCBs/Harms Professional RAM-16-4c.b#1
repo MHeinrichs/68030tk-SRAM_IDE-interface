@@ -2536,11 +2536,11 @@ Sollten andere Lagen belegt und relevant sein, so teilen Sie uns dies bitte expl
 <attribute name="NAME" x="26.3272" y="35.702" size="1.016" layer="25"/>
 <attribute name="VALUE" x="28.4608" y="35.8404" size="0.6096" layer="25"/>
 </element>
-<element name="R1" library="rcl" package="R0603" value="4.7K" x="27.1272" y="84.7344" smashed="yes" rot="MR0">
+<element name="R1" library="rcl" package="R0603" value="4.7" x="27.1272" y="84.7344" smashed="yes" rot="MR0">
 <attribute name="NAME" x="29.591" y="85.6742" size="1.27" layer="26" rot="MR0"/>
 <attribute name="VALUE" x="25.6286" y="84.963" size="0.6096" layer="26" rot="MR0"/>
 </element>
-<element name="R2" library="rcl" package="R0603" value="4.7K" x="30.48" y="57.3024" smashed="yes" rot="R180">
+<element name="R2" library="rcl" package="R0603" value="4.7" x="30.48" y="57.3024" smashed="yes" rot="R180">
 <attribute name="NAME" x="32.639" y="56.3626" size="1.27" layer="25" rot="R180"/>
 <attribute name="VALUE" x="32.9438" y="57.3786" size="0.4064" layer="25" rot="R180"/>
 </element>
