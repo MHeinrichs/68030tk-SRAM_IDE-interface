@@ -242,13 +242,13 @@ begin
 	
 	--map DSACK signal
 	DSACK		<= 	"ZZ" when MY_CYCLE ='1' ELSE
-						"00" when DSACK_32BIT_D1 ='0' else
+						--"00" when DSACK_32BIT    ='0' else
 						"01" when DSACK_16BIT	 ='0' else 						
 						"01" when AUTO_CONFIG_D0='1' else 
 						"11";
 	--DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
 	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
-	STERM <=  '1';
+	STERM <=  DSACK_32BIT;
 	
 	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and (nAS ='0' or nAS_D0 ='0')else '1';
 	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and (nAS ='0' or nAS_D0 ='0') else '1';
@@ -260,21 +260,21 @@ begin
 	begin
 		if	nAS = '1' then
 			DSACK_32BIT		<= '1';
-			DSACK_32BIT_D0 <= '1';
-			DSACK_32BIT_D1 <= '1';
-			DSACK_32BIT_D2 <= '1';
+			--DSACK_32BIT_D0 <= '1';
+			--DSACK_32BIT_D1 <= '1';
+			--DSACK_32BIT_D2 <= '1';
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
 			if(RAM2MB ='1' or RAM4MB='1')then
 				
 				DSACK_32BIT	<= '0';				
-				DSACK_32BIT_D0 <= DSACK_32BIT;				
-				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
-				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
+				--DSACK_32BIT_D0 <= DSACK_32BIT;				
+				--DSACK_32BIT_D1 <= DSACK_32BIT_D0;
+				--DSACK_32BIT_D2 <= DSACK_32BIT_D1;
 			else
 				DSACK_32BIT		<= '1';				
-				DSACK_32BIT_D0 <= '1';				
-				DSACK_32BIT_D1 <= '1';
-				DSACK_32BIT_D2 <= '1';
+				--DSACK_32BIT_D0 <= '1';				
+				--DSACK_32BIT_D1 <= '1';
+				--DSACK_32BIT_D2 <= '1';
 			end if;
 
 		end if;
