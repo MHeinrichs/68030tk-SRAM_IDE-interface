@@ -77,6 +77,7 @@ signal	MY_CYCLE: STD_LOGIC;
 signal   IDE_SPACE:STD_LOGIC;
 signal	AUTO_CONFIG:STD_LOGIC;
 signal	AUTO_CONFIG_DONE:STD_LOGIC_VECTOR(1 downto 0);
+signal	AUTO_CONFIG_PAUSE:STD_LOGIC;
 signal	AUTO_CONFIG_DONE_CYCLE:STD_LOGIC_VECTOR(1 downto 0);
 signal	SHUT_UP:STD_LOGIC_VECTOR(1 downto 0);
 signal	BASEADR:STD_LOGIC_VECTOR(2 downto 0);
@@ -84,32 +85,28 @@ signal	BASEADR_4MB:STD_LOGIC_VECTOR(2 downto 0);
 signal	IDE_BASEADR:STD_LOGIC_VECTOR(7 downto 0);
 signal	Dout1:STD_LOGIC_VECTOR(3 downto 0);
 signal	Dout2:STD_LOGIC_VECTOR(3 downto 0);
-signal	IDE_DSACK_D0:STD_LOGIC:= '1';
-signal	IDE_DSACK_D1:STD_LOGIC:= '1';
-signal	IDE_DSACK_D2:STD_LOGIC:= '1';
-signal	IDE_DSACK_D3:STD_LOGIC:= '1';
-signal	DSACK_16BIT:STD_LOGIC:='1';
-signal	DSACK_32BIT:STD_LOGIC:='1';
-signal	DSACK_32BIT_D0:STD_LOGIC:='1';
-signal	DSACK_32BIT_D1:STD_LOGIC:='1';
-signal	DSACK_32BIT_D2:STD_LOGIC:='1';
-signal	IDE_ENABLE:STD_LOGIC:= '0';
-signal	RAM2MB:STD_LOGIC:= '0';
-signal	RAM4MB:STD_LOGIC:= '0';
-signal	ROM_OE_S:STD_LOGIC:= '1';
-signal	IDE_R_S:STD_LOGIC:= '1';
-signal	IDE_W_S:STD_LOGIC:= '1';
-signal	nDS_D0:STD_LOGIC:= '1';
-signal	nDS_D1:STD_LOGIC:= '1';
-signal	AUTO_CONFIG_D0:STD_LOGIC:= '1';
-signal	nAS_D0:STD_LOGIC:= '1';
+signal	IDE_DSACK_D0:STD_LOGIC;
+signal	IDE_DSACK_D1:STD_LOGIC;
+signal	IDE_DSACK_D2:STD_LOGIC;
+signal	IDE_DSACK_D3:STD_LOGIC;
+signal	DSACK_16BIT:STD_LOGIC;
+signal	DSACK_32BIT:STD_LOGIC;
+signal	DSACK_32BIT_D0:STD_LOGIC;
+signal	DSACK_32BIT_D1:STD_LOGIC;
+signal	DSACK_32BIT_D2:STD_LOGIC;
+signal	IDE_ENABLE:STD_LOGIC;
+signal	RAM2MB:STD_LOGIC;
+signal	RAM4MB:STD_LOGIC;
+signal	ROM_OE_S:STD_LOGIC;
+signal	IDE_R_S:STD_LOGIC;
+signal	IDE_W_S:STD_LOGIC;
+signal	nDS_D0:STD_LOGIC;
+signal	nDS_D1:STD_LOGIC;
+signal	AUTO_CONFIG_D0:STD_LOGIC;
+signal	nAS_D0:STD_LOGIC;
+signal	AUTO_CONFIG_FINISH:STD_LOGIC;
 begin
-	--internal signals
-	--MY_RAMSEL	<= '1' 	when 
-	--								(A(31 downto 21) = (x"00" & BASEADR) or A(31 downto 21) = (x"00" & BASEADR_4MB))
-	--								AND SHUT_UP(0) ='0' 
-	--					else '0'; -- Adress match and board successfully configured
-	
+	--internal signals	
 	RAM2MB		<= '1' 	when 
 									A(31 downto 21) = (x"00" & BASEADR)
 									AND SHUT_UP(0) ='0' 
@@ -124,7 +121,7 @@ begin
 						else '0'; -- Access to IDE-Space
 	AUTO_CONFIG	<= '1'	when 
 									A(31 downto 16) = x"00E8"
-									AND not (AUTO_CONFIG_DONE ="11") 
+									AND not (AUTO_CONFIG_DONE ="11")
 						else '0'; -- Access to Autoconfig space and internal autoconfig not complete
 
 	--output
@@ -140,12 +137,7 @@ begin
 		if	(reset = '0') then
 			-- reset
 			IDE_ENABLE			<='0';
-			nDS_D0				<='1';
-			nDS_D1				<='1';
 		elsif rising_edge(clk) then
-			nDS_D0				<=nDS;
-			nDS_D1				<=nDS_D0;
-			nAS_D0				<=nAS;
 			if(IDE_SPACE='1' and nAS = '0')then
 				if(RW='0')then
 					--enable IDE on the first write on this IO-space!
@@ -157,21 +149,11 @@ begin
 
 	
 	-- this is the clocked process
-	ide_rw_gen: process (nAS, clk)
+	ide_rw_gen: process (clk)
 	begin
 	
-		if	(nAS = '1') then
-			IDE_R_S		<= '1';
-			IDE_W_S		<= '1';
-			ROM_OE_S	<= '1';
-			--ROM_EN_S	<= '1';
-			IDE_DSACK_D0		<= '1';
-			IDE_DSACK_D1		<= '1';
-			IDE_DSACK_D2		<= '1';
-			IDE_DSACK_D3		<= '1';
-			DSACK_16BIT			<= '1';
-		elsif rising_edge(clk) then
-			if(IDE_SPACE='1')then
+		if rising_edge(clk) then
+			if(IDE_SPACE='1' and nAS='0')then
 
 				if(RW='0')then
 					--the write goes to the hdd!
@@ -196,8 +178,17 @@ begin
 				IDE_DSACK_D1		<= IDE_DSACK_D0;
 				IDE_DSACK_D2		<= IDE_DSACK_D1;
 				IDE_DSACK_D3		<= IDE_DSACK_D2;
+			else
+				IDE_R_S		<= '1';
+				IDE_W_S		<= '1';
+				ROM_OE_S	<= '1';
+				--ROM_EN_S	<= '1';
+				IDE_DSACK_D0		<= '1';
+				IDE_DSACK_D1		<= '1';
+				IDE_DSACK_D2		<= '1';
+				IDE_DSACK_D3		<= '1';
+				DSACK_16BIT			<= '1';		
 			end if;				
-			
 		end if;
 	end process ide_rw_gen;
 
@@ -246,12 +237,11 @@ begin
 						"01" when DSACK_16BIT	 ='0' else 						
 						"01" when AUTO_CONFIG_D0='1' else 
 						"11";
-	--DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
-	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
+	--STERM <=  '0' when RAM2MB = '1' or RAM4MB = '1' else '1';
 	STERM <=  DSACK_32BIT;
 	
-	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and (nAS ='0' or nAS_D0 ='0')else '1';
-	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and (nAS ='0' or nAS_D0 ='0') else '1';
+	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and nAS ='0' else '1';
+	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and nAS ='0' else '1';
 	WE(0) <= '0' when RAM2MB = '1' and RW = '0' and nAS ='0' else '1';
 	WE(1) <= '0' when RAM4MB = '1' and RW = '0' and nAS ='0' else '1';
 	INT2	<= '1';
@@ -293,23 +283,18 @@ begin
 			Dout2;
 
 
-	autoconfig_done: process (reset, nAS)
-	begin
-		if	reset = '0' then
-			-- reset active ...
-			AUTO_CONFIG_DONE	<="00";
-		elsif rising_edge(nAS) then -- no reset, so wait for rising edge of the nAS
-			if(not(AUTO_CONFIG_DONE = "11"))then
-				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE;
-			end if;
-		end if;
-	end process autoconfig_done;
-
 	autoconfig: process (reset, clk)
 	begin
 		if	reset = '0' then
 			-- reset active ...
+			AUTO_CONFIG_PAUSE <='0';
 			AUTO_CONFIG_DONE_CYCLE	<="00";
+			AUTO_CONFIG_DONE	<="00";
+			
+			--use these presets for CDTV: This makes the DMAC config first!
+			--AUTO_CONFIG_PAUSE <='1';
+			--AUTO_CONFIG_DONE_CYCLE	<="11";
+			--AUTO_CONFIG_DONE	<="11";
 			Dout1<="1111";
 			Dout2<="1111";
 			SHUT_UP	<="11";
@@ -318,9 +303,30 @@ begin
 			IDE_BASEADR<=x"FF";
 			AUTO_CONFIG_D0 <= '0';
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock		
+			--nDS_D0				<=nDS;
+			--nDS_D1				<=nDS_D0;
+			nAS_D0				<=nAS;
+			if( 	A(31 downto 16) = x"00E8" 
+					and A (6 downto 1)="100100"
+					and RW='0' and nAS_D0='0')  then
+				AUTO_CONFIG_FINISH <= '1';
+			else
+				AUTO_CONFIG_FINISH <= '0';
+			end if;
+			
+			-- wait one autoconfig-strobe for CDTV!
+			if(AUTO_CONFIG_FINISH ='1'
+				and nAS_D0='1' and AUTO_CONFIG_PAUSE ='1') then
+				AUTO_CONFIG_PAUSE <='0';
+				AUTO_CONFIG_DONE_CYCLE	<="00";
+				AUTO_CONFIG_DONE <= "00";
+			elsif(nAS='1' and nAS_D0='0' )then
+				AUTO_CONFIG_DONE <= AUTO_CONFIG_DONE_CYCLE;
+			end if;
+		
 			if(AUTO_CONFIG= '1' and nAS='0') then
+				AUTO_CONFIG_D0 <='1';
 				if(RW='1') then
-					AUTO_CONFIG_D0 <='1';
 					case A(6 downto 1) is
 						when "000000"	=> Dout1 <= 	"1110" ; --ZII, System-Memory, no ROM
 						when "000001"	=> Dout1 <=	"0111" ; --one Card, 4MB = 111
@@ -372,8 +378,7 @@ begin
 						when others	=> Dout2 <=	"1111" ;
 					end case;	
 				else --write
-					if( nDS_D0='0' and nDS_D1='1')then
-						AUTO_CONFIG_D0 <='1';
+					if( nDS='0')then
 						if(AUTO_CONFIG_DONE(0)='0')then
 							if(A (6 downto 1)="100100")then								
 								BASEADR 				<= D(3 downto 1); --Base adress

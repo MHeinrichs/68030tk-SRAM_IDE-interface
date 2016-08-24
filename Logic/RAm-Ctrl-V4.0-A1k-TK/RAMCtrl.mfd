@@ -1,269 +1,227 @@
 MDF Database:  version 1.0
 MDF_INFO | RAMCtrl | XC95144XL-10-TQ100
-MACROCELL | 6 | 17 | AUTO_CONFIG_DONE<0>
-ATTRIBUTES | 8528672 | 0
-OUTPUTMC | 22 | 6 | 17 | 6 | 16 | 4 | 13 | 4 | 12 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0 | 6 | 15 | 6 | 11
-INPUTS | 4 | AUTO_CONFIG_DONE_CYCLE<0>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | nAS
-INPUTMC | 3 | 4 | 13 | 6 | 17 | 6 | 16
+MACROCELL | 1 | 16 | AUTO_CONFIG_DONE<0>
+ATTRIBUTES | 8561472 | 0
+OUTPUTMC | 21 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0 | 5 | 17 | 5 | 15 | 5 | 11
+INPUTS | 3 | AUTO_CONFIG_DONE_CYCLE<0>  | nAS  | nAS_D0
+INPUTMC | 2 | 4 | 7 | 1 | 15
 INPUTP | 1 | 2
 EQ | 4 | 
-   AUTO_CONFIG_DONE<0>.D = AUTO_CONFIG_DONE_CYCLE<0>
-	# AUTO_CONFIG_DONE<0> & AUTO_CONFIG_DONE<1>;
-   AUTO_CONFIG_DONE<0>.CLK = nAS;
+   AUTO_CONFIG_DONE<0>.D = AUTO_CONFIG_DONE_CYCLE<0>;
+   AUTO_CONFIG_DONE<0>.CLK = clk;	// GCK
    !AUTO_CONFIG_DONE<0>.AR = reset;	// GSR
-GLOBALS | 1 | 4 | reset
+   AUTO_CONFIG_DONE<0>.CE = nAS & !nAS_D0;
+GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 6 | 16 | AUTO_CONFIG_DONE<1>
-ATTRIBUTES | 8528672 | 0
-OUTPUTMC | 13 | 6 | 17 | 6 | 16 | 4 | 12 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 4 | 0 | 6 | 15
-INPUTS | 4 | AUTO_CONFIG_DONE_CYCLE<1>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | nAS
-INPUTMC | 3 | 4 | 12 | 6 | 17 | 6 | 16
+MACROCELL | 5 | 16 | AUTO_CONFIG_DONE<1>
+ATTRIBUTES | 8561472 | 0
+OUTPUTMC | 12 | 4 | 6 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 0 | 5 | 17 | 5 | 15
+INPUTS | 3 | AUTO_CONFIG_DONE_CYCLE<1>  | nAS  | nAS_D0
+INPUTMC | 2 | 4 | 6 | 1 | 15
 INPUTP | 1 | 2
 EQ | 4 | 
-   AUTO_CONFIG_DONE<1>.D = AUTO_CONFIG_DONE_CYCLE<1>
-	# AUTO_CONFIG_DONE<0> & AUTO_CONFIG_DONE<1>;
-   AUTO_CONFIG_DONE<1>.CLK = nAS;
+   AUTO_CONFIG_DONE<1>.D = AUTO_CONFIG_DONE_CYCLE<1>;
+   AUTO_CONFIG_DONE<1>.CLK = clk;	// GCK
    !AUTO_CONFIG_DONE<1>.AR = reset;	// GSR
-GLOBALS | 1 | 4 | reset
+   AUTO_CONFIG_DONE<1>.CE = nAS & !nAS_D0;
+GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 4 | 13 | AUTO_CONFIG_DONE_CYCLE<0>
+MACROCELL | 4 | 7 | AUTO_CONFIG_DONE_CYCLE<0>
 ATTRIBUTES | 4367168 | 0
-OUTPUTMC | 3 | 6 | 17 | 4 | 13 | 4 | 14
-INPUTS | 14 | A<5>  | A<4>  | AUTO_CONFIG_DONE_CYCLE<0>  | A<3>  | A<1>  | A<6>  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | nDS_D0  | nDS_D1  | AUTO_CONFIG/AUTO_CONFIG_D2  | A<2>  | Dout1_not0001/Dout1_not0001_D2
-INPUTMC | 6 | 4 | 13 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15 | 2 | 2
-INPUTP | 8 | 88 | 90 | 92 | 82 | 97 | 2 | 17 | 79
-EXPORTS | 1 | 4 | 14
-EQ | 8 | 
-   AUTO_CONFIG_DONE_CYCLE<0>.T = !A<5> & !A<4> & !AUTO_CONFIG_DONE_CYCLE<0> & A<3> & 
-	!A<1> & A<6>;
+OUTPUTMC | 2 | 1 | 16 | 4 | 7
+INPUTS | 11 | AUTO_CONFIG_DONE_CYCLE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<6>  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 4 | 7 | 1 | 16 | 5 | 17
+INPUTP | 8 | 92 | 82 | 88 | 90 | 97 | 15 | 2 | 17
+EQ | 6 | 
+   AUTO_CONFIG_DONE_CYCLE<0>.T = !AUTO_CONFIG_DONE_CYCLE<0> & A<3> & !A<1> & !A<5> & 
+	!A<4> & A<6>;
    AUTO_CONFIG_DONE_CYCLE<0>.CLK = clk;	// GCK
    !AUTO_CONFIG_DONE_CYCLE<0>.AR = reset;	// GSR
-   AUTO_CONFIG_DONE_CYCLE<0>.CE = !nAS & !RW & !AUTO_CONFIG_DONE<0> & !nDS_D0 & 
-	nDS_D1 & AUTO_CONFIG/AUTO_CONFIG_D2;
-    AUTO_CONFIG_DONE_CYCLE<0>.EXP  =  !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
-	Dout1_not0001/Dout1_not0001_D2
+   AUTO_CONFIG_DONE_CYCLE<0>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 4 | 12 | AUTO_CONFIG_DONE_CYCLE<1>
+MACROCELL | 4 | 6 | AUTO_CONFIG_DONE_CYCLE<1>
 ATTRIBUTES | 4367168 | 0
-OUTPUTMC | 2 | 6 | 16 | 4 | 12
-INPUTS | 13 | A<5>  | A<4>  | AUTO_CONFIG_DONE_CYCLE<1>  | A<3>  | A<1>  | A<6>  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | nDS_D0  | nDS_D1  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 6 | 4 | 12 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 7 | 88 | 90 | 92 | 82 | 97 | 2 | 17
+OUTPUTMC | 2 | 5 | 16 | 4 | 6
+INPUTS | 12 | AUTO_CONFIG_DONE_CYCLE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<6>  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 4 | 4 | 6 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 8 | 92 | 82 | 88 | 90 | 97 | 15 | 2 | 17
 EQ | 6 | 
-   AUTO_CONFIG_DONE_CYCLE<1>.T = !A<5> & !A<4> & !AUTO_CONFIG_DONE_CYCLE<1> & A<3> & 
-	!A<1> & A<6>;
+   AUTO_CONFIG_DONE_CYCLE<1>.T = !AUTO_CONFIG_DONE_CYCLE<1> & A<3> & !A<1> & !A<5> & 
+	!A<4> & A<6>;
    AUTO_CONFIG_DONE_CYCLE<1>.CLK = clk;	// GCK
    !AUTO_CONFIG_DONE_CYCLE<1>.AR = reset;	// GSR
-   AUTO_CONFIG_DONE_CYCLE<1>.CE = !nAS & !RW & AUTO_CONFIG_DONE<0> & 
-	!AUTO_CONFIG_DONE<1> & !nDS_D0 & nDS_D1 & AUTO_CONFIG/AUTO_CONFIG_D2;
+   AUTO_CONFIG_DONE_CYCLE<1>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 5 | 5 | AUTO_CONFIG_D0
-ATTRIBUTES | 8561412 | 0
-OUTPUTMC | 2 | 5 | 5 | 0 | 2
-INPUTS | 6 | nAS  | AUTO_CONFIG_D0  | AUTO_CONFIG/AUTO_CONFIG_D2  | nDS_D0  | nDS_D1  | RW
-INPUTMC | 4 | 5 | 5 | 6 | 15 | 1 | 12 | 2 | 0
-INPUTP | 2 | 2 | 17
-EQ | 7 | 
-   AUTO_CONFIG_D0.D = !nAS & RW & AUTO_CONFIG/AUTO_CONFIG_D2
-	# !nAS & AUTO_CONFIG_D0 & 
-	AUTO_CONFIG/AUTO_CONFIG_D2
-	# !nAS & !nDS_D0 & nDS_D1 & 
-	AUTO_CONFIG/AUTO_CONFIG_D2;
-   AUTO_CONFIG_D0.CLK = clk;	// GCK
-   !AUTO_CONFIG_D0.AR = reset;	// GSR
-GLOBALS | 2 | 2 | clk | 4 | reset
-
-MACROCELL | 2 | 12 | BASEADR<0>
+MACROCELL | 4 | 5 | BASEADR<0>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 2 | 3 | 5 | 1 | 17
-INPUTS | 13 | D<1>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 47 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 2 | 3 | 5 | 5 | 14
+INPUTS | 12 | D<1>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 2 | 1 | 16 | 5 | 17
+INPUTP | 10 | 47 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    BASEADR<0>.D = D<1>.PIN;
    BASEADR<0>.CLK = clk;	// GCK
    !BASEADR<0>.AP = reset;	// GSR
-   BASEADR<0>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	!AUTO_CONFIG_DONE<0> & A<3> & !nDS_D0 & nDS_D1 & !A<1> & A<6> & 
+   BASEADR<0>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & A<3> & 
+	!A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
 	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 9 | BASEADR<1>
+MACROCELL | 4 | 4 | BASEADR<1>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 10
-INPUTS | 13 | D<2>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 37 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 7
+INPUTS | 12 | D<2>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 2 | 1 | 16 | 5 | 17
+INPUTP | 10 | 37 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    BASEADR<1>.D = D<2>.PIN;
    BASEADR<1>.CLK = clk;	// GCK
    !BASEADR<1>.AP = reset;	// GSR
-   BASEADR<1>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	!AUTO_CONFIG_DONE<0> & A<3> & !nDS_D0 & nDS_D1 & !A<1> & A<6> & 
+   BASEADR<1>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & A<3> & 
+	!A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
 	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 7 | BASEADR<2>
+MACROCELL | 4 | 3 | BASEADR<2>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 9
-INPUTS | 13 | D<3>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 30 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 6
+INPUTS | 12 | D<3>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 2 | 1 | 16 | 5 | 17
+INPUTP | 10 | 30 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    BASEADR<2>.D = D<3>.PIN;
    BASEADR<2>.CLK = clk;	// GCK
    !BASEADR<2>.AP = reset;	// GSR
-   BASEADR<2>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	!AUTO_CONFIG_DONE<0> & A<3> & !nDS_D0 & nDS_D1 & !A<1> & A<6> & 
+   BASEADR<2>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & A<3> & 
+	!A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
 	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 6 | BASEADR_4MB<0>
+MACROCELL | 4 | 2 | BASEADR_4MB<0>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 2 | 3 | 5 | 6 | 12
-INPUTS | 13 | D<1>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 47 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 2 | 3 | 5 | 5 | 13
+INPUTS | 12 | D<1>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 2 | 1 | 16 | 5 | 17
+INPUTP | 10 | 47 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    BASEADR_4MB<0>.D = !D<1>.PIN;
    BASEADR_4MB<0>.CLK = clk;	// GCK
    !BASEADR_4MB<0>.AP = reset;	// GSR
-   BASEADR_4MB<0>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	!AUTO_CONFIG_DONE<0> & A<3> & !nDS_D0 & nDS_D1 & !A<1> & A<6> & 
+   BASEADR_4MB<0>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & A<3> & 
+	!A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
 	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
 MACROCELL | 2 | 17 | BASEADR_4MB<1>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 8
-INPUTS | 14 | D<1>.PIN  | D<2>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 10 | 47 | 37 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 5
+INPUTS | 13 | D<1>.PIN  | D<2>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 2 | 1 | 16 | 5 | 17
+INPUTP | 11 | 47 | 37 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 7 | 
    BASEADR_4MB<1>.D = D<1>.PIN
 	$ D<2>.PIN;
    BASEADR_4MB<1>.CLK = clk;	// GCK
    !BASEADR_4MB<1>.AP = reset;	// GSR
-   BASEADR_4MB<1>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	!AUTO_CONFIG_DONE<0> & A<3> & !nDS_D0 & nDS_D1 & !A<1> & A<6> & 
+   BASEADR_4MB<1>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & A<3> & 
+	!A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
 	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
 MACROCELL | 2 | 15 | BASEADR_4MB<2>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 7
-INPUTS | 15 | D<3>.PIN  | D<1>.PIN  | D<2>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 11 | 30 | 47 | 37 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 4
+INPUTS | 14 | D<3>.PIN  | D<1>.PIN  | D<2>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 2 | 1 | 16 | 5 | 17
+INPUTP | 12 | 30 | 47 | 37 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 7 | 
    BASEADR_4MB<2>.D = D<3>.PIN
 	$ D<1>.PIN & D<2>.PIN;
    BASEADR_4MB<2>.CLK = clk;	// GCK
    !BASEADR_4MB<2>.AP = reset;	// GSR
-   BASEADR_4MB<2>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	!AUTO_CONFIG_DONE<0> & A<3> & !nDS_D0 & nDS_D1 & !A<1> & A<6> & 
+   BASEADR_4MB<2>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & A<3> & 
+	!A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
 	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 5 | 10 | DSACK_16BIT
-ATTRIBUTES | 8553348 | 0
-OUTPUTMC | 3 | 5 | 10 | 0 | 2 | 5 | 11
-INPUTS | 9 | DSACK_16BIT  | IDE_SPACE/IDE_SPACE_D2  | IDE_ENABLE  | IDE_WAIT  | RW  | IDE_DSACK_D3  | IDE_DSACK_D0  | nAS  | EXP14_.EXP
-INPUTMC | 6 | 5 | 10 | 1 | 14 | 1 | 16 | 5 | 1 | 6 | 14 | 5 | 11
-INPUTP | 3 | 62 | 17 | 2
-IMPORTS | 1 | 5 | 11
-EQ | 12 | 
-   DSACK_16BIT.D = DSACK_16BIT & !IDE_SPACE/IDE_SPACE_D2
-	# RW & IDE_DSACK_D3 & !IDE_ENABLE & 
-	IDE_SPACE/IDE_SPACE_D2
-	# !RW & IDE_DSACK_D0 & IDE_WAIT & 
-	IDE_SPACE/IDE_SPACE_D2
-	# IDE_ENABLE & IDE_DSACK_D0 & IDE_WAIT & 
-	IDE_SPACE/IDE_SPACE_D2
-;Imported pterms FB6_12
-	# !RW & DSACK_16BIT & !IDE_WAIT
-	# DSACK_16BIT & IDE_ENABLE & !IDE_WAIT;
-   DSACK_16BIT.CLK = clk;	// GCK
-   DSACK_16BIT.AP = nAS;
-GLOBALS | 1 | 2 | clk
-
-MACROCELL | 5 | 8 | Dout1<0>
+MACROCELL | 4 | 12 | Dout1<0>
 ATTRIBUTES | 8557312 | 0
-OUTPUTMC | 3 | 5 | 8 | 2 | 8 | 5 | 9
-INPUTS | 9 | Dout1<0>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<6>  | A<1>  | Dout1<1>.EXP
-INPUTMC | 3 | 5 | 8 | 2 | 2 | 5 | 7
-INPUTP | 6 | 88 | 90 | 79 | 92 | 97 | 82
-EXPORTS | 1 | 5 | 9
-IMPORTS | 1 | 5 | 7
-EQ | 14 | 
+OUTPUTMC | 3 | 4 | 12 | 2 | 8 | 4 | 13
+INPUTS | 9 | Dout1<0>  | Dout1_not0001/Dout1_not0001_D2  | A<3>  | A<5>  | A<4>  | A<2>  | A<6>  | A<1>  | INT2_OBUF$BUF0.EXP
+INPUTMC | 3 | 4 | 12 | 5 | 15 | 4 | 11
+INPUTP | 6 | 92 | 88 | 90 | 79 | 97 | 82
+EXPORTS | 1 | 4 | 13
+IMPORTS | 1 | 4 | 11
+EQ | 16 | 
    !Dout1<0>.D = !Dout1<0> & !Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & !A<1> & 
+	# !A<3> & !A<1> & !A<5> & !A<4> & !A<2> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# A<5> & !A<4> & A<2> & !A<3> & A<1> & !A<6> & 
+;Imported pterms FB5_12
+	# !A<3> & A<1> & A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-;Imported pterms FB6_8
-	# !A<5> & A<4> & A<2> & !A<3> & !A<1> & !A<6> & 
+	# !A<3> & !A<1> & !A<5> & A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout1<0>.CLK = clk;	// GCK
    !Dout1<0>.AP = reset;	// GSR
-    Dout1<0>.EXP  =  !A<5> & A<4> & A<2> & A<3> & !A<1> & !A<6> & 
+    Dout1<0>.EXP  =  !A<3> & A<1> & !A<5> & !A<4> & !A<2> & 
+	Dout1_not0001/Dout1_not0001_D2
+	# A<3> & !A<1> & !A<5> & A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 5 | 7 | Dout1<1>
+MACROCELL | 4 | 9 | Dout1<1>
 ATTRIBUTES | 8557312 | 0
-OUTPUTMC | 3 | 5 | 7 | 2 | 10 | 5 | 8
-INPUTS | 8 | Dout1<1>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<6>  | A<1>
-INPUTMC | 2 | 5 | 7 | 2 | 2
-INPUTP | 6 | 88 | 90 | 79 | 92 | 97 | 82
-EXPORTS | 1 | 5 | 8
-EQ | 11 | 
+OUTPUTMC | 2 | 4 | 9 | 2 | 10
+INPUTS | 8 | Dout1<1>  | Dout1_not0001/Dout1_not0001_D2  | A<3>  | A<5>  | A<4>  | A<2>  | A<6>  | A<1>
+INPUTMC | 2 | 4 | 9 | 5 | 15
+INPUTP | 6 | 92 | 88 | 90 | 79 | 97 | 82
+EQ | 9 | 
    !Dout1<1>.D = !Dout1<1> & !Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & !A<2> & !A<3> & A<1> & !A<6> & 
+	# !A<3> & A<1> & !A<5> & A<4> & !A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & A<2> & !A<3> & A<1> & !A<6> & 
+	# !A<3> & A<1> & !A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout1<1>.CLK = clk;	// GCK
    !Dout1<1>.AP = reset;	// GSR
-    Dout1<1>.EXP  =  !A<5> & A<4> & A<2> & !A<3> & !A<1> & !A<6> & 
-	Dout1_not0001/Dout1_not0001_D2
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 5 | 4 | Dout1<2>
+MACROCELL | 6 | 16 | Dout1<2>
 ATTRIBUTES | 8557312 | 0
-OUTPUTMC | 2 | 5 | 4 | 2 | 5
-INPUTS | 8 | Dout1<2>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<6>  | A<1>
-INPUTMC | 2 | 5 | 4 | 2 | 2
-INPUTP | 6 | 88 | 90 | 79 | 92 | 97 | 82
+OUTPUTMC | 2 | 6 | 16 | 2 | 5
+INPUTS | 8 | Dout1<2>  | Dout1_not0001/Dout1_not0001_D2  | A<3>  | A<5>  | A<4>  | A<2>  | A<6>  | A<1>
+INPUTMC | 2 | 6 | 16 | 5 | 15
+INPUTP | 6 | 92 | 88 | 90 | 79 | 97 | 82
 EQ | 7 | 
    !Dout1<2>.D = !Dout1<2> & !Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & A<2> & !A<3> & A<1> & !A<6> & 
+	# !A<3> & A<1> & !A<5> & A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout1<2>.CLK = clk;	// GCK
    !Dout1<2>.AP = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 5 | 6 | Dout1<3>
+MACROCELL | 6 | 17 | Dout1<3>
 ATTRIBUTES | 8557312 | 0
-OUTPUTMC | 2 | 5 | 6 | 0 | 14
-INPUTS | 8 | Dout1<3>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<6>  | A<1>
-INPUTMC | 2 | 5 | 6 | 2 | 2
-INPUTP | 6 | 88 | 90 | 79 | 92 | 97 | 82
+OUTPUTMC | 2 | 6 | 17 | 0 | 14
+INPUTS | 8 | Dout1<3>  | Dout1_not0001/Dout1_not0001_D2  | A<3>  | A<5>  | A<4>  | A<2>  | A<6>  | A<1>
+INPUTMC | 2 | 6 | 17 | 5 | 15
+INPUTP | 6 | 92 | 88 | 90 | 79 | 97 | 82
 EQ | 9 | 
    !Dout1<3>.D = !Dout1<3> & !Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & !A<3> & A<1> & !A<6> & 
+	# !A<3> & A<1> & !A<5> & A<4> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<1> & 
+	# !A<3> & A<1> & !A<5> & !A<4> & !A<2> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout1<3>.CLK = clk;	// GCK
    !Dout1<3>.AP = reset;	// GSR
@@ -272,22 +230,22 @@ GLOBALS | 2 | 2 | clk | 1 | reset
 MACROCELL | 4 | 14 | Dout2<0>
 ATTRIBUTES | 8557312 | 0
 OUTPUTMC | 2 | 4 | 14 | 2 | 8
-INPUTS | 9 | Dout2<0>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<1>  | A<6>  | A<3>  | AUTO_CONFIG_DONE_CYCLE<0>.EXP
-INPUTMC | 3 | 4 | 14 | 2 | 2 | 4 | 13
-INPUTP | 6 | 88 | 90 | 79 | 82 | 97 | 92
+INPUTS | 9 | Dout2<0>  | Dout1_not0001/Dout1_not0001_D2  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | A<3>  | Dout2<2>.EXP
+INPUTMC | 3 | 4 | 14 | 5 | 15 | 4 | 13
+INPUTP | 6 | 82 | 88 | 90 | 79 | 97 | 92
 IMPORTS | 1 | 4 | 13
 EQ | 14 | 
    !Dout2<0>.D = !Dout2<0> & !Dout1_not0001/Dout1_not0001_D2
-	# A<5> & !A<4> & A<2> & !A<3> & !A<6> & 
+	# A<3> & A<1> & !A<5> & A<4> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# A<5> & !A<4> & A<2> & A<1> & !A<6> & 
+	# A<3> & !A<5> & A<4> & !A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & !A<2> & A<3> & !A<6> & 
+	# !A<3> & A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & A<3> & A<1> & !A<6> & 
+	# A<1> & A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
 ;Imported pterms FB5_14
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout2<0>.CLK = clk;	// GCK
    !Dout2<0>.AP = reset;	// GSR
@@ -296,244 +254,208 @@ GLOBALS | 2 | 2 | clk | 1 | reset
 MACROCELL | 4 | 17 | Dout2<1>
 ATTRIBUTES | 8557312 | 0
 OUTPUTMC | 2 | 4 | 17 | 2 | 10
-INPUTS | 9 | Dout2<1>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<1>  | A<6>  | SHUT_UP<1>.EXP
-INPUTMC | 3 | 4 | 17 | 2 | 2 | 4 | 0
-INPUTP | 6 | 88 | 90 | 79 | 92 | 82 | 97
+INPUTS | 9 | Dout2<1>  | Dout1_not0001/Dout1_not0001_D2  | A<3>  | A<5>  | A<4>  | A<2>  | A<1>  | A<6>  | SHUT_UP<1>.EXP
+INPUTMC | 3 | 4 | 17 | 5 | 15 | 4 | 0
+INPUTP | 6 | 92 | 88 | 90 | 79 | 82 | 97
 IMPORTS | 1 | 4 | 0
 EQ | 16 | 
    !Dout2<1>.D = !Dout2<1> & !Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & A<2> & A<3> & !A<6> & 
+	# A<3> & !A<1> & !A<5> & A<4> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & A<2> & !A<1> & !A<6> & 
+	# A<3> & !A<5> & A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & A<3> & !A<1> & !A<6> & 
+	# !A<1> & !A<5> & A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
 ;Imported pterms FB5_1
-	# !A<5> & !A<4> & !A<3> & A<1> & !A<6> & 
+	# !A<3> & A<1> & !A<5> & !A<4> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# A<5> & !A<4> & A<2> & !A<3> & !A<1> & !A<6> & 
+	# !A<3> & !A<1> & A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout2<1>.CLK = clk;	// GCK
    !Dout2<1>.AP = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 5 | 9 | Dout2<2>
+MACROCELL | 4 | 13 | Dout2<2>
 ATTRIBUTES | 8557312 | 0
-OUTPUTMC | 2 | 5 | 9 | 2 | 5
-INPUTS | 9 | Dout2<2>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<6>  | A<1>  | Dout1<0>.EXP
-INPUTMC | 3 | 5 | 9 | 2 | 2 | 5 | 8
-INPUTP | 6 | 88 | 90 | 79 | 92 | 97 | 82
-IMPORTS | 1 | 5 | 8
-EQ | 14 | 
+OUTPUTMC | 3 | 4 | 13 | 2 | 5 | 4 | 14
+INPUTS | 9 | Dout2<2>  | Dout1_not0001/Dout1_not0001_D2  | A<3>  | A<5>  | A<4>  | A<2>  | A<6>  | A<1>  | Dout1<0>.EXP
+INPUTMC | 3 | 4 | 13 | 5 | 15 | 4 | 12
+INPUTP | 6 | 92 | 88 | 90 | 79 | 97 | 82
+EXPORTS | 1 | 4 | 14
+IMPORTS | 1 | 4 | 12
+EQ | 16 | 
    !Dout2<2>.D = !Dout2<2> & !Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<1> & 
+	# !A<3> & A<1> & !A<5> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
+	# !A<3> & A<1> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<2> & !A<3> & A<1> & !A<6> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<4> & A<2> & !A<3> & A<1> & !A<6> & 
+;Imported pterms FB5_13
+	# !A<3> & A<1> & !A<5> & !A<4> & !A<2> & 
 	Dout1_not0001/Dout1_not0001_D2
-;Imported pterms FB6_9
-	# !A<5> & A<4> & A<2> & A<3> & !A<1> & !A<6> & 
+	# A<3> & !A<1> & !A<5> & A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout2<2>.CLK = clk;	// GCK
    !Dout2<2>.AP = reset;	// GSR
+    Dout2<2>.EXP  =  !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
+	Dout1_not0001/Dout1_not0001_D2
 GLOBALS | 2 | 2 | clk | 1 | reset
 
 MACROCELL | 4 | 15 | Dout2<3>
 ATTRIBUTES | 8557312 | 0
 OUTPUTMC | 2 | 4 | 15 | 0 | 14
-INPUTS | 9 | Dout2<3>  | Dout1_not0001/Dout1_not0001_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<6>  | A<1>  | CIIN_mux0000.EXP
-INPUTMC | 3 | 4 | 15 | 2 | 2 | 4 | 16
-INPUTP | 6 | 88 | 90 | 79 | 92 | 97 | 82
+INPUTS | 9 | Dout2<3>  | Dout1_not0001/Dout1_not0001_D2  | A<3>  | A<5>  | A<4>  | A<2>  | A<6>  | A<1>  | CIIN_mux0000.EXP
+INPUTMC | 3 | 4 | 15 | 5 | 15 | 4 | 16
+INPUTP | 6 | 92 | 88 | 90 | 79 | 97 | 82
 IMPORTS | 1 | 4 | 16
 EQ | 16 | 
    !Dout2<3>.D = !Dout2<3> & !Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & A<2> & A<1> & !A<6> & 
+	# !A<3> & A<1> & !A<5> & A<4> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & !A<3> & A<1> & !A<6> & 
+	# !A<3> & A<1> & !A<5> & !A<4> & !A<2> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<1> & 
+	# !A<3> & !A<5> & !A<4> & !A<2> & A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & !A<4> & !A<2> & !A<3> & A<6> & 
+	# A<1> & !A<5> & A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
 ;Imported pterms FB5_17
-	# A<5> & !A<4> & A<2> & !A<3> & !A<1> & !A<6> & 
+	# A<3> & !A<1> & !A<5> & A<4> & !A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & !A<2> & A<3> & !A<1> & !A<6> & 
+	# !A<3> & !A<1> & A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2;
    Dout2<3>.CLK = clk;	// GCK
    !Dout2<3>.AP = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 9 | IDE_BASEADR<0>
+MACROCELL | 2 | 9 | IDE_BASEADR<0>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 6 | 13
-INPUTS | 14 | D<0>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 44 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 15
+INPUTS | 13 | D<0>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 44 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<0>.D = D<0>.PIN;
    IDE_BASEADR<0>.CLK = clk;	// GCK
    !IDE_BASEADR<0>.AP = reset;	// GSR
-   IDE_BASEADR<0>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<0>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 7 | IDE_BASEADR<1>
+MACROCELL | 2 | 7 | IDE_BASEADR<1>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 17
-INPUTS | 14 | D<1>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 47 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 14
+INPUTS | 13 | D<1>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 47 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<1>.D = D<1>.PIN;
    IDE_BASEADR<1>.CLK = clk;	// GCK
    !IDE_BASEADR<1>.AP = reset;	// GSR
-   IDE_BASEADR<1>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<1>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 6 | IDE_BASEADR<2>
+MACROCELL | 2 | 6 | IDE_BASEADR<2>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 16
-INPUTS | 14 | D<2>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 37 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 13
+INPUTS | 13 | D<2>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 37 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<2>.D = D<2>.PIN;
    IDE_BASEADR<2>.CLK = clk;	// GCK
    !IDE_BASEADR<2>.AP = reset;	// GSR
-   IDE_BASEADR<2>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<2>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 5 | IDE_BASEADR<3>
+MACROCELL | 2 | 4 | IDE_BASEADR<3>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 15
-INPUTS | 14 | D<3>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 30 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 12
+INPUTS | 13 | D<3>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 30 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<3>.D = D<3>.PIN;
    IDE_BASEADR<3>.CLK = clk;	// GCK
    !IDE_BASEADR<3>.AP = reset;	// GSR
-   IDE_BASEADR<3>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<3>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 4 | IDE_BASEADR<4>
+MACROCELL | 2 | 3 | IDE_BASEADR<4>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 14
-INPUTS | 14 | D<0>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 44 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 11
+INPUTS | 13 | D<0>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 44 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<4>.D = D<0>.PIN;
    IDE_BASEADR<4>.CLK = clk;	// GCK
    !IDE_BASEADR<4>.AP = reset;	// GSR
-   IDE_BASEADR<4>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	!A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<4>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & !A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 3 | IDE_BASEADR<5>
+MACROCELL | 2 | 2 | IDE_BASEADR<5>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 13
-INPUTS | 14 | D<1>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 47 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 10
+INPUTS | 13 | D<1>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 47 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<5>.D = D<1>.PIN;
    IDE_BASEADR<5>.CLK = clk;	// GCK
    !IDE_BASEADR<5>.AP = reset;	// GSR
-   IDE_BASEADR<5>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	!A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<5>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & !A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 2 | IDE_BASEADR<6>
+MACROCELL | 2 | 1 | IDE_BASEADR<6>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 12
-INPUTS | 14 | D<2>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 37 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 9
+INPUTS | 13 | D<2>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 37 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<6>.D = D<2>.PIN;
    IDE_BASEADR<6>.CLK = clk;	// GCK
    !IDE_BASEADR<6>.AP = reset;	// GSR
-   IDE_BASEADR<6>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	!A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<6>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & !A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 4 | 1 | IDE_BASEADR<7>
+MACROCELL | 2 | 0 | IDE_BASEADR<7>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 1 | 7 | 11
-INPUTS | 14 | D<3>.PIN  | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 5 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 9 | 30 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 1 | 6 | 8
+INPUTS | 13 | D<3>.PIN  | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 3 | 1 | 16 | 5 | 16 | 5 | 17
+INPUTP | 10 | 30 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    IDE_BASEADR<7>.D = D<3>.PIN;
    IDE_BASEADR<7>.CLK = clk;	// GCK
    !IDE_BASEADR<7>.AP = reset;	// GSR
-   IDE_BASEADR<7>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	!A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
+   IDE_BASEADR<7>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & !A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
-
-MACROCELL | 5 | 3 | IDE_DSACK_D1
-ATTRIBUTES | 8553348 | 0
-OUTPUTMC | 2 | 5 | 3 | 5 | 2
-INPUTS | 4 | IDE_DSACK_D0  | IDE_SPACE/IDE_SPACE_D2  | IDE_DSACK_D1  | nAS
-INPUTMC | 3 | 6 | 14 | 1 | 14 | 5 | 3
-INPUTP | 1 | 2
-EQ | 4 | 
-   IDE_DSACK_D1.D = IDE_DSACK_D1 & !IDE_SPACE/IDE_SPACE_D2
-	# IDE_DSACK_D0 & IDE_SPACE/IDE_SPACE_D2;
-   IDE_DSACK_D1.CLK = clk;	// GCK
-   IDE_DSACK_D1.AP = nAS;
-GLOBALS | 1 | 2 | clk
-
-MACROCELL | 5 | 2 | IDE_DSACK_D2
-ATTRIBUTES | 8553348 | 0
-OUTPUTMC | 2 | 5 | 2 | 5 | 1
-INPUTS | 4 | IDE_DSACK_D1  | IDE_SPACE/IDE_SPACE_D2  | IDE_DSACK_D2  | nAS
-INPUTMC | 3 | 5 | 3 | 1 | 14 | 5 | 2
-INPUTP | 1 | 2
-EQ | 4 | 
-   IDE_DSACK_D2.D = IDE_DSACK_D1 & IDE_SPACE/IDE_SPACE_D2
-	# IDE_DSACK_D2 & !IDE_SPACE/IDE_SPACE_D2;
-   IDE_DSACK_D2.CLK = clk;	// GCK
-   IDE_DSACK_D2.AP = nAS;
-GLOBALS | 1 | 2 | clk
-
-MACROCELL | 5 | 1 | IDE_DSACK_D3
-ATTRIBUTES | 8553348 | 0
-OUTPUTMC | 2 | 5 | 10 | 5 | 1
-INPUTS | 4 | IDE_DSACK_D2  | IDE_SPACE/IDE_SPACE_D2  | IDE_DSACK_D3  | nAS
-INPUTMC | 3 | 5 | 2 | 1 | 14 | 5 | 1
-INPUTP | 1 | 2
-EQ | 4 | 
-   IDE_DSACK_D3.D = IDE_DSACK_D2 & IDE_SPACE/IDE_SPACE_D2
-	# IDE_DSACK_D3 & !IDE_SPACE/IDE_SPACE_D2;
-   IDE_DSACK_D3.CLK = clk;	// GCK
-   IDE_DSACK_D3.AP = nAS;
-GLOBALS | 1 | 2 | clk
 
 MACROCELL | 4 | 16 | CIIN_mux0000
 ATTRIBUTES | 265986 | 0
 OUTPUTMC | 1 | 4 | 15
-INPUTS | 11 | SHUT_UP<0>  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2  | CIIN_and0000/CIIN_and0000_D2  | A<5>  | A<4>  | A<2>  | A<3>  | A<1>  | A<6>  | Dout1_not0001/Dout1_not0001_D2
-INPUTMC | 5 | 2 | 1 | 6 | 12 | 1 | 17 | 2 | 4 | 2 | 2
-INPUTP | 6 | 88 | 90 | 79 | 92 | 82 | 97
+INPUTS | 11 | SHUT_UP<0>  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2  | CIIN_and0000/CIIN_and0000_D2  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | Dout1_not0001/Dout1_not0001_D2
+INPUTMC | 5 | 4 | 1 | 5 | 13 | 5 | 14 | 2 | 12 | 5 | 15
+INPUTP | 6 | 92 | 82 | 88 | 90 | 79 | 97
 EXPORTS | 1 | 4 | 15
 EQ | 9 | 
    CIIN = !SHUT_UP<0> & 
@@ -541,27 +463,45 @@ EQ | 9 |
 	# !SHUT_UP<0> & 
 	Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2;
    CIIN.OE = !CIIN_and0000/CIIN_and0000_D2;
-    CIIN_mux0000.EXP  =  A<5> & !A<4> & A<2> & !A<3> & !A<1> & !A<6> & 
+    CIIN_mux0000.EXP  =  A<3> & !A<1> & !A<5> & A<4> & !A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# !A<5> & A<4> & !A<2> & A<3> & !A<1> & !A<6> & 
+	# !A<3> & !A<1> & A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
 
 MACROCELL | 3 | 14 | IDE_R_S
-ATTRIBUTES | 8815494 | 0
+ATTRIBUTES | 8815362 | 0
 OUTPUTMC | 2 | 3 | 14 | 1 | 5
-INPUTS | 3 | IDE_R  | IDE_R_S_not0001/IDE_R_S_not0001_D2  | nAS
-INPUTMC | 2 | 3 | 14 | 1 | 15
-INPUTP | 1 | 2
-EQ | 3 | 
-   IDE_R.D = IDE_R & !IDE_R_S_not0001/IDE_R_S_not0001_D2;
+INPUTS | 21 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | IDE_R  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  | RW  | IDE_ENABLE
+INPUTMC | 11 | 3 | 14 | 4 | 0 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8 | 1 | 8
+INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2 | 17
+EQ | 21 | 
+   !IDE_R.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !IDE_R & !SHUT_UP<1> & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & RW & IDE_ENABLE & !SHUT_UP<1> & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
    IDE_R.CLK = clk;	// GCK
-   IDE_R.AP = nAS;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 2 | 8 | D_0_IOBUFE
 ATTRIBUTES | 265986 | 0
 INPUTS | 5 | Dout2<0>  | D_and0000/D_and0000_D2  | Dout1<0>  | RW  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 4 | 14 | 6 | 11 | 5 | 8 | 6 | 15
+INPUTMC | 4 | 4 | 14 | 5 | 11 | 4 | 12 | 5 | 17
 INPUTP | 1 | 17
 EQ | 3 | 
    !D<0> = !Dout1<0> & D_and0000/D_and0000_D2
@@ -571,7 +511,7 @@ EQ | 3 |
 MACROCELL | 2 | 10 | D_1_IOBUFE
 ATTRIBUTES | 265986 | 0
 INPUTS | 5 | Dout2<1>  | D_and0000/D_and0000_D2  | Dout1<1>  | RW  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 4 | 17 | 6 | 11 | 5 | 7 | 6 | 15
+INPUTMC | 4 | 4 | 17 | 5 | 11 | 4 | 9 | 5 | 17
 INPUTP | 1 | 17
 EQ | 3 | 
    !D<1> = !Dout1<1> & D_and0000/D_and0000_D2
@@ -581,7 +521,7 @@ EQ | 3 |
 MACROCELL | 2 | 5 | D_2_IOBUFE
 ATTRIBUTES | 265986 | 0
 INPUTS | 5 | Dout2<2>  | D_and0000/D_and0000_D2  | Dout1<2>  | RW  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 5 | 9 | 6 | 11 | 5 | 4 | 6 | 15
+INPUTMC | 4 | 4 | 13 | 5 | 11 | 6 | 16 | 5 | 17
 INPUTP | 1 | 17
 EQ | 3 | 
    !D<2> = !Dout1<2> & D_and0000/D_and0000_D2
@@ -591,7 +531,7 @@ EQ | 3 |
 MACROCELL | 0 | 14 | D_3_IOBUFE
 ATTRIBUTES | 265986 | 0
 INPUTS | 5 | Dout2<3>  | D_and0000/D_and0000_D2  | Dout1<3>  | RW  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 4 | 15 | 6 | 11 | 5 | 6 | 6 | 15
+INPUTMC | 4 | 4 | 15 | 5 | 11 | 6 | 17 | 5 | 17
 INPUTP | 1 | 17
 EQ | 3 | 
    !D<3> = !Dout1<3> & D_and0000/D_and0000_D2
@@ -601,42 +541,20 @@ EQ | 3 |
 MACROCELL | 0 | 2 | DSACK_1_OBUFE
 ATTRIBUTES | 265986 | 0
 INPUTS | 3 | AUTO_CONFIG_D0  | DSACK_16BIT  | nRAM_SEL
-INPUTMC | 3 | 5 | 5 | 5 | 10 | 0 | 1
+INPUTMC | 3 | 5 | 12 | 1 | 17 | 0 | 1
 EQ | 2 | 
    DSACK<1> = !AUTO_CONFIG_D0 & DSACK_16BIT;
    DSACK<1>.OE = !nRAM_SEL;
 
-MACROCELL | 1 | 12 | nDS_D0
-ATTRIBUTES | 8557316 | 0
-OUTPUTMC | 20 | 4 | 13 | 4 | 12 | 5 | 5 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 0 | 2 | 1 | 4 | 0
-INPUTS | 1 | nDS
-INPUTP | 1 | 15
-EQ | 3 | 
-   nDS_D0.D = nDS;
-   nDS_D0.CLK = clk;	// GCK
-   !nDS_D0.AP = reset;	// GSR
-GLOBALS | 2 | 2 | clk | 1 | reset
-
-MACROCELL | 2 | 0 | nDS_D1
-ATTRIBUTES | 8557316 | 0
-OUTPUTMC | 19 | 4 | 13 | 4 | 12 | 5 | 5 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0
-INPUTS | 1 | nDS_D0
-INPUTMC | 1 | 1 | 12
-EQ | 3 | 
-   nDS_D1.D = nDS_D0;
-   nDS_D1.CLK = clk;	// GCK
-   !nDS_D1.AP = reset;	// GSR
-GLOBALS | 2 | 2 | clk | 1 | reset
-
-MACROCELL | 1 | 16 | IDE_ENABLE
+MACROCELL | 1 | 8 | IDE_ENABLE
 ATTRIBUTES | 4367104 | 0
-OUTPUTMC | 5 | 5 | 10 | 1 | 16 | 0 | 8 | 1 | 15 | 5 | 11
-INPUTS | 20 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | nAS  | RW  | A<31>  | IDE_ENABLE  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
-INPUTMC | 10 | 1 | 16 | 4 | 0 | 6 | 13 | 7 | 17 | 7 | 16 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 11
-INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 2 | 17 | 141
+OUTPUTMC | 5 | 3 | 14 | 1 | 8 | 1 | 17 | 0 | 8 | 1 | 5
+INPUTS | 20 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | RW  | IDE_ENABLE  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+INPUTMC | 10 | 1 | 8 | 4 | 0 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8
+INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2 | 17
 EQ | 12 | 
    IDE_ENABLE.T = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !nAS & !RW & !A<31> & !IDE_ENABLE & !SHUT_UP<1> & 
+	!A<24> & !A<31> & !nAS & !RW & !IDE_ENABLE & !SHUT_UP<1> & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
@@ -649,56 +567,121 @@ EQ | 12 |
    !IDE_ENABLE.AR = reset;	// GSR
 GLOBALS | 2 | 2 | clk | 4 | reset
 
-MACROCELL | 2 | 1 | SHUT_UP<0>
+MACROCELL | 4 | 1 | SHUT_UP<0>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 8 | 4 | 16 | 3 | 5 | 2 | 13 | 2 | 16 | 2 | 11 | 2 | 14 | 0 | 1 | 2 | 4
-INPUTS | 12 | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 4 | 6 | 17 | 1 | 12 | 2 | 0 | 6 | 15
-INPUTP | 8 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 8 | 4 | 16 | 3 | 5 | 2 | 13 | 2 | 16 | 2 | 11 | 2 | 14 | 0 | 1 | 2 | 12
+INPUTS | 11 | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 2 | 1 | 16 | 5 | 17
+INPUTP | 9 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EQ | 6 | 
    SHUT_UP<0>.D = Gnd;
    SHUT_UP<0>.CLK = clk;	// GCK
    !SHUT_UP<0>.AP = reset;	// GSR
-   SHUT_UP<0>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	!AUTO_CONFIG_DONE<0> & A<3> & !nDS_D0 & nDS_D1 & !A<1> & A<6> & 
+   SHUT_UP<0>.CE = !nDS & !nAS & !RW & !AUTO_CONFIG_DONE<0> & A<3> & 
+	!A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
 	AUTO_CONFIG/AUTO_CONFIG_D2;
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 6 | 14 | IDE_DSACK_D0
-ATTRIBUTES | 8553348 | 0
-OUTPUTMC | 3 | 5 | 10 | 5 | 3 | 6 | 14
-INPUTS | 3 | IDE_DSACK_D0  | IDE_SPACE/IDE_SPACE_D2  | nAS
-INPUTMC | 2 | 6 | 14 | 1 | 14
-INPUTP | 1 | 2
-EQ | 3 | 
-   IDE_DSACK_D0.D = IDE_DSACK_D0 & !IDE_SPACE/IDE_SPACE_D2;
-   IDE_DSACK_D0.CLK = clk;	// GCK
-   IDE_DSACK_D0.AP = nAS;
-GLOBALS | 1 | 2 | clk
-
 MACROCELL | 4 | 0 | SHUT_UP<1>
 ATTRIBUTES | 8557376 | 0
-OUTPUTMC | 6 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15 | 4 | 17
-INPUTS | 14 | nAS  | RW  | A<5>  | A<4>  | A<2>  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | nDS_D0  | nDS_D1  | A<1>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2  | Dout1_not0001/Dout1_not0001_D2
-INPUTMC | 6 | 6 | 17 | 6 | 16 | 1 | 12 | 2 | 0 | 6 | 15 | 2 | 2
-INPUTP | 8 | 2 | 17 | 88 | 90 | 79 | 92 | 82 | 97
+OUTPUTMC | 12 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7 | 4 | 17
+INPUTS | 13 | nDS  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | AUTO_CONFIG_DONE<1>  | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | AUTO_CONFIG/AUTO_CONFIG_D2  | Dout1_not0001/Dout1_not0001_D2
+INPUTMC | 4 | 1 | 16 | 5 | 16 | 5 | 17 | 5 | 15
+INPUTP | 9 | 15 | 2 | 17 | 92 | 82 | 88 | 90 | 79 | 97
 EXPORTS | 1 | 4 | 17
 EQ | 10 | 
    SHUT_UP<1>.D = Gnd;
    SHUT_UP<1>.CLK = clk;	// GCK
    !SHUT_UP<1>.AP = reset;	// GSR
-   SHUT_UP<1>.CE = !nAS & !RW & !A<5> & !A<4> & !A<2> & 
-	AUTO_CONFIG_DONE<0> & !AUTO_CONFIG_DONE<1> & A<3> & !nDS_D0 & nDS_D1 & 
-	!A<1> & A<6> & AUTO_CONFIG/AUTO_CONFIG_D2;
-    SHUT_UP<1>.EXP  =  !A<5> & !A<4> & !A<3> & A<1> & !A<6> & 
+   SHUT_UP<1>.CE = !nDS & !nAS & !RW & AUTO_CONFIG_DONE<0> & 
+	!AUTO_CONFIG_DONE<1> & A<3> & !A<1> & !A<5> & !A<4> & !A<2> & A<6> & 
+	AUTO_CONFIG/AUTO_CONFIG_D2;
+    SHUT_UP<1>.EXP  =  !A<3> & A<1> & !A<5> & !A<4> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
-	# A<5> & !A<4> & A<2> & !A<3> & !A<1> & !A<6> & 
+	# !A<3> & !A<1> & A<5> & !A<4> & A<2> & !A<6> & 
 	Dout1_not0001/Dout1_not0001_D2
 GLOBALS | 2 | 2 | clk | 1 | reset
 
-MACROCELL | 2 | 3 | nAS_D0
-ATTRIBUTES | 8553284 | 0
-OUTPUTMC | 1 | 5 | 0
+MACROCELL | 5 | 12 | AUTO_CONFIG_D0
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 2 | nAS  | AUTO_CONFIG/AUTO_CONFIG_D2
+INPUTMC | 1 | 5 | 17
+INPUTP | 1 | 2
+EQ | 3 | 
+   AUTO_CONFIG_D0.D = !nAS & AUTO_CONFIG/AUTO_CONFIG_D2;
+   AUTO_CONFIG_D0.CLK = clk;	// GCK
+   !AUTO_CONFIG_D0.AR = reset;	// GSR
+GLOBALS | 2 | 2 | clk | 4 | reset
+
+MACROCELL | 1 | 17 | DSACK_16BIT
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 0 | 2 | 1 | 17
+INPUTS | 24 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | IDE_ENABLE  | SHUT_UP<1>  | IDE_WAIT  | IDE_DSACK_D0  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  | RW  | DSACK_16BIT  | IDE_DSACK_D3
+INPUTMC | 13 | 1 | 8 | 4 | 0 | 1 | 14 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8 | 1 | 17 | 1 | 9
+INPUTP | 11 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2 | 62 | 17
+EQ | 56 | 
+   !DSACK_16BIT.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & RW & !IDE_ENABLE & !SHUT_UP<1> & 
+	!IDE_DSACK_D3 & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !RW & !SHUT_UP<1> & !DSACK_16BIT & 
+	!IDE_WAIT & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !RW & !SHUT_UP<1> & IDE_WAIT & 
+	!IDE_DSACK_D0 & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & IDE_ENABLE & !SHUT_UP<1> & 
+	!DSACK_16BIT & !IDE_WAIT & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & IDE_ENABLE & !SHUT_UP<1> & 
+	IDE_WAIT & !IDE_DSACK_D0 & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
+   DSACK_16BIT.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 15 | nAS_D0
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 2 | 1 | 16 | 5 | 16
 INPUTS | 2 | nAS  | reset
 INPUTP | 2 | 2 | 160
 EQ | 3 | 
@@ -707,15 +690,51 @@ EQ | 3 |
    nAS_D0.CE = reset;
 GLOBALS | 1 | 2 | clk
 
+MACROCELL | 3 | 5 | DSACK_32BIT
+ATTRIBUTES | 8684418 | 0
+INPUTS | 17 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | BASEADR<0>  | A<21>  | SHUT_UP<0>  | Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D  | BASEADR_4MB<0>  | Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D  | nAS
+INPUTMC | 7 | 4 | 5 | 4 | 1 | 6 | 7 | 6 | 6 | 4 | 2 | 6 | 5 | 6 | 4
+INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 127 | 2
+EQ | 18 | 
+   !STERM.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & BASEADR<0> & A<21> & !SHUT_UP<0> & 
+	!Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !BASEADR<0> & !A<21> & !SHUT_UP<0> & 
+	!Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & BASEADR_4MB<0> & A<21> & !SHUT_UP<0> & 
+	!Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !BASEADR_4MB<0> & !A<21> & !SHUT_UP<0> & 
+	!Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D;
+   STERM.CLK = clk;	// GCK
+   STERM.AP = nAS;
+GLOBALS | 1 | 2 | clk
+
 MACROCELL | 3 | 16 | IDE_W_S
-ATTRIBUTES | 4621190 | 0
+ATTRIBUTES | 8815362 | 0
 OUTPUTMC | 1 | 3 | 16
-INPUTS | 20 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | RW  | A<31>  | SHUT_UP<1>  | IDE_W  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  | nAS
-INPUTMC | 10 | 4 | 0 | 3 | 16 | 6 | 13 | 7 | 17 | 7 | 16 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 11
-INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 17 | 141 | 2
-EQ | 12 | 
-   IDE_W.T = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !RW & !A<31> & !SHUT_UP<1> & IDE_W & 
+INPUTS | 20 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | RW  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  | IDE_W
+INPUTMC | 10 | 4 | 0 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8 | 3 | 16
+INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2 | 17
+EQ | 21 | 
+   !IDE_W.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !RW & !SHUT_UP<1> & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !SHUT_UP<1> & !IDE_W & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
@@ -725,18 +744,27 @@ EQ | 12 |
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
    IDE_W.CLK = clk;	// GCK
-   IDE_W.AP = nAS;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 8 | ROM_OE_S
-ATTRIBUTES | 4621190 | 0
+ATTRIBUTES | 8815362 | 0
 OUTPUTMC | 1 | 0 | 8
-INPUTS | 21 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | RW  | A<31>  | IDE_ENABLE  | SHUT_UP<1>  | ROM_OE  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  | nAS
-INPUTMC | 11 | 1 | 16 | 4 | 0 | 0 | 8 | 6 | 13 | 7 | 17 | 7 | 16 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 11
-INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 17 | 141 | 2
-EQ | 12 | 
-   ROM_OE.T = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & RW & !A<31> & !IDE_ENABLE & !SHUT_UP<1> & ROM_OE & 
+INPUTS | 21 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | SHUT_UP<1>  | ROM_OE  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  | RW  | IDE_ENABLE
+INPUTMC | 11 | 4 | 0 | 0 | 8 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8 | 1 | 8
+INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2 | 17
+EQ | 21 | 
+   !ROM_OE.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !SHUT_UP<1> & !ROM_OE & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & RW & !IDE_ENABLE & !SHUT_UP<1> & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
@@ -746,33 +774,86 @@ EQ | 12 |
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
    ROM_OE.CLK = clk;	// GCK
-   ROM_OE.AP = nAS;
 GLOBALS | 1 | 2 | clk
 
-MACROCELL | 3 | 5 | DSACK_32BIT
-ATTRIBUTES | 8684422 | 0
-INPUTS | 17 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | BASEADR<0>  | A<21>  | A<31>  | SHUT_UP<0>  | Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D  | BASEADR_4MB<0>  | Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D  | nAS
-INPUTMC | 7 | 2 | 12 | 2 | 1 | 7 | 10 | 7 | 9 | 2 | 6 | 7 | 8 | 7 | 7
-INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 127 | 141 | 2
-EQ | 18 | 
-   !STERM.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & BASEADR<0> & A<21> & !A<31> & !SHUT_UP<0> & 
-	!Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D & 
-	!Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
-	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !BASEADR<0> & !A<21> & !A<31> & !SHUT_UP<0> & 
-	!Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D & 
-	!Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
-	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & BASEADR_4MB<0> & A<21> & !A<31> & !SHUT_UP<0> & 
-	!Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D & 
-	!Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
-	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !BASEADR_4MB<0> & !A<21> & !A<31> & !SHUT_UP<0> & 
-	!Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D & 
-	!Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D;
-   STERM.CLK = clk;	// GCK
-   STERM.AP = nAS;
+MACROCELL | 1 | 14 | IDE_DSACK_D0
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 2 | 1 | 17 | 1 | 12
+INPUTS | 18 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+INPUTMC | 9 | 4 | 0 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8
+INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2
+EQ | 11 | 
+   !IDE_DSACK_D0.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !SHUT_UP<1> & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
+   IDE_DSACK_D0.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 12 | IDE_DSACK_D1
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 1 | 1 | 10
+INPUTS | 19 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | SHUT_UP<1>  | IDE_DSACK_D0  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+INPUTMC | 10 | 4 | 0 | 1 | 14 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8
+INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2
+EQ | 11 | 
+   !IDE_DSACK_D1.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !SHUT_UP<1> & !IDE_DSACK_D0 & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
+   IDE_DSACK_D1.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 10 | IDE_DSACK_D2
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 19 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | SHUT_UP<1>  | IDE_DSACK_D1  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+INPUTMC | 10 | 4 | 0 | 1 | 12 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8
+INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2
+EQ | 11 | 
+   !IDE_DSACK_D2.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !SHUT_UP<1> & !IDE_DSACK_D1 & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
+   IDE_DSACK_D2.CLK = clk;	// GCK
+GLOBALS | 1 | 2 | clk
+
+MACROCELL | 1 | 9 | IDE_DSACK_D3
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 1 | 1 | 17
+INPUTS | 19 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | SHUT_UP<1>  | IDE_DSACK_D2  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+INPUTMC | 10 | 4 | 0 | 1 | 10 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8
+INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2
+EQ | 11 | 
+   !IDE_DSACK_D3.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !SHUT_UP<1> & !IDE_DSACK_D2 & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
+   IDE_DSACK_D3.CLK = clk;	// GCK
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 0 | 5 | BYTE_0_OBUF
@@ -854,14 +935,32 @@ EQ | 1 |
    IDE_CS<1> = !A<13>;
 
 MACROCELL | 1 | 5 | IDE_R_S$BUF0
-ATTRIBUTES | 8684422 | 0
-INPUTS | 3 | IDE_R  | IDE_R_S_not0001/IDE_R_S_not0001_D2  | nAS
-INPUTMC | 2 | 3 | 14 | 1 | 15
-INPUTP | 1 | 2
-EQ | 3 | 
-   IDE_DIR.D = IDE_R & !IDE_R_S_not0001/IDE_R_S_not0001_D2;
+ATTRIBUTES | 8684290 | 0
+INPUTS | 21 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | nAS  | IDE_R  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  | RW  | IDE_ENABLE
+INPUTMC | 11 | 3 | 14 | 4 | 0 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8 | 1 | 8
+INPUTP | 10 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 2 | 17
+EQ | 21 | 
+   !IDE_DIR.D = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & !IDE_R & !SHUT_UP<1> & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<31> & !nAS & RW & IDE_ENABLE & !SHUT_UP<1> & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
+	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
    IDE_DIR.CLK = clk;	// GCK
-   IDE_DIR.AP = nAS;
 GLOBALS | 1 | 2 | clk
 
 MACROCELL | 4 | 8 | IO4_OBUF$BUF0
@@ -880,26 +979,26 @@ EQ | 1 |
 
 MACROCELL | 2 | 13 | OE_0_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 4 | RW  | SHUT_UP<0>  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2  | OE_0_or0000/OE_0_or0000_D2
-INPUTMC | 3 | 2 | 1 | 1 | 17 | 5 | 0
-INPUTP | 1 | 17
+INPUTS | 4 | nAS  | RW  | SHUT_UP<0>  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2
+INPUTMC | 2 | 4 | 1 | 5 | 14
+INPUTP | 2 | 2 | 17
 EQ | 2 | 
-   !OE<0> = RW & !SHUT_UP<0> & 
-	Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 & !OE_0_or0000/OE_0_or0000_D2;
+   !OE<0> = !nAS & RW & !SHUT_UP<0> & 
+	Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2;
 
 MACROCELL | 2 | 16 | OE_1_OBUF
 ATTRIBUTES | 264962 | 0
-INPUTS | 4 | RW  | SHUT_UP<0>  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2  | OE_0_or0000/OE_0_or0000_D2
-INPUTMC | 3 | 2 | 1 | 6 | 12 | 5 | 0
-INPUTP | 1 | 17
+INPUTS | 4 | nAS  | RW  | SHUT_UP<0>  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
+INPUTMC | 2 | 4 | 1 | 5 | 13
+INPUTP | 2 | 2 | 17
 EQ | 2 | 
-   !OE<1> = RW & !SHUT_UP<0> & 
-	Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 & !OE_0_or0000/OE_0_or0000_D2;
+   !OE<1> = !nAS & RW & !SHUT_UP<0> & 
+	Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2;
 
 MACROCELL | 2 | 11 | WE_0_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 4 | nAS  | RW  | SHUT_UP<0>  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2
-INPUTMC | 2 | 2 | 1 | 1 | 17
+INPUTMC | 2 | 4 | 1 | 5 | 14
 INPUTP | 2 | 2 | 17
 EQ | 2 | 
    !WE<0> = !nAS & !RW & !SHUT_UP<0> & 
@@ -908,7 +1007,7 @@ EQ | 2 |
 MACROCELL | 2 | 14 | WE_1_OBUF
 ATTRIBUTES | 264962 | 0
 INPUTS | 4 | nAS  | RW  | SHUT_UP<0>  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
-INPUTMC | 2 | 2 | 1 | 6 | 12
+INPUTMC | 2 | 4 | 1 | 5 | 13
 INPUTP | 2 | 2 | 17
 EQ | 2 | 
    !WE<1> = !nAS & !RW & !SHUT_UP<0> & 
@@ -918,7 +1017,7 @@ MACROCELL | 0 | 1 | nRAM_SEL_OBUF
 ATTRIBUTES | 396034 | 0
 OUTPUTMC | 2 | 0 | 2 | 0 | 4
 INPUTS | 5 | SHUT_UP<0>  | AUTO_CONFIG/AUTO_CONFIG_D2  | IDE_SPACE/IDE_SPACE_D2  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
-INPUTMC | 5 | 2 | 1 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12
+INPUTMC | 5 | 4 | 1 | 5 | 17 | 1 | 7 | 5 | 14 | 5 | 13
 EQ | 6 | 
    nRAM_SEL = SHUT_UP<0> & !AUTO_CONFIG/AUTO_CONFIG_D2 & 
 	!IDE_SPACE/IDE_SPACE_D2
@@ -935,9 +1034,17 @@ EQ | 1 |
 
 MACROCELL | 4 | 11 | INT2_OBUF$BUF0
 ATTRIBUTES | 264962 | 0
-INPUTS | 0
-EQ | 1 | 
+OUTPUTMC | 1 | 4 | 12
+INPUTS | 7 | A<3>  | A<1>  | A<5>  | A<4>  | A<2>  | A<6>  | Dout1_not0001/Dout1_not0001_D2
+INPUTMC | 1 | 5 | 15
+INPUTP | 6 | 92 | 82 | 88 | 90 | 79 | 97
+EXPORTS | 1 | 4 | 12
+EQ | 5 | 
    INT2 = Vcc;
+    INT2_OBUF$BUF0.EXP  =  !A<3> & A<1> & A<5> & !A<4> & A<2> & !A<6> & 
+	Dout1_not0001/Dout1_not0001_D2
+	# !A<3> & !A<1> & !A<5> & A<4> & A<2> & !A<6> & 
+	Dout1_not0001/Dout1_not0001_D2
 
 MACROCELL | 1 | 13 | ROM_EN_OBUF
 ATTRIBUTES | 264962 | 0
@@ -945,25 +1052,52 @@ INPUTS | 0
 EQ | 1 | 
    ROM_EN = Gnd;
 
-MACROCELL | 6 | 15 | AUTO_CONFIG/AUTO_CONFIG_D2
+MACROCELL | 5 | 17 | AUTO_CONFIG/AUTO_CONFIG_D2
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 26 | 4 | 13 | 4 | 12 | 5 | 5 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 8 | 2 | 10 | 2 | 5 | 0 | 14 | 2 | 1 | 4 | 0 | 0 | 1 | 2 | 2 | 2 | 4
-INPUTS | 18 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<20>  | AUTO_CONFIG_DONE<0>  | A<23>  | A<22>  | A<21>  | A<19>  | A<18>  | A<17>  | A<16>  | A<31>  | AUTO_CONFIG_DONE<1>
-INPUTMC | 2 | 6 | 17 | 6 | 16
-INPUTP | 16 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 116 | 123 | 125 | 127 | 96 | 118 | 114 | 109 | 141
+OUTPUTMC | 25 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 2 | 8 | 2 | 10 | 2 | 5 | 0 | 14 | 4 | 1 | 4 | 0 | 5 | 12 | 0 | 1 | 2 | 12
+INPUTS | 18 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<20>  | A<31>  | AUTO_CONFIG_DONE<0>  | A<23>  | A<22>  | A<21>  | A<19>  | A<17>  | A<18>  | A<16>  | AUTO_CONFIG_DONE<1>
+INPUTMC | 2 | 1 | 16 | 5 | 16
+INPUTP | 16 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 116 | 141 | 123 | 125 | 127 | 96 | 114 | 118 | 109
 EQ | 6 | 
    AUTO_CONFIG/AUTO_CONFIG_D2 = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !A<20> & !AUTO_CONFIG_DONE<0> & A<23> & A<22> & 
-	A<21> & A<19> & !A<18> & !A<17> & !A<16> & !A<31>
+	!A<24> & !A<20> & !A<31> & !AUTO_CONFIG_DONE<0> & A<23> & 
+	A<22> & A<21> & A<19> & !A<17> & !A<18> & !A<16>
 	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !A<20> & !AUTO_CONFIG_DONE<1> & A<23> & A<22> & 
-	A<21> & A<19> & !A<18> & !A<17> & !A<16> & !A<31>;
+	!A<24> & !A<20> & !A<31> & !AUTO_CONFIG_DONE<1> & A<23> & 
+	A<22> & A<21> & A<19> & !A<17> & !A<18> & !A<16>;
 
-MACROCELL | 1 | 14 | IDE_SPACE/IDE_SPACE_D2
+MACROCELL | 5 | 15 | Dout1_not0001/Dout1_not0001_D2
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 7 | 5 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 6 | 14 | 0 | 1 | 2 | 4
+OUTPUTMC | 11 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 4 | 0 | 4 | 11 | 4 | 16
+INPUTS | 20 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<20>  | A<31>  | nAS  | RW  | AUTO_CONFIG_DONE<0>  | A<23>  | A<22>  | A<21>  | A<19>  | A<17>  | A<18>  | A<16>  | AUTO_CONFIG_DONE<1>
+INPUTMC | 2 | 1 | 16 | 5 | 16
+INPUTP | 18 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 116 | 141 | 2 | 17 | 123 | 125 | 127 | 96 | 114 | 118 | 109
+EQ | 6 | 
+   Dout1_not0001/Dout1_not0001_D2 = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<20> & !A<31> & !nAS & RW & !AUTO_CONFIG_DONE<0> & 
+	A<23> & A<22> & A<21> & A<19> & !A<17> & !A<18> & !A<16>
+	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
+	!A<24> & !A<20> & !A<31> & !nAS & RW & !AUTO_CONFIG_DONE<1> & 
+	A<23> & A<22> & A<21> & A<19> & !A<17> & !A<18> & !A<16>;
+
+MACROCELL | 2 | 12 | CIIN_and0000/CIIN_and0000_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 4 | 16
+INPUTS | 5 | SHUT_UP<0>  | AUTO_CONFIG/AUTO_CONFIG_D2  | IDE_SPACE/IDE_SPACE_D2  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
+INPUTMC | 5 | 4 | 1 | 5 | 17 | 1 | 7 | 5 | 14 | 5 | 13
+EQ | 6 | 
+   CIIN_and0000/CIIN_and0000_D2 = SHUT_UP<0> & !AUTO_CONFIG/AUTO_CONFIG_D2 & 
+	!IDE_SPACE/IDE_SPACE_D2
+	# !AUTO_CONFIG/AUTO_CONFIG_D2 & 
+	!IDE_SPACE/IDE_SPACE_D2 & 
+	!Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 & 
+	!Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2;
+
+MACROCELL | 1 | 7 | IDE_SPACE/IDE_SPACE_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 2 | 0 | 1 | 2 | 12
 INPUTS | 17 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
-INPUTMC | 9 | 4 | 0 | 6 | 13 | 7 | 17 | 7 | 16 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 11
+INPUTMC | 9 | 4 | 0 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 9 | 6 | 8
 INPUTP | 8 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141
 EQ | 10 | 
    IDE_SPACE/IDE_SPACE_D2 = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
@@ -977,163 +1111,141 @@ EQ | 10 |
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
 	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
 
-MACROCELL | 6 | 13 | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D
+MACROCELL | 6 | 15 | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<0>  | A<16>
-INPUTMC | 1 | 4 | 9
+INPUTMC | 1 | 2 | 9
 INPUTP | 1 | 109
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D = IDE_BASEADR<0>
 	$ A<16>;
 
-MACROCELL | 7 | 17 | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D
+MACROCELL | 6 | 14 | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<1>  | A<17>
-INPUTMC | 1 | 4 | 7
+INPUTMC | 1 | 2 | 7
 INPUTP | 1 | 114
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D = IDE_BASEADR<1>
 	$ A<17>;
 
-MACROCELL | 7 | 16 | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D
+MACROCELL | 6 | 13 | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<2>  | A<18>
-INPUTMC | 1 | 4 | 6
+INPUTMC | 1 | 2 | 6
 INPUTP | 1 | 118
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D = IDE_BASEADR<2>
 	$ A<18>;
 
-MACROCELL | 7 | 15 | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D
+MACROCELL | 6 | 12 | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<3>  | A<19>
-INPUTMC | 1 | 4 | 5
+INPUTMC | 1 | 2 | 4
 INPUTP | 1 | 96
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D = IDE_BASEADR<3>
 	$ A<19>;
 
-MACROCELL | 7 | 14 | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D
+MACROCELL | 6 | 11 | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<4>  | A<20>
-INPUTMC | 1 | 4 | 4
+INPUTMC | 1 | 2 | 3
 INPUTP | 1 | 116
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D = IDE_BASEADR<4>
 	$ A<20>;
 
-MACROCELL | 7 | 13 | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D
+MACROCELL | 6 | 10 | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<5>  | A<21>
-INPUTMC | 1 | 4 | 3
+INPUTMC | 1 | 2 | 2
 INPUTP | 1 | 127
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D = IDE_BASEADR<5>
 	$ A<21>;
 
-MACROCELL | 7 | 12 | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D
+MACROCELL | 6 | 9 | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<6>  | A<22>
-INPUTMC | 1 | 4 | 2
+INPUTMC | 1 | 2 | 1
 INPUTP | 1 | 125
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D = IDE_BASEADR<6>
 	$ A<22>;
 
-MACROCELL | 7 | 11 | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+MACROCELL | 6 | 8 | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 1 | 16 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 15
+OUTPUTMC | 11 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 1 | 7
 INPUTS | 2 | IDE_BASEADR<7>  | A<23>
-INPUTMC | 1 | 4 | 1
+INPUTMC | 1 | 2 | 0
 INPUTP | 1 | 123
 EQ | 2 | 
    Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D = IDE_BASEADR<7>
 	$ A<23>;
 
-MACROCELL | 2 | 2 | Dout1_not0001/Dout1_not0001_D2
+MACROCELL | 5 | 14 | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 11 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 0 | 4 | 13 | 4 | 16
-INPUTS | 3 | nAS  | RW  | AUTO_CONFIG/AUTO_CONFIG_D2
-INPUTMC | 1 | 6 | 15
-INPUTP | 2 | 2 | 17
-EQ | 1 | 
-   Dout1_not0001/Dout1_not0001_D2 = !nAS & RW & AUTO_CONFIG/AUTO_CONFIG_D2;
-
-MACROCELL | 2 | 4 | CIIN_and0000/CIIN_and0000_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 1 | 4 | 16
-INPUTS | 5 | SHUT_UP<0>  | AUTO_CONFIG/AUTO_CONFIG_D2  | IDE_SPACE/IDE_SPACE_D2  | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2  | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
-INPUTMC | 5 | 2 | 1 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12
-EQ | 6 | 
-   CIIN_and0000/CIIN_and0000_D2 = SHUT_UP<0> & !AUTO_CONFIG/AUTO_CONFIG_D2 & 
-	!IDE_SPACE/IDE_SPACE_D2
-	# !AUTO_CONFIG/AUTO_CONFIG_D2 & 
-	!IDE_SPACE/IDE_SPACE_D2 & 
-	!Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 & 
-	!Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2;
-
-MACROCELL | 1 | 17 | Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 4 | 16 | 2 | 13 | 2 | 11 | 0 | 1 | 2 | 4
-INPUTS | 12 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | BASEADR<0>  | A<21>  | A<31>  | Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
-INPUTMC | 3 | 2 | 12 | 7 | 10 | 7 | 9
-INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 127 | 141
+OUTPUTMC | 5 | 4 | 16 | 2 | 13 | 2 | 11 | 0 | 1 | 2 | 12
+INPUTS | 12 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | BASEADR<0>  | A<21>  | Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
+INPUTMC | 3 | 4 | 5 | 6 | 7 | 6 | 6
+INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 127
 EQ | 8 | 
    Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & BASEADR<0> & A<21> & !A<31> & 
+	!A<24> & !A<31> & BASEADR<0> & A<21> & 
 	!Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D & 
 	!Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
 	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !BASEADR<0> & !A<21> & !A<31> & 
+	!A<24> & !A<31> & !BASEADR<0> & !A<21> & 
 	!Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D & 
 	!Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D;
 
-MACROCELL | 7 | 10 | Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D
+MACROCELL | 6 | 7 | Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 5 | 1 | 17
+OUTPUTMC | 2 | 3 | 5 | 5 | 14
 INPUTS | 2 | BASEADR<1>  | A<22>
-INPUTMC | 1 | 2 | 9
+INPUTMC | 1 | 4 | 4
 INPUTP | 1 | 125
 EQ | 2 | 
    Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D = BASEADR<1>
 	$ A<22>;
 
-MACROCELL | 7 | 9 | Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
+MACROCELL | 6 | 6 | Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 5 | 1 | 17
+OUTPUTMC | 2 | 3 | 5 | 5 | 14
 INPUTS | 2 | BASEADR<2>  | A<23>
-INPUTMC | 1 | 2 | 7
+INPUTMC | 1 | 4 | 3
 INPUTP | 1 | 123
 EQ | 2 | 
    Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D = BASEADR<2>
 	$ A<23>;
 
-MACROCELL | 6 | 12 | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
+MACROCELL | 5 | 13 | Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 5 | 4 | 16 | 2 | 16 | 2 | 14 | 0 | 1 | 2 | 4
-INPUTS | 12 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | BASEADR_4MB<0>  | A<21>  | A<31>  | Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
-INPUTMC | 3 | 2 | 6 | 7 | 8 | 7 | 7
-INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 127 | 141
+OUTPUTMC | 5 | 4 | 16 | 2 | 16 | 2 | 14 | 0 | 1 | 2 | 12
+INPUTS | 12 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | A<31>  | BASEADR_4MB<0>  | A<21>  | Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D  | Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
+INPUTMC | 3 | 4 | 2 | 6 | 5 | 6 | 4
+INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 141 | 127
 EQ | 8 | 
    Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & BASEADR_4MB<0> & A<21> & !A<31> & 
+	!A<24> & !A<31> & BASEADR_4MB<0> & A<21> & 
 	!Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D & 
 	!Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
 	# !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & !BASEADR_4MB<0> & !A<21> & !A<31> & 
+	!A<24> & !A<31> & !BASEADR_4MB<0> & !A<21> & 
 	!Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D & 
 	!Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D;
 
-MACROCELL | 7 | 8 | Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D
+MACROCELL | 6 | 5 | Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 5 | 6 | 12
+OUTPUTMC | 2 | 3 | 5 | 5 | 13
 INPUTS | 2 | BASEADR_4MB<1>  | A<22>
 INPUTMC | 1 | 2 | 17
 INPUTP | 1 | 125
@@ -1141,9 +1253,9 @@ EQ | 2 |
    Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM4MB_cmp_eq0000_or0000_xor0001_D = BASEADR_4MB<1>
 	$ A<22>;
 
-MACROCELL | 7 | 7 | Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
+MACROCELL | 6 | 4 | Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
 ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 5 | 6 | 12
+OUTPUTMC | 2 | 3 | 5 | 5 | 13
 INPUTS | 2 | BASEADR_4MB<2>  | A<23>
 INPUTMC | 1 | 2 | 15
 INPUTP | 1 | 123
@@ -1151,84 +1263,46 @@ EQ | 2 |
    Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D = BASEADR_4MB<2>
 	$ A<23>;
 
-MACROCELL | 1 | 15 | IDE_R_S_not0001/IDE_R_S_not0001_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 3 | 14 | 1 | 5
-INPUTS | 19 | A<30>  | A<29>  | A<28>  | A<27>  | A<26>  | A<25>  | A<24>  | RW  | A<31>  | IDE_ENABLE  | SHUT_UP<1>  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  | Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
-INPUTMC | 10 | 1 | 16 | 4 | 0 | 6 | 13 | 7 | 17 | 7 | 16 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 11
-INPUTP | 9 | 143 | 136 | 140 | 139 | 130 | 6 | 135 | 17 | 141
-EQ | 10 | 
-   IDE_R_S_not0001/IDE_R_S_not0001_D2 = !A<30> & !A<29> & !A<28> & !A<27> & !A<26> & !A<25> & 
-	!A<24> & RW & !A<31> & IDE_ENABLE & !SHUT_UP<1> & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D & 
-	!Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D;
-
-MACROCELL | 6 | 11 | D_and0000/D_and0000_D2
+MACROCELL | 5 | 11 | D_and0000/D_and0000_D2
 ATTRIBUTES | 133888 | 0
 OUTPUTMC | 4 | 2 | 8 | 2 | 10 | 2 | 5 | 0 | 14
 INPUTS | 2 | nAS  | AUTO_CONFIG_DONE<0>
-INPUTMC | 1 | 6 | 17
+INPUTMC | 1 | 1 | 16
 INPUTP | 1 | 2
 EQ | 1 | 
    D_and0000/D_and0000_D2 = !nAS & !AUTO_CONFIG_DONE<0>;
 
-MACROCELL | 5 | 0 | OE_0_or0000/OE_0_or0000_D2
-ATTRIBUTES | 133888 | 0
-OUTPUTMC | 2 | 2 | 13 | 2 | 16
-INPUTS | 2 | nAS  | nAS_D0
-INPUTMC | 1 | 2 | 3
-INPUTP | 1 | 2
-EQ | 1 | 
-   OE_0_or0000/OE_0_or0000_D2 = nAS & nAS_D0;
-
-MACROCELL | 5 | 11 | EXP14_
-ATTRIBUTES | 2048 | 0
-OUTPUTMC | 1 | 5 | 10
-INPUTS | 4 | RW  | DSACK_16BIT  | IDE_WAIT  | IDE_ENABLE
-INPUTMC | 2 | 5 | 10 | 1 | 16
-INPUTP | 2 | 17 | 62
-EXPORTS | 1 | 5 | 10
-EQ | 2 | 
-       EXP14_.EXP  =  !RW & DSACK_16BIT & !IDE_WAIT
-	# DSACK_16BIT & IDE_ENABLE & !IDE_WAIT
-
-PIN | A<30> | 64 | 0 | N/A | 143 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | A<29> | 64 | 0 | N/A | 136 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | A<28> | 64 | 0 | N/A | 140 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | A<27> | 64 | 0 | N/A | 139 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | A<26> | 64 | 0 | N/A | 130 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | A<25> | 64 | 0 | N/A | 6 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | A<24> | 64 | 0 | N/A | 135 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | A<20> | 64 | 0 | N/A | 116 | 2 | 6 | 15 | 7 | 14
-PIN | nAS | 64 | 0 | N/A | 2 | 38 | 6 | 17 | 6 | 16 | 4 | 13 | 4 | 12 | 5 | 5 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 10 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 5 | 3 | 5 | 2 | 5 | 1 | 3 | 14 | 1 | 16 | 2 | 1 | 6 | 14 | 4 | 0 | 2 | 3 | 3 | 16 | 0 | 8 | 3 | 5 | 1 | 5 | 2 | 11 | 2 | 14 | 2 | 2 | 6 | 11 | 5 | 0
-PIN | RW | 64 | 0 | N/A | 17 | 38 | 4 | 13 | 4 | 12 | 5 | 5 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 10 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 8 | 2 | 10 | 2 | 5 | 0 | 14 | 1 | 16 | 2 | 1 | 4 | 0 | 3 | 16 | 0 | 8 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 10 | 2 | 13 | 2 | 16 | 2 | 11 | 2 | 14 | 2 | 2 | 1 | 15 | 5 | 11
-PIN | A<5> | 64 | 0 | N/A | 88 | 27 | 4 | 13 | 4 | 12 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0 | 4 | 16
-PIN | A<4> | 64 | 0 | N/A | 90 | 27 | 4 | 13 | 4 | 12 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0 | 4 | 16
-PIN | A<2> | 64 | 0 | N/A | 79 | 27 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0 | 4 | 8 | 4 | 13 | 4 | 16
-PIN | reset | 65600 | 0 | N/A | 160 | 33 | 2 | 3 | 6 | 17 | 6 | 16 | 4 | 13 | 4 | 12 | 5 | 5 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 1 | 12 | 2 | 0 | 1 | 16 | 2 | 1 | 4 | 0
-PIN | clk | 4096 | 0 | N/A | 33 | 41 | 4 | 13 | 4 | 12 | 5 | 5 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 10 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 5 | 3 | 5 | 2 | 5 | 1 | 3 | 14 | 1 | 12 | 2 | 0 | 1 | 16 | 2 | 1 | 6 | 14 | 4 | 0 | 2 | 3 | 3 | 16 | 0 | 8 | 3 | 5 | 1 | 5
-PIN | A<1> | 64 | 0 | N/A | 82 | 31 | 4 | 13 | 4 | 12 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 10 | 4 | 16
-PIN | A<6> | 64 | 0 | N/A | 97 | 27 | 4 | 13 | 4 | 12 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0 | 4 | 16
-PIN | A<3> | 64 | 0 | N/A | 92 | 28 | 4 | 13 | 4 | 12 | 2 | 12 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 17 | 2 | 15 | 5 | 8 | 5 | 7 | 5 | 4 | 5 | 6 | 4 | 14 | 4 | 17 | 5 | 9 | 4 | 15 | 4 | 9 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 4 | 1 | 2 | 1 | 4 | 0 | 4 | 10 | 4 | 16
-PIN | IDE_WAIT | 64 | 0 | N/A | 62 | 2 | 5 | 10 | 5 | 11
-PIN | A<23> | 64 | 0 | N/A | 123 | 4 | 6 | 15 | 7 | 11 | 7 | 9 | 7 | 7
-PIN | A<22> | 64 | 0 | N/A | 125 | 4 | 6 | 15 | 7 | 12 | 7 | 10 | 7 | 8
-PIN | A<21> | 64 | 0 | N/A | 127 | 5 | 3 | 5 | 6 | 15 | 7 | 13 | 1 | 17 | 6 | 12
-PIN | A<19> | 64 | 0 | N/A | 96 | 2 | 6 | 15 | 7 | 15
-PIN | A<18> | 64 | 0 | N/A | 118 | 2 | 6 | 15 | 7 | 16
-PIN | A<17> | 64 | 0 | N/A | 114 | 2 | 6 | 15 | 7 | 17
-PIN | A<16> | 64 | 0 | N/A | 109 | 2 | 6 | 15 | 6 | 13
-PIN | A<31> | 64 | 0 | N/A | 141 | 9 | 1 | 16 | 3 | 16 | 0 | 8 | 3 | 5 | 6 | 15 | 1 | 14 | 1 | 17 | 6 | 12 | 1 | 15
-PIN | nDS | 64 | 0 | N/A | 15 | 1 | 1 | 12
+PIN | A<30> | 64 | 0 | N/A | 143 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | A<29> | 64 | 0 | N/A | 136 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | A<28> | 64 | 0 | N/A | 140 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | A<27> | 64 | 0 | N/A | 139 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | A<26> | 64 | 0 | N/A | 130 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | A<25> | 64 | 0 | N/A | 6 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | A<24> | 64 | 0 | N/A | 135 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | A<20> | 64 | 0 | N/A | 116 | 3 | 5 | 17 | 5 | 15 | 6 | 11
+PIN | A<31> | 64 | 0 | N/A | 141 | 16 | 3 | 14 | 1 | 8 | 1 | 17 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 5 | 17 | 5 | 15 | 1 | 7 | 5 | 14 | 5 | 13
+PIN | nDS | 64 | 0 | N/A | 15 | 18 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0
+PIN | nAS | 64 | 0 | N/A | 2 | 39 | 1 | 16 | 5 | 16 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 14 | 1 | 8 | 4 | 1 | 4 | 0 | 5 | 12 | 1 | 17 | 1 | 15 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5 | 2 | 13 | 2 | 16 | 2 | 11 | 2 | 14 | 5 | 15 | 5 | 11
+PIN | RW | 64 | 0 | N/A | 17 | 37 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 14 | 2 | 8 | 2 | 10 | 2 | 5 | 0 | 14 | 1 | 8 | 4 | 1 | 4 | 0 | 1 | 17 | 3 | 16 | 0 | 8 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 10 | 1 | 5 | 2 | 13 | 2 | 16 | 2 | 11 | 2 | 14 | 5 | 15
+PIN | clk | 4096 | 0 | N/A | 33 | 41 | 1 | 16 | 5 | 16 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 3 | 14 | 1 | 8 | 4 | 1 | 4 | 0 | 5 | 12 | 1 | 17 | 1 | 15 | 3 | 5 | 3 | 16 | 0 | 8 | 1 | 14 | 1 | 12 | 1 | 10 | 1 | 9 | 1 | 5
+PIN | reset | 65600 | 0 | N/A | 160 | 31 | 1 | 15 | 1 | 16 | 5 | 16 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 1 | 8 | 4 | 1 | 4 | 0 | 5 | 12
+PIN | A<1> | 64 | 0 | N/A | 82 | 32 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 10 | 4 | 11 | 4 | 16
+PIN | A<4> | 64 | 0 | N/A | 90 | 28 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0 | 4 | 11 | 4 | 16
+PIN | A<5> | 64 | 0 | N/A | 88 | 28 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0 | 4 | 11 | 4 | 16
+PIN | A<6> | 64 | 0 | N/A | 97 | 28 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0 | 4 | 11 | 4 | 16
+PIN | A<3> | 64 | 0 | N/A | 92 | 29 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0 | 4 | 10 | 4 | 11 | 4 | 16
+PIN | A<2> | 64 | 0 | N/A | 79 | 27 | 4 | 5 | 4 | 4 | 4 | 3 | 4 | 2 | 2 | 17 | 2 | 15 | 4 | 12 | 4 | 9 | 6 | 16 | 6 | 17 | 4 | 14 | 4 | 17 | 4 | 13 | 4 | 15 | 2 | 9 | 2 | 7 | 2 | 6 | 2 | 4 | 2 | 3 | 2 | 2 | 2 | 1 | 2 | 0 | 4 | 1 | 4 | 0 | 4 | 8 | 4 | 11 | 4 | 16
+PIN | A<23> | 64 | 0 | N/A | 123 | 5 | 5 | 17 | 5 | 15 | 6 | 8 | 6 | 6 | 6 | 4
+PIN | A<22> | 64 | 0 | N/A | 125 | 5 | 5 | 17 | 5 | 15 | 6 | 9 | 6 | 7 | 6 | 5
+PIN | A<21> | 64 | 0 | N/A | 127 | 6 | 3 | 5 | 5 | 17 | 5 | 15 | 6 | 10 | 5 | 14 | 5 | 13
+PIN | A<19> | 64 | 0 | N/A | 96 | 3 | 5 | 17 | 5 | 15 | 6 | 12
+PIN | IDE_WAIT | 64 | 0 | N/A | 62 | 1 | 1 | 17
+PIN | A<17> | 64 | 0 | N/A | 114 | 3 | 5 | 17 | 5 | 15 | 6 | 14
 PIN | SIZ<0> | 64 | 0 | N/A | 11 | 3 | 0 | 5 | 0 | 7 | 0 | 11
 PIN | SIZ<1> | 64 | 0 | N/A | 8 | 3 | 0 | 5 | 0 | 7 | 0 | 11
 PIN | A<0> | 64 | 0 | N/A | 86 | 4 | 0 | 5 | 0 | 7 | 0 | 11 | 0 | 10
+PIN | A<18> | 64 | 0 | N/A | 118 | 3 | 5 | 17 | 5 | 15 | 6 | 13
+PIN | A<16> | 64 | 0 | N/A | 109 | 3 | 5 | 17 | 5 | 15 | 6 | 15
 PIN | A<9> | 64 | 0 | N/A | 103 | 1 | 3 | 10
 PIN | A<10> | 64 | 0 | N/A | 102 | 1 | 3 | 13
 PIN | A<11> | 64 | 0 | N/A | 98 | 1 | 3 | 11
@@ -1237,9 +1311,9 @@ PIN | A<13> | 64 | 0 | N/A | 105 | 1 | 3 | 8
 PIN | CIIN | 536871040 | 0 | N/A | 77
 PIN | IDE_R | 536871040 | 0 | N/A | 155
 PIN | DSACK<1> | 536871040 | 0 | N/A | 19
+PIN | STERM | 536871040 | 0 | N/A | 144
 PIN | IDE_W | 536871040 | 0 | N/A | 157
 PIN | ROM_OE | 536871040 | 0 | N/A | 24
-PIN | STERM | 536871040 | 0 | N/A | 144
 PIN | BYTE<0> | 536871040 | 0 | N/A | 22
 PIN | BYTE<1> | 536871040 | 0 | N/A | 23
 PIN | BYTE<2> | 536871040 | 0 | N/A | 28
@@ -1261,7 +1335,7 @@ PIN | nRAM_SEL | 536871040 | 0 | N/A | 18
 PIN | ROM_WE | 536871040 | 0 | N/A | 12
 PIN | INT2 | 536871040 | 0 | N/A | 68
 PIN | ROM_EN | 536871040 | 0 | N/A | 13
-PIN | D<0> | 536870976 | 0 | N/A | 44 | 2 | 4 | 9 | 4 | 4
-PIN | D<1> | 536870976 | 0 | N/A | 47 | 6 | 2 | 12 | 2 | 6 | 2 | 17 | 2 | 15 | 4 | 7 | 4 | 3
-PIN | D<2> | 536870976 | 0 | N/A | 37 | 5 | 2 | 9 | 2 | 17 | 2 | 15 | 4 | 6 | 4 | 2
-PIN | D<3> | 536870976 | 0 | N/A | 30 | 4 | 2 | 7 | 2 | 15 | 4 | 5 | 4 | 1
+PIN | D<0> | 536870976 | 0 | N/A | 44 | 2 | 2 | 9 | 2 | 3
+PIN | D<1> | 536870976 | 0 | N/A | 47 | 6 | 4 | 5 | 4 | 2 | 2 | 17 | 2 | 15 | 2 | 7 | 2 | 2
+PIN | D<2> | 536870976 | 0 | N/A | 37 | 5 | 4 | 4 | 2 | 17 | 2 | 15 | 2 | 6 | 2 | 1
+PIN | D<3> | 536870976 | 0 | N/A | 30 | 4 | 4 | 3 | 2 | 15 | 2 | 4 | 2 | 0
