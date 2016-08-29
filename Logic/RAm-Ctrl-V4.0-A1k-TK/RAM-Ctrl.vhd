@@ -105,6 +105,8 @@ signal	nDS_D1:STD_LOGIC;
 signal	AUTO_CONFIG_D0:STD_LOGIC;
 signal	nAS_D0:STD_LOGIC;
 signal	AUTO_CONFIG_FINISH:STD_LOGIC;
+signal	AUTO_CONFIG_CYCLE:STD_LOGIC;
+signal	IDE_CYCLE:STD_LOGIC;
 begin
 	--internal signals	
 	RAM2MB		<= '1' 	when 
@@ -123,6 +125,39 @@ begin
 									A(31 downto 16) = x"00E8"
 									AND not (AUTO_CONFIG_DONE ="11")
 						else '0'; -- Access to Autoconfig space and internal autoconfig not complete
+	--not working:
+	--decode: process (clk)
+	--begin
+	--	if falling_edge(clk) then
+	--		if(A(31 downto 21) = (x"00" & BASEADR)
+	--								AND SHUT_UP(0) ='0') then
+	--			RAM2MB		<= '1';
+	--		else
+	--			RAM2MB		<= '0';
+	--		end if;
+	--		
+	--		if(A(31 downto 21) = (x"00" & BASEADR_4MB)
+	--								AND SHUT_UP(0) ='0') then
+	--			RAM4MB		<= '1';
+	--		else
+	--			RAM4MB		<= '0';
+	--		end if;
+
+	--		if(A(31 downto 16) = (x"00" & IDE_BASEADR)  
+	--								AND SHUT_UP(1) ='0') then
+	--			IDE_SPACE		<= '1';
+	--		else
+	--			IDE_SPACE		<= '0';
+	--		end if;
+
+	--		if(A(31 downto 16) = x"00E8"
+	--								AND not (AUTO_CONFIG_DONE ="11") then
+	--			AUTO_CONFIG		<= '1';
+	--		else
+	--			AUTO_CONFIG		<= '0';
+	--		end if;
+	--	end if;
+	--end process decode;
 
 	--output
 	MY_CYCLE		<= '0' 	when (RAM2MB='1' or RAM4MB='1' or AUTO_CONFIG='1' or IDE_SPACE ='1' ) else '1';
@@ -233,12 +268,13 @@ begin
 	
 	--map DSACK signal
 	DSACK		<= 	"ZZ" when MY_CYCLE ='1' ELSE
-						--"00" when DSACK_32BIT    ='0' else
+						"00" when DSACK_32BIT    ='0' else
 						"01" when DSACK_16BIT	 ='0' else 						
 						"01" when AUTO_CONFIG_D0='1' else 
 						"11";
 	--STERM <=  '0' when RAM2MB = '1' or RAM4MB = '1' else '1';
-	STERM <=  DSACK_32BIT;
+	--STERM <=  DSACK_32BIT;
+	STERM <=  '1';
 	
 	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and nAS ='0' else '1';
 	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and nAS ='0' else '1';
@@ -249,32 +285,32 @@ begin
 	dsack_gen: process (nAS, clk)
 	begin
 		if	nAS = '1' then
+			AUTO_CONFIG_CYCLE <= '1';
+			IDE_CYCLE <='1';
 			DSACK_32BIT		<= '1';
 			--DSACK_32BIT_D0 <= '1';
 			--DSACK_32BIT_D1 <= '1';
 			--DSACK_32BIT_D2 <= '1';
-		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
+		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: The memory is triggered at the falling edge, so i can save one register!
 			if(RAM2MB ='1' or RAM4MB='1')then
 				
 				DSACK_32BIT	<= '0';				
 				--DSACK_32BIT_D0 <= DSACK_32BIT;				
 				--DSACK_32BIT_D1 <= DSACK_32BIT_D0;
 				--DSACK_32BIT_D2 <= DSACK_32BIT_D1;
-			else
-				DSACK_32BIT		<= '1';				
-				--DSACK_32BIT_D0 <= '1';				
-				--DSACK_32BIT_D1 <= '1';
-				--DSACK_32BIT_D2 <= '1';
 			end if;
-
+			if(AUTO_CONFIG = '1')then
+				AUTO_CONFIG_CYCLE <= '0';
+			end if;
+			if(IDE_CYCLE = '1')then
+				IDE_CYCLE <= '0';
+			end if;
 		end if;
 	end process dsack_gen;
 	
 	--enable caching for RAM
-	CIIN	<= '1' when RAM2MB ='1' else 
-				'1' when RAM4MB ='1' else 
-				'0' when AUTO_CONFIG='1' else
-				'0' when IDE_SPACE='1' else
+	CIIN	<= '1' when DSACK_32BIT ='0' else 
+				'0' when AUTO_CONFIG_CYCLE='0' or IDE_CYCLE ='0' else
 				'Z';
 
 

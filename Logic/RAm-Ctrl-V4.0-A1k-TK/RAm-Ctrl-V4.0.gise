@@ -21,8 +21,82 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="RAm-Ctrl-V4.0.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="RAMCtrl.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="RAMCtrl.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="RAMCtrl.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="RAMCtrl.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="RAMCtrl.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="RAMCtrl.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAMCtrl.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="RAMCtrl.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="RAMCtrl.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="RAMCtrl.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="RAMCtrl.tspec"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="RAMCtrl.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RAMCtrl_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="RAMCtrl_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RAMCtrl_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="RAMCtrl_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAMCtrl_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="RAMCtrl_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1472240732" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1472240732">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1472240732" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-3834972103505869272" xil_pn:start_ts="1472240732">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1472418826" xil_pn:in_ck="4247645350691822674" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="5939336463179405201" xil_pn:start_ts="1472418815">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAMCtrl.lso"/>
+      <outfile xil_pn:name="RAMCtrl.ngc"/>
+      <outfile xil_pn:name="RAMCtrl.ngr"/>
+      <outfile xil_pn:name="RAMCtrl.prj"/>
+      <outfile xil_pn:name="RAMCtrl.stx"/>
+      <outfile xil_pn:name="RAMCtrl.syr"/>
+      <outfile xil_pn:name="RAMCtrl.xst"/>
+      <outfile xil_pn:name="RAMCtrl_vhdl.prj"/>
+      <outfile xil_pn:name="RAMCtrl_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1472240742" xil_pn:in_ck="176569500195729039" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3038238564671899789" xil_pn:start_ts="1472240742">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1472418834" xil_pn:in_ck="1788842262927861930" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1472418826">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="RAMCtrl.bld"/>
+      <outfile xil_pn:name="RAMCtrl.ngd"/>
+      <outfile xil_pn:name="RAMCtrl_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1472418844" xil_pn:in_ck="128717526578670844" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-5248935469081102553" xil_pn:start_ts="1472418834">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RAMCtrl.rpt"/>
+      <outfile xil_pn:name="RAMCtrl.tspec"/>
+      <outfile xil_pn:name="RAMCtrl_html"/>
+    </transform>
+  </transforms>
 
 </generated_project>
