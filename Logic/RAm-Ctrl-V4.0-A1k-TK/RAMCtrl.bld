@@ -5,9 +5,8 @@ Command Line: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -filter
 iseconfig/filter.filter -intstyle ise -dd _ngo -uc pinlist.ucf -p
 xc95144xl-TQ100-10 RAMCtrl.ngc RAMCtrl.ngd
 
-Reading NGO file
-"C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V4.0-
-A1k-TK/RAMCtrl.ngc" ...
+Reading NGO file "C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030
+-RAM/GitHub/Logic/RAm-Ctrl-V4.0-A1k-TK/RAMCtrl.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,10 +28,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 192064 kilobytes
+Total memory usage is 190152 kilobytes
 
 Writing NGD file "RAMCtrl.ngd" ...
-Total REAL time to NGDBUILD completion:  6 sec
+Total REAL time to NGDBUILD completion:  5 sec
 Total CPU time to NGDBUILD completion:   5 sec
 
 Writing NGDBUILD log file "RAMCtrl.bld"...

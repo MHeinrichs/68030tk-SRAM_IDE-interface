@@ -192,20 +192,26 @@ begin
 
 				if(RW='0')then
 					--the write goes to the hdd!
-					IDE_W_S		<= '0';	
+					IDE_W_S		<= '0';
+					IDE_R_S		<= '1';
+					ROM_OE_S		<=	'1';
 					if(IDE_WAIT ='1')then --IDE I/O
 						DSACK_16BIT		<=	IDE_DSACK_D0;
 					end if;
 				elsif(RW='1' and IDE_ENABLE='1')then
 						--read from IDE instead from ROM
+					IDE_W_S		<= '1';
 					IDE_R_S		<= '0';
+					ROM_OE_S		<=	'1';
 					if(IDE_WAIT ='1')then --IDE I/O
 						DSACK_16BIT		<=	IDE_DSACK_D0;
 					end if;
 				elsif(RW='1' and IDE_ENABLE='0')then
 					DSACK_16BIT		<= IDE_DSACK_D3;
 					--ROM_EN_S			<=	'0';						
-					ROM_OE_S			<=	'0';						
+					IDE_W_S		<= '1';
+					IDE_R_S		<= '1';
+					ROM_OE_S		<=	'0';						
 				end if;
 
 				--generate IO-delay
@@ -236,7 +242,7 @@ begin
 	IDE_DIR	<= IDE_R_S;
 	IDE_R		<= IDE_R_S;
 	IDE_W		<= IDE_W_S;
-	ROM_EN	<= '0';
+	ROM_EN	<= IDE_ENABLE;
 	ROM_WE	<= '1';
 	ROM_OE	<= ROM_OE_S;
 
@@ -268,13 +274,13 @@ begin
 	
 	--map DSACK signal
 	DSACK		<= 	"ZZ" when MY_CYCLE ='1' ELSE
-						"00" when DSACK_32BIT    ='0' else
+						--"00" when DSACK_32BIT    ='0' else
 						"01" when DSACK_16BIT	 ='0' else 						
 						"01" when AUTO_CONFIG_D0='1' else 
 						"11";
 	--STERM <=  '0' when RAM2MB = '1' or RAM4MB = '1' else '1';
-	--STERM <=  DSACK_32BIT;
-	STERM <=  '1';
+	STERM <=  DSACK_32BIT_D0;
+	--STERM <=  '1';
 	
 	OE(0) <= '0' when RAM2MB = '1' and RW = '1' and nAS ='0' else '1';
 	OE(1) <= '0' when RAM4MB = '1' and RW = '1' and nAS ='0' else '1';
@@ -288,21 +294,21 @@ begin
 			AUTO_CONFIG_CYCLE <= '1';
 			IDE_CYCLE <='1';
 			DSACK_32BIT		<= '1';
-			--DSACK_32BIT_D0 <= '1';
-			--DSACK_32BIT_D1 <= '1';
-			--DSACK_32BIT_D2 <= '1';
+			DSACK_32BIT_D0 <= '1';
+			DSACK_32BIT_D1 <= '1';
+			DSACK_32BIT_D2 <= '1';
 		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: The memory is triggered at the falling edge, so i can save one register!
-			if(RAM2MB ='1' or RAM4MB='1')then
-				
+			DSACK_32BIT_D0 <= DSACK_32BIT;				
+			DSACK_32BIT_D1 <= DSACK_32BIT_D0;
+			DSACK_32BIT_D2 <= DSACK_32BIT_D1;
+			
+			if(RAM2MB ='1' or RAM4MB='1')then			
 				DSACK_32BIT	<= '0';				
-				--DSACK_32BIT_D0 <= DSACK_32BIT;				
-				--DSACK_32BIT_D1 <= DSACK_32BIT_D0;
-				--DSACK_32BIT_D2 <= DSACK_32BIT_D1;
 			end if;
 			if(AUTO_CONFIG = '1')then
 				AUTO_CONFIG_CYCLE <= '0';
 			end if;
-			if(IDE_CYCLE = '1')then
+			if(IDE_SPACE = '1')then
 				IDE_CYCLE <= '0';
 			end if;
 		end if;
@@ -364,7 +370,7 @@ begin
 				AUTO_CONFIG_D0 <='1';
 				if(RW='1') then
 					case A(6 downto 1) is
-						when "000000"	=> Dout1 <= 	"1110" ; --ZII, System-Memory, no ROM
+						when "000000"	=> Dout1 <= 	"1100" ; --ZII, System-Memory, no ROM
 						when "000001"	=> Dout1 <=	"0111" ; --one Card, 4MB = 111
 						--when "0000100"	=> Dout1 <=	"1111" ; --ProductID high nibble : E->0001
 						when "000011"	=> Dout1 <=	"1101" ; --ProductID low nibble: F->0000

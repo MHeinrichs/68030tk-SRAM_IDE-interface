@@ -5,7 +5,7 @@
 <design name='RAMCtrl'/>
 <rptdir name='RAMCtrl'/>
 <xilinx path='c:/Xilinx/14.6/ISE_DS/ISE;'/>
-<projDir path='C:\Users\Matze\Documents\GitHub\68030tk-SRAM_IDE-interface\Logic\RAm-Ctrl-V4.0-A1k-TK'/>
+<projDir path='C:\Users\Matze\Amiga\Hardwarehacks\HArms Professional 030 -RAM\GitHub\Logic\RAm-Ctrl-V4.0-A1k-TK'/>
 <xslDir path='chipviewer/data/xsl'/>
 <fileDir path='/chipviewer/data/html'/>
 <dataFile file='index.htm'/>

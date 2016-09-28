@@ -1,7 +1,7 @@
  
 cpldfit:  version P.68d                             Xilinx Inc.
                                   Fitter Report
-Design Name: RAMCtrl                             Date:  8-29-2016, 10:09PM
+Design Name: RAMCtrl                             Date:  9-27-2016, 11:27PM
 Device Used: XC95144XL-10-TQ100
 Fitting Status: Successful
 
@@ -9,22 +9,22 @@ Fitting Status: Successful
 
 Macrocells     Product Terms    Function Block   Registers      Pins           
 Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
-85 /144 ( 59%) 185 /720  ( 26%) 205/432 ( 47%)   43 /144 ( 30%) 67 /81  ( 83%)
+85 /144 ( 59%) 184 /720  ( 26%) 207/432 ( 48%)   44 /144 ( 31%) 67 /81  ( 83%)
 
 ** Function Block Resources **
 
 Function    Mcells      FB Inps     Pterms      IO          
 Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
-FB1           9/18       37/54       24/90      10/11
-FB2           9/18       31/54       13/90      10/10*
+FB1           9/18       35/54       20/90      10/11
+FB2          11/18       29/54       16/90      10/10*
 FB3          18/18*      26/54       37/90       7/10
-FB4          12/18       31/54       17/90      10/10*
-FB5          18/18*      28/54       55/90       5/10
-FB6          10/18       30/54       20/90       9/10
-FB7           9/18       22/54       19/90       9/10
-FB8           0/18        0/54        0/90       7/10
+FB4          18/18*      28/54       36/90      10/10*
+FB5           7/18       29/54       12/90       5/10
+FB6          15/18       28/54       47/90       9/10
+FB7           5/18       28/54       12/90       9/10
+FB8           2/18        4/54        4/90       7/10
              -----       -----       -----      -----    
-             85/144     205/432     185/720     67/81 
+             85/144     207/432     184/720     67/81 
 
 * - Resource is exhausted
 
@@ -93,17 +93,17 @@ INFO:Cpld:994 - Exhaustive fitting is trying pterm limit: 32 and input limit: 54
 Signal                                                                                     Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
 Name                                                                                       Pts   Inps          No.  Type    Use     Mode Rate State
 nRAM_SEL                                                                                   2     5     FB1_2   11   I/O     O       STD  FAST 
-DSACK<1>                                                                                   2     4     FB1_3   12   I/O     O       STD  FAST 
-DSACK<0>                                                                                   4     6     FB1_5   13   I/O     O       STD  FAST RESET
+DSACK<1>                                                                                   2     3     FB1_3   12   I/O     O       STD  FAST 
+DSACK<0>                                                                                   1     1     FB1_5   13   I/O     O       STD  FAST 
 BYTE<0>                                                                                    4     5     FB1_6   14   I/O     O       STD  FAST 
 BYTE<1>                                                                                    3     5     FB1_8   15   I/O     O       STD  FAST 
-ROM_OE                                                                                     2     21    FB1_9   16   I/O     O       STD  FAST RESET
+ROM_OE                                                                                     1     20    FB1_9   16   I/O     O       STD  FAST RESET
 BYTE<3>                                                                                    2     3     FB1_11  17   I/O     O       STD  FAST 
 BYTE<2>                                                                                    2     5     FB1_12  18   I/O     O       STD  FAST 
 D<3>                                                                                       3     5     FB1_15  20   I/O     I/O     STD  FAST 
-IDE_DIR                                                                                    2     21    FB2_6   2    GTS/I/O O       STD  FAST RESET
+IDE_DIR                                                                                    1     4     FB2_6   2    GTS/I/O O       STD  FAST RESET
 ROM_WE                                                                                     0     0     FB2_12  7    I/O     O       STD  FAST 
-ROM_EN                                                                                     0     0     FB2_14  8    I/O     O       STD  FAST 
+ROM_EN                                                                                     1     20    FB2_14  8    I/O     O       STD  FAST RESET
 D<2>                                                                                       3     5     FB3_6   25   I/O     I/O     STD  FAST 
 D<0>                                                                                       3     5     FB3_9   28   I/O     I/O     STD  FAST 
 D<1>                                                                                       3     5     FB3_11  29   I/O     I/O     STD  FAST 
@@ -111,29 +111,31 @@ WE<0>                                                                           
 OE<0>                                                                                      1     4     FB3_14  32   I/O     O       STD  FAST 
 WE<1>                                                                                      1     4     FB3_15  33   I/O     O       STD  FAST 
 OE<1>                                                                                      1     4     FB3_17  34   I/O     O       STD  FAST 
-STERM                                                                                      0     0     FB4_6   90   I/O     O       STD  FAST 
+STERM                                                                                      2     2     FB4_6   90   I/O     O       STD  FAST RESET
 IDE_CS<0>                                                                                  1     1     FB4_8   91   I/O     O       STD  FAST 
 IDE_CS<1>                                                                                  1     1     FB4_9   92   I/O     O       STD  FAST 
 IDE_A<0>                                                                                   1     1     FB4_11  93   I/O     O       STD  FAST 
 IDE_A<2>                                                                                   1     1     FB4_12  94   I/O     O       STD  FAST 
 IDE_A<1>                                                                                   1     1     FB4_14  95   I/O     O       STD  FAST 
-IDE_R                                                                                      2     21    FB4_15  96   I/O     O       STD  FAST RESET
-IDE_W                                                                                      2     20    FB4_17  97   I/O     O       STD  FAST RESET
+IDE_R                                                                                      1     4     FB4_15  96   I/O     O       STD  FAST RESET
+IDE_W                                                                                      1     3     FB4_17  97   I/O     O       STD  FAST RESET
 IO4                                                                                        1     1     FB5_9   40   I/O     O       STD  FAST 
 IO5                                                                                        1     1     FB5_11  41   I/O     O       STD  FAST 
 INT2                                                                                       0     0     FB5_12  42   I/O     O       STD  FAST 
-CIIN                                                                                       2     3     FB5_17  49   I/O     O       STD  FAST 
+CIIN                                                                                       5     18    FB5_17  49   I/O     O       STD  FAST SET
 
 ** 54 Buried Nodes **
 
 Signal                                                                                     Total Total Loc     Pwr  Reg Init
 Name                                                                                       Pts   Inps          Mode State
-IDE_ENABLE                                                                                 1     20    FB2_11  STD  RESET
-IDE_DSACK_D3                                                                               1     19    FB2_13  STD  RESET
-IDE_DSACK_D2                                                                               1     19    FB2_15  STD  RESET
+IDE_SPACE/IDE_SPACE_D2                                                                     1     17    FB2_9   STD  
+IDE_DSACK_D3                                                                               1     19    FB2_10  STD  RESET
+IDE_DSACK_D2                                                                               1     19    FB2_11  STD  RESET
+IDE_DSACK_D1                                                                               1     19    FB2_13  STD  RESET
+IDE_DSACK_D0                                                                               1     2     FB2_15  STD  RESET
 nAS_D0                                                                                     2     2     FB2_16  STD  RESET
-AUTO_CONFIG_DONE<0>                                                                        2     3     FB2_17  STD  RESET
-Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2               4     13    FB2_18  STD  
+IDE_CYCLE                                                                                  2     3     FB2_17  STD  RESET
+DSACK_16BIT                                                                                5     24    FB2_18  STD  RESET
 IDE_BASEADR<7>                                                                             2     13    FB3_1   STD  RESET
 IDE_BASEADR<6>                                                                             2     13    FB3_2   STD  RESET
 IDE_BASEADR<5>                                                                             2     13    FB3_3   STD  RESET
@@ -145,46 +147,44 @@ IDE_BASEADR<0>                                                                  
 BASEADR<0>                                                                                 2     12    FB3_13  STD  RESET
 BASEADR_4MB<2>                                                                             3     14    FB3_16  STD  RESET
 BASEADR_4MB<1>                                                                             3     13    FB3_18  STD  RESET
-IDE_SPACE/IDE_SPACE_D2                                                                     1     17    FB4_10  STD  
-IDE_DSACK_D1                                                                               1     19    FB4_13  STD  RESET
-IDE_DSACK_D0                                                                               1     18    FB4_16  STD  RESET
-DSACK_16BIT                                                                                5     24    FB4_18  STD  RESET
-SHUT_UP<1>                                                                                 1     12    FB5_1   STD  RESET
-SHUT_UP<0>                                                                                 1     11    FB5_2   STD  RESET
-BASEADR_4MB<0>                                                                             2     12    FB5_3   STD  RESET
-BASEADR<2>                                                                                 2     12    FB5_4   STD  RESET
-BASEADR<1>                                                                                 2     12    FB5_5   STD  RESET
-AUTO_CONFIG_DONE_CYCLE<1>                                                                  2     12    FB5_6   STD  RESET
-AUTO_CONFIG_DONE_CYCLE<0>                                                                  2     11    FB5_7   STD  RESET
-Dout1<3>                                                                                   4     8     FB5_8   STD  RESET
-Dout1<1>                                                                                   4     8     FB5_10  STD  RESET
-Dout1<0>                                                                                   5     8     FB5_13  STD  RESET
-Dout2<2>                                                                                   6     8     FB5_14  STD  RESET
-Dout2<0>                                                                                   6     8     FB5_15  STD  RESET
-Dout2<3>                                                                                   7     8     FB5_16  STD  RESET
-Dout2<1>                                                                                   7     8     FB5_18  STD  RESET
-D_and0000/D_and0000_D2                                                                     1     2     FB6_9   STD  
-AUTO_CONFIG_D0                                                                             1     2     FB6_10  STD  RESET
+SHUT_UP<1>                                                                                 1     12    FB4_1   STD  RESET
+SHUT_UP<0>                                                                                 1     11    FB4_2   STD  RESET
+AUTO_CONFIG_D0                                                                             1     2     FB4_3   STD  RESET
+BASEADR_4MB<0>                                                                             2     12    FB4_4   STD  RESET
+BASEADR<2>                                                                                 2     12    FB4_5   STD  RESET
+BASEADR<1>                                                                                 2     12    FB4_7   STD  RESET
+AUTO_CONFIG_DONE_CYCLE<1>                                                                  2     12    FB4_10  STD  RESET
+AUTO_CONFIG_DONE_CYCLE<0>                                                                  2     11    FB4_13  STD  RESET
+Dout2<3>                                                                                   7     8     FB4_16  STD  RESET
+Dout2<1>                                                                                   7     8     FB4_18  STD  RESET
+D_and0000/D_and0000_D2                                                                     1     2     FB5_15  STD  
+Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2               2     12    FB5_16  STD  
+AUTO_CONFIG/AUTO_CONFIG_D2                                                                 2     18    FB5_18  STD  
+Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D        2     2     FB6_4   STD  
+Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D        2     2     FB6_5   STD  
+Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D        2     2     FB6_6   STD  
+Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  2     2     FB6_7   STD  
+Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  2     2     FB6_8   STD  
+Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  2     2     FB6_9   STD  
+Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  2     2     FB6_10  STD  
 Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  2     2     FB6_11  STD  
-Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  2     2     FB6_12  STD  
-IDE_CYCLE                                                                                  2     2     FB6_13  STD  RESET
 
 Signal                                                                                     Total Total Loc     Pwr  Reg Init
 Name                                                                                       Pts   Inps          Mode State
-Dout1_not0001/Dout1_not0001_D2                                                             2     20    FB6_14  STD  
-AUTO_CONFIG_DONE<1>                                                                        2     3     FB6_15  STD  RESET
-AUTO_CONFIG_CYCLE                                                                          2     3     FB6_16  STD  RESET
-AUTO_CONFIG/AUTO_CONFIG_D2                                                                 2     18    FB6_17  STD  
-Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2               4     13    FB6_18  STD  
-Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D        2     2     FB7_10  STD  
-Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D        2     2     FB7_11  STD  
-Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D  2     2     FB7_12  STD  
-Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D  2     2     FB7_13  STD  
-Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  2     2     FB7_14  STD  
-Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  2     2     FB7_15  STD  
-Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  2     2     FB7_16  STD  
-Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  2     2     FB7_17  STD  
-Dout1<2>                                                                                   3     8     FB7_18  STD  RESET
+Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  2     2     FB6_12  STD  
+Dout1<2>                                                                                   3     8     FB6_13  STD  RESET
+Dout1<3>                                                                                   4     8     FB6_14  STD  RESET
+Dout1<1>                                                                                   5     8     FB6_15  STD  RESET
+Dout1<0>                                                                                   5     8     FB6_16  STD  RESET
+Dout2<2>                                                                                   6     8     FB6_17  STD  RESET
+Dout2<0>                                                                                   6     8     FB6_18  STD  RESET
+Dout1_not0001/Dout1_not0001_D2                                                             2     20    FB7_14  STD  
+AUTO_CONFIG_DONE<1>                                                                        2     3     FB7_15  STD  RESET
+AUTO_CONFIG_DONE<0>                                                                        2     3     FB7_16  STD  RESET
+AUTO_CONFIG_CYCLE                                                                          2     3     FB7_17  STD  RESET
+Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2               4     13    FB7_18  STD  
+Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  2     2     FB8_17  STD  
+Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  2     2     FB8_18  STD  
 
 ** 36 Inputs **
 
@@ -243,19 +243,19 @@ Pin Type/Use - I  - Input             GCK - Global Clock
 X            - Signal used as input to the macrocell logic.
 Pin No.      - ~  - User Assigned
 *********************************** FB1  ***********************************
-Number of function block inputs used/remaining:               37/17
-Number of signals used by logic mapping into function block:  37
+Number of function block inputs used/remaining:               35/19
+Number of signals used by logic mapping into function block:  35
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB1_1         (b)     
 nRAM_SEL              2       0     0   3     FB1_2   11    I/O     O
 DSACK<1>              2       0     0   3     FB1_3   12    I/O     O
 (unused)              0       0     0   5     FB1_4         (b)     
-DSACK<0>              4       0     0   1     FB1_5   13    I/O     O
+DSACK<0>              1       0     0   4     FB1_5   13    I/O     O
 BYTE<0>               4       0     0   1     FB1_6   14    I/O     O
 (unused)              0       0     0   5     FB1_7         (b)     
 BYTE<1>               3       0     0   2     FB1_8   15    I/O     O
-ROM_OE                2       0     0   3     FB1_9   16    I/O     O
+ROM_OE                1       0     0   4     FB1_9   16    I/O     O
 (unused)              0       0     0   5     FB1_10        (b)     
 BYTE<3>               2       0     0   3     FB1_11  17    I/O     O
 BYTE<2>               2       0     0   3     FB1_12  18    I/O     O
@@ -267,36 +267,35 @@ D<3>                  3       0     0   2     FB1_15  20    I/O     I/O
 (unused)              0       0     0   5     FB1_18        (b)     
 
 Signals Used by Logic in Function Block
-  1: AUTO_CONFIG/AUTO_CONFIG_D2  14: DSACK_16BIT                                                                                26: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D 
-  2: AUTO_CONFIG_D0              15: D_and0000/D_and0000_D2                                                                     27: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D 
-  3: A<0>                        16: Dout1<3>                                                                                   28: Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 
-  4: A<1>                        17: Dout2<3>                                                                                   29: Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 
-  5: A<24>                       18: IDE_ENABLE                                                                                 30: ROM_OE 
-  6: A<25>                       19: IDE_SPACE/IDE_SPACE_D2                                                                     31: RW 
-  7: A<26>                       20: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  32: SHUT_UP<0> 
-  8: A<27>                       21: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  33: SHUT_UP<1> 
-  9: A<28>                       22: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  34: SIZ<0> 
- 10: A<29>                       23: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  35: SIZ<1> 
- 11: A<30>                       24: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  36: nAS 
- 12: A<31>                       25: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  37: nRAM_SEL 
- 13: DSACK<0>                   
+  1: AUTO_CONFIG/AUTO_CONFIG_D2  13: DSACK_16BIT                                                                                25: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D 
+  2: AUTO_CONFIG_D0              14: D_and0000/D_and0000_D2                                                                     26: Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 
+  3: A<0>                        15: Dout1<3>                                                                                   27: Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 
+  4: A<1>                        16: Dout2<3>                                                                                   28: ROM_EN 
+  5: A<24>                       17: IDE_SPACE/IDE_SPACE_D2                                                                     29: RW 
+  6: A<25>                       18: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  30: SHUT_UP<0> 
+  7: A<26>                       19: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  31: SHUT_UP<1> 
+  8: A<27>                       20: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  32: SIZ<0> 
+  9: A<28>                       21: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  33: SIZ<1> 
+ 10: A<29>                       22: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D  34: nAS 
+ 11: A<30>                       23: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D  35: nRAM_SEL 
+ 12: A<31>                       24: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-nRAM_SEL             X.................X........XX..X........ 5
-DSACK<1>             .X..........XX......................X... 4
-DSACK<0>             ............X..............XX..X...XX... 6
-BYTE<0>              ..XX..........................X..XX..... 5
-BYTE<1>              ..XX..........................X..XX..... 5
-ROM_OE               ....XXXXXXXX.....X.XXXXXXXX..XX.X..X.... 21
-BYTE<3>              ..XX..........................X......... 3
-BYTE<2>              ..XX..........................X..XX..... 5
-D<3>                 X.............XXX.............X......... 5
+nRAM_SEL             X...............X........XX..X.......... 5
+DSACK<1>             .X..........X.....................X..... 3
+DSACK<0>             ..................................X..... 1
+BYTE<0>              ..XX........................X..XX....... 5
+BYTE<1>              ..XX........................X..XX....... 5
+ROM_OE               ....XXXXXXXX.....XXXXXXXX..XX.X..X...... 20
+BYTE<3>              ..XX........................X........... 3
+BYTE<2>              ..XX........................X..XX....... 5
+D<3>                 X............XXX............X........... 5
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB2  ***********************************
-Number of function block inputs used/remaining:               31/23
-Number of signals used by logic mapping into function block:  31
+Number of function block inputs used/remaining:               29/25
+Number of signals used by logic mapping into function block:  29
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_1         (b)     
@@ -304,46 +303,47 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB2_3         (b)     
 (unused)              0       0     0   5     FB2_4         (b)     
 (unused)              0       0     0   5     FB2_5   1     GTS/I/O I
-IDE_DIR               2       0     0   3     FB2_6   2     GTS/I/O O
+IDE_DIR               1       0     0   4     FB2_6   2     GTS/I/O O
 (unused)              0       0     0   5     FB2_7         (b)     
 (unused)              0       0     0   5     FB2_8   3     GTS/I/O I
-(unused)              0       0     0   5     FB2_9   4     GTS/I/O I
-(unused)              0       0     0   5     FB2_10        (b)     
-IDE_ENABLE            1       0     0   4     FB2_11  6     I/O     I
+IDE_SPACE/IDE_SPACE_D2
+                      1       0     0   4     FB2_9   4     GTS/I/O I
+IDE_DSACK_D3          1       0     0   4     FB2_10        (b)     (b)
+IDE_DSACK_D2          1       0     0   4     FB2_11  6     I/O     I
 ROM_WE                0       0     0   5     FB2_12  7     I/O     O
-IDE_DSACK_D3          1       0     0   4     FB2_13        (b)     (b)
-ROM_EN                0       0     0   5     FB2_14  8     I/O     O
-IDE_DSACK_D2          1       0     0   4     FB2_15  9     I/O     I
+IDE_DSACK_D1          1       0     0   4     FB2_13        (b)     (b)
+ROM_EN                1       0     0   4     FB2_14  8     I/O     O
+IDE_DSACK_D0          1       0     0   4     FB2_15  9     I/O     I
 nAS_D0                2       0     0   3     FB2_16        (b)     (b)
-AUTO_CONFIG_DONE<0>   2       0     0   3     FB2_17  10    I/O     I
-Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2
-                      4       0     0   1     FB2_18        (b)     (b)
+IDE_CYCLE             2       0     0   3     FB2_17  10    I/O     I
+DSACK_16BIT           5       0     0   0     FB2_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: AUTO_CONFIG_DONE_CYCLE<0>  12: BASEADR<0>                                                                                 22: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D 
-  2: A<21>                      13: BASEADR<1>                                                                                 23: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D 
-  3: A<22>                      14: IDE_DSACK_D1                                                                               24: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D 
-  4: A<24>                      15: IDE_DSACK_D2                                                                               25: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D 
-  5: A<25>                      16: IDE_ENABLE                                                                                 26: Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D 
-  6: A<26>                      17: IDE_R                                                                                      27: RW 
-  7: A<27>                      18: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  28: SHUT_UP<1> 
-  8: A<28>                      19: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  29: nAS_D0 
-  9: A<29>                      20: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  30: nAS 
- 10: A<30>                      21: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D  31: reset 
- 11: A<31>                     
+  1: A<24>             11: IDE_DSACK_D0                                                                               21: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D 
+  2: A<25>             12: IDE_DSACK_D1                                                                               22: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D 
+  3: A<26>             13: IDE_DSACK_D2                                                                               23: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D 
+  4: A<27>             14: IDE_DSACK_D3                                                                               24: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D 
+  5: A<28>             15: IDE_SPACE/IDE_SPACE_D2                                                                     25: ROM_EN 
+  6: A<29>             16: IDE_WAIT                                                                                   26: RW 
+  7: A<30>             17: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  27: SHUT_UP<1> 
+  8: A<31>             18: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D  28: nAS 
+  9: DSACK_16BIT       19: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D  29: reset 
+ 10: IDE_CYCLE         20: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D 
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-IDE_DIR              ...XXXXXXXX....XXXXXXXXXX.XX.X.......... 21
-IDE_ENABLE           ...XXXXXXXX....X.XXXXXXXX.XX.X.......... 20
+IDE_DIR              ..............X.........XX.X............ 4
+IDE_SPACE/IDE_SPACE_D2 
+                     XXXXXXXX........XXXXXXXX..X............. 17
+IDE_DSACK_D3         XXXXXXXX....X...XXXXXXXX..XX............ 19
+IDE_DSACK_D2         XXXXXXXX...X....XXXXXXXX..XX............ 19
 ROM_WE               ........................................ 0
-IDE_DSACK_D3         ...XXXXXXXX...X..XXXXXXXX..X.X.......... 19
-ROM_EN               ........................................ 0
-IDE_DSACK_D2         ...XXXXXXXX..X...XXXXXXXX..X.X.......... 19
-nAS_D0               .............................XX......... 2
-AUTO_CONFIG_DONE<0>  X...........................XX.......... 3
-Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 
-                     .XXXXXXXXXXXX............X.............. 13
+IDE_DSACK_D1         XXXXXXXX..X.....XXXXXXXX..XX............ 19
+ROM_EN               XXXXXXXX........XXXXXXXXXXXX............ 20
+IDE_DSACK_D0         ..............X............X............ 2
+nAS_D0               ...........................XX........... 2
+IDE_CYCLE            .........X....X............X............ 3
+DSACK_16BIT          XXXXXXXXX.X..X.XXXXXXXXXXXXX............ 24
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB3  ***********************************
@@ -404,187 +404,196 @@ BASEADR_4MB<1>       XX.XXXX.......XX...XX.X.XX.............. 13
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB4  ***********************************
-Number of function block inputs used/remaining:               31/23
-Number of signals used by logic mapping into function block:  31
-Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
-Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0     0   5     FB4_1         (b)     
-(unused)              0       0     0   5     FB4_2   87    I/O     I
-(unused)              0       0     0   5     FB4_3         (b)     
-(unused)              0       0     0   5     FB4_4         (b)     
-(unused)              0       0     0   5     FB4_5   89    I/O     I
-STERM                 0       0     0   5     FB4_6   90    I/O     O
-(unused)              0       0     0   5     FB4_7         (b)     
-IDE_CS<0>             1       0     0   4     FB4_8   91    I/O     O
-IDE_CS<1>             1       0     0   4     FB4_9   92    I/O     O
-IDE_SPACE/IDE_SPACE_D2
-                      1       0     0   4     FB4_10        (b)     (b)
-IDE_A<0>              1       0     0   4     FB4_11  93    I/O     O
-IDE_A<2>              1       0     0   4     FB4_12  94    I/O     O
-IDE_DSACK_D1          1       0     0   4     FB4_13        (b)     (b)
-IDE_A<1>              1       0     0   4     FB4_14  95    I/O     O
-IDE_R                 2       0     0   3     FB4_15  96    I/O     O
-IDE_DSACK_D0          1       0     0   4     FB4_16        (b)     (b)
-IDE_W                 2       0     0   3     FB4_17  97    I/O     O
-DSACK_16BIT           5       0     0   0     FB4_18        (b)     (b)
-
-Signals Used by Logic in Function Block
-  1: A<12>             12: A<9>                                                                                       22: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D 
-  2: A<13>             13: A<10>                                                                                      23: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D 
-  3: A<24>             14: A<11>                                                                                      24: Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D 
-  4: A<25>             15: IDE_DSACK_D0                                                                               25: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D 
-  5: A<26>             16: IDE_DSACK_D3                                                                               26: Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D 
-  6: A<27>             17: IDE_ENABLE                                                                                 27: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D 
-  7: A<28>             18: IDE_R                                                                                      28: Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D 
-  8: A<29>             19: IDE_W                                                                                      29: RW 
-  9: A<30>             20: IDE_WAIT                                                                                   30: SHUT_UP<1> 
- 10: A<31>             21: Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D  31: nAS 
- 11: DSACK_16BIT      
-
-Signal                        1         2         3         4 FB
-Name                0----+----0----+----0----+----0----+----0 Inputs
-STERM                ........................................ 0
-IDE_CS<0>            X....................................... 1
-IDE_CS<1>            .X...................................... 1
-IDE_SPACE/IDE_SPACE_D2 
-                     ..XXXXXXXX..........XXXXXXXX.X.......... 17
-IDE_A<0>             ...........X............................ 1
-IDE_A<2>             .............X.......................... 1
-IDE_DSACK_D1         ..XXXXXXXX....X.....XXXXXXXX.XX......... 19
-IDE_A<1>             ............X........................... 1
-IDE_R                ..XXXXXXXX......XX..XXXXXXXXXXX......... 21
-IDE_DSACK_D0         ..XXXXXXXX..........XXXXXXXX.XX......... 18
-IDE_W                ..XXXXXXXX........X.XXXXXXXXXXX......... 20
-DSACK_16BIT          ..XXXXXXXXX...XXX..XXXXXXXXXXXX......... 24
-                    0----+----1----+----2----+----3----+----4
-                              0         0         0         0
-*********************************** FB5  ***********************************
 Number of function block inputs used/remaining:               28/26
 Number of signals used by logic mapping into function block:  28
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-SHUT_UP<1>            1       0   /\2   2     FB5_1         (b)     (b)
-SHUT_UP<0>            1       0     0   4     FB5_2   35    I/O     (b)
-BASEADR_4MB<0>        2       0     0   3     FB5_3         (b)     (b)
-BASEADR<2>            2       0     0   3     FB5_4         (b)     (b)
-BASEADR<1>            2       0     0   3     FB5_5   36    I/O     (b)
+SHUT_UP<1>            1       0   /\2   2     FB4_1         (b)     (b)
+SHUT_UP<0>            1       0     0   4     FB4_2   87    I/O     I
+AUTO_CONFIG_D0        1       0     0   4     FB4_3         (b)     (b)
+BASEADR_4MB<0>        2       0     0   3     FB4_4         (b)     (b)
+BASEADR<2>            2       0     0   3     FB4_5   89    I/O     I
+STERM                 2       0     0   3     FB4_6   90    I/O     O
+BASEADR<1>            2       0     0   3     FB4_7         (b)     (b)
+IDE_CS<0>             1       0     0   4     FB4_8   91    I/O     O
+IDE_CS<1>             1       0     0   4     FB4_9   92    I/O     O
 AUTO_CONFIG_DONE_CYCLE<1>
-                      2       0     0   3     FB5_6   37    I/O     (b)
+                      2       0     0   3     FB4_10        (b)     (b)
+IDE_A<0>              1       0     0   4     FB4_11  93    I/O     O
+IDE_A<2>              1       0     0   4     FB4_12  94    I/O     O
 AUTO_CONFIG_DONE_CYCLE<0>
-                      2       0     0   3     FB5_7         (b)     (b)
-Dout1<3>              4       0     0   1     FB5_8   39    I/O     I
-IO4                   1       0     0   4     FB5_9   40    I/O     O
-Dout1<1>              4       0     0   1     FB5_10        (b)     (b)
-IO5                   1       0     0   4     FB5_11  41    I/O     O
-INT2                  0       0   \/1   4     FB5_12  42    I/O     O
-Dout1<0>              5       1<- \/1   0     FB5_13        (b)     (b)
-Dout2<2>              6       1<-   0   0     FB5_14  43    I/O     (b)
-Dout2<0>              6       1<-   0   0     FB5_15  46    I/O     (b)
-Dout2<3>              7       3<- /\1   0     FB5_16        (b)     (b)
-CIIN                  2       0   /\3   0     FB5_17  49    I/O     O
-Dout2<1>              7       2<-   0   0     FB5_18        (b)     (b)
+                      2       0     0   3     FB4_13        (b)     (b)
+IDE_A<1>              1       0     0   4     FB4_14  95    I/O     O
+IDE_R                 1       0   \/1   3     FB4_15  96    I/O     O
+Dout2<3>              7       2<-   0   0     FB4_16        (b)     (b)
+IDE_W                 1       0   /\1   3     FB4_17  97    I/O     O
+Dout2<1>              7       2<-   0   0     FB4_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: AUTO_CONFIG/AUTO_CONFIG_D2  11: DSACK<0>                        20: IDE_CYCLE 
-  2: AUTO_CONFIG_CYCLE           12: Dout1<0>                        21: A<2> 
-  3: AUTO_CONFIG_DONE<0>         13: Dout1<1>                        22: A<3> 
-  4: AUTO_CONFIG_DONE<1>         14: Dout1<3>                        23: D<3>.PIN 
-  5: AUTO_CONFIG_DONE_CYCLE<0>   15: Dout1_not0001/Dout1_not0001_D2  24: D<2>.PIN 
-  6: AUTO_CONFIG_DONE_CYCLE<1>   16: Dout2<0>                        25: D<1>.PIN 
-  7: A<1>                        17: Dout2<1>                        26: RW 
-  8: A<4>                        18: Dout2<2>                        27: nAS 
-  9: A<5>                        19: Dout2<3>                        28: nDS 
- 10: A<6>                       
+  1: AUTO_CONFIG/AUTO_CONFIG_D2  11: A<6>                            20: A<2> 
+  2: AUTO_CONFIG_DONE<0>         12: CIIN                            21: A<3> 
+  3: AUTO_CONFIG_DONE<1>         13: Dout1_not0001/Dout1_not0001_D2  22: D<3>.PIN 
+  4: AUTO_CONFIG_DONE_CYCLE<0>   14: Dout2<1>                        23: D<2>.PIN 
+  5: AUTO_CONFIG_DONE_CYCLE<1>   15: Dout2<3>                        24: D<1>.PIN 
+  6: A<12>                       16: A<9>                            25: ROM_EN 
+  7: A<13>                       17: A<10>                           26: RW 
+  8: A<1>                        18: A<11>                           27: nAS 
+  9: A<4>                        19: IDE_SPACE/IDE_SPACE_D2          28: nDS 
+ 10: A<5>                       
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-SHUT_UP<1>           X.XX..XXXX..........XX...XXX............ 12
-SHUT_UP<0>           X.X...XXXX..........XX...XXX............ 11
-BASEADR_4MB<0>       X.X...XXXX..........XX..XXXX............ 12
-BASEADR<2>           X.X...XXXX..........XXX..XXX............ 12
-BASEADR<1>           X.X...XXXX..........XX.X.XXX............ 12
+SHUT_UP<1>           XXX....XXXX........XX....XXX............ 12
+SHUT_UP<0>           XX.....XXXX........XX....XXX............ 11
+AUTO_CONFIG_D0       X.........................X............. 2
+BASEADR_4MB<0>       XX.....XXXX........XX..X.XXX............ 12
+BASEADR<2>           XX.....XXXX........XXX...XXX............ 12
+STERM                ...........X..............X............. 2
+BASEADR<1>           XX.....XXXX........XX.X..XXX............ 12
+IDE_CS<0>            .....X.................................. 1
+IDE_CS<1>            ......X................................. 1
 AUTO_CONFIG_DONE_CYCLE<1> 
-                     X.XX.XXXXX...........X...XXX............ 12
+                     XXX.X..XXXX.........X....XXX............ 12
+IDE_A<0>             ...............X........................ 1
+IDE_A<2>             .................X...................... 1
 AUTO_CONFIG_DONE_CYCLE<0> 
-                     X.X.X.XXXX...........X...XXX............ 11
-Dout1<3>             ......XXXX...XX.....XX.................. 8
-IO4                  ....................X................... 1
-Dout1<1>             ......XXXX..X.X.....XX.................. 8
-IO5                  .....................X.................. 1
+                     XX.X...XXXX.........X....XXX............ 11
+IDE_A<1>             ................X....................... 1
+IDE_R                ..................X.....XXX............. 4
+Dout2<3>             .......XXXX.X.X....XX................... 8
+IDE_W                ..................X......XX............. 3
+Dout2<1>             .......XXXX.XX.....XX................... 8
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB5  ***********************************
+Number of function block inputs used/remaining:               29/25
+Number of signals used by logic mapping into function block:  29
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB5_1         (b)     
+(unused)              0       0     0   5     FB5_2   35    I/O     
+(unused)              0       0     0   5     FB5_3         (b)     
+(unused)              0       0     0   5     FB5_4         (b)     
+(unused)              0       0     0   5     FB5_5   36    I/O     
+(unused)              0       0     0   5     FB5_6   37    I/O     
+(unused)              0       0     0   5     FB5_7         (b)     
+(unused)              0       0     0   5     FB5_8   39    I/O     I
+IO4                   1       0     0   4     FB5_9   40    I/O     O
+(unused)              0       0     0   5     FB5_10        (b)     
+IO5                   1       0     0   4     FB5_11  41    I/O     O
+INT2                  0       0     0   5     FB5_12  42    I/O     O
+(unused)              0       0     0   5     FB5_13        (b)     
+(unused)              0       0     0   5     FB5_14  43    I/O     
+D_and0000/D_and0000_D2
+                      1       0     0   4     FB5_15  46    I/O     (b)
+Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2
+                      2       0     0   3     FB5_16        (b)     (b)
+CIIN                  5       0     0   0     FB5_17  49    I/O     O
+AUTO_CONFIG/AUTO_CONFIG_D2
+                      2       0     0   3     FB5_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: AUTO_CONFIG_CYCLE    11: A<23>             21: CIIN 
+  2: AUTO_CONFIG_DONE<0>  12: A<24>             22: IDE_CYCLE 
+  3: AUTO_CONFIG_DONE<1>  13: A<25>             23: A<2> 
+  4: A<16>                14: A<26>             24: A<3> 
+  5: A<17>                15: A<27>             25: Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D 
+  6: A<18>                16: A<28>             26: Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D 
+  7: A<19>                17: A<29>             27: Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 
+  8: A<20>                18: A<30>             28: SHUT_UP<0> 
+  9: A<21>                19: A<31>             29: nAS 
+ 10: A<22>                20: BASEADR<0>       
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+IO4                  ......................X................. 1
+IO5                  .......................X................ 1
 INT2                 ........................................ 0
-Dout1<0>             ......XXXX.X..X.....XX.................. 8
-Dout2<2>             ......XXXX....X..X..XX.................. 8
-Dout2<0>             ......XXXX....XX....XX.................. 8
-Dout2<3>             ......XXXX....X...X.XX.................. 8
-CIIN                 .X........X........X.................... 3
-Dout2<1>             ......XXXX....X.X...XX.................. 8
+D_and0000/D_and0000_D2 
+                     .X..........................X........... 2
+Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 
+                     ........X..XXXXXXXXX....XX.............. 12
+CIIN                 X.......X..XXXXXXXXXXX..XXXXX........... 18
+AUTO_CONFIG/AUTO_CONFIG_D2 
+                     .XXXXXXXXXXXXXXXXXX..................... 18
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB6  ***********************************
-Number of function block inputs used/remaining:               30/24
-Number of signals used by logic mapping into function block:  30
+Number of function block inputs used/remaining:               28/26
+Number of signals used by logic mapping into function block:  28
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
-(unused)              0       0     0   5     FB6_1         (b)     
+(unused)              0       0   /\2   3     FB6_1         (b)     (b)
 (unused)              0       0     0   5     FB6_2   74    I/O     I
 (unused)              0       0     0   5     FB6_3         (b)     
-(unused)              0       0     0   5     FB6_4         (b)     
-(unused)              0       0     0   5     FB6_5   76    I/O     I
-(unused)              0       0     0   5     FB6_6   77    I/O     I
-(unused)              0       0     0   5     FB6_7         (b)     
-(unused)              0       0     0   5     FB6_8   78    I/O     I
-D_and0000/D_and0000_D2
-                      1       0     0   4     FB6_9   79    I/O     I
-AUTO_CONFIG_D0        1       0     0   4     FB6_10        (b)     (b)
+Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
+                      2       0     0   3     FB6_4         (b)     (b)
+Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
+                      2       0     0   3     FB6_5   76    I/O     I
+Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D
+                      2       0     0   3     FB6_6   77    I/O     I
+Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
+                      2       0     0   3     FB6_7         (b)     (b)
+Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D
+                      2       0     0   3     FB6_8   78    I/O     I
+Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D
+                      2       0     0   3     FB6_9   79    I/O     I
+Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D
+                      2       0     0   3     FB6_10        (b)     (b)
 Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D
                       2       0     0   3     FB6_11  80    I/O     (b)
 Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D
                       2       0     0   3     FB6_12  81    I/O     I
-IDE_CYCLE             2       0     0   3     FB6_13        (b)     (b)
-Dout1_not0001/Dout1_not0001_D2
-                      2       0     0   3     FB6_14  82    I/O     I
-AUTO_CONFIG_DONE<1>   2       0     0   3     FB6_15  85    I/O     I
-AUTO_CONFIG_CYCLE     2       0     0   3     FB6_16        (b)     (b)
-AUTO_CONFIG/AUTO_CONFIG_D2
-                      2       0     0   3     FB6_17  86    I/O     I
-Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
-                      4       0     0   1     FB6_18        (b)     (b)
+Dout1<2>              3       0     0   2     FB6_13        (b)     (b)
+Dout1<3>              4       0     0   1     FB6_14  82    I/O     I
+Dout1<1>              5       0     0   0     FB6_15  85    I/O     I
+Dout1<0>              5       0     0   0     FB6_16        (b)     (b)
+Dout2<2>              6       1<-   0   0     FB6_17  86    I/O     I
+Dout2<0>              6       2<- /\1   0     FB6_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: AUTO_CONFIG/AUTO_CONFIG_D2  11: A<21>             21: A<31> 
-  2: AUTO_CONFIG_CYCLE           12: A<22>             22: BASEADR_4MB<0> 
-  3: AUTO_CONFIG_DONE<0>         13: A<23>             23: BASEADR_4MB<1> 
-  4: AUTO_CONFIG_DONE<1>         14: A<24>             24: IDE_BASEADR<0> 
-  5: AUTO_CONFIG_DONE_CYCLE<1>   15: A<25>             25: IDE_BASEADR<1> 
-  6: A<16>                       16: A<26>             26: IDE_CYCLE 
-  7: A<17>                       17: A<27>             27: Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D 
-  8: A<18>                       18: A<28>             28: RW 
-  9: A<19>                       19: A<29>             29: nAS_D0 
- 10: A<20>                       20: A<30>             30: nAS 
+  1: A<16>             11: BASEADR<1>                      20: Dout2<2> 
+  2: A<17>             12: BASEADR<2>                      21: IDE_BASEADR<0> 
+  3: A<18>             13: BASEADR_4MB<2>                  22: IDE_BASEADR<1> 
+  4: A<19>             14: Dout1<0>                        23: IDE_BASEADR<2> 
+  5: A<1>              15: Dout1<1>                        24: IDE_BASEADR<3> 
+  6: A<22>             16: Dout1<2>                        25: IDE_BASEADR<6> 
+  7: A<23>             17: Dout1<3>                        26: IDE_BASEADR<7> 
+  8: A<4>              18: Dout1_not0001/Dout1_not0001_D2  27: A<2> 
+  9: A<5>              19: Dout2<0>                        28: A<3> 
+ 10: A<6>             
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-D_and0000/D_and0000_D2 
-                     ..X..........................X.......... 2
-AUTO_CONFIG_D0       X............................X.......... 2
+Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D 
+                     ......X.....X........................... 2
+Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D 
+                     ......X....X............................ 2
+Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D 
+                     .....X....X............................. 2
+Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D 
+                     ......X..................X.............. 2
+Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D 
+                     .....X..................X............... 2
+Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D 
+                     ...X...................X................ 2
+Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D 
+                     ..X...................X................. 2
 Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D 
-                     ......X.................X............... 2
+                     .X...................X.................. 2
 Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D 
-                     .....X.................X................ 2
-IDE_CYCLE            .........................X...X.......... 2
-Dout1_not0001/Dout1_not0001_D2 
-                     ..XX.XXXXXXXXXXXXXXXX......X.X.......... 20
-AUTO_CONFIG_DONE<1>  ....X.......................XX.......... 3
-AUTO_CONFIG_CYCLE    XX...........................X.......... 3
-AUTO_CONFIG/AUTO_CONFIG_D2 
-                     ..XX.XXXXXXXXXXXXXXXX................... 18
-Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 
-                     ..........XX.XXXXXXXXXX...X............. 13
+                     X...................X................... 2
+Dout1<2>             ....X..XXX.....X.X........XX............ 8
+Dout1<3>             ....X..XXX......XX........XX............ 8
+Dout1<1>             ....X..XXX....X..X........XX............ 8
+Dout1<0>             ....X..XXX...X...X........XX............ 8
+Dout2<2>             ....X..XXX.......X.X......XX............ 8
+Dout2<0>             ....X..XXX.......XX.......XX............ 8
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB7  ***********************************
-Number of function block inputs used/remaining:               22/32
-Number of signals used by logic mapping into function block:  22
+Number of function block inputs used/remaining:               28/26
+Number of signals used by logic mapping into function block:  28
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB7_1         (b)     
@@ -596,58 +605,44 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB7_7         (b)     
 (unused)              0       0     0   5     FB7_8   54    I/O     I
 (unused)              0       0     0   5     FB7_9   55    I/O     I
-Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D
-                      2       0     0   3     FB7_10        (b)     (b)
-Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D
-                      2       0     0   3     FB7_11  56    I/O     I
-Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D
-                      2       0     0   3     FB7_12  58    I/O     (b)
-Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D
-                      2       0     0   3     FB7_13        (b)     (b)
-Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D
+(unused)              0       0     0   5     FB7_10        (b)     
+(unused)              0       0     0   5     FB7_11  56    I/O     I
+(unused)              0       0     0   5     FB7_12  58    I/O     
+(unused)              0       0     0   5     FB7_13        (b)     
+Dout1_not0001/Dout1_not0001_D2
                       2       0     0   3     FB7_14  59    I/O     I
-Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D
-                      2       0     0   3     FB7_15  60    I/O     I
-Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D
-                      2       0     0   3     FB7_16        (b)     (b)
-Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D
-                      2       0     0   3     FB7_17  61    I/O     I
-Dout1<2>              3       0     0   2     FB7_18        (b)     (b)
+AUTO_CONFIG_DONE<1>   2       0     0   3     FB7_15  60    I/O     I
+AUTO_CONFIG_DONE<0>   2       0     0   3     FB7_16        (b)     (b)
+AUTO_CONFIG_CYCLE     2       0     0   3     FB7_17  61    I/O     I
+Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2
+                      4       0     0   1     FB7_18        (b)     (b)
 
 Signals Used by Logic in Function Block
-  1: A<18>              9: A<5>                            16: IDE_BASEADR<3> 
-  2: A<19>             10: A<6>                            17: IDE_BASEADR<4> 
-  3: A<1>              11: BASEADR<2>                      18: IDE_BASEADR<5> 
-  4: A<20>             12: BASEADR_4MB<2>                  19: IDE_BASEADR<6> 
-  5: A<21>             13: Dout1<2>                        20: IDE_BASEADR<7> 
-  6: A<22>             14: Dout1_not0001/Dout1_not0001_D2  21: A<2> 
-  7: A<23>             15: IDE_BASEADR<2>                  22: A<3> 
-  8: A<4>             
+  1: AUTO_CONFIG/AUTO_CONFIG_D2  11: A<20>             20: A<29> 
+  2: AUTO_CONFIG_CYCLE           12: A<21>             21: A<30> 
+  3: AUTO_CONFIG_DONE<0>         13: A<22>             22: A<31> 
+  4: AUTO_CONFIG_DONE<1>         14: A<23>             23: BASEADR_4MB<0> 
+  5: AUTO_CONFIG_DONE_CYCLE<0>   15: A<24>             24: BASEADR_4MB<1> 
+  6: AUTO_CONFIG_DONE_CYCLE<1>   16: A<25>             25: Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D 
+  7: A<16>                       17: A<26>             26: RW 
+  8: A<17>                       18: A<27>             27: nAS_D0 
+  9: A<18>                       19: A<28>             28: nAS 
+ 10: A<19>                      
 
 Signal                        1         2         3         4 FB
 Name                0----+----0----+----0----+----0----+----0 Inputs
-Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D 
-                     ......X....X............................ 2
-Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D 
-                     ......X...X............................. 2
-Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D 
-                     ......X............X.................... 2
-Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D 
-                     .....X............X..................... 2
-Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D 
-                     ....X............X...................... 2
-Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D 
-                     ...X............X....................... 2
-Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D 
-                     .X.............X........................ 2
-Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D 
-                     X.............X......................... 2
-Dout1<2>             ..X....XXX..XX......XX.................. 8
+Dout1_not0001/Dout1_not0001_D2 
+                     ..XX..XXXXXXXXXXXXXXXX...X.X............ 20
+AUTO_CONFIG_DONE<1>  .....X....................XX............ 3
+AUTO_CONFIG_DONE<0>  ....X.....................XX............ 3
+AUTO_CONFIG_CYCLE    XX.........................X............ 3
+Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 
+                     ...........XX.XXXXXXXXXXX............... 13
                     0----+----1----+----2----+----3----+----4
                               0         0         0         0
 *********************************** FB8  ***********************************
-Number of function block inputs used/remaining:               0/54
-Number of signals used by logic mapping into function block:  0
+Number of function block inputs used/remaining:               4/50
+Number of signals used by logic mapping into function block:  4
 Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
 Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB8_1         (b)     
@@ -666,19 +661,34 @@ Name                Pt      Pt    Pt  Pt               #    Type    Use
 (unused)              0       0     0   5     FB8_14  71    I/O     I
 (unused)              0       0     0   5     FB8_15  72    I/O     I
 (unused)              0       0     0   5     FB8_16        (b)     
-(unused)              0       0     0   5     FB8_17  73    I/O     
-(unused)              0       0     0   5     FB8_18        (b)     
+Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D
+                      2       0     0   3     FB8_17  73    I/O     (b)
+Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D
+                      2       0     0   3     FB8_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: A<20>              3: IDE_BASEADR<4>     4: IDE_BASEADR<5> 
+  2: A<21>            
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D 
+                     .X.X.................................... 2
+Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D 
+                     X.X..................................... 2
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
 *******************************  Equations  ********************************
 
 ********** Mapped Logic **********
 
 
 AUTO_CONFIG/AUTO_CONFIG_D2 <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(20) AND NOT A(31) AND NOT AUTO_CONFIG_DONE(0) AND A(23) AND 
-	A(22) AND A(21) AND A(19) AND NOT A(17) AND NOT A(18) AND NOT A(16))
+	NOT A(24) AND NOT A(20) AND NOT AUTO_CONFIG_DONE(0) AND A(23) AND A(22) AND 
+	A(21) AND A(19) AND NOT A(31) AND NOT A(17) AND NOT A(18) AND NOT A(16))
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(20) AND NOT A(31) AND NOT AUTO_CONFIG_DONE(1) AND A(23) AND 
-	A(22) AND A(21) AND A(19) AND NOT A(17) AND NOT A(18) AND NOT A(16)));
+	NOT A(24) AND NOT A(20) AND NOT AUTO_CONFIG_DONE(1) AND A(23) AND A(22) AND 
+	A(21) AND A(19) AND NOT A(31) AND NOT A(17) AND NOT A(18) AND NOT A(16)));
 
 FDCPE_AUTO_CONFIG_CYCLE: FDCPE port map (AUTO_CONFIG_CYCLE,AUTO_CONFIG_CYCLE_D,clk,'0',nAS);
 AUTO_CONFIG_CYCLE_D <= (AUTO_CONFIG_CYCLE AND NOT AUTO_CONFIG/AUTO_CONFIG_D2);
@@ -693,51 +703,51 @@ FDCPE_AUTO_CONFIG_DONE1: FDCPE port map (AUTO_CONFIG_DONE(1),AUTO_CONFIG_DONE_CY
 AUTO_CONFIG_DONE_CE(1) <= (nAS AND NOT nAS_D0);
 
 FTCPE_AUTO_CONFIG_DONE_CYCLE0: FTCPE port map (AUTO_CONFIG_DONE_CYCLE(0),AUTO_CONFIG_DONE_CYCLE_T(0),clk,NOT reset,'0',AUTO_CONFIG_DONE_CYCLE_CE(0));
-AUTO_CONFIG_DONE_CYCLE_T(0) <= (NOT AUTO_CONFIG_DONE_CYCLE(0) AND A(3) AND NOT A(1) AND NOT A(5) AND 
-	NOT A(4) AND A(6));
+AUTO_CONFIG_DONE_CYCLE_T(0) <= (NOT AUTO_CONFIG_DONE_CYCLE(0) AND NOT A(1) AND A(6) AND NOT A(4) AND 
+	A(3) AND NOT A(5));
 AUTO_CONFIG_DONE_CYCLE_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FTCPE_AUTO_CONFIG_DONE_CYCLE1: FTCPE port map (AUTO_CONFIG_DONE_CYCLE(1),AUTO_CONFIG_DONE_CYCLE_T(1),clk,NOT reset,'0',AUTO_CONFIG_DONE_CYCLE_CE(1));
-AUTO_CONFIG_DONE_CYCLE_T(1) <= (NOT AUTO_CONFIG_DONE_CYCLE(1) AND A(3) AND NOT A(1) AND NOT A(5) AND 
-	NOT A(4) AND A(6));
+AUTO_CONFIG_DONE_CYCLE_T(1) <= (NOT AUTO_CONFIG_DONE_CYCLE(1) AND NOT A(1) AND A(6) AND NOT A(4) AND 
+	A(3) AND NOT A(5));
 AUTO_CONFIG_DONE_CYCLE_CE(1) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
 	NOT AUTO_CONFIG_DONE(1) AND AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_BASEADR0: FDCPE port map (BASEADR(0),D(1).PIN,clk,'0',NOT reset,BASEADR_CE(0));
-BASEADR_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND A(3) AND 
-	NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+BASEADR_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND 
+	A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_BASEADR1: FDCPE port map (BASEADR(1),D(2).PIN,clk,'0',NOT reset,BASEADR_CE(1));
-BASEADR_CE(1) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND A(3) AND 
-	NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+BASEADR_CE(1) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND 
+	A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_BASEADR2: FDCPE port map (BASEADR(2),D(3).PIN,clk,'0',NOT reset,BASEADR_CE(2));
-BASEADR_CE(2) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND A(3) AND 
-	NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+BASEADR_CE(2) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND 
+	A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_BASEADR_4MB0: FDCPE port map (BASEADR_4MB(0),NOT D(1).PIN,clk,'0',NOT reset,BASEADR_4MB_CE(0));
-BASEADR_4MB_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND A(3) AND 
-	NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+BASEADR_4MB_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND 
+	A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_BASEADR_4MB1: FDCPE port map (BASEADR_4MB(1),BASEADR_4MB_D(1),clk,'0',NOT reset,BASEADR_4MB_CE(1));
 BASEADR_4MB_D(1) <= D(1).PIN
 	 XOR 
 BASEADR_4MB_D(1) <= D(2).PIN;
-BASEADR_4MB_CE(1) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND A(3) AND 
-	NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+BASEADR_4MB_CE(1) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND 
+	A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_BASEADR_4MB2: FDCPE port map (BASEADR_4MB(2),BASEADR_4MB_D(2),clk,'0',NOT reset,BASEADR_4MB_CE(2));
 BASEADR_4MB_D(2) <= D(3).PIN
 	 XOR 
 BASEADR_4MB_D(2) <= (D(1).PIN AND D(2).PIN);
-BASEADR_4MB_CE(2) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND A(3) AND 
-	NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+BASEADR_4MB_CE(2) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND 
+	A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 
@@ -759,10 +769,19 @@ BYTE(2) <= ((NOT RW AND A(1))
 BYTE(3) <= ((NOT RW AND A(1))
 	OR (NOT RW AND A(0)));
 
-
-CIIN_I <= NOT DSACK(0);
+FTCPE_CIIN: FTCPE port map (CIIN_I,CIIN_T,clk,nAS,'0');
+CIIN_T <= ((NOT CIIN AND NOT SHUT_UP(0) AND 
+	Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2)
+	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT CIIN AND BASEADR(0) AND A(21) AND NOT A(31) AND NOT SHUT_UP(0) AND 
+	NOT Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D AND 
+	NOT Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D)
+	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT CIIN AND NOT BASEADR(0) AND NOT A(21) AND NOT A(31) AND NOT SHUT_UP(0) AND 
+	NOT Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D AND 
+	NOT Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D));
 CIIN <= CIIN_I when CIIN_OE = '1' else 'Z';
-CIIN_OE <= NOT ((DSACK(0) AND IDE_CYCLE AND AUTO_CONFIG_CYCLE));
+CIIN_OE <= NOT ((NOT CIIN AND AUTO_CONFIG_CYCLE AND IDE_CYCLE));
 
 
 D_I(0) <= NOT (((NOT Dout1(0) AND D_and0000/D_and0000_D2)
@@ -788,22 +807,19 @@ D_I(3) <= NOT (((NOT Dout1(3) AND D_and0000/D_and0000_D2)
 D(3) <= D_I(3) when D_OE(3) = '1' else 'Z';
 D_OE(3) <= (RW AND AUTO_CONFIG/AUTO_CONFIG_D2);
 
-FDCPE_DSACK0: FDCPE port map (DSACK_I(0),DSACK(0),clk,'0',nAS);
-DSACK(0) <= ((DSACK(0) AND SHUT_UP(0))
-	OR (DSACK(0) AND 
-	NOT Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 AND 
-	NOT Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2));
+
+DSACK_I(0) <= '1';
 DSACK(0) <= DSACK_I(0) when DSACK_OE(0) = '1' else 'Z';
 DSACK_OE(0) <= NOT nRAM_SEL;
 
 
-DSACK_I(1) <= (DSACK(0) AND NOT AUTO_CONFIG_D0 AND DSACK_16BIT);
+DSACK_I(1) <= (NOT AUTO_CONFIG_D0 AND DSACK_16BIT);
 DSACK(1) <= DSACK_I(1) when DSACK_OE(1) = '1' else 'Z';
 DSACK_OE(1) <= NOT nRAM_SEL;
 
 FDCPE_DSACK_16BIT: FDCPE port map (DSACK_16BIT,DSACK_16BIT_D,clk,'0','0');
 DSACK_16BIT_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND RW AND NOT IDE_ENABLE AND NOT SHUT_UP(1) AND 
+	NOT A(24) AND NOT nAS AND RW AND NOT ROM_EN AND NOT A(31) AND NOT SHUT_UP(1) AND 
 	NOT IDE_DSACK_D3 AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
@@ -814,7 +830,7 @@ DSACK_16BIT_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT RW AND NOT SHUT_UP(1) AND NOT DSACK_16BIT AND 
+	NOT A(24) AND NOT nAS AND NOT RW AND NOT A(31) AND NOT SHUT_UP(1) AND NOT DSACK_16BIT AND 
 	NOT IDE_WAIT AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
@@ -825,7 +841,7 @@ DSACK_16BIT_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT RW AND NOT SHUT_UP(1) AND IDE_WAIT AND 
+	NOT A(24) AND NOT nAS AND NOT RW AND NOT A(31) AND NOT SHUT_UP(1) AND IDE_WAIT AND 
 	NOT IDE_DSACK_D0 AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
@@ -836,7 +852,7 @@ DSACK_16BIT_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND IDE_ENABLE AND NOT SHUT_UP(1) AND 
+	NOT A(24) AND NOT nAS AND ROM_EN AND NOT A(31) AND NOT SHUT_UP(1) AND 
 	NOT DSACK_16BIT AND NOT IDE_WAIT AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
@@ -847,8 +863,8 @@ DSACK_16BIT_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND IDE_ENABLE AND NOT SHUT_UP(1) AND 
-	IDE_WAIT AND NOT IDE_DSACK_D0 AND 
+	NOT A(24) AND NOT nAS AND ROM_EN AND NOT A(31) AND NOT SHUT_UP(1) AND IDE_WAIT AND 
+	NOT IDE_DSACK_D0 AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
@@ -862,104 +878,108 @@ DSACK_16BIT_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A
 D_and0000/D_and0000_D2 <= (NOT nAS AND NOT AUTO_CONFIG_DONE(0));
 
 FDCPE_Dout10: FDCPE port map (Dout1(0),Dout1_D(0),clk,'0',NOT reset);
-Dout1_D(0) <= ((NOT A(3) AND NOT A(1) AND NOT A(5) AND A(4) AND A(2) AND NOT A(6) AND 
+Dout1_D(0) <= ((NOT Dout1(0) AND NOT Dout1_not0001/Dout1_not0001_D2)
+	OR (NOT A(1) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT Dout1(0) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND 
+	OR (A(6) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	OR (A(1) AND NOT A(6) AND NOT A(4) AND A(2) AND NOT A(3) AND A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND A(5) AND NOT A(4) AND A(2) AND NOT A(6) AND 
+	OR (NOT A(1) AND NOT A(6) AND A(4) AND A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
 
 FDCPE_Dout11: FDCPE port map (Dout1(1),Dout1_D(1),clk,'0',NOT reset);
 Dout1_D(1) <= ((NOT Dout1(1) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	OR (NOT A(1) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND A(4) AND NOT A(2) AND NOT A(6) AND 
+	OR (A(6) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND A(2) AND NOT A(6) AND 
+	OR (A(1) AND NOT A(6) AND A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
+	Dout1_not0001/Dout1_not0001_D2)
+	OR (A(1) AND NOT A(6) AND NOT A(4) AND A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
 
 FDCPE_Dout12: FDCPE port map (Dout1(2),Dout1_D(2),clk,'0',NOT reset);
 Dout1_D(2) <= ((NOT Dout1(2) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	OR (A(6) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND A(4) AND A(2) AND NOT A(6) AND 
+	OR (A(1) AND NOT A(6) AND A(4) AND A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
 
 FDCPE_Dout13: FDCPE port map (Dout1(3),Dout1_D(3),clk,'0',NOT reset);
 Dout1_D(3) <= ((NOT Dout1(3) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND A(4) AND NOT A(6) AND 
+	OR (A(1) AND NOT A(6) AND A(4) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND 
+	OR (A(1) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	OR (A(6) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
 
 
 Dout1_not0001/Dout1_not0001_D2 <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(20) AND NOT A(31) AND NOT nAS AND RW AND NOT AUTO_CONFIG_DONE(0) AND 
-	A(23) AND A(22) AND A(21) AND A(19) AND NOT A(17) AND NOT A(18) AND NOT A(16))
+	NOT A(24) AND NOT A(20) AND NOT nAS AND RW AND NOT AUTO_CONFIG_DONE(0) AND A(23) AND 
+	A(22) AND A(21) AND A(19) AND NOT A(31) AND NOT A(17) AND NOT A(18) AND NOT A(16))
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(20) AND NOT A(31) AND NOT nAS AND RW AND NOT AUTO_CONFIG_DONE(1) AND 
-	A(23) AND A(22) AND A(21) AND A(19) AND NOT A(17) AND NOT A(18) AND NOT A(16)));
+	NOT A(24) AND NOT A(20) AND NOT nAS AND RW AND NOT AUTO_CONFIG_DONE(1) AND A(23) AND 
+	A(22) AND A(21) AND A(19) AND NOT A(31) AND NOT A(17) AND NOT A(18) AND NOT A(16)));
 
 FDCPE_Dout20: FDCPE port map (Dout2(0),Dout2_D(0),clk,'0',NOT reset);
-Dout2_D(0) <= ((NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+Dout2_D(0) <= ((A(1) AND NOT A(6) AND A(4) AND A(3) AND NOT A(5) AND 
+	Dout1_not0001/Dout1_not0001_D2)
+	OR (A(6) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
 	OR (NOT Dout2(0) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (A(3) AND A(1) AND NOT A(5) AND A(4) AND NOT A(6) AND 
+	OR (A(1) AND NOT A(6) AND NOT A(4) AND A(2) AND A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (A(3) AND NOT A(5) AND A(4) AND NOT A(2) AND NOT A(6) AND 
+	OR (NOT A(6) AND A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(5) AND NOT A(4) AND A(2) AND NOT A(6) AND 
-	Dout1_not0001/Dout1_not0001_D2)
-	OR (A(1) AND A(5) AND NOT A(4) AND A(2) AND NOT A(6) AND 
+	OR (NOT A(6) AND NOT A(4) AND A(2) AND NOT A(3) AND A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
 
 FDCPE_Dout21: FDCPE port map (Dout2(1),Dout2_D(1),clk,'0',NOT reset);
-Dout2_D(1) <= ((NOT A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(6) AND 
+Dout2_D(1) <= ((A(1) AND NOT A(6) AND NOT A(4) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(1) AND A(5) AND NOT A(4) AND A(2) AND NOT A(6) AND 
+	OR (NOT A(1) AND NOT A(6) AND NOT A(4) AND A(2) AND NOT A(3) AND A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
 	OR (NOT Dout2(1) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND 
+	OR (NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (A(3) AND NOT A(1) AND NOT A(5) AND A(4) AND NOT A(6) AND 
+	OR (NOT A(1) AND NOT A(6) AND A(4) AND A(2) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (A(3) AND NOT A(5) AND A(4) AND A(2) AND NOT A(6) AND 
+	OR (NOT A(1) AND NOT A(6) AND A(4) AND A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(1) AND NOT A(5) AND A(4) AND A(2) AND NOT A(6) AND 
+	OR (NOT A(6) AND A(4) AND A(2) AND A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
 
 FDCPE_Dout22: FDCPE port map (Dout2(2),Dout2_D(2),clk,'0',NOT reset);
-Dout2_D(2) <= ((A(3) AND NOT A(1) AND NOT A(5) AND A(4) AND A(2) AND NOT A(6) AND 
+Dout2_D(2) <= ((NOT A(1) AND NOT A(6) AND A(4) AND A(2) AND A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
 	OR (NOT Dout2(2) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND 
+	OR (A(1) AND NOT A(6) AND NOT A(4) AND A(2) AND NOT A(3) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND A(2) AND NOT A(6) AND 
+	OR (A(1) AND NOT A(6) AND A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(4) AND A(2) AND NOT A(6) AND 
+	OR (A(1) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	OR (A(6) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
 
 FDCPE_Dout23: FDCPE port map (Dout2(3),Dout2_D(3),clk,'0',NOT reset);
-Dout2_D(3) <= ((NOT A(3) AND A(1) AND NOT A(5) AND A(4) AND NOT A(6) AND 
+Dout2_D(3) <= ((NOT A(1) AND NOT A(6) AND NOT A(4) AND A(2) AND NOT A(3) AND A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (A(3) AND NOT A(1) AND NOT A(5) AND A(4) AND NOT A(2) AND NOT A(6) AND 
-	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(1) AND A(5) AND NOT A(4) AND A(2) AND NOT A(6) AND 
+	OR (NOT A(1) AND NOT A(6) AND A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
 	OR (NOT Dout2(3) AND NOT Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND 
+	OR (A(1) AND NOT A(6) AND A(4) AND A(2) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (NOT A(3) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	OR (A(1) AND NOT A(6) AND A(4) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2)
-	OR (A(1) AND NOT A(5) AND A(4) AND A(2) AND NOT A(6) AND 
+	OR (A(1) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
+	Dout1_not0001/Dout1_not0001_D2)
+	OR (A(6) AND NOT A(4) AND NOT A(2) AND NOT A(3) AND NOT A(5) AND 
 	Dout1_not0001/Dout1_not0001_D2));
+
+
 
 
 IDE_A(0) <= A(9);
@@ -972,42 +992,42 @@ IDE_A(2) <= A(11);
 
 FDCPE_IDE_BASEADR0: FDCPE port map (IDE_BASEADR(0),D(0).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(0));
 IDE_BASEADR_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_IDE_BASEADR1: FDCPE port map (IDE_BASEADR(1),D(1).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(1));
 IDE_BASEADR_CE(1) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_IDE_BASEADR2: FDCPE port map (IDE_BASEADR(2),D(2).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(2));
 IDE_BASEADR_CE(2) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_IDE_BASEADR3: FDCPE port map (IDE_BASEADR(3),D(3).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(3));
 IDE_BASEADR_CE(3) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_IDE_BASEADR4: FDCPE port map (IDE_BASEADR(4),D(0).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(4));
 IDE_BASEADR_CE(4) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_IDE_BASEADR5: FDCPE port map (IDE_BASEADR(5),D(1).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(5));
 IDE_BASEADR_CE(5) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_IDE_BASEADR6: FDCPE port map (IDE_BASEADR(6),D(2).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(6));
 IDE_BASEADR_CE(6) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_IDE_BASEADR7: FDCPE port map (IDE_BASEADR(7),D(3).PIN,clk,'0',NOT reset,IDE_BASEADR_CE(7));
 IDE_BASEADR_CE(7) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 
@@ -1016,45 +1036,18 @@ IDE_CS(0) <= NOT A(12);
 
 IDE_CS(1) <= NOT A(13);
 
-FDCPE_IDE_CYCLE: FDCPE port map (IDE_CYCLE,'0',clk,'0',nAS,IDE_CYCLE);
+FDCPE_IDE_CYCLE: FDCPE port map (IDE_CYCLE,IDE_CYCLE_D,clk,'0',nAS);
+IDE_CYCLE_D <= (IDE_CYCLE AND NOT IDE_SPACE/IDE_SPACE_D2);
 
 FDCPE_IDE_DIR: FDCPE port map (IDE_DIR,IDE_DIR_D,clk,'0','0');
-IDE_DIR_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT IDE_R AND NOT SHUT_UP(1) AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
-	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND RW AND IDE_ENABLE AND NOT SHUT_UP(1) AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D));
+IDE_DIR_D <= (NOT nAS AND RW AND ROM_EN AND IDE_SPACE/IDE_SPACE_D2);
 
 FDCPE_IDE_DSACK_D0: FDCPE port map (IDE_DSACK_D0,IDE_DSACK_D0_D,clk,'0','0');
-IDE_DSACK_D0_D <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT SHUT_UP(1) AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D);
+IDE_DSACK_D0_D <= (NOT nAS AND IDE_SPACE/IDE_SPACE_D2);
 
 FDCPE_IDE_DSACK_D1: FDCPE port map (IDE_DSACK_D1,IDE_DSACK_D1_D,clk,'0','0');
 IDE_DSACK_D1_D <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT SHUT_UP(1) AND NOT IDE_DSACK_D0 AND 
+	NOT A(24) AND NOT nAS AND NOT A(31) AND NOT SHUT_UP(1) AND NOT IDE_DSACK_D0 AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
@@ -1066,7 +1059,7 @@ IDE_DSACK_D1_D <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A
 
 FDCPE_IDE_DSACK_D2: FDCPE port map (IDE_DSACK_D2,IDE_DSACK_D2_D,clk,'0','0');
 IDE_DSACK_D2_D <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT SHUT_UP(1) AND NOT IDE_DSACK_D1 AND 
+	NOT A(24) AND NOT nAS AND NOT A(31) AND NOT SHUT_UP(1) AND NOT IDE_DSACK_D1 AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
@@ -1078,19 +1071,7 @@ IDE_DSACK_D2_D <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A
 
 FDCPE_IDE_DSACK_D3: FDCPE port map (IDE_DSACK_D3,IDE_DSACK_D3_D,clk,'0','0');
 IDE_DSACK_D3_D <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT SHUT_UP(1) AND NOT IDE_DSACK_D2 AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D);
-
-FTCPE_IDE_ENABLE: FTCPE port map (IDE_ENABLE,IDE_ENABLE_T,clk,NOT reset,'0');
-IDE_ENABLE_T <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT RW AND NOT IDE_ENABLE AND NOT SHUT_UP(1) AND 
+	NOT A(24) AND NOT nAS AND NOT A(31) AND NOT SHUT_UP(1) AND NOT IDE_DSACK_D2 AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
@@ -1101,26 +1082,7 @@ IDE_ENABLE_T <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(2
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D);
 
 FDCPE_IDE_R: FDCPE port map (IDE_R,IDE_R_D,clk,'0','0');
-IDE_R_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT IDE_R AND NOT SHUT_UP(1) AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
-	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND RW AND IDE_ENABLE AND NOT SHUT_UP(1) AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D));
+IDE_R_D <= (NOT nAS AND RW AND ROM_EN AND IDE_SPACE/IDE_SPACE_D2);
 
 
 IDE_SPACE/IDE_SPACE_D2 <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
@@ -1135,26 +1097,7 @@ IDE_SPACE/IDE_SPACE_D2 <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) A
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D);
 
 FDCPE_IDE_W: FDCPE port map (IDE_W,IDE_W_D,clk,'0','0');
-IDE_W_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT RW AND NOT SHUT_UP(1) AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
-	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT SHUT_UP(1) AND NOT IDE_W AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D));
+IDE_W_D <= (NOT nAS AND NOT RW AND IDE_SPACE/IDE_SPACE_D2);
 
 
 INT2 <= '1';
@@ -1207,21 +1150,18 @@ Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_
 
 
 Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND BASEADR(0) AND BASEADR(1) AND A(22) AND 
-	A(21) AND 
+	NOT A(24) AND BASEADR(0) AND A(21) AND NOT A(31) AND 
+	NOT Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D AND 
 	NOT Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND BASEADR(0) AND NOT BASEADR(1) AND NOT A(22) AND 
-	A(21) AND 
-	NOT Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D)
-	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT BASEADR(0) AND BASEADR(1) AND A(22) AND 
-	NOT A(21) AND 
-	NOT Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D)
-	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT BASEADR(0) AND NOT BASEADR(1) AND NOT A(22) AND 
-	NOT A(21) AND 
+	NOT A(24) AND NOT BASEADR(0) AND NOT A(21) AND NOT A(31) AND 
+	NOT Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D AND 
 	NOT Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D));
+
+
+Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D <= BASEADR(1)
+	 XOR 
+Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001/Mcompar_RAM2MB_cmp_eq0000_or0000_xor0001_D <= A(22);
 
 
 Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000_D <= BASEADR(2)
@@ -1230,20 +1170,20 @@ Mcompar_RAM2MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM2MB_cmp_eq0000_or0001_xor000
 
 
 Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND A(22) AND 
-	A(21) AND 
+	NOT A(24) AND BASEADR_4MB(0) AND BASEADR_4MB(1) AND A(22) AND A(21) AND 
+	NOT A(31) AND 
 	NOT Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND NOT A(22) AND 
-	A(21) AND 
+	NOT A(24) AND BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND NOT A(22) AND A(21) AND 
+	NOT A(31) AND 
 	NOT Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND A(22) AND 
-	NOT A(21) AND 
+	NOT A(24) AND NOT BASEADR_4MB(0) AND BASEADR_4MB(1) AND A(22) AND NOT A(21) AND 
+	NOT A(31) AND 
 	NOT Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D)
 	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND NOT A(22) AND 
-	NOT A(21) AND 
+	NOT A(24) AND NOT BASEADR_4MB(0) AND NOT BASEADR_4MB(1) AND NOT A(22) AND NOT A(21) AND 
+	NOT A(31) AND 
 	NOT Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000/Mcompar_RAM4MB_cmp_eq0000_or0001_xor0000_D));
 
 
@@ -1259,12 +1199,21 @@ OE(0) <= NOT ((NOT nAS AND RW AND NOT SHUT_UP(0) AND
 OE(1) <= NOT ((NOT nAS AND RW AND NOT SHUT_UP(0) AND 
 	Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2));
 
-
-ROM_EN <= '0';
+FTCPE_ROM_EN: FTCPE port map (ROM_EN,ROM_EN_T,clk,NOT reset,'0');
+ROM_EN_T <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT nAS AND NOT RW AND NOT ROM_EN AND NOT A(31) AND NOT SHUT_UP(1) AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D);
 
 FDCPE_ROM_OE: FDCPE port map (ROM_OE,ROM_OE_D,clk,'0','0');
-ROM_OE_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND NOT SHUT_UP(1) AND NOT ROM_OE AND 
+ROM_OE_D <= (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
+	NOT A(24) AND NOT nAS AND RW AND NOT ROM_EN AND NOT A(31) AND NOT SHUT_UP(1) AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
@@ -1272,33 +1221,22 @@ ROM_OE_D <= ((NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
 	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D)
-	OR (NOT A(30) AND NOT A(29) AND NOT A(28) AND NOT A(27) AND NOT A(26) AND NOT A(25) AND 
-	NOT A(24) AND NOT A(31) AND NOT nAS AND RW AND NOT IDE_ENABLE AND NOT SHUT_UP(1) AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0000_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0001_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0002_xor0001_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0000_D AND 
-	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D));
+	NOT Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001/Mcompar_IDE_SPACE_cmp_eq0000_or0003_xor0001_D);
 
 
 ROM_WE <= '1';
 
 FDCPE_SHUT_UP0: FDCPE port map (SHUT_UP(0),'0',clk,'0',NOT reset,SHUT_UP_CE(0));
-SHUT_UP_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND A(3) AND 
-	NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+SHUT_UP_CE(0) <= (NOT nDS AND NOT nAS AND NOT RW AND NOT AUTO_CONFIG_DONE(0) AND NOT A(1) AND 
+	A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
 FDCPE_SHUT_UP1: FDCPE port map (SHUT_UP(1),'0',clk,'0',NOT reset,SHUT_UP_CE(1));
 SHUT_UP_CE(1) <= (NOT nDS AND NOT nAS AND NOT RW AND AUTO_CONFIG_DONE(0) AND 
-	NOT AUTO_CONFIG_DONE(1) AND A(3) AND NOT A(1) AND NOT A(5) AND NOT A(4) AND NOT A(2) AND A(6) AND 
+	NOT AUTO_CONFIG_DONE(1) AND NOT A(1) AND A(6) AND NOT A(4) AND NOT A(2) AND A(3) AND NOT A(5) AND 
 	AUTO_CONFIG/AUTO_CONFIG_D2);
 
-
-STERM <= '1';
+FDCPE_STERM: FDCPE port map (STERM,NOT CIIN,clk,'0',nAS);
 
 
 WE(0) <= NOT ((NOT nAS AND NOT RW AND NOT SHUT_UP(0) AND 
@@ -1314,9 +1252,9 @@ FDCPE_nAS_D0: FDCPE port map (nAS_D0,nAS,clk,'0','0',reset);
 nRAM_SEL <= ((SHUT_UP(0) AND NOT AUTO_CONFIG/AUTO_CONFIG_D2 AND 
 	NOT IDE_SPACE/IDE_SPACE_D2)
 	OR (
-	NOT Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 AND 
-	NOT Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2 AND NOT AUTO_CONFIG/AUTO_CONFIG_D2 AND 
-	NOT IDE_SPACE/IDE_SPACE_D2));
+	NOT Mcompar_RAM4MB_cmp_eq0000_AEB_or0000/Mcompar_RAM4MB_cmp_eq0000_AEB_or0000_D2 AND NOT AUTO_CONFIG/AUTO_CONFIG_D2 AND 
+	NOT IDE_SPACE/IDE_SPACE_D2 AND 
+	NOT Mcompar_RAM2MB_cmp_eq0000_AEB_or0000/Mcompar_RAM2MB_cmp_eq0000_AEB_or0000_D2));
 
 Register Legend:
  FDCPE (Q,D,C,CLR,PRE,CE); 
