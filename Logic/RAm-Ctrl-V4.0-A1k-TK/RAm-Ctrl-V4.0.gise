@@ -63,7 +63,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1472501660" xil_pn:in_ck="4247645350691822674" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="5939336463179405201" xil_pn:start_ts="1472501649">
+    <transform xil_pn:end_ts="1475089325" xil_pn:in_ck="4247645350691822674" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="5939336463179405201" xil_pn:start_ts="1475089315">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -84,7 +84,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1472501668" xil_pn:in_ck="1788842262927861930" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1472501660">
+    <transform xil_pn:end_ts="1475089333" xil_pn:in_ck="1788842262927861930" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1475089325">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="RAMCtrl.bld"/>
@@ -93,7 +93,7 @@
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1472501679" xil_pn:in_ck="128717526578670844" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-5248935469081102553" xil_pn:start_ts="1472501668">
+    <transform xil_pn:end_ts="1475089348" xil_pn:in_ck="128717526578670844" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="-5248935469081102553" xil_pn:start_ts="1475089333">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -107,17 +107,15 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="RAMCtrl.jed"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:name="TRAN_timRpt">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
     </transform>

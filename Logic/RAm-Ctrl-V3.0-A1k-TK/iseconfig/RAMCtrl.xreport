@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-01-30T13:29:50</DateModified>
+  <DateModified>2016-10-06T22:16:38</DateModified>
   <ModuleName>RAMCtrl</ModuleName>
-  <SummaryTimeStamp>2015-01-12T22:10:40</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK/iseconfig/RAMCtrl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Matze/Documents/GitHub/68030tk-SRAM_IDE-interface/Logic/RAm-Ctrl-V3.0-A1k-TK\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2016-10-06T22:12:47</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/GitHub/Logic/RAm-Ctrl-V3.0-A1k-TK/iseconfig/RAMCtrl.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/GitHub/Logic/RAm-Ctrl-V3.0-A1k-TK\</ImplementationReportsDirectory>
   <DateInitialized>2014-09-16T14:59:51</DateInitialized>
   <EnableMessageFiltering>true</EnableMessageFiltering>
  </header>

@@ -370,7 +370,7 @@ begin
 				AUTO_CONFIG_D0 <='1';
 				if(RW='1') then
 					case A(6 downto 1) is
-						when "000000"	=> Dout1 <= 	"1100" ; --ZII, System-Memory, no ROM
+						when "000000"	=> Dout1 <= 	"1110" ; --ZII, System-Memory, no ROM
 						when "000001"	=> Dout1 <=	"0111" ; --one Card, 4MB = 111
 						--when "0000100"	=> Dout1 <=	"1111" ; --ProductID high nibble : E->0001
 						when "000011"	=> Dout1 <=	"1101" ; --ProductID low nibble: F->0000
