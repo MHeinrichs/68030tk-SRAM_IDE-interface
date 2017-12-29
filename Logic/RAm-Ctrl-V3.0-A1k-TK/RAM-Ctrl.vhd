@@ -299,58 +299,63 @@ begin
 					 else '1';
 	
 	--map DSACK signal
-	DSACK_INT	<= "00" when DSACK_32BIT_D1='0' and nAS='0' else
+	DSACK_INT	<= "00" when MY_RAMSEL='0' and nAS='0' else
 						"01" when DSACK_16BIT	='0' and nAS='0' else 						
 						"01" when AUTO_CONFIG	='1' and nAS='0' else 
 						"11";
 	DSACK <= DSACK_INT when MY_CYCLE ='0' ELSE "ZZ";
-	--STERM <=  '0' when MY_RAMSEL ='1' else '1';
+	
 	STERM <=  '1';
-	dsack_gen: process (reset, clk)
-	begin
-		if	reset = '0' then
-			DSACK_32BIT		<= '1';
-			DSACK_32BIT_D0 <= '1';
-			DSACK_32BIT_D1 <= '1';
-			DSACK_32BIT_D2 <= '1';
-			DSACK_32BIT_D3 <= '1';
-			nOE				<= '1';
-			nWE				<= '1';
-		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
-			if(MY_RAMSEL = '1' and nAS ='0')then
-				nOE 			<= not RW;
+	
+	nOE 	<= '0' when (MY_RAMSEL = '1' and nAS ='0') and RW= '1' else '1';
+	nWE 	<= '0' when (MY_RAMSEL = '1' and nAS ='0') and RW= '0' else '1';
 				
-				if(RW='0' and DSACK_32BIT_D2 ='1') then --nWE must be deasserted before nAS terminates!
-					nWE 		<= '0';
-				else 
-					nWE 		<= '1';
-				end if;
-			
-				DSACK_32BIT	<= '0';				
-				DSACK_32BIT_D0 <= DSACK_32BIT;				
-				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
-				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
-				DSACK_32BIT_D3 <= DSACK_32BIT_D2;
-
-			else
-				DSACK_32BIT		<= '1';
-				DSACK_32BIT_D0 <= '1';
-				DSACK_32BIT_D1 <= '1';
-				DSACK_32BIT_D2 <= '1';
-				DSACK_32BIT_D3 <= '1';
-				
-				nOE				<= '1';
-				nWE				<= '1';
-			end if;
-		end if;
-	end process dsack_gen;
+--	dsack_gen: process (reset, clk)	begin
+--		if	reset = '0' then
+--			DSACK_32BIT		<= '1';
+--			DSACK_32BIT_D0 <= '1';
+--			DSACK_32BIT_D1 <= '1';
+--			DSACK_32BIT_D2 <= '1';
+--			DSACK_32BIT_D3 <= '1';
+--			nOE				<= '1';
+--			nWE				<= '1';
+--		elsif rising_edge(clk) then -- no reset, so wait for rising edge of the clock, Attention: THe Memory is triggered at the fallingedge, so i can save one tregister!
+--			if(MY_RAMSEL = '1' and nAS ='0')then
+--				--nOE 			<= not RW;
+--				
+--				if(RW='0'
+--					--and DSACK_32BIT_D2 ='1'
+--					) then --nWE must be deasserted before nAS terminates!
+--					--nWE 		<= '0';
+--				else 
+--					--nWE 		<= '1';
+--				end if;
+--			
+--				DSACK_32BIT	<= '0';				
+--				DSACK_32BIT_D0 <= DSACK_32BIT;				
+--				DSACK_32BIT_D1 <= DSACK_32BIT_D0;
+--				DSACK_32BIT_D2 <= DSACK_32BIT_D1;
+--				DSACK_32BIT_D3 <= DSACK_32BIT_D2;
+--
+--			else
+--				DSACK_32BIT		<= '1';
+--				DSACK_32BIT_D0 <= '1';
+--				DSACK_32BIT_D1 <= '1';
+--				DSACK_32BIT_D2 <= '1';
+--				DSACK_32BIT_D3 <= '1';
+--				
+--				nOE				<= '1';
+--				nWE				<= '1';
+--			end if;
+--		end if;
+--	end process dsack_gen;
 	
 	--enable caching for RAM
-	CIIN	<= '1' when MY_RAMSEL ='1' else 
-				'0' when AUTO_CONFIG='1' else
-				'0' when IDE_SPACE='1' else
-				'Z';
-
+	--CIIN	<= '1' when MY_RAMSEL ='1' else 
+	--			'0' when AUTO_CONFIG='1' else
+	--			'0' when IDE_SPACE='1' else
+	--			'Z';
+	CIIN <='Z';
 
 	autoconfig: process (reset, clk)
 	begin

@@ -23,16 +23,10 @@
 <msg type="warning" file="Cpld" num="1007" delta="old" >Removing unused input(s) &apos;<arg fmt="%s" index="1">ECS</arg>&apos;.  The input(s) are unused after optimization. Please verify functionality via simulation.
 </msg>
 
-<msg type="warning" file="Cpld" num="0" delta="new" >The signal(s) &apos;<arg fmt="%s" index="1">CIIN_and0000</arg>&apos; are in combinational feedback loops.
-These signals may cause hazards/glitches. Apply the NOREDUCE parameter to the hazard reduction circuitry.
-Timing analysis of paths involving this node may be inaccurate or incomplete.
+<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">1</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">DSACK&lt;1&gt;</arg> to allow all signals assigned to this function block to be placed.
 </msg>
 
-<msg type="warning" file="Cpld" num="828" delta="old" >Signal &apos;<arg fmt="%s" index="1">Mtrien_Dout.CE</arg>&apos; has been minimized to &apos;<arg fmt="%s" index="2">VCC</arg>&apos;.
-  The signal is removed.
-</msg>
-
-<msg type="warning" file="Cpld" num="896" delta="old" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">4</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">IDE_R</arg> to allow all signals assigned to this function block to be placed.
+<msg type="warning" file="Cpld" num="896" delta="new" >Unable to map all desired signals into function block, FB<arg fmt="%d" index="1">5</arg>, because too many function block product terms are required. Buffering output signal <arg fmt="%s" index="2">IO5</arg> to allow all signals assigned to this function block to be placed.
 </msg>
 
 </messages>

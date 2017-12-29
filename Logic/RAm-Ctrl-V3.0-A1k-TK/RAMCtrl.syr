@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: RAMCtrl.prj
 
@@ -76,19 +76,19 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/Matze/Amiga/Hardwarehacks/HArms Professional 030 -RAM/GitHub/Logic/RAm-Ctrl-V3.0-A1k-TK/RAM-Ctrl.vhd" in Library work.
-Entity <RAMCtrl> compiled.
-Entity <RAMCtrl> (Architecture <Behavioral>) compiled.
+Entity <ramctrl> compiled.
+Entity <ramctrl> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <RAMCtrl> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <RAMCtrl> in library <work> (architecture <behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <RAMCtrl> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <RAMCtrl> in library <work> (Architecture <behavioral>).
 Entity <RAMCtrl> analyzed. Unit <RAMCtrl> generated.
 
 
@@ -105,10 +105,12 @@ WARNING:Xst:647 - Input <A<15:14>> is never used. This port will be preserved an
 WARNING:Xst:647 - Input <A<8:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:1780 - Signal <IDE_W_S> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <IDE_R_S> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <DSACK_32BIT_D3> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <DSACK_32BIT_D3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <DSACK_32BIT_D2> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <DSACK_32BIT_D1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <DSACK_32BIT_D0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <DSACK_32BIT> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 2-bit tristate buffer for signal <DSACK>.
-    Found 1-bit register for signal <nOE>.
-    Found 1-bit register for signal <nWE>.
     Found 1-bit register for signal <IDE_R>.
     Found 1-bit register for signal <IDE_W>.
     Found 3-bit register for signal <IDE_A>.
@@ -119,10 +121,6 @@ WARNING:Xst:646 - Signal <DSACK_32BIT_D3> is assigned but never used. This uncon
     Found 3-bit register for signal <BASEADR_4MB>.
     Found 4-bit tristate buffer for signal <Dout>.
     Found 1-bit register for signal <DSACK_16BIT>.
-    Found 1-bit register for signal <DSACK_32BIT>.
-    Found 1-bit register for signal <DSACK_32BIT_D0>.
-    Found 1-bit register for signal <DSACK_32BIT_D1>.
-    Found 1-bit register for signal <DSACK_32BIT_D2>.
     Found 8-bit register for signal <IDE_BASEADR>.
     Found 1-bit register for signal <IDE_DSACK_D0>.
     Found 1-bit register for signal <IDE_DSACK_D1>.
@@ -130,14 +128,14 @@ WARNING:Xst:646 - Signal <DSACK_32BIT_D3> is assigned but never used. This uncon
     Found 1-bit register for signal <IDE_DSACK_D3>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 16-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 108.
-    Found 4-bit register for signal <Mtridata_Dout> created at line 360.
-    Found 1-bit register for signal <Mtrien_Dout> created at line 360.
+    Found 4-bit register for signal <Mtridata_Dout> created at line 365.
+    Found 1-bit register for signal <Mtrien_Dout> created at line 365.
     Found 11-bit comparator equal for signal <nCS1_S$cmp_eq0000> created at line 125.
     Found 11-bit comparator equal for signal <nCS2_S$cmp_eq0000> created at line 131.
     Found 1-bit register for signal <ROM_OUT_ENABLE_S>.
     Found 2-bit register for signal <SHUT_UP>.
     Summary:
-	inferred  33 D-type flip-flop(s).
+	inferred  27 D-type flip-flop(s).
 	inferred   3 Comparator(s).
 	inferred   7 Tristate(s).
 Unit <RAMCtrl> synthesized.
@@ -147,8 +145,8 @@ Unit <RAMCtrl> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 36
- 1-bit register                                        : 33
+# Registers                                            : 30
+ 1-bit register                                        : 27
  3-bit register                                        : 2
  4-bit register                                        : 1
 # Comparators                                          : 3
@@ -170,8 +168,8 @@ Macro Statistics
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Registers                                            : 33
- Flip-Flops                                            : 33
+# Registers                                            : 27
+ Flip-Flops                                            : 27
 # Comparators                                          : 3
  11-bit comparator equal                               : 2
  16-bit comparator equal                               : 1
@@ -191,19 +189,13 @@ Optimizing unit <RAMCtrl> ...
   implementation constraint: INIT=s	 : IDE_R
   implementation constraint: INIT=s	 : ROM_OUT_ENABLE_S
   implementation constraint: INIT=s	 : IDE_W
-  implementation constraint: INIT=s	 : DSACK_32BIT_D0
-  implementation constraint: INIT=s	 : DSACK_32BIT_D1
-  implementation constraint: INIT=s	 : DSACK_32BIT_D2
-  implementation constraint: INIT=s	 : DSACK_32BIT
-  implementation constraint: INIT=s	 : nOE
   implementation constraint: INIT=r	 : IDE_ENABLE
-  implementation constraint: INIT=s	 : nWE
+  implementation constraint: INIT=r	 : Mtrien_Dout
   implementation constraint: INIT=s	 : IDE_DSACK_D0
   implementation constraint: INIT=s	 : IDE_DSACK_D1
   implementation constraint: INIT=s	 : IDE_DSACK_D2
   implementation constraint: INIT=s	 : IDE_DSACK_D3
   implementation constraint: INIT=s	 : DSACK_16BIT
-  implementation constraint: INIT=r	 : Mtrien_Dout
 
 =========================================================================
 *                           Partition Report                            *
@@ -236,19 +228,18 @@ Design Statistics
 
 Cell Usage :
 # BELS                             : 356
-#      AND2                        : 93
-#      AND3                        : 27
-#      AND4                        : 2
+#      AND2                        : 92
+#      AND3                        : 29
+#      AND4                        : 3
 #      GND                         : 1
-#      INV                         : 157
-#      OR2                         : 56
-#      OR3                         : 3
+#      INV                         : 160
+#      OR2                         : 52
+#      OR3                         : 2
 #      OR4                         : 1
 #      VCC                         : 1
 #      XOR2                        : 15
-# FlipFlops/Latches                : 43
+# FlipFlops/Latches                : 37
 #      FDCE                        : 14
-#      FDP                         : 6
 #      FDPE                        : 23
 # IO Buffers                       : 64
 #      IBUF                        : 36
@@ -259,13 +250,13 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.02 secs
+Total CPU time to Xst completion: 8.32 secs
  
 --> 
 
-Total memory usage is 290068 kilobytes
+Total memory usage is 290064 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
