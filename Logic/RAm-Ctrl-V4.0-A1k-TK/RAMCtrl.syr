@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: RAMCtrl.prj
 
@@ -106,10 +106,6 @@ WARNING:Xst:647 - Input <ECS> is never used. This port will be preserved and lef
 WARNING:Xst:647 - Input <A<15:14>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <A<8:7>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <IDE_IRQ> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:1780 - Signal <nDS_D1> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <nDS_D0> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <DSACK_32BIT<1>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <AUTO_CONFIG_FINISH> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 4-bit tristate buffer for signal <D>.
     Found 2-bit tristate buffer for signal <DSACK>.
     Found 1-bit tristate buffer for signal <CIIN>.
@@ -119,25 +115,24 @@ WARNING:Xst:646 - Signal <AUTO_CONFIG_FINISH> is assigned but never used. This u
     Found 2-bit register for signal <AUTO_CONFIG_DONE_CYCLE>.
     Found 3-bit register for signal <BASEADR>.
     Found 3-bit register for signal <BASEADR_4MB>.
-    Found 3-bit adder for signal <BASEADR_4MB$add0000> created at line 429.
+    Found 3-bit adder for signal <BASEADR_4MB$add0000> created at line 373.
     Found 4-bit register for signal <Dout1>.
-    Found 4-bit register for signal <Dout2>.
     Found 1-bit register for signal <DSACK_16BIT>.
-    Found 1-bit register for signal <DSACK_32BIT<0>>.
+    Found 2-bit register for signal <DSACK_32BIT>.
     Found 8-bit register for signal <IDE_BASEADR>.
     Found 1-bit register for signal <IDE_CYCLE>.
     Found 4-bit register for signal <IDE_DSACK>.
     Found 1-bit register for signal <IDE_ENABLE>.
     Found 1-bit register for signal <IDE_R_S>.
-    Found 16-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 131.
+    Found 16-bit comparator equal for signal <IDE_SPACE$cmp_eq0000> created at line 122.
     Found 1-bit register for signal <IDE_W_S>.
     Found 1-bit register for signal <nAS_D0>.
-    Found 11-bit comparator equal for signal <RAM2MB$cmp_eq0000> created at line 123.
-    Found 11-bit comparator equal for signal <RAM4MB$cmp_eq0000> created at line 127.
+    Found 11-bit comparator equal for signal <RAM2MB$cmp_eq0000> created at line 114.
+    Found 11-bit comparator equal for signal <RAM4MB$cmp_eq0000> created at line 118.
     Found 1-bit register for signal <ROM_OE_S>.
     Found 2-bit register for signal <SHUT_UP>.
     Summary:
-	inferred  26 D-type flip-flop(s).
+	inferred  27 D-type flip-flop(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred   3 Comparator(s).
 	inferred   7 Tristate(s).
@@ -151,10 +146,10 @@ Macro Statistics
 # Adders/Subtractors                                   : 1
  3-bit adder                                           : 1
 # Registers                                            : 31
- 1-bit register                                        : 26
+ 1-bit register                                        : 27
  2-bit register                                        : 1
  3-bit register                                        : 2
- 4-bit register                                        : 2
+ 4-bit register                                        : 1
 # Comparators                                          : 3
  11-bit comparator equal                               : 2
  16-bit comparator equal                               : 1
@@ -176,8 +171,8 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 1
  3-bit adder                                           : 1
-# Registers                                            : 26
- Flip-Flops                                            : 26
+# Registers                                            : 27
+ Flip-Flops                                            : 27
 # Comparators                                          : 3
  11-bit comparator equal                               : 2
  16-bit comparator equal                               : 1
@@ -220,24 +215,22 @@ Design Statistics
 # IOs                              : 73
 
 Cell Usage :
-# BELS                             : 430
-#      AND2                        : 97
-#      AND3                        : 24
+# BELS                             : 365
+#      AND2                        : 74
+#      AND3                        : 25
 #      AND4                        : 4
 #      AND5                        : 1
 #      AND8                        : 5
 #      GND                         : 1
-#      INV                         : 205
-#      OR2                         : 61
-#      OR3                         : 13
-#      OR4                         : 1
-#      OR5                         : 1
+#      INV                         : 184
+#      OR2                         : 44
+#      OR3                         : 10
 #      VCC                         : 1
 #      XOR2                        : 16
-# FlipFlops/Latches                : 42
+# FlipFlops/Latches                : 39
 #      FDC                         : 1
 #      FDCE                        : 5
-#      FDP                         : 17
+#      FDP                         : 14
 #      FDPE                        : 19
 # IO Buffers                       : 67
 #      IBUF                        : 36
@@ -248,13 +241,13 @@ Cell Usage :
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 7.92 secs
+Total CPU time to Xst completion: 7.97 secs
  
 --> 
 
-Total memory usage is 324164 kilobytes
+Total memory usage is 324160 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 
