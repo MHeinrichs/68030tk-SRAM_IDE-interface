@@ -1,8 +1,0 @@
-INTSTYLE=impact
-INFILE=C:\Users\Matze\Documents\GitHub\68030tk-SRAM_IDE-interface\Logic\impact.xsl
-OUTFILE=C:\Users\Matze\Documents\GitHub\68030tk-SRAM_IDE-interface\Logic\impact.xsl
-FAMILY=Single
-PART=Single
-WORKINGDIR=C:\Users\Matze\Documents\GitHub\68030tk-SRAM_IDE-interface\Logic
-LICENSE=iMPACT
-USER_INFO=iMPACT
